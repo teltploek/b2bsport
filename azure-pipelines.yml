@@ -49,7 +49,7 @@ variables:
 
   # Cache configuration (for Microsoft-hosted agents)
   npmCacheKey: 'npm-v1 | "$(Agent.OS)" | package-lock.json'
-  nextCacheKey: 'next-build-v1 | "$(Agent.OS)" | package-lock.json | components/**/*.tsx | app/**/*.tsx | next.config.ts'
+  nextCacheKey: 'next-build-v1 | "$(Agent.OS)" | package-lock.json | src/components/**/*.tsx | src/app/**/*.tsx | next.config.js'
 
 stages:
 # ========================================
