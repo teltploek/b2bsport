@@ -288,6 +288,7 @@ stages:
           NODE_ENV=production
           PORT=$(PORT)
           HOSTNAME=0.0.0.0
+          NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=AIzaSyBDSSjltJkHSrdISimb0C3XclW_9EspkMk
           "@
           $envContent | Out-File -FilePath "$(DEPLOYMENT_PATH)\.env.production" -Encoding UTF8
           Write-Host "Environment file created"
