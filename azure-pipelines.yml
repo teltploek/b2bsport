@@ -146,6 +146,13 @@ stages:
         echo "Build size: $(du -sh .next | cut -f1)"
       displayName: 'Verify build'
 
+    # Remove node_modules before packaging
+    - script: |
+        echo "Removing node_modules to reduce artifact size..."
+        rm -rf node_modules
+        echo "node_modules removed"
+      displayName: 'Remove node_modules'
+
     # Create deployment package
     - task: ArchiveFiles@2
       displayName: 'Archive build output'
@@ -155,7 +162,6 @@ stages:
         archiveType: 'zip'
         archiveFile: '$(Build.ArtifactStagingDirectory)/build.zip'
         replaceExistingArchive: true
-        # Include only necessary files
         verbose: false
         quiet: false
 
