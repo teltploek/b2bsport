@@ -1,0 +1,438 @@
+# Azure DevOps Optimized Production Pipeline for B2B Sport Website
+# Uses Microsoft-hosted agents for build (faster) and self-hosted for deployment
+# Deploys to https://b2bsport.dk
+
+name: $(Date:yyyyMMdd).$(Rev:r)
+
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    exclude:
+      - '*.md'
+      - 'docs/**'
+      - '.azure/scripts/*.ps1'
+
+parameters:
+  - name: deployToProduction
+    displayName: 'Deploy to Production Server'
+    type: boolean
+    default: true
+  - name: clearCache
+    displayName: 'Clear all caches (fresh build)'
+    type: boolean
+    default: false
+  - name: sendTeamsNotifications
+    displayName: 'Send Teams notifications'
+    type: boolean
+    default: true
+
+variables:
+  # Production configuration
+  DEPLOYMENT_PATH: 'E:\FTP\Webpages\b2bsport-front-3'
+  SERVICE_NAME: 'b2b-sport-front-service'
+  APP_URL: 'https://b2bsport.dk'
+  NSSM_PATH: 'C:\nssm-2.24\win64\nssm.exe'
+
+  # Environment
+  NODE_ENV: 'production'
+  PORT: '3002'
+  NODE_OPTIONS: '--max-old-space-size=2048'
+  NEXT_TELEMETRY_DISABLED: '1'
+
+  # Build metadata
+  BUILD_NUMBER: '$(Build.BuildNumber)'
+  BUILD_TIMESTAMP: '$(Build.BuildId)'
+  BUILD_BRANCH: '$(Build.SourceBranchName)'
+  BUILD_COMMIT: '$(Build.SourceVersion)'
+
+  # Cache configuration (for Microsoft-hosted agents)
+  npmCacheKey: 'npm-v1 | "$(Agent.OS)" | package-lock.json'
+  nextCacheKey: 'next-build-v1 | "$(Agent.OS)" | package-lock.json | components/**/*.tsx | app/**/*.tsx | next.config.ts'
+
+stages:
+# ========================================
+# Build Stage - Uses Microsoft-hosted agents (faster)
+# ========================================
+- stage: Build
+  displayName: 'Build Application'
+  pool:
+    vmImage: 'ubuntu-latest'  # Microsoft-hosted agent
+  jobs:
+  - job: BuildJob
+    displayName: 'Build and Package'
+    timeoutInMinutes: 10
+
+    steps:
+    - checkout: self
+      clean: true
+      displayName: 'Checkout code'
+
+    - task: NodeTool@0
+      displayName: 'Setup Node.js'
+      inputs:
+        versionSpec: '20.x'  # LTS version
+
+    # Clear caches if requested
+    - ${{ if eq(parameters.clearCache, true) }}:
+      - script: |
+          echo "Clearing npm cache..."
+          npm cache clean --force
+          echo "Cache cleared"
+        displayName: 'Clear npm cache'
+
+    # Cache npm packages
+    - task: Cache@2
+      displayName: 'Cache npm packages'
+      inputs:
+        key: $(npmCacheKey)
+        restoreKeys: |
+          npm-v1 | "$(Agent.OS)"
+        path: $(Pipeline.Workspace)/.npm
+      continueOnError: true
+
+    # Cache Next.js build
+    - task: Cache@2
+      displayName: 'Cache Next.js build'
+      inputs:
+        key: $(nextCacheKey)
+        restoreKeys: |
+          next-build-v1 | "$(Agent.OS)" | package-lock.json
+          next-build-v1 | "$(Agent.OS)"
+        path: .next/cache
+      continueOnError: true
+
+    # Configure npm for CI
+    - script: |
+        npm config set cache $(Pipeline.Workspace)/.npm
+        npm config set prefer-offline true
+        npm config set audit false
+        npm config set fund false
+        echo "npm configured for CI"
+      displayName: 'Configure npm'
+
+    # Install dependencies
+    - script: |
+        echo "Installing dependencies..."
+        npm ci --production=false
+        echo "Dependencies installed"
+      displayName: 'Install dependencies'
+
+    # Build application
+    - script: |
+        echo "Building Next.js application..."
+        echo "Target URL: $(APP_URL)"
+        npm run build
+        echo "Build completed"
+      displayName: 'Build Next.js application'
+      env:
+        NODE_ENV: $(NODE_ENV)
+        NODE_OPTIONS: $(NODE_OPTIONS)
+        NEXT_TELEMETRY_DISABLED: $(NEXT_TELEMETRY_DISABLED)
+
+    # Verify build output
+    - script: |
+        echo "Verifying build output..."
+        if [ ! -f ".next/BUILD_ID" ]; then
+          echo "ERROR: .next/BUILD_ID not found"
+          exit 1
+        fi
+        if [ ! -f ".next/build-manifest.json" ]; then
+          echo "ERROR: .next/build-manifest.json not found"
+          exit 1
+        fi
+        echo "Build verification passed"
+        echo "Build size: $(du -sh .next | cut -f1)"
+      displayName: 'Verify build'
+
+    # Create deployment package
+    - task: ArchiveFiles@2
+      displayName: 'Archive build output'
+      inputs:
+        rootFolderOrFile: '.'
+        includeRootFolder: false
+        archiveType: 'zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/build.zip'
+        replaceExistingArchive: true
+        # Include only necessary files
+        verbose: false
+        quiet: false
+
+    # Publish artifacts
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish artifacts'
+      inputs:
+        pathToPublish: '$(Build.ArtifactStagingDirectory)/build.zip'
+        artifactName: 'build-output'
+        publishLocation: 'Container'
+
+    # Build metrics
+    - script: |
+        echo "=============================="
+        echo "Build Performance Report"
+        echo "=============================="
+        echo "Build number: $(Build.BuildNumber)"
+        echo "Commit: $(Build.SourceVersion)"
+        echo "Branch: $(Build.SourceBranchName)"
+        echo ""
+        echo "Build output size: $(du -sh .next | cut -f1)"
+        echo "Node modules size: $(du -sh node_modules | cut -f1)"
+        echo "=============================="
+      displayName: 'Build metrics'
+
+# ========================================
+# Deploy Stage - Uses self-hosted Windows agent
+# ========================================
+- stage: Deploy
+  displayName: 'Deploy to Production'
+  dependsOn: Build
+  condition: and(succeeded(), eq('${{ parameters.deployToProduction }}', true))
+  pool:
+    name: 'Windows-Server-Pool'  # Self-hosted agent
+  jobs:
+  - job: DeployJob
+    displayName: 'Deploy to b2bsport.dk'
+    timeoutInMinutes: 10
+
+    steps:
+    # Setup Node.js
+    - task: NodeTool@0
+      displayName: 'Setup Node.js'
+      inputs:
+        versionSpec: '20.x'
+
+    # Download artifacts
+    - task: DownloadBuildArtifacts@1
+      displayName: 'Download artifacts'
+      inputs:
+        buildType: 'current'
+        artifactName: 'build-output'
+        downloadPath: '$(System.ArtifactsDirectory)'
+
+    # Stop service
+    - task: PowerShell@2
+      displayName: 'Stop production service'
+      inputs:
+        targetType: 'inline'
+        script: |
+          Write-Host "##[section]Stopping $(SERVICE_NAME)..."
+          & "$(NSSM_PATH)" stop $(SERVICE_NAME)
+          Start-Sleep -Seconds 5
+          Write-Host "Service stopped"
+
+    # Backup current deployment (optional)
+    - task: PowerShell@2
+      displayName: 'Backup current deployment'
+      continueOnError: true
+      inputs:
+        targetType: 'inline'
+        script: |
+          $backupPath = "$(DEPLOYMENT_PATH)_backup_$(Get-Date -Format 'yyyyMMdd_HHmmss')"
+          if (Test-Path "$(DEPLOYMENT_PATH)\.next") {
+            Write-Host "Creating backup at $backupPath..."
+            New-Item -ItemType Directory -Path "$backupPath" -Force | Out-Null
+            Copy-Item "$(DEPLOYMENT_PATH)\.next" "$backupPath\.next" -Recurse
+            Write-Host "Backup created"
+          } else {
+            Write-Host "No existing deployment to backup"
+          }
+
+    # Clean deployment directory
+    - task: PowerShell@2
+      displayName: 'Clean deployment directory'
+      inputs:
+        targetType: 'inline'
+        script: |
+          Write-Host "Cleaning deployment directory..."
+
+          # Create deployment directory if it doesn't exist
+          if (!(Test-Path "$(DEPLOYMENT_PATH)")) {
+            New-Item -ItemType Directory -Path "$(DEPLOYMENT_PATH)" -Force
+          }
+
+          # Clean specific directories
+          $itemsToClean = @(".next", "node_modules", "package-lock.json")
+          foreach ($item in $itemsToClean) {
+            $path = Join-Path "$(DEPLOYMENT_PATH)" $item
+            if (Test-Path $path) {
+              Write-Host "Removing $item..."
+              Remove-Item $path -Recurse -Force -ErrorAction SilentlyContinue
+            }
+          }
+          Write-Host "Cleanup complete"
+
+    # Extract and deploy files
+    - task: ExtractFiles@1
+      displayName: 'Extract build files'
+      inputs:
+        archiveFilePatterns: '$(System.ArtifactsDirectory)/build-output/build.zip'
+        destinationFolder: '$(DEPLOYMENT_PATH)'
+        cleanDestinationFolder: false
+        overwriteExistingFiles: true
+
+    # Create production environment file
+    - task: PowerShell@2
+      displayName: 'Create environment file'
+      inputs:
+        targetType: 'inline'
+        script: |
+          $envContent = @"
+          NODE_ENV=production
+          PORT=$(PORT)
+          HOSTNAME=0.0.0.0
+          "@
+          $envContent | Out-File -FilePath "$(DEPLOYMENT_PATH)\.env.production" -Encoding UTF8
+          Write-Host "Environment file created"
+
+    # Install production dependencies
+    - task: PowerShell@2
+      displayName: 'Install production dependencies'
+      inputs:
+        targetType: 'inline'
+        script: |
+          cd "$(DEPLOYMENT_PATH)"
+          Write-Host "Installing production dependencies..."
+
+          # Use npm ci for faster, reproducible installs
+          npm ci --production=false
+
+          if ($LASTEXITCODE -ne 0) {
+            Write-Host "npm ci failed, trying npm install..."
+            npm install --production=false
+          }
+
+          Write-Host "Dependencies installed"
+
+    # Verify deployment files
+    - task: PowerShell@2
+      displayName: 'Verify deployment'
+      inputs:
+        targetType: 'inline'
+        script: |
+          Write-Host "Verifying deployment files..."
+
+          $requiredFiles = @(
+            ".next\BUILD_ID",
+            ".next\build-manifest.json",
+            "package.json",
+            "next.config.ts",
+            "server.js"
+          )
+
+          $errors = 0
+          foreach ($file in $requiredFiles) {
+            $path = Join-Path "$(DEPLOYMENT_PATH)" $file
+            if (Test-Path $path) {
+              Write-Host "✓ $file exists"
+            } else {
+              Write-Host "✗ Missing: $file"
+              $errors++
+            }
+          }
+
+          if ($errors -gt 0) {
+            Write-Host "##vso[task.logissue type=error]Deployment verification failed"
+            exit 1
+          }
+
+          Write-Host "Deployment verified successfully"
+
+    # Start service
+    - task: PowerShell@2
+      displayName: 'Start production service'
+      inputs:
+        targetType: 'inline'
+        script: |
+          Write-Host "##[section]Starting $(SERVICE_NAME)..."
+          & "$(NSSM_PATH)" start $(SERVICE_NAME)
+          Start-Sleep -Seconds 10
+
+          # NSSM returns Unicode output, need to handle encoding
+          $statusOutput = & "$(NSSM_PATH)" status $(SERVICE_NAME) 2>&1
+          $statusString = [System.Text.Encoding]::Unicode.GetString([System.Text.Encoding]::Default.GetBytes($statusOutput))
+
+          # Remove null characters and trim
+          $cleanStatus = $statusString -replace '\0', '' | Out-String -Stream | Where-Object { $_ } | Select-Object -First 1
+
+          Write-Host "Service status: $cleanStatus"
+
+          if ($cleanStatus -notmatch "SERVICE_RUNNING") {
+            Write-Host "##vso[task.logissue type=error]Service failed to start (status: $cleanStatus)"
+            exit 1
+          }
+
+          Write-Host "Service started successfully"
+
+    # Health check
+    - task: PowerShell@2
+      displayName: 'Health check'
+      continueOnError: true
+      inputs:
+        targetType: 'inline'
+        script: |
+          Write-Host "Running health check..."
+          Start-Sleep -Seconds 5
+
+          try {
+            $response = Invoke-WebRequest -Uri "http://localhost:$(PORT)" -UseBasicParsing -TimeoutSec 10
+            Write-Host "✓ Application responding: Status $($response.StatusCode)"
+            Write-Host "Deployment successful!"
+            Write-Host "Application URL: $(APP_URL)"
+          } catch {
+            Write-Host "##vso[task.logissue type=warning]Health check failed: $_"
+            Write-Host "Application may still be starting..."
+          }
+
+    # Clean old backups (keep last 3)
+    - task: PowerShell@2
+      displayName: 'Clean old backups'
+      continueOnError: true
+      inputs:
+        targetType: 'inline'
+        script: |
+          Write-Host "Cleaning old backups..."
+          $backupPattern = "$(DEPLOYMENT_PATH)_backup_*"
+          $backups = Get-ChildItem -Path (Split-Path "$(DEPLOYMENT_PATH)" -Parent) -Filter (Split-Path $backupPattern -Leaf) -Directory | Sort-Object Name -Descending
+
+          if ($backups.Count -gt 3) {
+            $toDelete = $backups | Select-Object -Skip 3
+            foreach ($backup in $toDelete) {
+              Write-Host "Removing old backup: $($backup.Name)"
+              Remove-Item $backup.FullName -Recurse -Force
+            }
+          }
+          Write-Host "Backup cleanup complete"
+
+    # Send Teams notification - Success
+    - ${{ if eq(parameters.sendTeamsNotifications, true) }}:
+      - task: PowerShell@2
+        displayName: 'Send Teams notification - Success'
+        condition: succeeded()
+        continueOnError: true
+        inputs:
+          filePath: '.azure/scripts/send-teams-success.ps1'
+          arguments: >
+            -WebhookUrl "$(TEAMS_WEBHOOK_URL)"
+            -BuildNumber "$(Build.BuildNumber)"
+            -CommitMessage "$(Build.SourceVersionMessage)"
+            -TriggeredBy "$(Build.RequestedFor)"
+            -BranchName "$(Build.SourceBranchName)"
+            -BuildUrl "$(System.TeamFoundationCollectionUri)$(System.TeamProject)/_build/results?buildId=$(Build.BuildId)&view=results"
+            -AppUrl "$(APP_URL)"
+
+    # Send Teams notification - Failure
+    - ${{ if eq(parameters.sendTeamsNotifications, true) }}:
+      - task: PowerShell@2
+        displayName: 'Send Teams notification - Failure'
+        condition: failed()
+        continueOnError: true
+        inputs:
+          filePath: '.azure/scripts/send-teams-failure.ps1'
+          arguments: >
+            -WebhookUrl "$(TEAMS_WEBHOOK_URL)"
+            -BuildNumber "$(Build.BuildNumber)"
+            -CommitMessage "$(Build.SourceVersionMessage)"
+            -TriggeredBy "$(Build.RequestedFor)"
+            -BranchName "$(Build.SourceBranchName)"
+            -BuildUrl "$(System.TeamFoundationCollectionUri)$(System.TeamProject)/_build/results?buildId=$(Build.BuildId)&view=results"

@@ -1,5 +1,3 @@
-import { User } from 'lucide-react'
-
 interface TeamSectionProps {
   dictionary: {
     team?: {
@@ -20,16 +18,16 @@ interface TeamSectionProps {
 }
 
 const teamMembers = [
-  { name: 'Jonas Larholm', roleKey: 'clubConsultant' },
-  { name: 'Anders Heide-Andersen', roleKey: 'clubConsultant' },
-  { name: 'Louise Krabbe Riis', roleKey: 'projectAssistant' },
-  { name: 'Christoffer Hjarnø', roleKey: 'marketing' },
-  { name: 'Sebastian H. Pedersen', roleKey: 'it' },
-  { name: 'Andreas D. Pedersen', roleKey: 'it' },
-  { name: 'Brian Frisch', roleKey: 'it' },
-  { name: 'Rikke Jørgensen', roleKey: 'accounting' },
-  { name: 'Casper Pedersen', roleKey: 'ceo' },
-  { name: 'Rasmus B. Lynddahl', roleKey: 'chairman' },
+  { name: 'Jonas Larholm', roleKey: 'clubConsultant', initials: 'JOL' },
+  { name: 'Anders Heide-Andersen', roleKey: 'clubConsultant', initials: 'AND' },
+  { name: 'Louise Krabbe Riis', roleKey: 'projectAssistant', initials: 'LKR' },
+  { name: 'Christoffer Hjarnø', roleKey: 'marketing', initials: 'CHR' },
+  { name: 'Sebastian H. Pedersen', roleKey: 'it', initials: 'SEB' },
+  { name: 'Andreas D. Pedersen', roleKey: 'it', initials: 'ADP' },
+  { name: 'Brian Frisch', roleKey: 'it', initials: 'BRF' },
+  { name: 'Rikke Jørgensen', roleKey: 'accounting', initials: 'RIP' },
+  { name: 'Casper Pedersen', roleKey: 'ceo', initials: 'CAS' },
+  { name: 'Rasmus B. Lynddahl', roleKey: 'chairman', initials: 'RAS' },
 ]
 
 export default function TeamSection({ dictionary, locale }: TeamSectionProps) {
@@ -62,8 +60,12 @@ export default function TeamSection({ dictionary, locale }: TeamSectionProps) {
 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-semantic-brand-light flex items-center justify-center">
-                <User className="w-12 h-12 text-semantic-brand-default" />
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-semantic-brand-light">
+                <img
+                  src={`/employees/${member.initials}.jpg`}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-semibold font-display text-semantic-text-primary mb-1">
                 {member.name}

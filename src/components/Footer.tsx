@@ -222,6 +222,19 @@ export function Footer({ dictionary, lang }: FooterProps) {
             <p className="text-xs text-white/70">
               © 2025 B2B Sport & Promotion Group ApS. Alle rettigheder forbeholdes.
             </p>
+            <a
+              href={`https://www.ingenco2.dk/certificate/6994/${lang}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'inline-block' }}
+            >
+              <img
+                src="/regular_da.svg"
+                alt="CO2 Neutral Certificate"
+                width={76}
+                height={60}
+              />
+            </a>
             <div className="flex gap-6">
               <Link
                 href={`/${lang}`}
