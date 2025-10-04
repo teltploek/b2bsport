@@ -62,7 +62,7 @@ stages:
   jobs:
   - job: BuildJob
     displayName: 'Build and Package'
-    timeoutInMinutes: 10
+    timeoutInMinutes: 30
 
     steps:
     - checkout: self
@@ -193,7 +193,7 @@ stages:
   jobs:
   - job: DeployJob
     displayName: 'Deploy to b2bsport.dk'
-    timeoutInMinutes: 10
+    timeoutInMinutes: 30
 
     steps:
     # Setup Node.js
