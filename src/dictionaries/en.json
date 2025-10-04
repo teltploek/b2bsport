@@ -1,0 +1,601 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "whatWeDo": "What We Do",
+    "sports": "Sports",
+    "contact": "Contact",
+    "demo": "Book demo",
+    "clubSystem": "Club System"
+  },
+  "hero": {
+    "title": "All of Denmark's club partner",
+    "subtitle": "We're building a digital solution for sports equipment ordering",
+    "cta": "Contact us"
+  },
+  "valueProposition": {
+    "title": "An easier way to order club equipment",
+    "subtitle": "We're working to make sports equipment ordering digital and simple. No more Excel sheets, back-and-forth emails, and time-consuming administration.",
+    "mainCTA": "See how we do it",
+    "features": {
+      "digital": {
+        "title": "100% Digital",
+        "description": "Everything in one place - orders, members, budgets"
+      },
+      "time": {
+        "title": "Save time",
+        "description": "Simplified ordering and approval"
+      },
+      "accuracy": {
+        "title": "Fewer errors",
+        "description": "Clear agreements and easy validation"
+      },
+      "support": {
+        "title": "Full support",
+        "description": "We help you all the way from start to finish"
+      }
+    }
+  },
+  "team": {
+    "title": "Meet the team",
+    "subtitle": "A dedicated team of experts working to revolutionize the sports equipment industry",
+    "roles": {
+      "clubConsultant": "Club Consultant",
+      "projectAssistant": "Project Assistant & Sales Support",
+      "marketing": "Marketing",
+      "it": "IT",
+      "accounting": "Accounting",
+      "ceo": "CEO",
+      "chairman": "Chairman of the Board"
+    }
+  },
+  "contactCTA": {
+    "title": "Ready to revolutionize your club administration?",
+    "subtitle": "Let us show you how you can save time and money on club equipment",
+    "primaryCTA": "Book demo",
+    "secondaryCTA": "Contact us",
+    "phone": "+45 69 15 35 45",
+    "email": "info@b2bsport.dk"
+  },
+  "clubSystem": {
+    "title": "The future of sports equipment ordering",
+    "subtitle": "While others use Excel and email, we offer a complete digital solution",
+    "benefits": {
+      "realtime": "Track your orders in real-time",
+      "agreements": "Your agreements are already loaded",
+      "simple": "Just fill in the empty fields"
+    },
+    "comparison": {
+      "before": "Before: Excel chaos and email ping-pong",
+      "after": "Now: Everything in one place with full control"
+    },
+    "stats": {
+      "timeSaved": "75% less time on admin",
+      "errorReduction": "90% fewer order errors",
+      "clubs": "50+ clubs already using it",
+      "satisfaction": "4.9/5 customer satisfaction"
+    }
+  },
+  "cta": {
+    "getStarted": "Get started",
+    "bookDemo": "Book a demo",
+    "learnMore": "Learn more about the system"
+  },
+  "sports": {
+    "title": "We deliver to all sports",
+    "subtitle": "Clubs, associations and boarding schools - we deliver to all sports"
+  },
+  "whatWeDoPage": {
+    "hero": {
+      "title": "Your club deserves better",
+      "subtitle": "Eliminate time-consuming administration and get more time for what really matters - your sport"
+    },
+    "mission": {
+      "title": "Finally a modern solution",
+      "subtitle": "Thousands of hours are wasted every year on manual equipment handling. That stops now.",
+      "points": {
+        "saveTime": {
+          "title": "Save time every week",
+          "description": "No more copy-paste between emails and Excel sheets"
+        },
+        "rightPrices": {
+          "title": "Always the right prices",
+          "description": "Your agreements are already in place - no surprises"
+        },
+        "trackEverything": {
+          "title": "Keep track of everything",
+          "description": "From member requests to deliveries - everything in one place"
+        }
+      }
+    },
+    "differentiator": {
+      "title": "See the difference yourself",
+      "subtitle": "Why spend hours on something that could take minutes?",
+      "currentWay": "How you do it now",
+      "ourWay": "How it could be",
+      "comparison": {
+        "excelChaos": "Excel sheets sent back and forth",
+        "emailPingPong": "Endless email threads about orders",
+        "manualPrices": "Manual price updates",
+        "uncertainDelivery": "Uncertainty about delivery times",
+        "lostOrders": "Orders lost in the inbox",
+        "oneSystem": "One system for everything",
+        "instantOrders": "Order directly with club prices",
+        "automaticUpdates": "Automatic updates",
+        "trackDelivery": "Track deliveries in real-time",
+        "completeOverview": "Complete overview always"
+      }
+    },
+    "goToMarket": {
+      "title": "Ready for the future?",
+      "subtitle": "Start your digital transformation today",
+      "description": "We're working to make it easy to be a sports club. Contact us to hear how we can help you.",
+      "cta": "Contact us"
+    }
+  },
+  "contactInfo": {
+    "title": "Contact us",
+    "phone": "Phone",
+    "email": "Email",
+    "openingHours": "Opening hours",
+    "weekdays": "Monday - Friday: 10:00 AM - 6:00 PM",
+    "weekend": "Weekend: Closed",
+    "company": "Company",
+    "companyName": "B2B Sport & Promotion Group ApS",
+    "cvr": "VAT: 40279695",
+    "followUs": "Follow us",
+    "offices": {
+      "sjaelland": {
+        "name": "Zealand Office",
+        "type": "Head office",
+        "address1": "Rødovrevej 151",
+        "address2": "2610 Rødovre",
+        "serves": "Serves: Copenhagen and surroundings"
+      },
+      "jylland": {
+        "name": "Jutland & Funen Office",
+        "type": "Regional office",
+        "address1": "Industrivej 41",
+        "address2": "6760 Ribe",
+        "serves": "Serves: Jutland and Funen"
+      }
+    }
+  },
+  "about": {
+    "title": "About B2BSport",
+    "subtitle": "We digitalize the sports equipment industry"
+  },
+  "brands": {
+    "title": "We work with the best",
+    "subtitle": "Quality brands and reliable suppliers"
+  },
+  "testimonials": {
+    "title": "What our clubs say",
+    "subtitle": "Hear from clubs that have already revolutionized their equipment management",
+    "items": [
+      {
+        "quote": "We've saved at least 10 hours per month on administration. Now our coaches can focus on what they do best - coaching!",
+        "author": "Lars Andersen",
+        "role": "Club President",
+        "club": "Øresund Football Club"
+      },
+      {
+        "quote": "Finally we have control over our budget! The system gives us full control and no unexpected costs.",
+        "author": "Maria Christensen",
+        "role": "Treasurer",
+        "club": "Sønderjysk Basketball"
+      },
+      {
+        "quote": "It's so easy! I can order new equipment in 5 minutes, and all prices are already negotiated and loaded.",
+        "author": "Thomas Nielsen",
+        "role": "Coach",
+        "club": "Midtjylland Handball"
+      }
+    ]
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "The digital revolution in sports equipment",
+      "subtitle": "We're transforming a traditional industry with modern technology and user-friendly solutions"
+    },
+    "mission": {
+      "title": "Our mission",
+      "content": "We're on a mission to revolutionize how sports clubs order and manage their equipment. Through our IT-driven approach, we eliminate wasted time, reduce errors, and give clubs full control over their equipment needs."
+    },
+    "story": {
+      "title": "From frustration to innovation",
+      "intro": "It all started with a simple observation: Why should clubs in 2025 still send Excel sheets back and forth via email to order sports equipment?",
+      "problem": "We saw coaches spending hours on administration instead of coaching. We saw club managers struggling with unmanageable budgets. We saw suppliers drowning in emails and manual processes.",
+      "solution": "So we built the solution: Denmark's first fully digital platform for ordering sports equipment. A platform that makes it easy to be a club, coach, and supplier."
+    },
+    "approach": {
+      "title": "IT-driven, but human-centered",
+      "subtitle": "Our approach combines the best of both worlds",
+      "points": {
+        "technology": {
+          "title": "Modern technology",
+          "description": "We use the latest technologies to ensure a fast, secure, and reliable platform"
+        },
+        "userFriendly": {
+          "title": "User-friendly design",
+          "description": "Anyone can use our system - no technical expertise required"
+        },
+        "realtime": {
+          "title": "Real-time updates",
+          "description": "See order status, inventory, and prices updated in real-time"
+        },
+        "integration": {
+          "title": "Easy integration",
+          "description": "Our system integrates seamlessly with existing club systems"
+        }
+      }
+    },
+    "benefits": {
+      "title": "Benefits of our digital platform",
+      "list": [
+        "Save 75% of time on administration",
+        "Reduce order errors by up to 90%",
+        "Get full control over club finances",
+        "Give coaches more time to coach",
+        "Track all orders in real-time",
+        "Get automatic reminders and notifications"
+      ]
+    },
+    "values": {
+      "title": "Our values",
+      "transparency": {
+        "title": "Transparency",
+        "description": "No hidden fees, no surprises. Everything is clear from the start."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We constantly challenge the status quo to find better solutions."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "We see ourselves as your partner, not just a supplier."
+      },
+      "simplicity": {
+        "title": "Simplicity",
+        "description": "Complex problems don't require complex solutions."
+      }
+    },
+    "cta": {
+      "title": "Ready to revolutionize your club?",
+      "subtitle": "Join the clubs that have already made the leap to the future",
+      "button": "Book a demo today"
+    }
+  },
+  "clubSystemPage": {
+    "hero": {
+      "title": "The Club System that changes everything",
+      "subtitle": "See how we've revolutionized sports equipment ordering with Denmark's first fully digital platform",
+      "cta": "Book a personal demo"
+    },
+    "features": {
+      "title": "Everything you need - in one place",
+      "subtitle": "Our platform gives you full control over your club's equipment, finances, and members",
+      "superAdmin": {
+        "title": "Super Admin Portal",
+        "subtitle": "For club managers and boards",
+        "features": [
+          "Complete member database",
+          "Budget and approval workflows",
+          "Multi-team organization",
+          "Historical order data"
+        ]
+      },
+      "staffAdmin": {
+        "title": "Staff Admin Portal",
+        "subtitle": "For coaches and team leaders",
+        "features": [
+          "Filtered product catalogs",
+          "Quick reordering",
+          "Player sizes and preferences",
+          "Direct access to club agreements"
+        ]
+      },
+      "agreements": {
+        "title": "Smart Agreement Integration",
+        "subtitle": "Your negotiated prices - always up to date",
+        "features": [
+          "Pre-loaded prices",
+          "Automatic volume discounts",
+          "No hidden costs",
+          "Product recommendations"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Why choose us?",
+      "subtitle": "See the difference between traditional ordering and our digital solution",
+      "traditional": "Traditional method",
+      "ourSystem": "Our system",
+      "rows": {
+        "ordering": {
+          "label": "Ordering",
+          "traditional": "Excel sheets via email",
+          "modern": "Online portal 24/7"
+        },
+        "pricing": {
+          "label": "Pricing",
+          "traditional": "Manually updated lists",
+          "modern": "Real-time prices from agreements"
+        },
+        "tracking": {
+          "label": "Tracking",
+          "traditional": "Email back and forth",
+          "modern": "Live order status"
+        },
+        "approval": {
+          "label": "Approval",
+          "traditional": "Unclear processes",
+          "modern": "Automatic workflow"
+        },
+        "history": {
+          "label": "History",
+          "traditional": "Scattered in emails",
+          "modern": "Complete order log"
+        }
+      }
+    },
+    "roi": {
+      "title": "Free up time for what matters most",
+      "subtitle": "Less administration, more sport",
+      "stats": {
+        "timeSaved": {
+          "value": "75%",
+          "label": "Less time on administration"
+        },
+        "errorReduction": {
+          "value": "90%",
+          "label": "Fewer order errors"
+        },
+        "fasterDelivery": {
+          "value": "2-3 days",
+          "label": "Faster delivery time"
+        },
+        "satisfaction": {
+          "value": "100%",
+          "label": "Satisfaction among pilot customers"
+        }
+      }
+    },
+    "demoBooking": {
+      "title": "See the system in action",
+      "subtitle": "Book a free demo and see how it can transform your club",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "club": "Club name",
+        "phone": "Phone",
+        "message": "Message (optional)",
+        "submit": "Book demo"
+      }
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Let's talk about your club's future",
+      "subtitle": "We're ready to help you revolutionize your equipment management"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": {
+        "label": "Address",
+        "line1": "B2BSport A/S",
+        "line2": "Rødovrevej 151",
+        "line3": "2610 Rødovre"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "+45 30 50 79 15"
+      },
+      "email": {
+        "label": "Email",
+        "value": "contact@b2bsport.dk"
+      },
+      "hours": {
+        "label": "Business Hours",
+        "weekdays": "Monday - Friday: 8:00 AM - 4:00 PM",
+        "weekend": "Weekend: Closed"
+      }
+    },
+    "inquiry": {
+      "title": "Send us a message",
+      "subtitle": "Have questions or want to learn more? Fill out the form below.",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "club": "Club/Organization (optional)",
+        "message": "Message",
+        "submit": "Send message",
+        "submitting": "Sending..."
+      }
+    },
+    "demoBooking": {
+      "title": "Book a personal demo",
+      "subtitle": "See how our system can transform your club - book a free demo.",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "club": "Club/Organization",
+        "preferredDate": "Preferred date",
+        "preferredTime": "Preferred time",
+        "memberCount": "Number of club members",
+        "sports": "Primary sports",
+        "currentMethod": "Current ordering method",
+        "requirements": "Specific requirements or questions (optional)",
+        "submit": "Book demo",
+        "submitting": "Booking...",
+        "methodOptions": {
+          "excel": "Excel and email",
+          "phone": "Phone/SMS",
+          "paper": "Paper forms",
+          "other": "Other"
+        }
+      }
+    },
+    "success": {
+      "title": "Thank you for your inquiry!",
+      "message": "We've received your message and will get back to you within 24 hours.",
+      "backToHome": "Back to home"
+    },
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email address",
+      "invalidPhone": "Please enter a valid phone number",
+      "submitError": "An error occurred. Please try again."
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "B2BSport",
+      "description": "Denmark's first fully digital platform for ordering sports equipment. We make it easy to be a sports club."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "home": "Home",
+      "about": "About",
+      "clubSystem": "Club System",
+      "contact": "Contact"
+    },
+    "sports": {
+      "title": "Sports",
+      "football": "Football",
+      "golf": "Golf",
+      "tennis": "Tennis",
+      "basketball": "Basketball"
+    },
+    "contact": {
+      "title": "Contact",
+      "phone": "+45 30 50 79 15",
+      "email": "contact@b2bsport.dk",
+      "address": "Rødovrevej 151, 2610 Rødovre"
+    },
+    "bottom": {
+      "copyright": "© 2025 B2BSport A/S. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms and Conditions"
+    }
+  },
+  "sportsPage": {
+    "hero": {
+      "subtitle": "Complete equipment solution for"
+    },
+    "products": {
+      "title": "Our products for",
+      "teamWear": {
+        "title": "Team Wear",
+        "description": "Complete clothing sets with club logo and personalization. From jerseys to socks - everything you need."
+      },
+      "trainingGear": {
+        "title": "Training Equipment",
+        "description": "Professional equipment for training. Cones, balls, bibs and much more for effective training."
+      },
+      "accessories": {
+        "title": "Accessories",
+        "description": "All the extras that make the difference. Bags, water bottles, first aid equipment and more."
+      },
+      "customization": {
+        "title": "Customization",
+        "description": "Make it personal with names, numbers and club logo. Professional printing and embroidery."
+      }
+    },
+    "benefits": {
+      "title": "Why clubs choose us",
+      "digitalOrdering": {
+        "title": "100% Digital ordering",
+        "description": "No more Excel sheets. Order everything online with your pre-loaded prices."
+      },
+      "fastDelivery": {
+        "title": "Fast delivery",
+        "description": "2-3 day delivery on stock items. Always updated inventory status."
+      },
+      "clubAgreements": {
+        "title": "Club agreements",
+        "description": "Your prices are already negotiated and loaded. No surprises."
+      },
+      "support": {
+        "title": "Dedicated support",
+        "description": "Personal advice from experts who know your sport."
+      }
+    },
+    "cta": {
+      "title": "Ready to digitalize your equipment management?",
+      "subtitle": "Book a demo and see how we can help your club",
+      "button": "Book demo for",
+      "contact": "Contact us"
+    },
+    "brands": {
+      "title": "We work with the best brands",
+      "subtitle": "Quality equipment from recognized manufacturers"
+    }
+  },
+  "notFound": {
+    "title": "404 - Page not found",
+    "heading": "Oops! This page doesn't exist",
+    "message": "Sorry, but the page you're looking for doesn't exist or has been moved.",
+    "backToHome": "Back to home",
+    "contactUs": "Contact us"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "heading": "Sorry, an error occurred",
+    "message": "We're working on fixing the problem. Please try again later.",
+    "tryAgain": "Try again",
+    "backToHome": "Back to home"
+  },
+  "productConfigurator": {
+    "title": "Design your gear",
+    "subtitle": "Personalize your team wear with name, number and club logo",
+    "productType": {
+      "label": "Select product type",
+      "jersey": "Jersey",
+      "shorts": "Shorts",
+      "socks": "Socks",
+      "tracksuit": "Tracksuit",
+      "jacket": "Jacket"
+    },
+    "color": {
+      "label": "Select color",
+      "primary": "Primary color",
+      "secondary": "Secondary color"
+    },
+    "personalization": {
+      "label": "Personalization",
+      "playerName": "Player name",
+      "playerNumber": "Player number",
+      "addLogo": "Add club logo",
+      "position": {
+        "label": "Logo position",
+        "chest": "Chest",
+        "sleeve": "Sleeve",
+        "back": "Back"
+      }
+    },
+    "quantity": {
+      "label": "Quantity",
+      "sizes": "Sizes",
+      "xs": "XS",
+      "s": "S",
+      "m": "M",
+      "l": "L",
+      "xl": "XL",
+      "xxl": "XXL"
+    },
+    "preview": {
+      "front": "Front",
+      "back": "Back",
+      "rotate": "Rotate view"
+    },
+    "actions": {
+      "reset": "Start over",
+      "getQuote": "Get quote",
+      "addToInquiry": "Add to inquiry",
+      "contactMessage": "We'll contact you within 24 hours with a quote"
+    }
+  }
+}

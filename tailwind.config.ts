@@ -1,0 +1,92 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'semantic': {
+          'brand': {
+            'default': 'var(--semantic-brand-primary)',
+            'hover': 'var(--semantic-brand-primary-hover)',
+            'light': 'var(--semantic-brand-primary-subtle)',
+            'dark': 'var(--semantic-brand-secondary)',
+            'accent': 'var(--semantic-brand-accent)',
+          },
+          'background': {
+            'primary': 'var(--semantic-bg-primary)',
+            'secondary': 'var(--semantic-bg-secondary)',
+            'elevated': 'var(--semantic-bg-elevated)',
+            'alt': 'var(--semantic-bg-section-alt)',
+            'light': 'var(--semantic-bg-section-light)',
+            'overlay': 'var(--semantic-bg-overlay)',
+          },
+          'surface': {
+            'primary': 'var(--semantic-surface-primary)',
+            'secondary': 'var(--semantic-surface-secondary)',
+            'elevated': 'var(--semantic-surface-elevated)',
+            'brand': 'var(--semantic-surface-brand)',
+            'accent': 'var(--semantic-surface-accent)',
+          },
+          'text': {
+            'primary': 'var(--semantic-text-primary)',
+            'secondary': 'var(--semantic-text-secondary)',
+            'tertiary': 'var(--semantic-text-tertiary)',
+            'on-brand': 'var(--semantic-text-on-brand)',
+            'on-accent': 'var(--semantic-text-on-accent)',
+            'link': 'var(--semantic-text-link)',
+            'disabled': 'var(--semantic-text-disabled)',
+          },
+          'border': {
+            'DEFAULT': 'var(--semantic-border-default)',
+            'subtle': 'var(--semantic-border-subtle)',
+            'strong': 'var(--semantic-border-strong)',
+            'brand': 'var(--semantic-border-brand)',
+            'accent': 'var(--semantic-border-accent)',
+          },
+          'state': {
+            'success': 'var(--semantic-state-success)',
+            'success-bg': 'var(--semantic-state-success-bg)',
+            'success-text': 'var(--semantic-state-success-text)',
+            'warning': 'var(--semantic-state-warning)',
+            'warning-bg': 'var(--semantic-state-warning-bg)',
+            'warning-text': 'var(--semantic-state-warning-text)',
+            'error': 'var(--semantic-state-error)',
+            'error-bg': 'var(--semantic-state-error-bg)',
+            'error-text': 'var(--semantic-state-error-text)',
+            'info': 'var(--semantic-state-info)',
+            'info-bg': 'var(--semantic-state-info-bg)',
+            'info-text': 'var(--semantic-state-info-text)',
+          },
+          'on-brand': 'var(--semantic-text-on-brand)',
+          'success': 'var(--semantic-feedback-success)',
+          'warning': 'var(--semantic-feedback-warning)',
+          'error': 'var(--semantic-feedback-error)',
+        }
+      },
+      fontFamily: {
+        display: ['var(--font-baloo)'],
+        body: ['var(--font-open-sans)'],
+      },
+      fontSize: {
+        'display-2xl': ['var(--typography-display-2xl-size)', { lineHeight: 'var(--typography-display-2xl-line-height)' }],
+        'display-xl': ['var(--typography-display-xl-size)', { lineHeight: 'var(--typography-display-xl-line-height)' }],
+        'display-lg': ['var(--typography-display-lg-size)', { lineHeight: 'var(--typography-display-lg-line-height)' }],
+        'display-md': ['var(--typography-display-md-size)', { lineHeight: 'var(--typography-display-md-line-height)' }],
+        'display-sm': ['var(--typography-display-sm-size)', { lineHeight: 'var(--typography-display-sm-line-height)' }],
+        'display-xs': ['var(--typography-display-xs-size)', { lineHeight: 'var(--typography-display-xs-line-height)' }],
+        'body-xl': ['var(--typography-text-xl-size)', { lineHeight: 'var(--typography-text-xl-line-height)' }],
+        'body-lg': ['var(--typography-text-lg-size)', { lineHeight: 'var(--typography-text-lg-line-height)' }],
+        'body-md': ['var(--typography-text-md-size)', { lineHeight: 'var(--typography-text-md-line-height)' }],
+        'body-sm': ['var(--typography-text-sm-size)', { lineHeight: 'var(--typography-text-sm-line-height)' }],
+        'body-xs': ['var(--typography-text-xs-size)', { lineHeight: 'var(--typography-text-xs-line-height)' }],
+      },
+    },
+  },
+  plugins: [],
+}
+export default config

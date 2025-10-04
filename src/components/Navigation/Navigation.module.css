@@ -1,0 +1,133 @@
+.nav {
+  @apply sticky top-0 z-40;
+  @apply backdrop-blur-sm;
+  @apply border-b;
+  background-color: var(--semantic-surface-primary);
+  background-color: color-mix(in srgb, var(--semantic-surface-primary) 95%, transparent);
+  border-color: var(--semantic-border-subtle);
+}
+
+.navContainer {
+  @apply mx-auto max-w-7xl px-4 relative;
+}
+
+.navContent {
+  @apply flex items-center justify-between h-20;
+}
+
+.logoLink {
+  @apply absolute left-0 top-1/2 -translate-y-[40%] z-50 py-2;
+}
+
+.logo {
+  @apply h-24 w-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)];
+}
+
+.desktopNav {
+  @apply hidden lg:flex items-center gap-8 ml-auto;
+}
+
+.navList {
+  @apply flex gap-8 list-none m-0 p-0 ml-48;
+}
+
+.navLink {
+  @apply font-medium py-2 relative transition-colors;
+  color: var(--semantic-text-primary);
+}
+
+.navLink:hover {
+  color: var(--semantic-brand-default);
+}
+
+.navLinkActive {
+  color: var(--semantic-brand-default);
+}
+
+.navLinkActive::after {
+  @apply content-[''] absolute bottom-[-1px] left-0 right-0 h-[2px];
+  background-color: var(--semantic-brand-default);
+}
+
+.navActions {
+  @apply flex items-center gap-4;
+}
+
+.ctaButton {
+  @apply inline-flex items-center justify-center;
+  @apply rounded-md px-6 py-3;
+  @apply text-sm font-semibold;
+  @apply transition-colors;
+  background-color: var(--semantic-brand-default);
+  color: var(--semantic-text-on-brand);
+}
+
+.ctaButton:hover {
+  background-color: var(--semantic-brand-hover);
+}
+
+.mobileMenuButton {
+  @apply lg:hidden ml-auto p-2 rounded-md transition-colors;
+}
+
+.mobileMenuButton:hover {
+  background-color: var(--semantic-background-secondary);
+}
+
+.mobileMenuIcon {
+  @apply h-6 w-6;
+  color: var(--semantic-text-primary);
+}
+
+.mobileMenu {
+  @apply lg:hidden absolute top-full left-0 right-0;
+  @apply transform transition-all duration-300 ease-in-out;
+  @apply shadow-lg border-b;
+  background-color: var(--semantic-surface-primary);
+  border-color: var(--semantic-border-subtle);
+}
+
+.mobileMenuHidden {
+  @apply -translate-y-full opacity-0 pointer-events-none;
+}
+
+.mobileMenuVisible {
+  @apply translate-y-0 opacity-100;
+}
+
+.mobileMenuList {
+  @apply py-4 px-4 space-y-2;
+}
+
+.mobileNavLink {
+  @apply block px-4 py-3 rounded-md transition-colors;
+  @apply font-medium;
+  color: var(--semantic-text-primary);
+}
+
+.mobileNavLink:hover {
+  background-color: var(--semantic-background-secondary);
+}
+
+.mobileNavLinkActive {
+  background-color: var(--semantic-overlay-brand);
+  color: var(--semantic-brand-default);
+}
+
+.mobileCtaButton {
+  @apply w-full inline-flex items-center justify-center;
+  @apply rounded-md px-6 py-3;
+  @apply text-base font-semibold;
+  @apply transition-colors;
+  background-color: var(--semantic-brand-default);
+  color: var(--semantic-text-on-brand);
+}
+
+.mobileCtaButton:hover {
+  background-color: var(--semantic-brand-hover);
+}
+
+.languageSwitcherContainer {
+  @apply px-4 pb-4 border-t pt-4;
+  border-color: var(--semantic-border-subtle);
+}

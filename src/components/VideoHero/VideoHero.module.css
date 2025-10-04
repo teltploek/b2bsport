@@ -1,0 +1,33 @@
+.heroSection {
+  @apply relative overflow-hidden;
+  @apply bg-gradient-to-br from-semantic-brand-default to-semantic-brand-hover;
+  @apply py-16;
+}
+
+.videoBackground {
+  @apply absolute inset-0 w-full h-full object-cover;
+  @apply opacity-30;
+}
+
+.overlay {
+  @apply absolute inset-0;
+  @apply bg-black/50;
+}
+
+.content {
+  @apply relative z-10;
+}
+
+.contentContainer {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.title {
+  @apply text-5xl font-bold font-display text-center mb-6;
+  @apply text-white;
+}
+
+.subtitle {
+  @apply text-xl text-center max-w-3xl mx-auto;
+  @apply text-white/90;
+}

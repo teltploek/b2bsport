@@ -1,0 +1,53 @@
+.contactCTA {
+  @apply py-24 px-4 bg-semantic-background-alt;
+}
+
+.container {
+  @apply max-w-4xl mx-auto;
+}
+
+.content {
+  @apply text-center;
+}
+
+.title {
+  @apply text-4xl md:text-5xl font-bold font-display text-semantic-text-primary mb-6;
+}
+
+.subtitle {
+  @apply text-xl text-semantic-text-secondary mb-10;
+}
+
+.buttons {
+  @apply flex flex-col sm:flex-row gap-4 justify-center mb-12;
+}
+
+.primaryButton {
+  @apply inline-flex items-center justify-center gap-2 px-8 py-4 
+         text-lg font-semibold text-white bg-semantic-brand-default 
+         rounded-lg hover:bg-semantic-brand-hover transition-colors;
+}
+
+.secondaryButton {
+  @apply inline-flex items-center justify-center px-8 py-4 
+         text-lg font-semibold text-semantic-brand-default 
+         bg-white border-2 border-semantic-brand-default 
+         rounded-lg hover:bg-semantic-brand-light transition-colors;
+}
+
+.buttonIcon {
+  @apply w-5 h-5;
+}
+
+.quickContact {
+  @apply flex flex-col sm:flex-row gap-6 justify-center;
+}
+
+.contactItem {
+  @apply inline-flex items-center gap-2 text-semantic-text-secondary 
+         hover:text-semantic-brand-default transition-colors;
+}
+
+.contactIcon {
+  @apply w-5 h-5;
+}

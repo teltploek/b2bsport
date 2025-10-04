@@ -1,0 +1,278 @@
+
+:root {
+
+  --primitive-green-900: #022c16;
+  --primitive-green-800: #065f32;
+  --primitive-green-700: #059447;
+  --primitive-green-600: #16a34a;
+  --primitive-green-500: #22c55e;
+  --primitive-green-400: #4ade80;
+  --primitive-green-300: #86efac;
+  --primitive-green-200: #bbf7d0;
+  --primitive-green-100: #dcfce7;
+  --primitive-green-50: #f0fdf4;
+
+  --primitive-blue-900: #1e293b;
+  --primitive-blue-800: #1e40af;
+  --primitive-blue-700: #2563eb;
+  --primitive-blue-600: #3b82f6;
+  --primitive-blue-500: #60a5fa;
+  --primitive-blue-400: #93c5fd;
+  --primitive-blue-300: #bfdbfe;
+  --primitive-blue-200: #dbeafe;
+  --primitive-blue-100: #eff6ff;
+  --primitive-blue-50: #f0f9ff;
+
+  --primitive-amber-900: #451a03;
+  --primitive-amber-800: #78350f;
+  --primitive-amber-700: #92400e;
+  --primitive-amber-600: #d97706;
+  --primitive-amber-500: #f59e0b;
+  --primitive-amber-400: #fbbf24;
+  --primitive-amber-300: #fcd34d;
+  --primitive-amber-200: #fde68a;
+  --primitive-amber-100: #fef3c7;
+  --primitive-amber-50: #fffbeb;
+
+  --primitive-gray-900: #0f0f0f;
+  --primitive-gray-800: #1a1a1a;
+  --primitive-gray-700: #333333;
+  --primitive-gray-600: #4d4d4d;
+  --primitive-gray-500: #666666;
+  --primitive-gray-400: #808080;
+  --primitive-gray-300: #b3b3b3;
+  --primitive-gray-200: #e0e0e0;
+  --primitive-gray-100: #f0f0f0;
+  --primitive-gray-50: #fafafa;
+
+  --primitive-white: #ffffff;
+  --primitive-off-white: #fcfcfc;
+
+
+  --semantic-brand-primary: var(--primitive-green-600);
+  --semantic-brand-primary-hover: var(--primitive-green-700);
+  --semantic-brand-primary-active: var(--primitive-green-800);
+  --semantic-brand-primary-subtle: var(--primitive-green-100);
+  --semantic-brand-secondary: var(--primitive-blue-600);
+  --semantic-brand-secondary-hover: var(--primitive-blue-700);
+  --semantic-brand-secondary-active: var(--primitive-blue-800);
+  --semantic-brand-accent: var(--primitive-amber-500);
+  --semantic-brand-accent-hover: var(--primitive-amber-600);
+
+  --semantic-bg-primary: var(--primitive-white);
+  --semantic-bg-secondary: var(--primitive-gray-50);
+  --semantic-bg-tertiary: var(--primitive-green-50);
+  --semantic-bg-elevated: var(--primitive-white);
+  --semantic-bg-overlay: rgba(22, 163, 74, 0.85);
+  --semantic-bg-section-alt: #fafbfc;
+  --semantic-bg-section-light: var(--primitive-blue-50);
+  
+  --semantic-gradient-brand: linear-gradient(to bottom right, var(--primitive-white), var(--primitive-green-50));
+  --semantic-gradient-brand-intense: linear-gradient(to bottom right, var(--primitive-green-500), var(--primitive-green-700));
+  --semantic-gradient-surface: linear-gradient(to bottom, var(--primitive-gray-50), var(--primitive-white));
+  --semantic-gradient-accent: linear-gradient(to right, var(--primitive-amber-500), var(--primitive-amber-600));
+  
+  --semantic-overlay-light: rgba(255, 255, 255, 0.1);
+  --semantic-overlay-medium: rgba(255, 255, 255, 0.2);
+  --semantic-overlay-dark: rgba(0, 0, 0, 0.5);
+  --semantic-overlay-brand: rgba(22, 163, 74, 0.1);
+
+  --semantic-surface-primary: var(--primitive-white);
+  --semantic-surface-secondary: var(--primitive-gray-50);
+  --semantic-surface-elevated: var(--primitive-white);
+  --semantic-surface-brand: var(--primitive-green-600);
+  --semantic-surface-accent: var(--primitive-blue-600);
+
+  --semantic-text-primary: var(--primitive-gray-800);
+  --semantic-text-secondary: var(--primitive-gray-600);
+  --semantic-text-tertiary: var(--primitive-gray-400);
+  --semantic-text-subtle: var(--primitive-gray-300);
+  --semantic-text-brand: var(--primitive-green-700);
+  --semantic-text-accent: var(--primitive-blue-600);
+  --semantic-text-on-brand: var(--primitive-white);
+  --semantic-text-on-accent: var(--primitive-white);
+  --semantic-text-link: var(--primitive-blue-600);
+  --semantic-text-link-hover: var(--primitive-blue-700);
+
+  --semantic-border-default: var(--primitive-gray-200);
+  --semantic-border-subtle: var(--primitive-gray-100);
+  --semantic-border-strong: var(--primitive-gray-300);
+  --semantic-border-brand: var(--primitive-green-300);
+  --semantic-border-accent: var(--primitive-blue-300);
+
+  --semantic-state-hover: var(--primitive-gray-50);
+  --semantic-state-active: var(--primitive-gray-100);
+  --semantic-state-focus: var(--primitive-blue-500);
+  --semantic-state-disabled: var(--primitive-gray-100);
+
+  --semantic-state-success: var(--primitive-green-600);
+  --semantic-state-success-bg: var(--primitive-green-50);
+  --semantic-state-success-text: var(--primitive-green-800);
+  --semantic-state-warning: var(--primitive-amber-600);
+  --semantic-state-warning-bg: var(--primitive-amber-50);
+  --semantic-state-warning-text: var(--primitive-amber-800);
+  --semantic-state-error: #dc2626;
+  --semantic-state-error-bg: #fef2f2;
+  --semantic-state-error-text: #991b1b;
+  --semantic-state-info: var(--primitive-blue-600);
+  --semantic-state-info-bg: var(--primitive-blue-50);
+  --semantic-state-info-text: var(--primitive-blue-800);
+
+  --semantic-focus-outline: var(--primitive-blue-500);
+  --semantic-focus-outline-offset: 2px;
+  --semantic-focus-outline-width: 2px;
+
+  --semantic-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --semantic-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --semantic-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --semantic-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+
+  --component-button-primary-bg: var(--semantic-brand-primary);
+  --component-button-primary-bg-hover: var(--semantic-brand-primary-hover);
+  --component-button-primary-text: var(--semantic-text-on-brand);
+  --component-button-secondary-bg: transparent;
+  --component-button-secondary-border: var(--semantic-brand-primary);
+  --component-button-secondary-text: var(--semantic-brand-primary);
+  --component-button-secondary-bg-hover: var(--semantic-brand-primary);
+  --component-button-secondary-text-hover: var(--semantic-text-on-brand);
+  --component-button-cta-bg: var(--semantic-brand-accent);
+  --component-button-cta-bg-hover: var(--semantic-brand-accent-hover);
+  --component-button-cta-text: var(--primitive-white);
+  --component-button-radius: var(--radius-sm);
+
+  --component-card-bg: var(--semantic-surface-elevated);
+  --component-card-border: var(--semantic-border-subtle);
+  --component-card-shadow: var(--semantic-shadow-md);
+  --component-card-bg-hover: var(--semantic-surface-secondary);
+  --component-card-radius: var(--radius-md);
+
+  --component-nav-bg: var(--semantic-bg-primary);
+  --component-nav-border: var(--semantic-border-subtle);
+  --component-nav-link: var(--semantic-text-primary);
+  --component-nav-link-hover: var(--semantic-text-brand);
+  --component-nav-link-active: var(--semantic-text-brand);
+
+  --component-hero-bg: var(--semantic-bg-tertiary);
+  --component-hero-heading: var(--semantic-text-brand);
+  --component-hero-text: var(--semantic-text-primary);
+  --component-hero-accent: var(--semantic-brand-accent);
+
+  --component-footer-bg: var(--primitive-gray-900);
+  --component-footer-text: var(--primitive-gray-300);
+  --component-footer-link: var(--primitive-white);
+  --component-footer-border: var(--primitive-gray-700);
+
+  --component-form-bg: var(--semantic-bg-elevated);
+  --component-form-border: var(--semantic-border-default);
+  --component-form-focus: var(--semantic-state-focus);
+  --component-form-text: var(--semantic-text-primary);
+  --component-form-placeholder: var(--semantic-text-tertiary);
+  --component-form-radius: var(--radius-sm);
+
+  --component-badge-bg: var(--semantic-surface-secondary);
+  --component-badge-text: var(--semantic-text-secondary);
+  --component-badge-border: var(--semantic-border-subtle);
+  --component-badge-success-bg: var(--semantic-state-success-bg);
+  --component-badge-success-text: var(--semantic-state-success-text);
+  --component-badge-warning-bg: var(--semantic-state-warning-bg);
+  --component-badge-warning-text: var(--semantic-state-warning-text);
+  --component-badge-info-bg: var(--semantic-state-info-bg);
+  --component-badge-info-text: var(--semantic-state-info-text);
+  --component-badge-radius: var(--radius-full);
+
+  --component-sports-grid-bg: var(--semantic-surface-primary);
+  --component-sports-grid-hover: var(--primitive-green-50);
+  --component-sports-grid-border: var(--primitive-gray-200);
+  --component-sports-grid-icon: var(--semantic-text-brand);
+  --component-sports-grid-radius: var(--radius-md);
+
+  --component-club-system-bg: var(--semantic-bg-secondary);
+  --component-club-system-accent: var(--semantic-brand-primary);
+  --component-club-system-text: var(--semantic-text-primary);
+  --component-club-system-highlight: var(--semantic-brand-accent);
+
+  
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-32: 8rem;
+
+  
+  --font-family-body: var(--font-open-sans), sans-serif;
+  --font-family-display: var(--font-ubuntu), sans-serif;
+  
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-display: clamp(2.5rem, 5vw + 1rem, 4rem);
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  
+  --max-width-xs: 20rem;
+  --max-width-sm: 24rem;
+  --max-width-md: 28rem;
+  --max-width-lg: 32rem;
+  --max-width-xl: 36rem;
+  --max-width-2xl: 42rem;
+  --max-width-3xl: 48rem;
+  --max-width-4xl: 56rem;
+  --max-width-5xl: 64rem;
+  --max-width-6xl: 72rem;
+  --max-width-7xl: 80rem;
+  
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.375rem;
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.75rem;
+  --radius-full: 9999px;
+
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  
+  --semantic-bg-subtle: var(--primitive-green-50);
+  --semantic-accent-default: var(--primitive-amber-500);
+  --semantic-accent-emphasis: var(--primitive-amber-600);
+  --semantic-accent-subtle: var(--primitive-amber-100);
+  --semantic-error-default: #dc2626;
+  --semantic-error-subtle: #fee2e2;
+  --semantic-success-default: var(--primitive-green-600);
+  --semantic-success-subtle: var(--primitive-green-50);
+  --semantic-success-emphasis: var(--primitive-green-700);
+}

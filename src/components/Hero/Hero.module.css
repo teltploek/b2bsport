@@ -1,0 +1,114 @@
+.hero {
+  @apply relative overflow-hidden;
+  @apply min-h-[600px] md:min-h-[700px];
+  @apply flex items-center;
+  @apply py-24 pb-16 md:py-32 md:pb-24;
+  background: var(--semantic-gradient-brand-intense);
+}
+
+.videoBackground {
+  @apply absolute inset-0 w-full h-full object-cover;
+  @apply opacity-30;
+}
+
+.overlay {
+  @apply absolute inset-0;
+  background: var(--semantic-overlay-dark);
+}
+
+.heroContainer {
+  @apply relative z-10;
+  @apply mx-auto max-w-7xl px-4;
+}
+
+.content {
+  @apply max-w-3xl mx-auto text-center;
+}
+
+.badge {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6;
+  @apply text-sm font-semibold;
+  background: var(--semantic-overlay-light);
+  @apply backdrop-blur-md;
+  @apply border-2;
+  border-color: var(--semantic-overlay-medium);
+  color: var(--semantic-text-on-brand);
+}
+
+.title {
+  @apply font-display text-5xl sm:text-6xl lg:text-7xl;
+  @apply font-black tracking-tight leading-[1.1];
+  @apply mb-6;
+  color: var(--semantic-text-on-brand);
+  @apply drop-shadow-2xl;
+}
+
+.subtitle {
+  @apply text-xl sm:text-2xl lg:text-3xl;
+  @apply font-light mb-8;
+  color: var(--semantic-text-on-brand);
+  @apply opacity-90;
+}
+
+.description {
+  @apply text-lg lg:text-xl mb-10;
+  color: var(--semantic-text-on-brand);
+  @apply opacity-80 max-w-2xl mx-auto;
+}
+
+.ctaGroup {
+  @apply flex flex-col sm:flex-row gap-4 justify-center items-center;
+}
+
+.ctaPrimary {
+  @apply inline-flex items-center justify-center;
+  @apply px-8 py-4 rounded-md;
+  @apply text-lg font-bold;
+  @apply shadow-xl transform transition-all duration-200;
+  @apply hover:-translate-y-0.5 hover:shadow-2xl;
+  background: var(--semantic-brand-accent);
+  color: var(--semantic-text-on-accent);
+}
+
+.ctaPrimary:hover {
+  background: var(--semantic-brand-accent-hover);
+}
+
+.ctaSecondary {
+  @apply inline-flex items-center justify-center;
+  @apply px-8 py-4 rounded-md;
+  @apply text-lg font-bold;
+  @apply transform transition-all duration-200;
+  @apply hover:-translate-y-0.5;
+  background: var(--semantic-overlay-light);
+  @apply backdrop-blur-md;
+  @apply border-2;
+  border-color: var(--semantic-overlay-medium);
+  color: var(--semantic-text-on-brand);
+}
+
+.ctaSecondary:hover {
+  background: var(--semantic-overlay-medium);
+  border-color: var(--semantic-text-on-brand);
+}
+
+.features {
+  @apply mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8;
+  @apply max-w-3xl mx-auto;
+}
+
+.feature {
+  @apply text-center;
+}
+
+.featureIcon {
+  @apply w-12 h-12 mx-auto mb-3;
+  color: var(--semantic-brand-accent);
+  @apply drop-shadow-lg;
+}
+
+.featureText {
+  @apply text-sm font-medium;
+  color: var(--semantic-text-on-brand);
+  @apply opacity-90;
+}

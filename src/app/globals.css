@@ -1,0 +1,104 @@
+@import '../styles/design-tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+  }
+
+  body {
+    @apply bg-semantic-background-primary text-semantic-text-primary;
+  }
+}
+
+@layer components {
+  .container-dynamic {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .bg-section-primary {
+    background-color: var(--semantic-bg-primary);
+  }
+
+  .bg-section-secondary {
+    background-color: var(--semantic-bg-secondary);
+  }
+
+  .bg-section-alt {
+    background-color: var(--semantic-bg-section-alt);
+  }
+
+  .bg-section-light {
+    background-color: var(--semantic-bg-section-light);
+  }
+
+  .button-base {
+    @apply inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .button-primary {
+    @apply button-base bg-semantic-brand-default text-semantic-on-brand hover:bg-semantic-brand-hover focus:ring-semantic-brand-default;
+  }
+
+  .button-secondary {
+    @apply button-base bg-transparent text-semantic-brand-default border-2 border-semantic-brand-default hover:bg-semantic-brand-light focus:ring-semantic-brand-default;
+  }
+
+  .button-primary-inverted {
+    @apply button-base bg-white text-semantic-brand-default hover:bg-gray-100 focus:ring-white;
+  }
+
+  .button-secondary-inverted {
+    @apply button-base bg-transparent text-white border-2 border-white hover:bg-white hover:text-semantic-brand-default focus:ring-white;
+  }
+
+  .card-base {
+    @apply bg-white rounded-lg shadow-sm border border-semantic-border;
+  }
+
+  .card-hover {
+    @apply hover:shadow-md hover:border-semantic-brand-default transition-all duration-200 cursor-pointer;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-semantic-border rounded-md focus:outline-none focus:ring-2 focus:ring-semantic-brand-default focus:border-transparent;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-semantic-text-primary mb-1;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-semantic-brand-default to-semantic-brand-hover bg-clip-text text-transparent;
+  }
+
+  .grid-auto-fit {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+
+  .sport-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--semantic-shadow-lg);
+    background: var(--component-sports-grid-hover) !important;
+    border-color: var(--semantic-border-brand) !important;
+  }
+
+  .sport-icon {
+    color: var(--component-sports-grid-icon);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: all 0.2s ease;
+  }
+
+  .sport-card:hover .sport-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  }
+}

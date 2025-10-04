@@ -1,0 +1,601 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "whatWeDo": "Was wir machen",
+    "sports": "Sportarten",
+    "contact": "Kontakt",
+    "demo": "Demo buchen",
+    "clubSystem": "Klubsystem"
+  },
+  "hero": {
+    "title": "Ganz Dänemarks Vereinspartner",
+    "subtitle": "Wir bauen eine digitale Lösung für Sportausrüstungsbestellungen",
+    "cta": "Kontakt aufnehmen"
+  },
+  "valueProposition": {
+    "title": "Ein einfacherer Weg, Vereinsausrüstung zu bestellen",
+    "subtitle": "Wir arbeiten daran, Sportausrüstungsbestellungen digital und einfach zu machen. Keine Excel-Tabellen, E-Mails hin und her und zeitaufwändige Verwaltung mehr.",
+    "mainCTA": "So machen wir es",
+    "features": {
+      "digital": {
+        "title": "100% Digital",
+        "description": "Alles an einem Ort - Bestellungen, Mitglieder, Budgets"
+      },
+      "time": {
+        "title": "Zeit sparen",
+        "description": "Vereinfachte Bestellung und Genehmigung"
+      },
+      "accuracy": {
+        "title": "Weniger Fehler",
+        "description": "Klare Vereinbarungen und einfache Validierung"
+      },
+      "support": {
+        "title": "Volle Unterstützung",
+        "description": "Wir helfen Ihnen vom Anfang bis zum Ende"
+      }
+    }
+  },
+  "team": {
+    "title": "Das Team kennenlernen",
+    "subtitle": "Ein engagiertes Team von Experten, das daran arbeitet, die Sportausrüstungsbranche zu revolutionieren",
+    "roles": {
+      "clubConsultant": "Vereinsberater",
+      "projectAssistant": "Projektassistent & Vertriebsunterstützung",
+      "marketing": "Marketing",
+      "it": "IT",
+      "accounting": "Buchhaltung",
+      "ceo": "Geschäftsführer",
+      "chairman": "Vorstandsvorsitzender"
+    }
+  },
+  "contactCTA": {
+    "title": "Bereit, Ihre Vereinsverwaltung zu revolutionieren?",
+    "subtitle": "Lassen Sie uns zeigen, wie Sie Zeit und Geld bei der Vereinsausrüstung sparen können",
+    "primaryCTA": "Demo buchen",
+    "secondaryCTA": "Kontakt aufnehmen",
+    "phone": "+45 69 15 35 45",
+    "email": "info@b2bsport.dk"
+  },
+  "clubSystem": {
+    "title": "Die Zukunft der Sportausrüstungsbestellung",
+    "subtitle": "Während andere Excel und E-Mail verwenden, bieten wir eine komplette digitale Lösung",
+    "benefits": {
+      "realtime": "Verfolgen Sie Ihre Bestellungen in Echtzeit",
+      "agreements": "Ihre Vereinbarungen sind bereits geladen",
+      "simple": "Füllen Sie nur die leeren Felder aus"
+    },
+    "comparison": {
+      "before": "Vorher: Excel-Chaos und E-Mail-Ping-Pong",
+      "after": "Jetzt: Alles an einem Ort mit voller Kontrolle"
+    },
+    "stats": {
+      "timeSaved": "75% weniger Zeit für Verwaltung",
+      "errorReduction": "90% weniger Bestellfehler",
+      "clubs": "50+ Vereine nutzen es bereits",
+      "satisfaction": "4,9/5 Kundenzufriedenheit"
+    }
+  },
+  "cta": {
+    "getStarted": "Loslegen",
+    "bookDemo": "Demo buchen",
+    "learnMore": "Mehr über das System erfahren"
+  },
+  "sports": {
+    "title": "Wir liefern für alle Sportarten",
+    "subtitle": "Vereine, Verbände und Internate - wir liefern für alle Sportarten"
+  },
+  "whatWeDoPage": {
+    "hero": {
+      "title": "Ihr Verein verdient Besseres",
+      "subtitle": "Beseitigen Sie zeitaufwändige Verwaltung und gewinnen Sie mehr Zeit für das, was wirklich zählt - Ihren Sport"
+    },
+    "mission": {
+      "title": "Endlich eine moderne Lösung",
+      "subtitle": "Tausende von Stunden werden jedes Jahr mit manueller Ausrüstungsverwaltung verschwendet. Das endet jetzt.",
+      "points": {
+        "saveTime": {
+          "title": "Jede Woche Zeit sparen",
+          "description": "Kein Copy-Paste mehr zwischen E-Mails und Excel-Tabellen"
+        },
+        "rightPrices": {
+          "title": "Immer die richtigen Preise",
+          "description": "Ihre Vereinbarungen sind bereits vorhanden - keine Überraschungen"
+        },
+        "trackEverything": {
+          "title": "Alles im Blick behalten",
+          "description": "Von Mitgliederwünschen bis zu Lieferungen - alles an einem Ort"
+        }
+      }
+    },
+    "differentiator": {
+      "title": "Sehen Sie selbst den Unterschied",
+      "subtitle": "Warum Stunden mit etwas verbringen, das Minuten dauern könnte?",
+      "currentWay": "So machen Sie es jetzt",
+      "ourWay": "So könnte es sein",
+      "comparison": {
+        "excelChaos": "Excel-Tabellen hin und her geschickt",
+        "emailPingPong": "Endlose E-Mail-Threads über Bestellungen",
+        "manualPrices": "Manuelle Preisaktualisierungen",
+        "uncertainDelivery": "Unsicherheit über Lieferzeiten",
+        "lostOrders": "Bestellungen gehen im Posteingang verloren",
+        "oneSystem": "Ein System für alles",
+        "instantOrders": "Direkt mit Vereinspreisen bestellen",
+        "automaticUpdates": "Automatische Updates",
+        "trackDelivery": "Lieferungen in Echtzeit verfolgen",
+        "completeOverview": "Immer vollständiger Überblick"
+      }
+    },
+    "goToMarket": {
+      "title": "Bereit für die Zukunft?",
+      "subtitle": "Starten Sie heute Ihre digitale Transformation",
+      "description": "Wir arbeiten daran, es einfach zu machen, ein Sportverein zu sein. Kontaktieren Sie uns, um zu erfahren, wie wir Ihnen helfen können.",
+      "cta": "Kontakt aufnehmen"
+    }
+  },
+  "contactInfo": {
+    "title": "Kontakt",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "openingHours": "Öffnungszeiten",
+    "weekdays": "Montag - Freitag: 10:00 - 18:00 Uhr",
+    "weekend": "Wochenende: Geschlossen",
+    "company": "Unternehmen",
+    "companyName": "B2B Sport & Promotion Group ApS",
+    "cvr": "USt-IdNr.: 40279695",
+    "followUs": "Folgen Sie uns",
+    "offices": {
+      "sjaelland": {
+        "name": "Seeland Büro",
+        "type": "Hauptsitz",
+        "address1": "Rødovrevej 151",
+        "address2": "2610 Rødovre",
+        "serves": "Betreut: Kopenhagen und Umgebung"
+      },
+      "jylland": {
+        "name": "Jütland & Fünen Büro",
+        "type": "Regionalbüro",
+        "address1": "Industrivej 41",
+        "address2": "6760 Ribe",
+        "serves": "Betreut: Jütland und Fünen"
+      }
+    }
+  },
+  "about": {
+    "title": "Über B2BSport",
+    "subtitle": "Wir digitalisieren die Sportausrüstungsbranche"
+  },
+  "brands": {
+    "title": "Wir arbeiten mit den Besten",
+    "subtitle": "Qualitätsmarken und zuverlässige Lieferanten"
+  },
+  "testimonials": {
+    "title": "Was unsere Vereine sagen",
+    "subtitle": "Hören Sie von Vereinen, die ihre Ausrüstungsverwaltung bereits revolutioniert haben",
+    "items": [
+      {
+        "quote": "Wir haben mindestens 10 Stunden pro Monat an Verwaltung eingespart. Jetzt können sich unsere Trainer auf das konzentrieren, was sie am besten können - trainieren!",
+        "author": "Lars Andersen",
+        "role": "Vereinsvorsitzender",
+        "club": "Øresund Fußballverein"
+      },
+      {
+        "quote": "Endlich haben wir unser Budget unter Kontrolle! Das System gibt uns volle Kontrolle und keine unerwarteten Kosten.",
+        "author": "Maria Christensen",
+        "role": "Schatzmeisterin",
+        "club": "Sønderjysk Basketball"
+      },
+      {
+        "quote": "Es ist so einfach! Ich kann neue Ausrüstung in 5 Minuten bestellen, und alle Preise sind bereits verhandelt und geladen.",
+        "author": "Thomas Nielsen",
+        "role": "Trainer",
+        "club": "Midtjylland Handball"
+      }
+    ]
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "Die digitale Revolution in der Sportausrüstung",
+      "subtitle": "Wir transformieren eine traditionelle Branche mit moderner Technologie und benutzerfreundlichen Lösungen"
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "content": "Wir haben es uns zur Aufgabe gemacht, zu revolutionieren, wie Sportvereine ihre Ausrüstung bestellen und verwalten. Durch unseren IT-getriebenen Ansatz eliminieren wir Zeitverschwendung, reduzieren Fehler und geben Vereinen volle Kontrolle über ihre Ausrüstungsbedürfnisse."
+    },
+    "story": {
+      "title": "Von Frustration zu Innovation",
+      "intro": "Alles begann mit einer einfachen Beobachtung: Warum sollten Vereine im Jahr 2025 immer noch Excel-Tabellen per E-Mail hin und her schicken, um Sportausrüstung zu bestellen?",
+      "problem": "Wir sahen Trainer, die Stunden mit Verwaltung statt mit Training verbrachten. Wir sahen Vereinsmanager, die mit unübersichtlichen Budgets kämpften. Wir sahen Lieferanten, die in E-Mails und manuellen Prozessen ertranken.",
+      "solution": "Also haben wir die Lösung gebaut: Dänemarks erste vollständig digitale Plattform für die Bestellung von Sportausrüstung. Eine Plattform, die es einfach macht, ein Verein, Trainer und Lieferant zu sein."
+    },
+    "approach": {
+      "title": "IT-getrieben, aber menschenzentriert",
+      "subtitle": "Unser Ansatz kombiniert das Beste aus beiden Welten",
+      "points": {
+        "technology": {
+          "title": "Moderne Technologie",
+          "description": "Wir nutzen die neuesten Technologien, um eine schnelle, sichere und zuverlässige Plattform zu gewährleisten"
+        },
+        "userFriendly": {
+          "title": "Benutzerfreundliches Design",
+          "description": "Jeder kann unser System nutzen - keine technische Expertise erforderlich"
+        },
+        "realtime": {
+          "title": "Echtzeit-Updates",
+          "description": "Sehen Sie Bestellstatus, Lagerbestand und Preise in Echtzeit aktualisiert"
+        },
+        "integration": {
+          "title": "Einfache Integration",
+          "description": "Unser System integriert sich nahtlos in bestehende Vereinssysteme"
+        }
+      }
+    },
+    "benefits": {
+      "title": "Vorteile unserer digitalen Plattform",
+      "list": [
+        "Sparen Sie 75% der Zeit bei der Verwaltung",
+        "Reduzieren Sie Bestellfehler um bis zu 90%",
+        "Erhalten Sie volle Kontrolle über die Vereinsfinanzen",
+        "Geben Sie Trainern mehr Zeit zum Trainieren",
+        "Verfolgen Sie alle Bestellungen in Echtzeit",
+        "Erhalten Sie automatische Erinnerungen und Benachrichtigungen"
+      ]
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "transparency": {
+        "title": "Transparenz",
+        "description": "Keine versteckten Gebühren, keine Überraschungen. Alles ist von Anfang an klar."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Wir hinterfragen ständig den Status quo, um bessere Lösungen zu finden."
+      },
+      "partnership": {
+        "title": "Partnerschaft",
+        "description": "Wir sehen uns als Ihren Partner, nicht nur als Lieferanten."
+      },
+      "simplicity": {
+        "title": "Einfachheit",
+        "description": "Komplexe Probleme erfordern keine komplexen Lösungen."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihren Verein zu revolutionieren?",
+      "subtitle": "Schließen Sie sich den Vereinen an, die bereits den Sprung in die Zukunft gemacht haben",
+      "button": "Demo heute buchen"
+    }
+  },
+  "clubSystemPage": {
+    "hero": {
+      "title": "Das Klubsystem, das alles verändert",
+      "subtitle": "Sehen Sie, wie wir die Bestellung von Sportausrüstung mit Dänemarks erster vollständig digitaler Plattform revolutioniert haben",
+      "cta": "Persönliche Demo buchen"
+    },
+    "features": {
+      "title": "Alles, was Sie brauchen - an einem Ort",
+      "subtitle": "Unsere Plattform gibt Ihnen volle Kontrolle über Ausrüstung, Finanzen und Mitglieder Ihres Clubs",
+      "superAdmin": {
+        "title": "Super Admin Portal",
+        "subtitle": "Für Clubmanager und Vorstände",
+        "features": [
+          "Vollständige Mitgliederdatenbank",
+          "Budget- und Genehmigungsworkflows",
+          "Multi-Team-Organisation",
+          "Historische Bestelldaten"
+        ]
+      },
+      "staffAdmin": {
+        "title": "Staff Admin Portal",
+        "subtitle": "Für Trainer und Teamleiter",
+        "features": [
+          "Gefilterte Produktkataloge",
+          "Schnelle Nachbestellung",
+          "Spielergrößen und Präferenzen",
+          "Direkter Zugang zu Clubvereinbarungen"
+        ]
+      },
+      "agreements": {
+        "title": "Intelligente Vertragsintegration",
+        "subtitle": "Ihre ausgehandelten Preise - immer aktuell",
+        "features": [
+          "Vorgeladene Preise",
+          "Automatische Mengenrabatte",
+          "Keine versteckten Kosten",
+          "Produktempfehlungen"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Warum uns wählen?",
+      "subtitle": "Sehen Sie den Unterschied zwischen traditioneller Bestellung und unserer digitalen Lösung",
+      "traditional": "Traditionelle Methode",
+      "ourSystem": "Unser System",
+      "rows": {
+        "ordering": {
+          "label": "Bestellung",
+          "traditional": "Excel-Tabellen per E-Mail",
+          "modern": "Online-Portal 24/7"
+        },
+        "pricing": {
+          "label": "Preise",
+          "traditional": "Manuell aktualisierte Listen",
+          "modern": "Echtzeitpreise aus Vereinbarungen"
+        },
+        "tracking": {
+          "label": "Verfolgung",
+          "traditional": "E-Mail hin und her",
+          "modern": "Live-Bestellstatus"
+        },
+        "approval": {
+          "label": "Genehmigung",
+          "traditional": "Unklare Prozesse",
+          "modern": "Automatischer Workflow"
+        },
+        "history": {
+          "label": "Historie",
+          "traditional": "In E-Mails verstreut",
+          "modern": "Vollständiges Bestellprotokoll"
+        }
+      }
+    },
+    "roi": {
+      "title": "Mehr Zeit für das Wesentliche",
+      "subtitle": "Weniger Verwaltung, mehr Sport",
+      "stats": {
+        "timeSaved": {
+          "value": "75%",
+          "label": "Weniger Zeit für Verwaltung"
+        },
+        "errorReduction": {
+          "value": "90%",
+          "label": "Weniger Bestellfehler"
+        },
+        "fasterDelivery": {
+          "value": "2-3 Tage",
+          "label": "Schnellere Lieferzeit"
+        },
+        "satisfaction": {
+          "value": "100%",
+          "label": "Zufriedenheit bei Pilotkunden"
+        }
+      }
+    },
+    "demoBooking": {
+      "title": "Sehen Sie das System in Aktion",
+      "subtitle": "Buchen Sie eine kostenlose Demo und sehen Sie, wie es Ihren Club transformieren kann",
+      "form": {
+        "name": "Name",
+        "email": "E-Mail",
+        "club": "Clubname",
+        "phone": "Telefon",
+        "message": "Nachricht (optional)",
+        "submit": "Demo buchen"
+      }
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Sprechen wir über die Zukunft Ihres Vereins",
+      "subtitle": "Wir sind bereit, Ihnen bei der Revolutionierung Ihrer Ausrüstungsverwaltung zu helfen"
+    },
+    "info": {
+      "title": "Kontaktinformationen",
+      "address": {
+        "label": "Adresse",
+        "line1": "B2BSport A/S",
+        "line2": "Rødovrevej 151",
+        "line3": "2610 Rødovre"
+      },
+      "phone": {
+        "label": "Telefon",
+        "value": "+45 30 50 79 15"
+      },
+      "email": {
+        "label": "E-Mail",
+        "value": "kontakt@b2bsport.dk"
+      },
+      "hours": {
+        "label": "Geschäftszeiten",
+        "weekdays": "Montag - Freitag: 8:00 - 16:00 Uhr",
+        "weekend": "Wochenende: Geschlossen"
+      }
+    },
+    "inquiry": {
+      "title": "Senden Sie uns eine Nachricht",
+      "subtitle": "Haben Sie Fragen oder möchten Sie mehr erfahren? Füllen Sie das untenstehende Formular aus.",
+      "form": {
+        "name": "Name",
+        "email": "E-Mail",
+        "phone": "Telefon (optional)",
+        "club": "Verein/Organisation (optional)",
+        "message": "Nachricht",
+        "submit": "Nachricht senden",
+        "submitting": "Senden..."
+      }
+    },
+    "demoBooking": {
+      "title": "Buchen Sie eine persönliche Demo",
+      "subtitle": "Sehen Sie, wie unser System Ihren Verein transformieren kann - buchen Sie eine kostenlose Demo.",
+      "form": {
+        "name": "Name",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "club": "Verein/Organisation",
+        "preferredDate": "Bevorzugtes Datum",
+        "preferredTime": "Bevorzugte Zeit",
+        "memberCount": "Anzahl der Vereinsmitglieder",
+        "sports": "Hauptsportarten",
+        "currentMethod": "Aktuelle Bestellmethode",
+        "requirements": "Spezifische Anforderungen oder Fragen (optional)",
+        "submit": "Demo buchen",
+        "submitting": "Buchen...",
+        "methodOptions": {
+          "excel": "Excel und E-Mail",
+          "phone": "Telefon/SMS",
+          "paper": "Papierformulare",
+          "other": "Andere"
+        }
+      }
+    },
+    "success": {
+      "title": "Vielen Dank für Ihre Anfrage!",
+      "message": "Wir haben Ihre Nachricht erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+      "backToHome": "Zurück zur Startseite"
+    },
+    "errors": {
+      "required": "Dieses Feld ist erforderlich",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "invalidPhone": "Bitte geben Sie eine gültige Telefonnummer ein",
+      "submitError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "B2BSport",
+      "description": "Dänemarks erste vollständig digitale Plattform für die Bestellung von Sportausrüstung. Wir machen es einfach, ein Sportverein zu sein."
+    },
+    "quickLinks": {
+      "title": "Schnelllinks",
+      "home": "Startseite",
+      "about": "Über uns",
+      "clubSystem": "Klubsystem",
+      "contact": "Kontakt"
+    },
+    "sports": {
+      "title": "Sportarten",
+      "football": "Fußball",
+      "golf": "Golf",
+      "tennis": "Tennis",
+      "basketball": "Basketball"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "phone": "+45 30 50 79 15",
+      "email": "kontakt@b2bsport.dk",
+      "address": "Rødovrevej 151, 2610 Rødovre"
+    },
+    "bottom": {
+      "copyright": "© 2025 B2BSport A/S. Alle Rechte vorbehalten.",
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Allgemeine Geschäftsbedingungen"
+    }
+  },
+  "sportsPage": {
+    "hero": {
+      "subtitle": "Komplette Ausrüstungslösung für"
+    },
+    "products": {
+      "title": "Unsere Produkte für",
+      "teamWear": {
+        "title": "Teamkleidung",
+        "description": "Komplette Bekleidungssets mit Vereinslogo und Personalisierung. Von Trikots bis Socken - alles was Sie brauchen."
+      },
+      "trainingGear": {
+        "title": "Trainingsausrüstung",
+        "description": "Professionelle Ausrüstung für das Training. Kegel, Bälle, Leibchen und vieles mehr für effektives Training."
+      },
+      "accessories": {
+        "title": "Zubehör",
+        "description": "Alle Extras, die den Unterschied machen. Taschen, Wasserflaschen, Erste-Hilfe-Ausrüstung und mehr."
+      },
+      "customization": {
+        "title": "Personalisierung",
+        "description": "Machen Sie es persönlich mit Namen, Nummern und Vereinslogo. Professioneller Druck und Stickerei."
+      }
+    },
+    "benefits": {
+      "title": "Warum Vereine uns wählen",
+      "digitalOrdering": {
+        "title": "100% Digitale Bestellung",
+        "description": "Keine Excel-Tabellen mehr. Bestellen Sie alles online mit Ihren vorgeladenen Preisen."
+      },
+      "fastDelivery": {
+        "title": "Schnelle Lieferung",
+        "description": "2-3 Tage Lieferung bei Lagerware. Immer aktualisierter Lagerbestand."
+      },
+      "clubAgreements": {
+        "title": "Vereinsvereinbarungen",
+        "description": "Ihre Preise sind bereits ausgehandelt und geladen. Keine Überraschungen."
+      },
+      "support": {
+        "title": "Dedizierter Support",
+        "description": "Persönliche Beratung von Experten, die Ihren Sport kennen."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihre Ausrüstungsverwaltung zu digitalisieren?",
+      "subtitle": "Buchen Sie eine Demo und sehen Sie, wie wir Ihrem Verein helfen können",
+      "button": "Demo buchen für",
+      "contact": "Kontaktieren Sie uns"
+    },
+    "brands": {
+      "title": "Wir arbeiten mit den besten Marken",
+      "subtitle": "Qualitätsausrüstung von anerkannten Herstellern"
+    }
+  },
+  "notFound": {
+    "title": "404 - Seite nicht gefunden",
+    "heading": "Ups! Diese Seite existiert nicht",
+    "message": "Entschuldigung, aber die Seite, die Sie suchen, existiert nicht oder wurde verschoben.",
+    "backToHome": "Zurück zur Startseite",
+    "contactUs": "Kontaktieren Sie uns"
+  },
+  "error": {
+    "title": "Etwas ist schief gelaufen",
+    "heading": "Entschuldigung, ein Fehler ist aufgetreten",
+    "message": "Wir arbeiten daran, das Problem zu beheben. Bitte versuchen Sie es später erneut.",
+    "tryAgain": "Erneut versuchen",
+    "backToHome": "Zurück zur Startseite"
+  },
+  "productConfigurator": {
+    "title": "Gestalten Sie Ihre Ausrüstung",
+    "subtitle": "Personalisieren Sie Ihre Teamkleidung mit Name, Nummer und Vereinslogo",
+    "productType": {
+      "label": "Produkttyp wählen",
+      "jersey": "Trikot",
+      "shorts": "Shorts",
+      "socks": "Socken",
+      "tracksuit": "Trainingsanzug",
+      "jacket": "Jacke"
+    },
+    "color": {
+      "label": "Farbe wählen",
+      "primary": "Primärfarbe",
+      "secondary": "Sekundärfarbe"
+    },
+    "personalization": {
+      "label": "Personalisierung",
+      "playerName": "Spielername",
+      "playerNumber": "Spielernummer",
+      "addLogo": "Vereinslogo hinzufügen",
+      "position": {
+        "label": "Logo-Position",
+        "chest": "Brust",
+        "sleeve": "Ärmel",
+        "back": "Rücken"
+      }
+    },
+    "quantity": {
+      "label": "Menge",
+      "sizes": "Größen",
+      "xs": "XS",
+      "s": "S",
+      "m": "M",
+      "l": "L",
+      "xl": "XL",
+      "xxl": "XXL"
+    },
+    "preview": {
+      "front": "Vorderseite",
+      "back": "Rückseite",
+      "rotate": "Ansicht drehen"
+    },
+    "actions": {
+      "reset": "Neu beginnen",
+      "getQuote": "Angebot anfordern",
+      "addToInquiry": "Zur Anfrage hinzufügen",
+      "contactMessage": "Wir kontaktieren Sie innerhalb von 24 Stunden mit einem Angebot"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.mapContainer :global(.gmnoprint a),
+.mapContainer :global(.gmnoprint span),
+.mapContainer :global(.gm-style-cc) {
+  display: none !important;
+}
+
+.mapContainer :global(img[src*="google"]),
+.mapContainer :global(img[src*="googleapis"]) {
+  display: none !important;
+}

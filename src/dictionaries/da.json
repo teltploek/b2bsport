@@ -1,0 +1,602 @@
+{
+  "nav": {
+    "home": "Forside",
+    "about": "Om os",
+    "whatWeDo": "Hvad vi gør",
+    "sports": "Sportsgrene",
+    "contact": "Kontakt",
+    "demo": "Book demo",
+    "clubSystem": "Klubsystem"
+  },
+  "hero": {
+    "title": "Hele Danmarks klubpartner",
+    "subtitle": "Vi bygger en digital løsning for bestilling af sportsudstyr",
+    "cta": "Kontakt os"
+  },
+  "valueProposition": {
+    "title": "En nemmere måde at bestille klubbens udstyr",
+    "subtitle": "Vi arbejder på at gøre bestilling af sportsudstyr digital og nem. Slip for Excel-ark, emails frem og tilbage, og tidskrævende administration.",
+    "mainCTA": "Se hvordan vi gør det",
+    "features": {
+      "digital": {
+        "title": "100% Digital",
+        "description": "Alt samlet ét sted - ordrer, medlemmer, budgetter"
+      },
+      "time": {
+        "title": "Spar tid",
+        "description": "Forenklet bestilling og godkendelse"
+      },
+      "accuracy": {
+        "title": "Færre fejl",
+        "description": "Klare aftaler og nem validering"
+      },
+      "support": {
+        "title": "Fuld support",
+        "description": "Vi hjælper dig hele vejen fra start til mål"
+      }
+    }
+  },
+  "team": {
+    "title": "Mød teamet",
+    "subtitle": "Et dedikeret team af eksperter der arbejder for at revolutionere sportsudstyrsbranchen",
+    "roles": {
+      "clubConsultant": "Klubkonsulent",
+      "projectAssistant": "Projektmedarbejder og salgsbackup",
+      "marketing": "Marketing",
+      "it": "IT",
+      "accounting": "Bogholderi",
+      "ceo": "Daglig leder",
+      "chairman": "Bestyrelsesformand"
+    }
+  },
+  "contactCTA": {
+    "title": "Klar til at revolutionere jeres klubadministration?",
+    "subtitle": "Lad os vise jer hvordan I kan spare tid og penge på klubbens udstyr",
+    "primaryCTA": "Book demo",
+    "secondaryCTA": "Kontakt os",
+    "phone": "+45 69 15 35 45",
+    "email": "info@b2bsport.dk"
+  },
+  "clubSystem": {
+    "title": "Fremtiden for sportsudstyr bestilling",
+    "subtitle": "Mens andre bruger Excel og email, tilbyder vi en komplet digital løsning",
+    "benefits": {
+      "realtime": "Følg dine ordrer i realtid",
+      "agreements": "Dine aftaler er allerede indlæst",
+      "simple": "Udfyld kun de tomme felter"
+    },
+    "comparison": {
+      "before": "Før: Excel-kaos og email ping-pong",
+      "after": "Nu: Alt samlet ét sted med fuld kontrol"
+    },
+    "stats": {
+      "timeSaved": "75% mindre tid på administration",
+      "errorReduction": "90% færre fejl i ordrer",
+      "clubs": "50+ klubber bruger allerede systemet",
+      "satisfaction": "4.9/5 i kundetilfredshed"
+    }
+  },
+  "cta": {
+    "getStarted": "Kom i gang",
+    "bookDemo": "Book en demo",
+    "learnMore": "Læs mere om systemet"
+  },
+  "sports": {
+    "title": "Vi leverer til alle sportsgrene",
+    "subtitle": "Klubber, foreninger og efterskoler - vi leverer til alle sportsgrene"
+  },
+  "about": {
+    "title": "Om B2BSport",
+    "subtitle": "Vi digitaliserer sportsudstyrsbranchen"
+  },
+  "brands": {
+    "title": "Vi arbejder med de bedste",
+    "subtitle": "Kvalitetsmærker og pålidelige leverandører"
+  },
+  "testimonials": {
+    "title": "Hvad vores klubber siger",
+    "subtitle": "Hør fra klubber der allerede har revolutioneret deres udstyrshåndtering",
+    "items": [
+      {
+        "quote": "Vi har sparet mindst 10 timer om måneden på administration. Nu kan vores trænere fokusere på det de er bedst til - at træne!",
+        "author": "Lars Andersen",
+        "role": "Klubformand",
+        "club": "Øresund Fodboldklub"
+      },
+      {
+        "quote": "Endelig har vi styr på vores budget! Systemet giver os fuld kontrol og ingen uforudsete udgifter.",
+        "author": "Maria Christensen",
+        "role": "Kasserer",
+        "club": "Sønderjysk Basketball"
+      },
+      {
+        "quote": "Det er så nemt! Jeg kan bestille nyt udstyr på 5 minutter, og alle priser er allerede aftalt og indlæst.",
+        "author": "Thomas Nielsen",
+        "role": "Træner",
+        "club": "Midtjylland Håndbold"
+      }
+    ]
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "Den digitale revolution inden for sportsudstyr",
+      "subtitle": "Vi transformerer en traditionel branche med moderne teknologi og brugervenlige løsninger"
+    },
+    "mission": {
+      "title": "Vores mission",
+      "content": "Vi er på en mission for at revolutionere, hvordan sportsklubber bestiller og administrerer deres udstyr. Gennem vores IT-drevne tilgang eliminerer vi tidsspilde, reducerer fejl og giver klubber fuld kontrol over deres udstyrsbehov."
+    },
+    "story": {
+      "title": "Fra frustration til innovation",
+      "intro": "Det hele startede med en simpel observation: Hvorfor skal klubber i 2025 stadig sende Excel-ark frem og tilbage via email for at bestille sportsudstyr?",
+      "problem": "Vi så trænere bruge timer på administration i stedet for at træne. Vi så klubledere kæmpe med uoverskuelige budgetter. Vi så leverandører drukne i emails og manuelle processer.",
+      "solution": "Så vi byggede løsningen: Danmarks første fuldt digitale platform for bestilling af sportsudstyr. En platform der gør det nemt at være klub, træner og leverandør."
+    },
+    "approach": {
+      "title": "IT-drevet, men menneskecentreret",
+      "subtitle": "Vores tilgang kombinerer det bedste fra to verdener",
+      "points": {
+        "technology": {
+          "title": "Moderne teknologi",
+          "description": "Vi bruger de nyeste teknologier for at sikre en hurtig, sikker og pålidelig platform"
+        },
+        "userFriendly": {
+          "title": "Brugervenligt design",
+          "description": "Alle kan bruge vores system - ingen teknisk ekspertise påkrævet"
+        },
+        "realtime": {
+          "title": "Realtids opdateringer",
+          "description": "Se ordrestatus, lagerbeholdning og priser opdateret i realtid"
+        },
+        "integration": {
+          "title": "Nem integration",
+          "description": "Vores system integrerer problemfrit med eksisterende klubsystemer"
+        }
+      }
+    },
+    "benefits": {
+      "title": "Fordele ved vores digitale platform",
+      "list": [
+        "Spar 75% af tiden på administration",
+        "Reducer fejl i ordrer med op til 90%",
+        "Få fuld kontrol over klubbens økonomi",
+        "Giv trænere mere tid til at træne",
+        "Track alle ordrer i realtid",
+        "Få automatisk påmindelser og notifikationer"
+      ]
+    },
+    "values": {
+      "title": "Vores værdier",
+      "transparency": {
+        "title": "Gennemsigtighed",
+        "description": "Ingen skjulte gebyrer, ingen overraskelser. Alt er tydeligt fra start."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Vi udfordrer konstant status quo for at finde bedre løsninger."
+      },
+      "partnership": {
+        "title": "Partnerskab",
+        "description": "Vi ser os selv som jeres partner, ikke bare en leverandør."
+      },
+      "simplicity": {
+        "title": "Enkelhed",
+        "description": "Komplekse problemer kræver ikke komplekse løsninger."
+      }
+    },
+    "cta": {
+      "title": "Klar til at revolutionere jeres klub?",
+      "subtitle": "Slut dig til de klubber der allerede har taget springet til fremtiden",
+      "button": "Book en demo i dag"
+    }
+  },
+  "clubSystemPage": {
+    "hero": {
+      "title": "Klubsystemet der ændrer alt",
+      "subtitle": "Se hvordan vi har revolutioneret bestilling af sportsudstyr med Danmarks første fuldt digitale platform",
+      "cta": "Book en personlig demo"
+    },
+    "features": {
+      "title": "Alt hvad I behøver - samlet ét sted",
+      "subtitle": "Vores platform giver jer fuld kontrol over klubbens udstyr, økonomi og medlemmer",
+      "superAdmin": {
+        "title": "Super Admin Portal",
+        "subtitle": "For klubledere og bestyrelser",
+        "features": [
+          "Komplet medlemsdatabase",
+          "Budget og godkendelsesflow",
+          "Multi-hold organisation",
+          "Historisk ordredata"
+        ]
+      },
+      "staffAdmin": {
+        "title": "Staff Admin Portal",
+        "subtitle": "For trænere og holdledere",
+        "features": [
+          "Filtrerede produktkataloger",
+          "Hurtig genbestilling",
+          "Spillerstørrelser og præferencer",
+          "Direkte adgang til klubaftaler"
+        ]
+      },
+      "agreements": {
+        "title": "Smart Aftale Integration",
+        "subtitle": "Jeres forhandlede priser - altid opdaterede",
+        "features": [
+          "Forudindlæste priser",
+          "Automatiske mængderabatter",
+          "Ingen skjulte omkostninger",
+          "Produktanbefalinger"
+        ]
+      }
+    },
+    "comparison": {
+      "title": "Hvorfor vælge os?",
+      "subtitle": "Se forskellen mellem traditionel bestilling og vores digitale løsning",
+      "traditional": "Traditionel metode",
+      "ourSystem": "Vores system",
+      "rows": {
+        "ordering": {
+          "label": "Bestilling",
+          "traditional": "Excel-ark via email",
+          "modern": "Online portal 24/7"
+        },
+        "pricing": {
+          "label": "Priser",
+          "traditional": "Manuelt opdaterede lister",
+          "modern": "Realtids-priser fra aftaler"
+        },
+        "tracking": {
+          "label": "Sporing",
+          "traditional": "Email frem og tilbage",
+          "modern": "Live ordrestatus"
+        },
+        "approval": {
+          "label": "Godkendelse",
+          "traditional": "Uklare processer",
+          "modern": "Automatisk workflow"
+        },
+        "history": {
+          "label": "Historik",
+          "traditional": "Spredt i emails",
+          "modern": "Komplet ordrelog"
+        }
+      }
+    },
+    "roi": {
+      "title": "Frigør tid til det der betyder mest",
+      "subtitle": "Mindre administration, mere sport",
+      "stats": {
+        "timeSaved": {
+          "value": "75%",
+          "label": "Mindre tid på administration"
+        },
+        "errorReduction": {
+          "value": "90%",
+          "label": "Færre fejl i ordrer"
+        },
+        "fasterDelivery": {
+          "value": "2-3 dage",
+          "label": "Hurtigere leveringstid"
+        },
+        "satisfaction": {
+          "value": "100%",
+          "label": "Tilfredshed blandt pilotkunder"
+        }
+      }
+    },
+    "demoBooking": {
+      "title": "Se systemet i aktion",
+      "subtitle": "Book en uforpligtende demo og se hvordan det kan transformere jeres klub",
+      "form": {
+        "name": "Navn",
+        "email": "Email",
+        "club": "Klubnavn",
+        "phone": "Telefon",
+        "message": "Besked (valgfri)",
+        "submit": "Book demo"
+      }
+    }
+  },
+  "whatWeDoPage": {
+    "hero": {
+      "title": "Din klub fortjener bedre",
+      "subtitle": "Slip for tidskrævende administration og få mere tid til det, der virkelig betyder noget - jeres sport"
+    },
+    "mission": {
+      "title": "Endelig en moderne løsning",
+      "subtitle": "Tusindvis af timer spildes hvert år på manuel håndtering af klubbens udstyr. Det stopper nu.",
+      "points": {
+        "saveTime": {
+          "title": "Spar tid hver uge",
+          "description": "Ingen mere copy-paste mellem mails og Excel-ark"
+        },
+        "rightPrices": {
+          "title": "Altid de rigtige priser",
+          "description": "Jeres aftaler er allerede på plads - ingen overraskelser"
+        },
+        "trackEverything": {
+          "title": "Hold styr på alt",
+          "description": "Fra medlemsønsker til leverancer - alt samlet ét sted"
+        }
+      }
+    },
+    "differentiator": {
+      "title": "Se forskellen selv",
+      "subtitle": "Hvorfor bruge timer på noget, der kan tage minutter?",
+      "currentWay": "Sådan gør I nu",
+      "ourWay": "Sådan kunne det være",
+      "comparison": {
+        "excelChaos": "Excel-ark sendt frem og tilbage",
+        "emailPingPong": "Uendelige email-tråde om ordrer",
+        "manualPrices": "Manuel opdatering af priser",
+        "uncertainDelivery": "Usikkerhed om leveringstider",
+        "lostOrders": "Ordrer der forsvinder i indbakken",
+        "oneSystem": "Ét system til alt",
+        "instantOrders": "Bestil direkte med klubbens priser",
+        "automaticUpdates": "Automatiske opdateringer",
+        "trackDelivery": "Følg leverancer i realtid",
+        "completeOverview": "Komplet overblik altid"
+      }
+    },
+    "goToMarket": {
+      "title": "Klar til fremtiden?",
+      "subtitle": "Start jeres digitale transformation i dag",
+      "description": "Vi arbejder på at gøre det nemt at være sportsklub. Kontakt os for at høre, hvordan vi kan hjælpe jer.",
+      "cta": "Kontakt os"
+    }
+  },
+  "contactInfo": {
+    "title": "Kontakt os",
+    "phone": "Telefon",
+    "email": "Email",
+    "openingHours": "Åbningstider",
+    "weekdays": "Mandag - Fredag: 10:00 - 18:00",
+    "weekend": "Weekend: Lukket",
+    "company": "Virksomhed",
+    "companyName": "B2B Sport & Promotion Group ApS",
+    "cvr": "CVR: 40279695",
+    "followUs": "Følg os",
+    "offices": {
+      "sjaelland": {
+        "name": "Sjælland Kontor",
+        "type": "Hovedkontor",
+        "address1": "Rødovrevej 151",
+        "address2": "2610 Rødovre",
+        "serves": "Betjener: København og omegn"
+      },
+      "jylland": {
+        "name": "Jylland & Fyn Kontor",
+        "type": "Regional kontor",
+        "address1": "Industrivej 41",
+        "address2": "6760 Ribe",
+        "serves": "Betjener: Jylland og Fyn"
+      }
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Lad os tale om jeres klubs fremtid",
+      "subtitle": "Vi er klar til at hjælpe jer med at revolutionere jeres udstyrshåndtering"
+    },
+    "info": {
+      "title": "Kontakt information",
+      "address": {
+        "label": "Adresse",
+        "line1": "B2BSport A/S",
+        "line2": "Rødovrevej 151",
+        "line3": "2610 Rødovre"
+      },
+      "phone": {
+        "label": "Telefon",
+        "value": "+45 30 50 79 15"
+      },
+      "email": {
+        "label": "Email",
+        "value": "kontakt@b2bsport.dk"
+      },
+      "hours": {
+        "label": "Åbningstider",
+        "weekdays": "Mandag - Fredag: 8:00 - 16:00",
+        "weekend": "Weekend: Lukket"
+      }
+    },
+    "inquiry": {
+      "title": "Send os en besked",
+      "subtitle": "Har du spørgsmål eller vil du høre mere? Udfyld formularen herunder.",
+      "form": {
+        "name": "Navn",
+        "email": "Email",
+        "phone": "Telefon (valgfri)",
+        "club": "Klub/Organisation (valgfri)",
+        "message": "Besked",
+        "submit": "Send besked",
+        "submitting": "Sender..."
+      }
+    },
+    "demoBooking": {
+      "title": "Book en personlig demo",
+      "subtitle": "Se hvordan vores system kan transformere jeres klub - book en uforpligtende demo.",
+      "form": {
+        "name": "Navn",
+        "email": "Email",
+        "phone": "Telefon",
+        "club": "Klub/Organisation",
+        "preferredDate": "Foretrukken dato",
+        "preferredTime": "Foretrukket tidspunkt",
+        "memberCount": "Antal medlemmer i klubben",
+        "sports": "Primære sportsgrene",
+        "currentMethod": "Nuværende bestillingsmetode",
+        "requirements": "Specifikke krav eller spørgsmål (valgfri)",
+        "submit": "Book demo",
+        "submitting": "Booker...",
+        "methodOptions": {
+          "excel": "Excel og email",
+          "phone": "Telefon/SMS",
+          "paper": "Papir formularer",
+          "other": "Andet"
+        }
+      }
+    },
+    "success": {
+      "title": "Tak for din henvendelse!",
+      "message": "Vi har modtaget din besked og vender tilbage inden for 24 timer.",
+      "backToHome": "Tilbage til forsiden"
+    },
+    "errors": {
+      "required": "Dette felt er påkrævet",
+      "invalidEmail": "Indtast en gyldig email adresse",
+      "invalidPhone": "Indtast et gyldigt telefonnummer",
+      "submitError": "Der opstod en fejl. Prøv venligst igen."
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "B2BSport",
+      "description": "Danmarks første fuldt digitale platform for bestilling af sportsudstyr. Vi gør det nemt at være sportsklub."
+    },
+    "quickLinks": {
+      "title": "Hurtige links",
+      "home": "Forside",
+      "about": "Om os",
+      "clubSystem": "Klubsystem",
+      "contact": "Kontakt"
+    },
+    "sports": {
+      "title": "Sportsgrene",
+      "football": "Fodbold",
+      "golf": "Golf",
+      "tennis": "Tennis",
+      "basketball": "Basketball"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "phone": "+45 69 15 35 45",
+      "email": "info@b2bsport.dk",
+      "address": "Sjælland: Rødovrevej 151, 2610 Rødovre",
+      "address2": "Jylland & Fyn: Industrivej 41, 6760 Ribe"
+    },
+    "bottom": {
+      "copyright": "© 2025 B2BSport A/S. Alle rettigheder forbeholdes.",
+      "privacy": "Privatlivspolitik",
+      "terms": "Vilkår og betingelser"
+    }
+  },
+  "sportsPage": {
+    "hero": {
+      "subtitle": "Komplet udstyrsløsning til"
+    },
+    "products": {
+      "title": "Vores produkter til",
+      "teamWear": {
+        "title": "Holdtøj",
+        "description": "Komplette tøjsæt med klublogo og personalisering. Fra trøjer til strømper - alt hvad I behøver."
+      },
+      "trainingGear": {
+        "title": "Træningsudstyr",
+        "description": "Professionelt udstyr til træning. Kegler, bolde, veste og meget mere til effektiv træning."
+      },
+      "accessories": {
+        "title": "Tilbehør",
+        "description": "Alt det ekstra der gør forskellen. Tasker, vanddunke, førstehjælpsudstyr og mere."
+      },
+      "customization": {
+        "title": "Personalisering",
+        "description": "Gør det personligt med navne, numre og klublogo. Professionel trykning og broderi."
+      }
+    },
+    "benefits": {
+      "title": "Derfor vælger klubber os",
+      "digitalOrdering": {
+        "title": "100% Digital bestilling",
+        "description": "Slut med Excel-ark. Bestil alt online med jeres forudindlæste priser."
+      },
+      "fastDelivery": {
+        "title": "Hurtig levering",
+        "description": "2-3 dages levering på lagervarer. Altid opdateret lagerstatus."
+      },
+      "clubAgreements": {
+        "title": "Klubaftaler",
+        "description": "Jeres priser er allerede forhandlet og indlæst. Ingen overraskelser."
+      },
+      "support": {
+        "title": "Dedikeret support",
+        "description": "Personlig rådgivning fra eksperter der kender jeres sport."
+      }
+    },
+    "cta": {
+      "title": "Klar til at digitalisere jeres udstyrshåndtering?",
+      "subtitle": "Book en demo og se hvordan vi kan hjælpe jeres klub",
+      "button": "Book demo for",
+      "contact": "Kontakt os"
+    },
+    "brands": {
+      "title": "Vi arbejder med de bedste mærker",
+      "subtitle": "Kvalitetsudstyr fra anerkendte producenter"
+    }
+  },
+  "notFound": {
+    "title": "404 - Siden blev ikke fundet",
+    "heading": "Ups! Denne side findes ikke",
+    "message": "Beklager, men siden du leder efter eksisterer ikke eller er blevet flyttet.",
+    "backToHome": "Tilbage til forsiden",
+    "contactUs": "Kontakt os"
+  },
+  "error": {
+    "title": "Noget gik galt",
+    "heading": "Beklager, der opstod en fejl",
+    "message": "Vi arbejder på at løse problemet. Prøv venligst igen senere.",
+    "tryAgain": "Prøv igen",
+    "backToHome": "Tilbage til forsiden"
+  },
+  "productConfigurator": {
+    "title": "Design jeres tøj",
+    "subtitle": "Personaliser jeres holdtøj med navn, nummer og klublogo",
+    "productType": {
+      "label": "Vælg produkttype",
+      "jersey": "Trøje",
+      "shorts": "Shorts",
+      "socks": "Strømper",
+      "tracksuit": "Træningsdragt",
+      "jacket": "Jakke"
+    },
+    "color": {
+      "label": "Vælg farve",
+      "primary": "Primær farve",
+      "secondary": "Sekundær farve"
+    },
+    "personalization": {
+      "label": "Personalisering",
+      "playerName": "Spillernavn",
+      "playerNumber": "Spillernummer",
+      "addLogo": "Tilføj klublogo",
+      "position": {
+        "label": "Logo placering",
+        "chest": "Bryst",
+        "sleeve": "Ærme",
+        "back": "Ryg"
+      }
+    },
+    "quantity": {
+      "label": "Antal",
+      "sizes": "Størrelser",
+      "xs": "XS",
+      "s": "S",
+      "m": "M",
+      "l": "L",
+      "xl": "XL",
+      "xxl": "XXL"
+    },
+    "preview": {
+      "front": "Forside",
+      "back": "Bagside",
+      "rotate": "Roter visning"
+    },
+    "actions": {
+      "reset": "Start forfra",
+      "getQuote": "Få tilbud",
+      "addToInquiry": "Tilføj til forespørgsel",
+      "contactMessage": "Vi kontakter jer inden for 24 timer med et tilbud"
+    }
+  }
+}
