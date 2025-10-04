@@ -323,8 +323,7 @@ stages:
             ".next\BUILD_ID",
             ".next\build-manifest.json",
             "package.json",
-            "next.config.ts",
-            "server.js"
+            "next.config.js"
           )
 
           $errors = 0
