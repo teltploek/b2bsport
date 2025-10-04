@@ -146,12 +146,13 @@ stages:
         echo "Build size: $(du -sh .next | cut -f1)"
       displayName: 'Verify build'
 
-    # Remove node_modules before packaging
+    # Remove unnecessary files before packaging
     - script: |
-        echo "Removing node_modules to reduce artifact size..."
+        echo "Removing unnecessary files to reduce artifact size..."
         rm -rf node_modules
-        echo "node_modules removed"
-      displayName: 'Remove node_modules'
+        rm -rf video-source
+        echo "Removed: node_modules, video-source"
+      displayName: 'Remove unnecessary files'
 
     # Create deployment package
     - task: ArchiveFiles@2
