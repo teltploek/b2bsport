@@ -30,7 +30,7 @@ parameters:
 
 variables:
   # Production configuration
-  DEPLOYMENT_PATH: 'E:\FTP\Webpages\b2bsport-front-3'
+  DEPLOYMENT_PATH: 'C:\B2BGroupApplications\WebApplications\b2bsport-front'
   SERVICE_NAME: 'b2b-sport-front-service'
   APP_URL: 'https://b2bsport.dk'
   NSSM_PATH: 'C:\nssm-2.24\win64\nssm.exe'
