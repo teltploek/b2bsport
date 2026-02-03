@@ -1,17 +1,19 @@
 
 :root {
 
-  --primitive-green-900: #022c16;
-  --primitive-green-800: #065f32;
-  --primitive-green-700: #059447;
-  --primitive-green-600: #16a34a;
-  --primitive-green-500: #22c55e;
-  --primitive-green-400: #4ade80;
-  --primitive-green-300: #86efac;
-  --primitive-green-200: #bbf7d0;
-  --primitive-green-100: #dcfce7;
-  --primitive-green-50: #f0fdf4;
+  /* Forest Green Palette (Primary) */
+  --primitive-green-900: #1a3a2f;
+  --primitive-green-800: #2d4a3e;
+  --primitive-green-700: #3d5a4e;
+  --primitive-green-600: #4d6a5e;
+  --primitive-green-500: #5d7a6e;
+  --primitive-green-400: #7d9a8e;
+  --primitive-green-300: #9dbaae;
+  --primitive-green-200: #bdd5ce;
+  --primitive-green-100: #ddeee8;
+  --primitive-green-50: #f0f7f4;
 
+  /* Blue Palette (Secondary) */
   --primitive-blue-900: #1e293b;
   --primitive-blue-800: #1e40af;
   --primitive-blue-700: #2563eb;
@@ -23,6 +25,19 @@
   --primitive-blue-100: #eff6ff;
   --primitive-blue-50: #f0f9ff;
 
+  /* Coral/Orange Palette (Accent for CTAs) */
+  --primitive-coral-900: #7c2d12;
+  --primitive-coral-800: #9a3412;
+  --primitive-coral-700: #c2410c;
+  --primitive-coral-600: #e85d3d;
+  --primitive-coral-500: #ef6c4f;
+  --primitive-coral-400: #f5927a;
+  --primitive-coral-300: #fbb8a5;
+  --primitive-coral-200: #fdddd3;
+  --primitive-coral-100: #feece7;
+  --primitive-coral-50: #fff5f3;
+
+  /* Legacy Amber (keeping for compatibility) */
   --primitive-amber-900: #451a03;
   --primitive-amber-800: #78350f;
   --primitive-amber-700: #92400e;
@@ -34,6 +49,7 @@
   --primitive-amber-100: #fef3c7;
   --primitive-amber-50: #fffbeb;
 
+  /* Gray Palette */
   --primitive-gray-900: #0f0f0f;
   --primitive-gray-800: #1a1a1a;
   --primitive-gray-700: #333333;
@@ -45,60 +61,81 @@
   --primitive-gray-100: #f0f0f0;
   --primitive-gray-50: #fafafa;
 
+  /* Cream/Off-White Palette */
+  --primitive-cream-900: #4a4538;
+  --primitive-cream-800: #6b6455;
+  --primitive-cream-700: #8c8472;
+  --primitive-cream-600: #ada48f;
+  --primitive-cream-500: #cec4ac;
+  --primitive-cream-400: #e0d9c9;
+  --primitive-cream-300: #ebe6da;
+  --primitive-cream-200: #f5f2eb;
+  --primitive-cream-100: #faf8f3;
+  --primitive-cream-50: #fdfcf9;
+
   --primitive-white: #ffffff;
-  --primitive-off-white: #fcfcfc;
+  --primitive-off-white: #faf8f3;
 
 
-  --semantic-brand-primary: var(--primitive-green-600);
-  --semantic-brand-primary-hover: var(--primitive-green-700);
-  --semantic-brand-primary-active: var(--primitive-green-800);
+  /* Brand Colors - Forest Green */
+  --semantic-brand-primary: var(--primitive-green-900);
+  --semantic-brand-primary-hover: var(--primitive-green-800);
+  --semantic-brand-primary-active: var(--primitive-green-700);
   --semantic-brand-primary-subtle: var(--primitive-green-100);
-  --semantic-brand-secondary: var(--primitive-blue-600);
-  --semantic-brand-secondary-hover: var(--primitive-blue-700);
-  --semantic-brand-secondary-active: var(--primitive-blue-800);
-  --semantic-brand-accent: var(--primitive-amber-500);
-  --semantic-brand-accent-hover: var(--primitive-amber-600);
+  --semantic-brand-secondary: var(--primitive-green-800);
+  --semantic-brand-secondary-hover: var(--primitive-green-700);
+  --semantic-brand-secondary-active: var(--primitive-green-600);
+  /* Accent Colors - Coral for CTAs */
+  --semantic-brand-accent: var(--primitive-coral-600);
+  --semantic-brand-accent-hover: var(--primitive-coral-700);
 
+  /* Background Colors - Cream/Off-White */
   --semantic-bg-primary: var(--primitive-white);
-  --semantic-bg-secondary: var(--primitive-gray-50);
-  --semantic-bg-tertiary: var(--primitive-green-50);
+  --semantic-bg-secondary: var(--primitive-cream-200);
+  --semantic-bg-tertiary: var(--primitive-cream-100);
   --semantic-bg-elevated: var(--primitive-white);
-  --semantic-bg-overlay: rgba(22, 163, 74, 0.85);
-  --semantic-bg-section-alt: #fafbfc;
-  --semantic-bg-section-light: var(--primitive-blue-50);
+  --semantic-bg-overlay: rgba(26, 58, 47, 0.85);
+  --semantic-bg-section-alt: var(--primitive-cream-200);
+  --semantic-bg-section-light: var(--primitive-cream-100);
   
-  --semantic-gradient-brand: linear-gradient(to bottom right, var(--primitive-white), var(--primitive-green-50));
-  --semantic-gradient-brand-intense: linear-gradient(to bottom right, var(--primitive-green-500), var(--primitive-green-700));
-  --semantic-gradient-surface: linear-gradient(to bottom, var(--primitive-gray-50), var(--primitive-white));
-  --semantic-gradient-accent: linear-gradient(to right, var(--primitive-amber-500), var(--primitive-amber-600));
+  /* Gradients */
+  --semantic-gradient-brand: linear-gradient(to bottom right, var(--primitive-cream-100), var(--primitive-cream-200));
+  --semantic-gradient-brand-intense: linear-gradient(to bottom right, var(--primitive-green-900), var(--primitive-green-800));
+  --semantic-gradient-surface: linear-gradient(to bottom, var(--primitive-cream-100), var(--primitive-white));
+  --semantic-gradient-accent: linear-gradient(to right, var(--primitive-coral-600), var(--primitive-coral-700));
   
+  /* Overlays */
   --semantic-overlay-light: rgba(255, 255, 255, 0.1);
   --semantic-overlay-medium: rgba(255, 255, 255, 0.2);
-  --semantic-overlay-dark: rgba(0, 0, 0, 0.5);
-  --semantic-overlay-brand: rgba(22, 163, 74, 0.1);
+  --semantic-overlay-dark: rgba(26, 58, 47, 0.6);
+  --semantic-overlay-brand: rgba(26, 58, 47, 0.1);
 
+  /* Surface Colors */
   --semantic-surface-primary: var(--primitive-white);
-  --semantic-surface-secondary: var(--primitive-gray-50);
+  --semantic-surface-secondary: var(--primitive-cream-100);
   --semantic-surface-elevated: var(--primitive-white);
-  --semantic-surface-brand: var(--primitive-green-600);
-  --semantic-surface-accent: var(--primitive-blue-600);
+  --semantic-surface-brand: var(--primitive-green-900);
+  --semantic-surface-accent: var(--primitive-coral-600);
 
-  --semantic-text-primary: var(--primitive-gray-800);
+  /* Text Colors */
+  --semantic-text-primary: var(--primitive-green-900);
   --semantic-text-secondary: var(--primitive-gray-600);
   --semantic-text-tertiary: var(--primitive-gray-400);
   --semantic-text-subtle: var(--primitive-gray-300);
-  --semantic-text-brand: var(--primitive-green-700);
-  --semantic-text-accent: var(--primitive-blue-600);
-  --semantic-text-on-brand: var(--primitive-white);
+  --semantic-text-brand: var(--primitive-green-900);
+  --semantic-text-accent: var(--primitive-coral-600);
+  --semantic-text-on-brand: var(--primitive-cream-100);
   --semantic-text-on-accent: var(--primitive-white);
-  --semantic-text-link: var(--primitive-blue-600);
-  --semantic-text-link-hover: var(--primitive-blue-700);
+  --semantic-text-link: var(--primitive-green-800);
+  --semantic-text-link-hover: var(--primitive-green-700);
+  --semantic-text-disabled: var(--primitive-gray-400);
 
-  --semantic-border-default: var(--primitive-gray-200);
-  --semantic-border-subtle: var(--primitive-gray-100);
+  /* Border Colors */
+  --semantic-border-default: var(--primitive-cream-300);
+  --semantic-border-subtle: var(--primitive-cream-200);
   --semantic-border-strong: var(--primitive-gray-300);
   --semantic-border-brand: var(--primitive-green-300);
-  --semantic-border-accent: var(--primitive-blue-300);
+  --semantic-border-accent: var(--primitive-coral-300);
 
   --semantic-state-hover: var(--primitive-gray-50);
   --semantic-state-active: var(--primitive-gray-100);
@@ -128,6 +165,7 @@
   --semantic-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
 
+  /* Button Components */
   --component-button-primary-bg: var(--semantic-brand-primary);
   --component-button-primary-bg-hover: var(--semantic-brand-primary-hover);
   --component-button-primary-text: var(--semantic-text-on-brand);
@@ -136,32 +174,36 @@
   --component-button-secondary-text: var(--semantic-brand-primary);
   --component-button-secondary-bg-hover: var(--semantic-brand-primary);
   --component-button-secondary-text-hover: var(--semantic-text-on-brand);
-  --component-button-cta-bg: var(--semantic-brand-accent);
-  --component-button-cta-bg-hover: var(--semantic-brand-accent-hover);
+  --component-button-cta-bg: var(--primitive-coral-600);
+  --component-button-cta-bg-hover: var(--primitive-coral-700);
   --component-button-cta-text: var(--primitive-white);
-  --component-button-radius: var(--radius-sm);
+  --component-button-radius: var(--radius-full);
 
+  /* Card Components */
   --component-card-bg: var(--semantic-surface-elevated);
   --component-card-border: var(--semantic-border-subtle);
   --component-card-shadow: var(--semantic-shadow-md);
-  --component-card-bg-hover: var(--semantic-surface-secondary);
-  --component-card-radius: var(--radius-md);
+  --component-card-bg-hover: var(--primitive-cream-100);
+  --component-card-radius: var(--radius-xl);
 
-  --component-nav-bg: var(--semantic-bg-primary);
-  --component-nav-border: var(--semantic-border-subtle);
-  --component-nav-link: var(--semantic-text-primary);
-  --component-nav-link-hover: var(--semantic-text-brand);
-  --component-nav-link-active: var(--semantic-text-brand);
+  /* Navigation Components */
+  --component-nav-bg: var(--primitive-green-900);
+  --component-nav-border: var(--primitive-green-800);
+  --component-nav-link: var(--primitive-cream-100);
+  --component-nav-link-hover: var(--primitive-white);
+  --component-nav-link-active: var(--primitive-white);
 
-  --component-hero-bg: var(--semantic-bg-tertiary);
-  --component-hero-heading: var(--semantic-text-brand);
-  --component-hero-text: var(--semantic-text-primary);
-  --component-hero-accent: var(--semantic-brand-accent);
+  /* Hero Components */
+  --component-hero-bg: var(--primitive-green-900);
+  --component-hero-heading: var(--primitive-cream-100);
+  --component-hero-text: var(--primitive-cream-200);
+  --component-hero-accent: var(--primitive-coral-600);
 
-  --component-footer-bg: var(--primitive-gray-900);
-  --component-footer-text: var(--primitive-gray-300);
-  --component-footer-link: var(--primitive-white);
-  --component-footer-border: var(--primitive-gray-700);
+  /* Footer Components */
+  --component-footer-bg: var(--primitive-green-900);
+  --component-footer-text: var(--primitive-cream-300);
+  --component-footer-link: var(--primitive-cream-100);
+  --component-footer-border: var(--primitive-green-800);
 
   --component-form-bg: var(--semantic-bg-elevated);
   --component-form-border: var(--semantic-border-default);
@@ -181,16 +223,18 @@
   --component-badge-info-text: var(--semantic-state-info-text);
   --component-badge-radius: var(--radius-full);
 
+  /* Sports Grid Components */
   --component-sports-grid-bg: var(--semantic-surface-primary);
-  --component-sports-grid-hover: var(--primitive-green-50);
-  --component-sports-grid-border: var(--primitive-gray-200);
-  --component-sports-grid-icon: var(--semantic-text-brand);
-  --component-sports-grid-radius: var(--radius-md);
+  --component-sports-grid-hover: var(--primitive-cream-100);
+  --component-sports-grid-border: var(--primitive-cream-300);
+  --component-sports-grid-icon: var(--primitive-green-900);
+  --component-sports-grid-radius: var(--radius-xl);
 
-  --component-club-system-bg: var(--semantic-bg-secondary);
-  --component-club-system-accent: var(--semantic-brand-primary);
-  --component-club-system-text: var(--semantic-text-primary);
-  --component-club-system-highlight: var(--semantic-brand-accent);
+  /* Club System Components */
+  --component-club-system-bg: var(--primitive-cream-200);
+  --component-club-system-accent: var(--primitive-green-900);
+  --component-club-system-text: var(--primitive-green-900);
+  --component-club-system-highlight: var(--primitive-coral-600);
 
   
   --spacing-1: 0.25rem;
@@ -266,13 +310,14 @@
   --transition-slow: 500ms ease;
 
   
-  --semantic-bg-subtle: var(--primitive-green-50);
-  --semantic-accent-default: var(--primitive-amber-500);
-  --semantic-accent-emphasis: var(--primitive-amber-600);
-  --semantic-accent-subtle: var(--primitive-amber-100);
+  /* Additional Semantic Colors */
+  --semantic-bg-subtle: var(--primitive-cream-100);
+  --semantic-accent-default: var(--primitive-coral-600);
+  --semantic-accent-emphasis: var(--primitive-coral-700);
+  --semantic-accent-subtle: var(--primitive-coral-100);
   --semantic-error-default: #dc2626;
   --semantic-error-subtle: #fee2e2;
-  --semantic-success-default: var(--primitive-green-600);
+  --semantic-success-default: var(--primitive-green-700);
   --semantic-success-subtle: var(--primitive-green-50);
-  --semantic-success-emphasis: var(--primitive-green-700);
+  --semantic-success-emphasis: var(--primitive-green-800);
 }
