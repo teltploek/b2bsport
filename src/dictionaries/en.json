@@ -113,13 +113,28 @@
     "phone": "+45 69 15 35 45",
     "email": "info@b2bsport.dk"
   },
+  "contactSection": {
+    "title": "Ready to revolutionize your club administration?",
+    "subtitle": "Get started with Denmark's first fully digital platform for sports equipment ordering",
+    "email": "Email",
+    "phone": "Phone",
+    "hours": "Opening hours",
+    "hoursValue": "Mon-Fri: 8:00 AM - 4:00 PM"
+  },
   "clubSystem": {
     "title": "The future of sports equipment ordering",
     "subtitle": "While others use Excel and email, we offer a complete digital solution",
     "benefits": {
       "realtime": "Track your orders in real-time",
       "agreements": "Your agreements are already loaded",
-      "simple": "Just fill in the empty fields"
+      "simple": "Just fill in the empty fields",
+      "autoConfirmation": "Automatic order confirmation"
+    },
+    "problems": {
+      "excelSheets": "Excel sheets sent back and forth",
+      "outdatedPrices": "Outdated price lists",
+      "manualHandling": "Manual order handling",
+      "noOverview": "No overview of status"
     },
     "comparison": {
       "before": "Before: Excel chaos and email ping-pong",
@@ -143,9 +158,15 @@
     "titleHighlight": "Danish sports clubs",
     "description": "With years of experience in the sports industry, we understand club needs. Our mission is to make it",
     "descriptionHighlight": "easy, fast and reliable",
+    "descriptionSuffix": "to manage club equipment.",
     "stat": {
       "value": "50+",
       "label": "Proud club partners"
+    },
+    "verifiedPartner": "Verified partner",
+    "users": {
+      "count": "1000+",
+      "label": "Users"
     },
     "solutions": {
       "title": "Complete solutions",
@@ -268,7 +289,23 @@
   },
   "about": {
     "title": "About B2BSport",
-    "subtitle": "We digitalize the sports equipment industry"
+    "subtitle": "We digitalize the sports equipment industry",
+    "digest": {
+      "innovation": {
+        "title": "IT-driven innovation",
+        "description": "We use technology to simplify your daily operations"
+      },
+      "transparency": {
+        "title": "Full transparency",
+        "description": "Real-time insight into orders, deliveries and finances"
+      },
+      "implementation": {
+        "title": "Fast implementation",
+        "description": "Up and running in hours - not days"
+      },
+      "readMore": "Read more about us →",
+      "tagline": "Digital transformation"
+    }
   },
   "brands": {
     "title": "We work with the best",
@@ -581,8 +618,17 @@
       "email": "contact@b2bsport.dk",
       "address": "Rødovrevej 151, 2610 Rødovre"
     },
+    "offices": {
+      "sjaelland": "Zealand",
+      "jyllandFyn": "Jutland & Funen"
+    },
+    "partnerCard": {
+      "title": "Become a partner",
+      "description": "Ready to digitalize your club?",
+      "cta": "Contact us"
+    },
     "bottom": {
-      "copyright": "© 2025 B2BSport A/S. All rights reserved.",
+      "copyright": "© 2025 B2B Sport & Promotion Group ApS. All rights reserved.",
       "privacy": "Privacy Policy",
       "terms": "Terms and Conditions"
     }

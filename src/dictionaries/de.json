@@ -113,13 +113,28 @@
     "phone": "+45 69 15 35 45",
     "email": "info@b2bsport.dk"
   },
+  "contactSection": {
+    "title": "Bereit, Ihre Vereinsverwaltung zu revolutionieren?",
+    "subtitle": "Starten Sie mit Dänemarks erster vollständig digitaler Plattform für Sportausrüstungsbestellungen",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "hours": "Öffnungszeiten",
+    "hoursValue": "Mo-Fr: 8:00 - 16:00 Uhr"
+  },
   "clubSystem": {
     "title": "Die Zukunft der Sportausrüstungsbestellung",
     "subtitle": "Während andere Excel und E-Mail verwenden, bieten wir eine komplette digitale Lösung",
     "benefits": {
       "realtime": "Verfolgen Sie Ihre Bestellungen in Echtzeit",
       "agreements": "Ihre Vereinbarungen sind bereits geladen",
-      "simple": "Füllen Sie nur die leeren Felder aus"
+      "simple": "Füllen Sie nur die leeren Felder aus",
+      "autoConfirmation": "Automatische Auftragsbestätigung"
+    },
+    "problems": {
+      "excelSheets": "Excel-Tabellen hin und her geschickt",
+      "outdatedPrices": "Veraltete Preislisten",
+      "manualHandling": "Manuelle Auftragsabwicklung",
+      "noOverview": "Kein Überblick über den Status"
     },
     "comparison": {
       "before": "Vorher: Excel-Chaos und E-Mail-Ping-Pong",
@@ -143,9 +158,15 @@
     "titleHighlight": "dänische Sportvereine",
     "description": "Mit jahrelanger Erfahrung in der Sportbranche verstehen wir die Bedürfnisse der Vereine. Unsere Mission ist es,",
     "descriptionHighlight": "einfach, schnell und zuverlässig",
+    "descriptionSuffix": "die Vereinsausrüstung zu verwalten.",
     "stat": {
       "value": "50+",
       "label": "Stolze Vereinspartner"
+    },
+    "verifiedPartner": "Verifizierter Partner",
+    "users": {
+      "count": "1000+",
+      "label": "Nutzer"
     },
     "solutions": {
       "title": "Komplette Lösungen",
@@ -268,7 +289,23 @@
   },
   "about": {
     "title": "Über B2BSport",
-    "subtitle": "Wir digitalisieren die Sportausrüstungsbranche"
+    "subtitle": "Wir digitalisieren die Sportausrüstungsbranche",
+    "digest": {
+      "innovation": {
+        "title": "IT-getriebene Innovation",
+        "description": "Wir nutzen Technologie, um Ihren Alltag zu vereinfachen"
+      },
+      "transparency": {
+        "title": "Volle Transparenz",
+        "description": "Echtzeit-Einblick in Bestellungen, Lieferungen und Finanzen"
+      },
+      "implementation": {
+        "title": "Schnelle Implementierung",
+        "description": "In Stunden einsatzbereit - nicht in Tagen"
+      },
+      "readMore": "Mehr über uns erfahren →",
+      "tagline": "Digitale Transformation"
+    }
   },
   "brands": {
     "title": "Wir arbeiten mit den Besten",
@@ -581,8 +618,17 @@
       "email": "kontakt@b2bsport.dk",
       "address": "Rødovrevej 151, 2610 Rødovre"
     },
+    "offices": {
+      "sjaelland": "Seeland",
+      "jyllandFyn": "Jütland & Fünen"
+    },
+    "partnerCard": {
+      "title": "Partner werden",
+      "description": "Bereit, Ihren Verein zu digitalisieren?",
+      "cta": "Kontakt aufnehmen"
+    },
     "bottom": {
-      "copyright": "© 2025 B2BSport A/S. Alle Rechte vorbehalten.",
+      "copyright": "© 2025 B2B Sport & Promotion Group ApS. Alle Rechte vorbehalten.",
       "privacy": "Datenschutzrichtlinie",
       "terms": "Allgemeine Geschäftsbedingungen"
     }

@@ -113,13 +113,28 @@
     "phone": "+45 69 15 35 45",
     "email": "info@b2bsport.dk"
   },
+  "contactSection": {
+    "title": "Klar til at revolutionere jeres klubadministration?",
+    "subtitle": "Kom i gang med Danmarks første fuldt digitale platform for sportsudstyr bestilling",
+    "email": "Email",
+    "phone": "Telefon",
+    "hours": "Åbningstider",
+    "hoursValue": "Man-Fre: 8:00 - 16:00"
+  },
   "clubSystem": {
     "title": "Fremtiden for sportsudstyr bestilling",
     "subtitle": "Mens andre bruger Excel og email, tilbyder vi en komplet digital løsning",
     "benefits": {
       "realtime": "Følg dine ordrer i realtid",
       "agreements": "Dine aftaler er allerede indlæst",
-      "simple": "Udfyld kun de tomme felter"
+      "simple": "Udfyld kun de tomme felter",
+      "autoConfirmation": "Automatisk ordrebekræftelse"
+    },
+    "problems": {
+      "excelSheets": "Excel-ark sendt frem og tilbage",
+      "outdatedPrices": "Uopdaterede prislister",
+      "manualHandling": "Manuel ordrehåndtering",
+      "noOverview": "Ingen overblik over status"
     },
     "comparison": {
       "before": "Før: Excel-kaos og email ping-pong",
@@ -143,9 +158,15 @@
     "titleHighlight": "danske sportsklubber",
     "description": "Med års erfaring i sportsbranchen forstår vi klubbernes behov. Vores mission er at gøre det",
     "descriptionHighlight": "nemt, hurtigt og pålideligt",
+    "descriptionSuffix": "at håndtere klubbens udstyr.",
     "stat": {
       "value": "50+",
       "label": "Stolte klubpartnere"
+    },
+    "verifiedPartner": "Verificeret partner",
+    "users": {
+      "count": "1000+",
+      "label": "Brugere"
     },
     "solutions": {
       "title": "Komplette løsninger",
@@ -168,7 +189,23 @@
   },
   "about": {
     "title": "Om B2BSport",
-    "subtitle": "Vi digitaliserer sportsudstyrsbranchen"
+    "subtitle": "Vi digitaliserer sportsudstyrsbranchen",
+    "digest": {
+      "innovation": {
+        "title": "IT-drevet innovation",
+        "description": "Vi bruger teknologi til at forenkle jeres hverdag"
+      },
+      "transparency": {
+        "title": "Fuld transparens",
+        "description": "Realtids-indsigt i ordrer, leverancer og økonomi"
+      },
+      "implementation": {
+        "title": "Hurtig implementering",
+        "description": "Op og køre på få timer - ikke dage"
+      },
+      "readMore": "Læs mere om os →",
+      "tagline": "Digital transformation"
+    }
   },
   "brands": {
     "title": "Vi arbejder med de bedste",
@@ -582,8 +619,17 @@
       "address": "Sjælland: Rødovrevej 151, 2610 Rødovre",
       "address2": "Jylland & Fyn: Industrivej 41, 6760 Ribe"
     },
+    "offices": {
+      "sjaelland": "Sjælland",
+      "jyllandFyn": "Jylland & Fyn"
+    },
+    "partnerCard": {
+      "title": "Bliv partner",
+      "description": "Klar til at digitalisere jeres klub?",
+      "cta": "Kontakt os"
+    },
     "bottom": {
-      "copyright": "© 2025 B2BSport A/S. Alle rettigheder forbeholdes.",
+      "copyright": "© 2025 B2B Sport & Promotion Group ApS. Alle rettigheder forbeholdes.",
       "privacy": "Privatlivspolitik",
       "terms": "Vilkår og betingelser"
     }
