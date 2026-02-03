@@ -97,8 +97,12 @@
     "learnMore": "Learn more about the system"
   },
   "sports": {
-    "title": "We deliver to all sports",
-    "subtitle": "Clubs, associations and boarding schools - we deliver to all sports"
+    "tag": "Sports",
+    "title": "Equipment for all sports",
+    "subtitle": "From football to golf - we deliver quality equipment to clubs across Denmark",
+    "description": "Whatever sport your club plays, we have the right equipment. Our digital platform makes it easy to order everything from team wear to training gear.",
+    "viewAll": "View all sports",
+    "exploreSport": "Explore"
   },
   "whatWeDoPage": {
     "hero": {

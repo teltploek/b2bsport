@@ -97,8 +97,12 @@
     "learnMore": "Læs mere om systemet"
   },
   "sports": {
-    "title": "Vi leverer til alle sportsgrene",
-    "subtitle": "Klubber, foreninger og efterskoler - vi leverer til alle sportsgrene"
+    "tag": "Sportsgrene",
+    "title": "Udstyr til alle sportsgrene",
+    "subtitle": "Fra fodbold til golf - vi leverer kvalitetsudstyr til klubber i hele Danmark",
+    "description": "Uanset hvilken sport din klub dyrker, har vi det rette udstyr. Vores digitale platform gør det nemt at bestille alt fra holdtøj til træningsudstyr.",
+    "viewAll": "Se alle sportsgrene",
+    "exploreSport": "Udforsk"
   },
   "about": {
     "title": "Om B2BSport",

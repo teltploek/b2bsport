@@ -97,8 +97,12 @@
     "learnMore": "Mehr über das System erfahren"
   },
   "sports": {
-    "title": "Wir liefern für alle Sportarten",
-    "subtitle": "Vereine, Verbände und Internate - wir liefern für alle Sportarten"
+    "tag": "Sportarten",
+    "title": "Ausrüstung für alle Sportarten",
+    "subtitle": "Von Fußball bis Golf - wir liefern Qualitätsausrüstung an Vereine in ganz Dänemark",
+    "description": "Egal welchen Sport Ihr Verein betreibt, wir haben die richtige Ausrüstung. Unsere digitale Plattform macht es einfach, alles von Teamkleidung bis Trainingsausrüstung zu bestellen.",
+    "viewAll": "Alle Sportarten ansehen",
+    "exploreSport": "Entdecken"
   },
   "whatWeDoPage": {
     "hero": {
