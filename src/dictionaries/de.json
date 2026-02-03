@@ -168,10 +168,12 @@
   },
   "whatWeDoPage": {
     "hero": {
+      "tag": "Was wir machen",
       "title": "Ihr Verein verdient Besseres",
       "subtitle": "Beseitigen Sie zeitaufwändige Verwaltung und gewinnen Sie mehr Zeit für das, was wirklich zählt - Ihren Sport"
     },
     "mission": {
+      "tag": "Moderne Lösung",
       "title": "Endlich eine moderne Lösung",
       "subtitle": "Tausende von Stunden werden jedes Jahr mit manueller Ausrüstungsverwaltung verschwendet. Das endet jetzt.",
       "points": {
@@ -190,6 +192,7 @@
       }
     },
     "differentiator": {
+      "tag": "Vergleich",
       "title": "Sehen Sie selbst den Unterschied",
       "subtitle": "Warum Stunden mit etwas verbringen, das Minuten dauern könnte?",
       "currentWay": "So machen Sie es jetzt",
@@ -207,9 +210,29 @@
         "completeOverview": "Immer vollständiger Überblick"
       }
     },
+    "process": {
+      "tag": "Der Prozess",
+      "title": "So einfach ist es",
+      "subtitle": "Vereinsausrüstung ohne Aufwand bestellen",
+      "steps": {
+        "login": {
+          "title": "Einloggen",
+          "description": "Ihr Verein erhält eigenen Zugang mit allen Vereinbarungen bereit"
+        },
+        "select": {
+          "title": "Ausrüstung wählen",
+          "description": "Finden Sie genau das, was Sie brauchen - Preise sind bereits vereinbart"
+        },
+        "delivery": {
+          "title": "Lieferung erhalten",
+          "description": "Verfolgen Sie Ihre Bestellung bis zur Lieferung und werden Sie benachrichtigt"
+        }
+      }
+    },
     "goToMarket": {
-      "title": "Bereit für die Zukunft?",
-      "subtitle": "Starten Sie heute Ihre digitale Transformation",
+      "tag": "Loslegen",
+      "title": "Starten Sie heute Ihre digitale Reise",
+      "subtitle": "Werden Sie einer der ersten Vereine, der Zeitverschwendung und Verwaltung eliminiert. Wir zeigen Ihnen wie.",
       "description": "Wir arbeiten daran, es einfach zu machen, ein Sportverein zu sein. Kontaktieren Sie uns, um zu erfahren, wie wir Ihnen helfen können.",
       "cta": "Kontakt aufnehmen"
     }

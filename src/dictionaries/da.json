@@ -381,10 +381,12 @@
   },
   "whatWeDoPage": {
     "hero": {
+      "tag": "Hvad vi gør",
       "title": "Din klub fortjener bedre",
       "subtitle": "Slip for tidskrævende administration og få mere tid til det, der virkelig betyder noget - jeres sport"
     },
     "mission": {
+      "tag": "Moderne løsning",
       "title": "Endelig en moderne løsning",
       "subtitle": "Tusindvis af timer spildes hvert år på manuel håndtering af klubbens udstyr. Det stopper nu.",
       "points": {
@@ -403,6 +405,7 @@
       }
     },
     "differentiator": {
+      "tag": "Sammenligning",
       "title": "Se forskellen selv",
       "subtitle": "Hvorfor bruge timer på noget, der kan tage minutter?",
       "currentWay": "Sådan gør I nu",
@@ -420,9 +423,29 @@
         "completeOverview": "Komplet overblik altid"
       }
     },
+    "process": {
+      "tag": "Processen",
+      "title": "Så nemt er det",
+      "subtitle": "Bestil klubbens udstyr uden besvær",
+      "steps": {
+        "login": {
+          "title": "Log ind",
+          "description": "Jeres klub får egen adgang med alle aftaler klar"
+        },
+        "select": {
+          "title": "Vælg udstyr",
+          "description": "Find præcis det I skal bruge - priserne er allerede aftalt"
+        },
+        "delivery": {
+          "title": "Modtag levering",
+          "description": "Følg jeres ordre hele vejen og få besked ved levering"
+        }
+      }
+    },
     "goToMarket": {
-      "title": "Klar til fremtiden?",
-      "subtitle": "Start jeres digitale transformation i dag",
+      "tag": "Kom i gang",
+      "title": "Start jeres digitale rejse i dag",
+      "subtitle": "Bliv en af de første klubber der slipper for tidsspilde og administration. Vi er klar til at vise jer hvordan.",
       "description": "Vi arbejder på at gøre det nemt at være sportsklub. Kontakt os for at høre, hvordan vi kan hjælpe jer.",
       "cta": "Kontakt os"
     }

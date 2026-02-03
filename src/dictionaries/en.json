@@ -168,10 +168,12 @@
   },
   "whatWeDoPage": {
     "hero": {
+      "tag": "What we do",
       "title": "Your club deserves better",
       "subtitle": "Eliminate time-consuming administration and get more time for what really matters - your sport"
     },
     "mission": {
+      "tag": "Modern solution",
       "title": "Finally a modern solution",
       "subtitle": "Thousands of hours are wasted every year on manual equipment handling. That stops now.",
       "points": {
@@ -190,6 +192,7 @@
       }
     },
     "differentiator": {
+      "tag": "Comparison",
       "title": "See the difference yourself",
       "subtitle": "Why spend hours on something that could take minutes?",
       "currentWay": "How you do it now",
@@ -207,9 +210,29 @@
         "completeOverview": "Complete overview always"
       }
     },
+    "process": {
+      "tag": "The process",
+      "title": "It's that easy",
+      "subtitle": "Order club equipment without hassle",
+      "steps": {
+        "login": {
+          "title": "Log in",
+          "description": "Your club gets its own access with all agreements ready"
+        },
+        "select": {
+          "title": "Choose equipment",
+          "description": "Find exactly what you need - prices are already agreed"
+        },
+        "delivery": {
+          "title": "Receive delivery",
+          "description": "Track your order all the way and get notified on delivery"
+        }
+      }
+    },
     "goToMarket": {
-      "title": "Ready for the future?",
-      "subtitle": "Start your digital transformation today",
+      "tag": "Get started",
+      "title": "Start your digital journey today",
+      "subtitle": "Be one of the first clubs to eliminate wasted time and administration. We're ready to show you how.",
       "description": "We're working to make it easy to be a sports club. Contact us to hear how we can help you.",
       "cta": "Contact us"
     }
