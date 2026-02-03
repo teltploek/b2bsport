@@ -1,13 +1,14 @@
 import Link from 'next/link'
-import styles from './ValueProposition.module.css'
-import { CheckCircle, TrendingUp, Clock, Users } from 'lucide-react'
+import { TrendingUp, Clock, CheckCircle, Users, ArrowRight, Star, Zap, Shield } from 'lucide-react'
 
 interface ValuePropositionProps {
   dictionary: {
     valueProposition?: {
+      tag?: string
       title: string
       subtitle: string
       mainCTA: string
+      socialProof?: string
       features: {
         digital: {
           title: string
@@ -26,6 +27,29 @@ interface ValuePropositionProps {
           description: string
         }
       }
+      cards?: {
+        platform: {
+          badge: string
+          title: string
+          description: string
+          features: string[]
+          cta: string
+        }
+        support: {
+          badge: string
+          title: string
+          description: string
+          features: string[]
+          cta: string
+        }
+        partnership: {
+          badge: string
+          title: string
+          description: string
+          features: string[]
+          cta: string
+        }
+      }
     }
   }
   locale: string
@@ -33,60 +57,248 @@ interface ValuePropositionProps {
 
 export default function ValueProposition({ dictionary, locale }: ValuePropositionProps) {
   const content = dictionary.valueProposition || {
-    title: "Digitalt klubsystem der erstatter Excel og email",
-    subtitle: "Vi har bygget Danmarks første fuldt digitale platform for bestilling af sportsudstyr. Glem alt om Excel-ark, emails frem og tilbage, og uklare aftaler.",
-    mainCTA: "Se hvordan vi gør det",
+    tag: 'Fordele',
+    title: 'En nemmere måde at bestille klubbens udstyr',
+    subtitle: 'Vi arbejder på at gøre bestilling af sportsudstyr digital og nem. Slip for Excel-ark, emails frem og tilbage, og tidskrævende administration.',
+    mainCTA: 'Se hvordan vi gør det',
+    socialProof: 'klubber',
     features: {
       digital: {
-        title: "100% Digital",
-        description: "Alt samlet ét sted - ordrer, medlemmer, budgetter"
+        title: '100% Digital',
+        description: 'Alt samlet ét sted - ordrer, medlemmer, budgetter',
       },
       time: {
-        title: "Spar 75% tid",
-        description: "Automatiseret bestilling og godkendelse"
+        title: 'Spar tid',
+        description: 'Forenklet bestilling og godkendelse',
       },
       accuracy: {
-        title: "90% færre fejl",
-        description: "Forudindlæste aftaler og automatisk validering"
+        title: 'Færre fejl',
+        description: 'Klare aftaler og nem validering',
       },
       support: {
-        title: "Fuld support",
-        description: "Vi hjælper dig hele vejen fra start til mål"
-      }
-    }
+        title: 'Fuld support',
+        description: 'Vi hjælper dig hele vejen fra start til mål',
+      },
+    },
   }
 
-  const features = [
-    { icon: TrendingUp, ...content.features.digital },
-    { icon: Clock, ...content.features.time },
-    { icon: CheckCircle, ...content.features.accuracy },
-    { icon: Users, ...content.features.support },
+  const cards = content.cards || {
+    platform: {
+      badge: 'Digital platform',
+      title: '100% Digital bestilling',
+      description: 'Alt hvad din klub behøver, samlet i én moderne platform',
+      features: [
+        'Forudindlæste prisaftaler',
+        'Komplet ordrehistorik',
+        'Nem medlemsstyring',
+        'Automatiske godkendelser',
+      ],
+      cta: 'Se platformen',
+    },
+    support: {
+      badge: 'Anbefalet',
+      title: 'Personlig support',
+      description: 'Dedikeret hjælp fra start til mål - vi kender jeres sport',
+      features: [
+        'Dedikeret kontaktperson',
+        'Hurtig responstid',
+        'Sportsspecifikke rådgivning',
+        'Onboarding support',
+      ],
+      cta: 'Kontakt os',
+    },
+    partnership: {
+      badge: 'Partnerskab',
+      title: 'Langsigtet samarbejde',
+      description: 'Mere end en leverandør - vi bliver jeres udstyrspartner',
+      features: [
+        'Faste klubaftaler',
+        'Mængderabatter',
+        'Forudsigelighed i budget',
+        'Prioriteret levering',
+      ],
+      cta: 'Bliv partner',
+    },
+  }
+
+  const cardData = [
+    {
+      ...cards.platform,
+      icon: Zap,
+      featured: false,
+      bgColor: 'bg-cream-100',
+      textColor: 'text-forest-900',
+      badgeColor: 'bg-forest-900/10 text-forest-800',
+    },
+    {
+      ...cards.support,
+      icon: Shield,
+      featured: true,
+      bgColor: 'bg-forest-900',
+      textColor: 'text-cream-100',
+      badgeColor: 'bg-coral-600 text-white',
+    },
+    {
+      ...cards.partnership,
+      icon: Users,
+      featured: false,
+      bgColor: 'bg-cream-100',
+      textColor: 'text-forest-900',
+      badgeColor: 'bg-forest-900/10 text-forest-800',
+    },
   ]
 
   return (
-    <section className={styles.valueProposition}>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>{content.title}</h2>
-          <p className={styles.subtitle}>{content.subtitle}</p>
+    <section className="bg-white py-20 md:py-28 lg:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold bg-forest-900/10 text-forest-800 mb-6">
+            {content.tag || 'Fordele'}
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 leading-[1.1] tracking-tight mb-6">
+            {content.title}
+          </h2>
+          <p className="text-lg md:text-xl text-forest-700 leading-relaxed">
+            {content.subtitle}
+          </p>
         </div>
-<div className={styles.features}>
-          {features.map((feature, index) => {
-            const Icon = feature.icon
+
+        {/* Feature Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+          {cardData.map((card, index) => {
+            const Icon = card.icon
             return (
-              <div key={index} className={styles.feature}>
-                <div className={styles.iconWrapper}>
-                  <Icon className={styles.icon} />
+              <div
+                key={index}
+                className={`relative rounded-3xl p-8 ${card.bgColor} ${
+                  card.featured ? 'ring-2 ring-coral-600 md:-translate-y-4' : ''
+                } shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}
+              >
+                {/* Badge */}
+                <span
+                  className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide ${card.badgeColor} mb-6`}
+                >
+                  {card.featured && (
+                    <Star className="w-3 h-3 mr-1 fill-current" />
+                  )}
+                  {card.badge}
+                </span>
+
+                {/* Icon */}
+                <div
+                  className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
+                    card.featured
+                      ? 'bg-coral-600'
+                      : 'bg-forest-900 group-hover:bg-coral-600'
+                  } transition-colors duration-300`}
+                >
+                  <Icon
+                    className={`w-7 h-7 ${
+                      card.featured ? 'text-white' : 'text-cream-100'
+                    }`}
+                  />
                 </div>
-                <h3 className={styles.featureTitle}>{feature.title}</h3>
-                <p className={styles.featureDescription}>{feature.description}</p>
+
+                {/* Title */}
+                <h3
+                  className={`font-display text-xl lg:text-2xl font-bold ${card.textColor} mb-3`}
+                >
+                  {card.title}
+                </h3>
+
+                {/* Description */}
+                <p
+                  className={`text-base ${
+                    card.featured ? 'text-cream-200' : 'text-forest-700'
+                  } mb-6 leading-relaxed`}
+                >
+                  {card.description}
+                </p>
+
+                {/* Feature List */}
+                <ul className="space-y-3 mb-8">
+                  {card.features.map((feature, featureIndex) => (
+                    <li
+                      key={featureIndex}
+                      className={`flex items-start gap-2 text-sm ${
+                        card.featured ? 'text-cream-200' : 'text-forest-700'
+                      }`}
+                    >
+                      <CheckCircle
+                        className={`w-5 h-5 flex-shrink-0 ${
+                          card.featured ? 'text-coral-400' : 'text-coral-600'
+                        }`}
+                      />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA Button */}
+                <Link
+                  href={
+                    index === 1
+                      ? `/${locale}/contact`
+                      : `/${locale}/what-we-do`
+                  }
+                  className={`inline-flex items-center justify-center w-full px-6 py-3.5 rounded-full text-base font-bold transition-all duration-200 group/btn ${
+                    card.featured
+                      ? 'bg-coral-600 text-white hover:bg-coral-700 shadow-lg hover:shadow-xl'
+                      : 'bg-forest-900 text-cream-100 hover:bg-forest-800'
+                  }`}
+                >
+                  {card.cta}
+                  <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-200 group-hover/btn:translate-x-1" />
+                </Link>
+
+                {/* Social proof for featured card */}
+                {card.featured && (
+                  <div className="mt-6 pt-6 border-t border-forest-700">
+                    <div className="flex items-center justify-center gap-3">
+                      {/* Mini avatars */}
+                      <div className="flex -space-x-2">
+                        {[1, 2, 3, 4].map((i) => (
+                          <div
+                            key={i}
+                            className="w-8 h-8 rounded-full bg-forest-700 border-2 border-forest-900 flex items-center justify-center"
+                          >
+                            <svg
+                              className="w-4 h-4 text-cream-100"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                              />
+                            </svg>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="text-xs text-cream-200">
+                        <span className="font-bold text-cream-100">50+</span>{' '}
+                        {content.socialProof || 'klubber'}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             )
           })}
         </div>
-<div className={styles.ctaWrapper}>
-          <Link href={`/${locale}/what-we-do`} className={styles.mainCTA}>
+
+        {/* Bottom CTA */}
+        <div className="text-center">
+          <Link
+            href={`/${locale}/what-we-do`}
+            className="inline-flex items-center text-forest-900 font-semibold hover:text-coral-600 transition-colors group"
+          >
             {content.mainCTA}
+            <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>
       </div>

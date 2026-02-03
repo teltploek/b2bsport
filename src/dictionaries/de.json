@@ -29,6 +29,7 @@
     }
   },
   "valueProposition": {
+    "tag": "Vorteile",
     "title": "Ein einfacherer Weg, Vereinsausrüstung zu bestellen",
     "subtitle": "Wir arbeiten daran, Sportausrüstungsbestellungen digital und einfach zu machen. Keine Excel-Tabellen, E-Mails hin und her und zeitaufwändige Verwaltung mehr.",
     "mainCTA": "So machen wir es",
@@ -49,7 +50,46 @@
         "title": "Volle Unterstützung",
         "description": "Wir helfen Ihnen vom Anfang bis zum Ende"
       }
-    }
+    },
+    "cards": {
+      "platform": {
+        "badge": "Digitale Plattform",
+        "title": "100% Digitale Bestellung",
+        "description": "Alles, was Ihr Verein braucht, in einer modernen Plattform",
+        "features": [
+          "Vorgeladene Preisvereinbarungen",
+          "Vollständige Bestellhistorie",
+          "Einfache Mitgliederverwaltung",
+          "Automatische Genehmigungen"
+        ],
+        "cta": "Plattform ansehen"
+      },
+      "support": {
+        "badge": "Empfohlen",
+        "title": "Persönlicher Support",
+        "description": "Engagierte Hilfe von Anfang bis Ende - wir kennen Ihren Sport",
+        "features": [
+          "Dedizierter Ansprechpartner",
+          "Schnelle Reaktionszeit",
+          "Sportspezifische Beratung",
+          "Onboarding-Unterstützung"
+        ],
+        "cta": "Kontaktieren Sie uns"
+      },
+      "partnership": {
+        "badge": "Partnerschaft",
+        "title": "Langfristige Zusammenarbeit",
+        "description": "Mehr als ein Lieferant - wir werden Ihr Ausrüstungspartner",
+        "features": [
+          "Feste Vereinsvereinbarungen",
+          "Mengenrabatte",
+          "Budgetvorhersehbarkeit",
+          "Prioritätslieferung"
+        ],
+        "cta": "Partner werden"
+      }
+    },
+    "socialProof": "Vereine"
   },
   "team": {
     "title": "Das Team kennenlernen",

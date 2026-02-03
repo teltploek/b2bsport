@@ -29,6 +29,7 @@
     }
   },
   "valueProposition": {
+    "tag": "Fordele",
     "title": "En nemmere måde at bestille klubbens udstyr",
     "subtitle": "Vi arbejder på at gøre bestilling af sportsudstyr digital og nem. Slip for Excel-ark, emails frem og tilbage, og tidskrævende administration.",
     "mainCTA": "Se hvordan vi gør det",
@@ -49,7 +50,46 @@
         "title": "Fuld support",
         "description": "Vi hjælper dig hele vejen fra start til mål"
       }
-    }
+    },
+    "cards": {
+      "platform": {
+        "badge": "Digital platform",
+        "title": "100% Digital bestilling",
+        "description": "Alt hvad din klub behøver, samlet i én moderne platform",
+        "features": [
+          "Forudindlæste prisaftaler",
+          "Komplet ordrehistorik",
+          "Nem medlemsstyring",
+          "Automatiske godkendelser"
+        ],
+        "cta": "Se platformen"
+      },
+      "support": {
+        "badge": "Anbefalet",
+        "title": "Personlig support",
+        "description": "Dedikeret hjælp fra start til mål - vi kender jeres sport",
+        "features": [
+          "Dedikeret kontaktperson",
+          "Hurtig responstid",
+          "Sportsspecifik rådgivning",
+          "Onboarding support"
+        ],
+        "cta": "Kontakt os"
+      },
+      "partnership": {
+        "badge": "Partnerskab",
+        "title": "Langsigtet samarbejde",
+        "description": "Mere end en leverandør - vi bliver jeres udstyrspartner",
+        "features": [
+          "Faste klubaftaler",
+          "Mængderabatter",
+          "Forudsigelighed i budget",
+          "Prioriteret levering"
+        ],
+        "cta": "Bliv partner"
+      }
+    },
+    "socialProof": "klubber"
   },
   "team": {
     "title": "Mød teamet",

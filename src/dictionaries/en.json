@@ -29,6 +29,7 @@
     }
   },
   "valueProposition": {
+    "tag": "Benefits",
     "title": "An easier way to order club equipment",
     "subtitle": "We're working to make sports equipment ordering digital and simple. No more Excel sheets, back-and-forth emails, and time-consuming administration.",
     "mainCTA": "See how we do it",
@@ -49,7 +50,46 @@
         "title": "Full support",
         "description": "We help you all the way from start to finish"
       }
-    }
+    },
+    "cards": {
+      "platform": {
+        "badge": "Digital platform",
+        "title": "100% Digital ordering",
+        "description": "Everything your club needs, in one modern platform",
+        "features": [
+          "Pre-loaded price agreements",
+          "Complete order history",
+          "Easy member management",
+          "Automatic approvals"
+        ],
+        "cta": "See the platform"
+      },
+      "support": {
+        "badge": "Recommended",
+        "title": "Personal support",
+        "description": "Dedicated help from start to finish - we know your sport",
+        "features": [
+          "Dedicated contact person",
+          "Fast response time",
+          "Sport-specific advice",
+          "Onboarding support"
+        ],
+        "cta": "Contact us"
+      },
+      "partnership": {
+        "badge": "Partnership",
+        "title": "Long-term collaboration",
+        "description": "More than a supplier - we become your equipment partner",
+        "features": [
+          "Fixed club agreements",
+          "Volume discounts",
+          "Budget predictability",
+          "Priority delivery"
+        ],
+        "cta": "Become a partner"
+      }
+    },
+    "socialProof": "clubs"
   },
   "team": {
     "title": "Meet the team",
