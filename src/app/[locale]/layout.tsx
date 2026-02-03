@@ -1,15 +1,15 @@
 import type { Metadata, Viewport } from 'next'
-import { Baloo_2, Open_Sans } from 'next/font/google'
+import { Plus_Jakarta_Sans, Open_Sans } from 'next/font/google'
 import '../globals.css'
 import { i18n, type Locale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/get-dictionary'
 import Navigation from '@/components/Navigation/Navigation'
 import { Footer } from '@/components/Footer'
 
-const baloo = Baloo_2({
-  weight: ['700', '800'],
+const plusJakartaSans = Plus_Jakarta_Sans({
+  weight: ['500', '600', '700', '800'],
   subsets: ['latin'],
-  variable: '--font-baloo',
+  variable: '--font-plus-jakarta',
 })
 
 const openSans = Open_Sans({
@@ -78,7 +78,7 @@ export default async function RootLayout({
   const dictionary = await getDictionary(params.locale)
   
   return (
-    <html lang={params.locale} className={`${baloo.variable} ${openSans.variable}`}>
+    <html lang={params.locale} className={`${plusJakartaSans.variable} ${openSans.variable}`}>
       <body className={openSans.className}>
         <div className="min-h-screen flex flex-col">
           <Navigation dictionary={dictionary} locale={params.locale} />

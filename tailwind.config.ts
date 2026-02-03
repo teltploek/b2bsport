@@ -105,8 +105,8 @@ const config: Config = {
         }
       },
       fontFamily: {
-        display: ['var(--font-baloo)'],
-        body: ['var(--font-open-sans)'],
+        display: ['var(--font-plus-jakarta)', 'system-ui', 'sans-serif'],
+        body: ['var(--font-open-sans)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display-2xl': ['var(--typography-display-2xl-size)', { lineHeight: 'var(--typography-display-2xl-line-height)' }],
