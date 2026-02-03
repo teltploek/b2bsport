@@ -14,6 +14,20 @@
     "subtitle": "Vi bygger en digital løsning for bestilling af sportsudstyr",
     "cta": "Kontakt os"
   },
+  "welcome": {
+    "tag": "Velkommen",
+    "title": "Vi gør det nemt at være sportsklub",
+    "description": "B2B Sport er Danmarks første fuldt digitale platform for bestilling af sportsudstyr. Vi hjælper klubber med at spare tid, undgå fejl og få fuld kontrol over deres udstyr.",
+    "cta": "Kom i kontakt",
+    "leftCard": {
+      "tag": "Digital platform",
+      "title": "Alt samlet ét sted"
+    },
+    "rightCard": {
+      "tag": "50+ klubber",
+      "title": "Stolte partnere"
+    }
+  },
   "valueProposition": {
     "title": "En nemmere måde at bestille klubbens udstyr",
     "subtitle": "Vi arbejder på at gøre bestilling af sportsudstyr digital og nem. Slip for Excel-ark, emails frem og tilbage, og tidskrævende administration.",

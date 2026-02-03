@@ -14,6 +14,20 @@
     "subtitle": "Wir bauen eine digitale Lösung für Sportausrüstungsbestellungen",
     "cta": "Kontakt aufnehmen"
   },
+  "welcome": {
+    "tag": "Willkommen",
+    "title": "Wir machen es einfach, ein Sportverein zu sein",
+    "description": "B2B Sport ist Dänemarks erste vollständig digitale Plattform für die Bestellung von Sportausrüstung. Wir helfen Vereinen, Zeit zu sparen, Fehler zu vermeiden und volle Kontrolle über ihre Ausrüstung zu erlangen.",
+    "cta": "Kontakt aufnehmen",
+    "leftCard": {
+      "tag": "Digitale Plattform",
+      "title": "Alles an einem Ort"
+    },
+    "rightCard": {
+      "tag": "50+ Vereine",
+      "title": "Stolze Partner"
+    }
+  },
   "valueProposition": {
     "title": "Ein einfacherer Weg, Vereinsausrüstung zu bestellen",
     "subtitle": "Wir arbeiten daran, Sportausrüstungsbestellungen digital und einfach zu machen. Keine Excel-Tabellen, E-Mails hin und her und zeitaufwändige Verwaltung mehr.",
