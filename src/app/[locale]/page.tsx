@@ -4,6 +4,7 @@ import Hero from '@/components/Hero/Hero'
 import Welcome from '@/components/Welcome/Welcome'
 import ValueProposition from '@/components/ValueProposition/ValueProposition'
 import SportsGrid from '@/components/SportsGrid/SportsGrid'
+import Experience from '@/components/Experience/Experience'
 import BrandsGrid from '@/components/BrandsGrid/BrandsGrid'
 import ContactCTA from '@/components/ContactCTA/ContactCTA'
 
@@ -20,6 +21,7 @@ export default async function Home({
       <Welcome dictionary={dictionary} locale={locale} />
       <ValueProposition dictionary={dictionary} locale={locale} />
       <SportsGrid dictionary={dictionary} locale={locale} />
+      <Experience dictionary={dictionary} locale={locale} />
       <BrandsGrid dictionary={dictionary} />
       <ContactCTA dictionary={dictionary} locale={locale} />
     </main>

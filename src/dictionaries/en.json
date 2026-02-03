@@ -96,6 +96,27 @@
     "bookDemo": "Book a demo",
     "learnMore": "Learn more about the system"
   },
+  "experience": {
+    "tag": "Experience & quality",
+    "title": "We empower",
+    "titleHighlight": "Danish sports clubs",
+    "description": "With years of experience in the sports industry, we understand club needs. Our mission is to make it",
+    "descriptionHighlight": "easy, fast and reliable",
+    "stat": {
+      "value": "50+",
+      "label": "Proud club partners"
+    },
+    "solutions": {
+      "title": "Complete solutions",
+      "items": [
+        "Digital ordering platform",
+        "Pre-loaded price agreements",
+        "Complete brand assortment",
+        "Personal support"
+      ]
+    },
+    "cta": "Become a partner"
+  },
   "sports": {
     "tag": "Sports",
     "title": "Equipment for all sports",

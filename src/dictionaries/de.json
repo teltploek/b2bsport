@@ -96,6 +96,27 @@
     "bookDemo": "Demo buchen",
     "learnMore": "Mehr über das System erfahren"
   },
+  "experience": {
+    "tag": "Erfahrung & Qualität",
+    "title": "Wir stärken",
+    "titleHighlight": "dänische Sportvereine",
+    "description": "Mit jahrelanger Erfahrung in der Sportbranche verstehen wir die Bedürfnisse der Vereine. Unsere Mission ist es,",
+    "descriptionHighlight": "einfach, schnell und zuverlässig",
+    "stat": {
+      "value": "50+",
+      "label": "Stolze Vereinspartner"
+    },
+    "solutions": {
+      "title": "Komplette Lösungen",
+      "items": [
+        "Digitale Bestellplattform",
+        "Vorgeladene Preisvereinbarungen",
+        "Komplettes Markensortiment",
+        "Persönlicher Support"
+      ]
+    },
+    "cta": "Partner werden"
+  },
   "sports": {
     "tag": "Sportarten",
     "title": "Ausrüstung für alle Sportarten",

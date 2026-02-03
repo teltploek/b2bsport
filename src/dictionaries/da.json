@@ -96,6 +96,27 @@
     "bookDemo": "Book en demo",
     "learnMore": "Læs mere om systemet"
   },
+  "experience": {
+    "tag": "Erfaring & kvalitet",
+    "title": "Vi styrker",
+    "titleHighlight": "danske sportsklubber",
+    "description": "Med års erfaring i sportsbranchen forstår vi klubbernes behov. Vores mission er at gøre det",
+    "descriptionHighlight": "nemt, hurtigt og pålideligt",
+    "stat": {
+      "value": "50+",
+      "label": "Stolte klubpartnere"
+    },
+    "solutions": {
+      "title": "Komplette løsninger",
+      "items": [
+        "Digital platform til bestilling",
+        "Forudindlæste prisaftaler",
+        "Komplet sortiment af brands",
+        "Personlig support"
+      ]
+    },
+    "cta": "Bliv partner"
+  },
   "sports": {
     "tag": "Sportsgrene",
     "title": "Udstyr til alle sportsgrene",
