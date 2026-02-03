@@ -92,6 +92,7 @@
     "socialProof": "Vereine"
   },
   "team": {
+    "tag": "Unser Team",
     "title": "Das Team kennenlernen",
     "subtitle": "Ein engagiertes Team von Experten, das daran arbeitet, die Sportausrüstungsbranche zu revolutionieren",
     "roles": {
@@ -239,7 +240,8 @@
         "address2": "6760 Ribe",
         "serves": "Betreut: Jütland und Fünen"
       }
-    }
+    },
+    "getDirections": "Wegbeschreibung"
   },
   "about": {
     "title": "Über B2BSport",
@@ -456,6 +458,7 @@
   },
   "contactPage": {
     "hero": {
+      "tag": "Kontakt",
       "title": "Sprechen wir über die Zukunft Ihres Vereins",
       "subtitle": "Wir sind bereit, Ihnen bei der Revolutionierung Ihrer Ausrüstungsverwaltung zu helfen"
     },

@@ -14,8 +14,8 @@ export default async function ContactPage({ params: { locale } }: PageProps) {
   return (
     <main>
       <ContactHero dict={dict} />
-      <section className="bg-semantic-background-secondary">
-        <div className="max-w-7xl mx-auto py-12 lg:py-20 px-6">
+      <section className="bg-cream-200">
+        <div className="max-w-7xl mx-auto py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
           <ContactInfo dict={dict} />
         </div>
       </section>

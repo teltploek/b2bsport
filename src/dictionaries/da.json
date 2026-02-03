@@ -92,6 +92,7 @@
     "socialProof": "klubber"
   },
   "team": {
+    "tag": "Vores team",
     "title": "Mød teamet",
     "subtitle": "Et dedikeret team af eksperter der arbejder for at revolutionere sportsudstyrsbranchen",
     "roles": {
@@ -452,10 +453,12 @@
         "address2": "6760 Ribe",
         "serves": "Betjener: Jylland og Fyn"
       }
-    }
+    },
+    "getDirections": "Få rutevejledning"
   },
   "contactPage": {
     "hero": {
+      "tag": "Kontakt os",
       "title": "Lad os tale om jeres klubs fremtid",
       "subtitle": "Vi er klar til at hjælpe jer med at revolutionere jeres udstyrshåndtering"
     },

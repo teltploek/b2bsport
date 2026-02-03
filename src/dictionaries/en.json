@@ -92,6 +92,7 @@
     "socialProof": "clubs"
   },
   "team": {
+    "tag": "Our team",
     "title": "Meet the team",
     "subtitle": "A dedicated team of experts working to revolutionize the sports equipment industry",
     "roles": {
@@ -239,7 +240,8 @@
         "address2": "6760 Ribe",
         "serves": "Serves: Jutland and Funen"
       }
-    }
+    },
+    "getDirections": "Get directions"
   },
   "about": {
     "title": "About B2BSport",
@@ -456,6 +458,7 @@
   },
   "contactPage": {
     "hero": {
+      "tag": "Contact us",
       "title": "Let's talk about your club's future",
       "subtitle": "We're ready to help you revolutionize your equipment management"
     },
