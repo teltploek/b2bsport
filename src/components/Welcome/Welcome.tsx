@@ -45,7 +45,7 @@ export default function Welcome({ dictionary, locale }: WelcomeProps) {
           {/* Left Card - Image/Visual with offset */}
           <div className="lg:col-span-3 order-2 lg:order-1">
             <div className="relative">
-              <div className="bg-forest-900 rounded-2xl p-6 md:p-8 min-h-[240px] md:min-h-[280px] lg:aspect-[4/5] flex flex-col justify-between transform lg:-translate-y-8">
+              <div className="bg-forest-900 rounded-2xl p-6 md:p-8 min-h-[240px] md:min-h-[280px] lg:aspect-[4/5] flex flex-col justify-between transform lg:-translate-y-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 lg:hover:-translate-y-10">
                 {/* Decorative Pattern */}
                 <div className="absolute inset-0 overflow-hidden rounded-2xl opacity-10">
                   <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -114,7 +114,7 @@ export default function Welcome({ dictionary, locale }: WelcomeProps) {
           {/* Right Card - Stats/Visual with offset */}
           <div className="lg:col-span-3 order-3">
             <div className="relative">
-              <div className="bg-cream-100 border-2 border-forest-200 rounded-2xl p-6 md:p-8 min-h-[240px] md:min-h-[280px] lg:aspect-[4/5] flex flex-col justify-between transform lg:translate-y-12">
+              <div className="bg-cream-100 border-2 border-forest-200 rounded-2xl p-6 md:p-8 min-h-[240px] md:min-h-[280px] lg:aspect-[4/5] flex flex-col justify-between transform lg:translate-y-12 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 lg:hover:translate-y-10">
                 {/* Decorative corners */}
                 <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-coral-600 rounded-tr-lg" />
                 <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-coral-600 rounded-bl-lg" />

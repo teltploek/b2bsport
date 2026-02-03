@@ -212,9 +212,9 @@ export default async function WhatWeDo({
           {/* Process Steps */}
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Step 1 - Log in */}
-            <div className="relative">
-              <div className="bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="w-20 h-20 bg-forest-900 rounded-2xl flex items-center justify-center mx-auto mb-6 relative">
+            <div className="relative group">
+              <div className="bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="w-20 h-20 bg-forest-900 rounded-2xl flex items-center justify-center mx-auto mb-6 relative transition-colors duration-300 group-hover:bg-coral-600">
                   <LogIn className="w-10 h-10 text-cream-100" />
                   <span className="absolute -top-2 -right-2 w-8 h-8 bg-coral-600 rounded-full flex items-center justify-center text-sm font-bold text-white">
                     1
@@ -235,7 +235,7 @@ export default async function WhatWeDo({
 
             {/* Step 2 - Choose Equipment */}
             <div className="relative">
-              <div className="bg-forest-900 rounded-3xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 md:-translate-y-4">
+              <div className="bg-forest-900 rounded-3xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 md:-translate-y-4 hover:-translate-y-1 md:hover:-translate-y-5">
                 <div className="w-20 h-20 bg-coral-600 rounded-2xl flex items-center justify-center mx-auto mb-6 relative">
                   <ShoppingBag className="w-10 h-10 text-white" />
                   <span className="absolute -top-2 -right-2 w-8 h-8 bg-cream-100 rounded-full flex items-center justify-center text-sm font-bold text-forest-900">
@@ -256,9 +256,9 @@ export default async function WhatWeDo({
             </div>
 
             {/* Step 3 - Receive Delivery */}
-            <div className="relative">
-              <div className="bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="w-20 h-20 bg-forest-900 rounded-2xl flex items-center justify-center mx-auto mb-6 relative">
+            <div className="relative group">
+              <div className="bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="w-20 h-20 bg-forest-900 rounded-2xl flex items-center justify-center mx-auto mb-6 relative transition-colors duration-300 group-hover:bg-coral-600">
                   <Truck className="w-10 h-10 text-cream-100" />
                   <span className="absolute -top-2 -right-2 w-8 h-8 bg-coral-600 rounded-full flex items-center justify-center text-sm font-bold text-white">
                     3

@@ -86,9 +86,9 @@ export function Footer({ dictionary, lang }: FooterProps) {
 
               {/* Office Locations */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                <div className="bg-forest-800/50 rounded-2xl p-5 backdrop-blur-sm">
+                <div className="bg-forest-800/50 rounded-2xl p-5 backdrop-blur-sm transition-all duration-300 hover:bg-forest-800/70 hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="p-2 bg-coral-600/20 rounded-lg">
+                    <div className="p-2 bg-coral-600/20 rounded-lg transition-colors duration-200 group-hover:bg-coral-600/30">
                       <MapPin size={18} className="text-coral-500" />
                     </div>
                     <div>
@@ -102,9 +102,9 @@ export function Footer({ dictionary, lang }: FooterProps) {
                     </div>
                   </div>
                 </div>
-                <div className="bg-forest-800/50 rounded-2xl p-5 backdrop-blur-sm">
+                <div className="bg-forest-800/50 rounded-2xl p-5 backdrop-blur-sm transition-all duration-300 hover:bg-forest-800/70 hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="p-2 bg-coral-600/20 rounded-lg">
+                    <div className="p-2 bg-coral-600/20 rounded-lg transition-colors duration-200 group-hover:bg-coral-600/30">
                       <MapPin size={18} className="text-coral-500" />
                     </div>
                     <div>
@@ -144,7 +144,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                   href="https://www.linkedin.com/company/b2b-sport-danmark"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200"
+                  className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200 hover:scale-110"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
@@ -153,7 +153,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                   href="https://facebook.com/b2bsport"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200"
+                  className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200 hover:scale-110"
                   aria-label="Facebook"
                 >
                   <Facebook size={20} />
@@ -162,7 +162,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                   href="https://instagram.com/b2bsport"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200"
+                  className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200 hover:scale-110"
                   aria-label="Instagram"
                 >
                   <Instagram size={20} />
@@ -185,7 +185,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                         className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.quickLinks.home}
-                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Link>
                     </li>
                     <li>
@@ -194,7 +194,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                         className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.quickLinks.about}
-                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Link>
                     </li>
                     <li>
@@ -203,7 +203,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                         className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.quickLinks.contact}
-                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Link>
                     </li>
                   </ul>
@@ -221,7 +221,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                         className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.sports.football}
-                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Link>
                     </li>
                     <li>
@@ -230,7 +230,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                         className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.sports.golf}
-                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Link>
                     </li>
                     <li>
@@ -239,7 +239,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                         className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.sports.tennis}
-                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Link>
                     </li>
                     <li>
@@ -248,7 +248,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                         className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.sports.basketball}
-                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Link>
                     </li>
                   </ul>
@@ -256,7 +256,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
 
                 {/* Newsletter/CTA Card */}
                 <div className="col-span-2 sm:col-span-1">
-                  <div className="bg-cream-100 rounded-2xl p-6">
+                  <div className="bg-cream-100 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                     <h3 className="font-semibold font-display text-forest-900 text-lg mb-2">
                       Bliv partner
                     </h3>
@@ -265,10 +265,10 @@ export function Footer({ dictionary, lang }: FooterProps) {
                     </p>
                     <Link
                       href={`/${lang}/contact`}
-                      className="inline-flex items-center justify-center gap-2 bg-coral-600 hover:bg-coral-700 text-white px-5 py-3 min-h-[44px] rounded-full text-sm font-medium transition-colors"
+                      className="inline-flex items-center justify-center gap-2 bg-coral-600 hover:bg-coral-700 text-white px-5 py-3 min-h-[44px] rounded-full text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg group"
                     >
                       Kontakt os
-                      <ArrowUpRight size={16} />
+                      <ArrowUpRight size={16} className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </Link>
                   </div>
                 </div>

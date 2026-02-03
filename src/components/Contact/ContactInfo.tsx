@@ -102,7 +102,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                 href="https://www.linkedin.com/company/b2b-sport-danmark"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all"
+                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all duration-200 hover:scale-110"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -111,7 +111,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                 href="https://facebook.com/b2bsport"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all"
+                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all duration-200 hover:scale-110"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -120,7 +120,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                 href="https://instagram.com/b2bsport"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all"
+                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all duration-200 hover:scale-110"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -133,7 +133,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
       {/* Office Location Cards */}
       <div className="lg:col-span-2 flex flex-col gap-6">
         {/* Sjælland Office */}
-        <div className="bg-cream-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl flex-1">
+        <div className="bg-cream-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl flex-1 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
           <div className="flex flex-col md:flex-row h-full">
             <div className="md:w-1/2 h-48 sm:h-56 md:h-auto min-h-[180px]">
               <Map
@@ -176,7 +176,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
         </div>
 
         {/* Jylland & Fyn Office */}
-        <div className="bg-cream-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl flex-1">
+        <div className="bg-cream-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl flex-1 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
           <div className="flex flex-col md:flex-row h-full">
             <div className="md:w-1/2 h-48 sm:h-56 md:h-auto min-h-[180px]">
               <Map
