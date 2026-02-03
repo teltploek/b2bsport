@@ -84,7 +84,7 @@ export default function Experience({ dictionary, locale }: ExperienceProps) {
               </div>
 
               {/* Overlapping accent card (bottom right) */}
-              <div className="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 bg-coral-600 rounded-2xl p-5 md:p-6 shadow-xl">
+              <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-6 md:-bottom-8 md:-right-8 bg-coral-600 rounded-2xl p-4 sm:p-5 md:p-6 shadow-xl max-w-[200px] sm:max-w-none">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 flex items-center justify-center">
                     <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ export default function Experience({ dictionary, locale }: ExperienceProps) {
               </div>
 
               {/* Overlapping element (top left) */}
-              <div className="absolute -top-6 -left-2 md:-top-8 md:-left-4 bg-cream-100 border-2 border-forest-200 rounded-xl p-4 shadow-lg">
+              <div className="absolute -top-4 left-2 sm:-top-6 sm:-left-2 md:-top-8 md:-left-4 bg-cream-100 border-2 border-forest-200 rounded-xl p-3 sm:p-4 shadow-lg">
                 <div className="flex items-center gap-3">
                   {/* Mini avatars */}
                   <div className="flex -space-x-2">

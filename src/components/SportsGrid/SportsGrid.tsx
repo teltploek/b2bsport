@@ -99,48 +99,50 @@ export default function SportsGrid({ dictionary, locale }: SportsGridProps) {
 
         {/* Mobile Navigation + Pagination */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-          {/* Pagination Dots */}
-          <div className="flex items-center gap-2">
+          {/* Pagination Dots - touch-friendly with padding */}
+          <div className="flex items-center gap-1">
             {Array.from({ length: totalPages }).map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentPage(idx)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
-                  idx === currentPage
-                    ? 'w-8 bg-coral-600'
-                    : 'bg-forest-200 hover:bg-forest-300'
-                }`}
+                className={`min-h-[44px] min-w-[44px] flex items-center justify-center`}
                 aria-label={`Go to page ${idx + 1}`}
-              />
+              >
+                <span className={`rounded-full transition-all duration-200 ${
+                  idx === currentPage
+                    ? 'w-8 h-2.5 bg-coral-600'
+                    : 'w-2.5 h-2.5 bg-forest-200 hover:bg-forest-300'
+                }`} />
+              </button>
             ))}
           </div>
 
-          {/* Mobile Navigation Arrows */}
+          {/* Mobile Navigation Arrows - touch-friendly 44px min tap targets */}
           <div className="flex lg:hidden items-center gap-3">
             <button
               onClick={goToPrev}
-              className="w-10 h-10 rounded-full border-2 border-forest-200 flex items-center justify-center text-forest-700 transition-all duration-200 hover:border-forest-900 hover:bg-forest-900 hover:text-white"
+              className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full border-2 border-forest-200 flex items-center justify-center text-forest-700 transition-all duration-200 hover:border-forest-900 hover:bg-forest-900 hover:text-white"
               aria-label="Previous sports"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             <button
               onClick={goToNext}
-              className="w-10 h-10 rounded-full bg-forest-900 flex items-center justify-center text-white transition-all duration-200 hover:bg-forest-800"
+              className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-forest-900 flex items-center justify-center text-white transition-all duration-200 hover:bg-forest-800"
               aria-label="Next sports"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
           </div>
 
-          {/* View All Link */}
+          {/* View All Link - touch-friendly tap target */}
           <Link
             href={`/${locale}/contact`}
-            className="inline-flex items-center text-forest-900 font-semibold transition-all duration-200 hover:text-coral-600 group"
+            className="inline-flex items-center text-forest-900 font-semibold transition-all duration-200 hover:text-coral-600 group min-h-[44px] py-2"
           >
             {dictionary.sports.viewAll}
             <svg

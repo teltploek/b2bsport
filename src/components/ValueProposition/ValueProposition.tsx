@@ -165,13 +165,13 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-8 mb-12">
           {cardData.map((card, index) => {
             const Icon = card.icon
             return (
               <div
                 key={index}
-                className={`relative rounded-3xl p-8 ${card.bgColor} ${
+                className={`relative rounded-3xl p-6 sm:p-8 ${card.bgColor} ${
                   card.featured ? 'ring-2 ring-coral-600 md:-translate-y-4' : ''
                 } shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}
               >
@@ -235,14 +235,14 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
                   ))}
                 </ul>
 
-                {/* CTA Button */}
+                {/* CTA Button - min-h-[44px] for touch-friendly tap target */}
                 <Link
                   href={
                     index === 1
                       ? `/${locale}/contact`
                       : `/${locale}/what-we-do`
                   }
-                  className={`inline-flex items-center justify-center w-full px-6 py-3.5 rounded-full text-base font-bold transition-all duration-200 group/btn ${
+                  className={`inline-flex items-center justify-center w-full px-6 py-3.5 min-h-[48px] rounded-full text-base font-bold transition-all duration-200 group/btn ${
                     card.featured
                       ? 'bg-coral-600 text-white hover:bg-coral-700 shadow-lg hover:shadow-xl'
                       : 'bg-forest-900 text-cream-100 hover:bg-forest-800'

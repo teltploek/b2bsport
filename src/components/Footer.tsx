@@ -120,52 +120,52 @@ export function Footer({ dictionary, lang }: FooterProps) {
                 </div>
               </div>
 
-              {/* Contact Info */}
-              <div className="flex flex-wrap gap-6 mb-8">
+              {/* Contact Info - touch-friendly min-h-[44px] tap targets */}
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 mb-8">
                 <a
                   href="tel:+4569153545"
-                  className="flex items-center gap-2 text-cream-100/80 hover:text-coral-500 transition-colors group"
+                  className="flex items-center gap-3 text-cream-100/80 hover:text-coral-500 transition-colors group min-h-[44px] py-2"
                 >
-                  <Phone size={16} className="text-coral-500 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm">+45 69 15 35 45</span>
+                  <Phone size={18} className="text-coral-500 group-hover:scale-110 transition-transform" />
+                  <span className="text-base">+45 69 15 35 45</span>
                 </a>
                 <a
                   href="mailto:info@b2bsport.dk"
-                  className="flex items-center gap-2 text-cream-100/80 hover:text-coral-500 transition-colors group"
+                  className="flex items-center gap-3 text-cream-100/80 hover:text-coral-500 transition-colors group min-h-[44px] py-2"
                 >
-                  <Mail size={16} className="text-coral-500 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm">info@b2bsport.dk</span>
+                  <Mail size={18} className="text-coral-500 group-hover:scale-110 transition-transform" />
+                  <span className="text-base">info@b2bsport.dk</span>
                 </a>
               </div>
 
-              {/* Social Icons */}
+              {/* Social Icons - touch-friendly min 44px tap targets */}
               <div className="flex gap-3">
                 <a
                   href="https://www.linkedin.com/company/b2b-sport-danmark"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200"
+                  className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin size={18} />
+                  <Linkedin size={20} />
                 </a>
                 <a
                   href="https://facebook.com/b2bsport"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200"
+                  className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200"
                   aria-label="Facebook"
                 >
-                  <Facebook size={18} />
+                  <Facebook size={20} />
                 </a>
                 <a
                   href="https://instagram.com/b2bsport"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200"
+                  className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-100/60 hover:bg-coral-600 hover:text-white transition-all duration-200"
                   aria-label="Instagram"
                 >
-                  <Instagram size={18} />
+                  <Instagram size={20} />
                 </a>
               </div>
             </div>
@@ -178,11 +178,11 @@ export function Footer({ dictionary, lang }: FooterProps) {
                   <h3 className="font-semibold font-display text-cream-100 text-lg mb-5">
                     {dictionary.footer.quickLinks.title}
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-1">
                     <li>
                       <Link
                         href={`/${lang}`}
-                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group"
+                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.quickLinks.home}
                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -191,7 +191,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                     <li>
                       <Link
                         href={`/${lang}/what-we-do`}
-                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group"
+                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.quickLinks.about}
                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -200,7 +200,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                     <li>
                       <Link
                         href={`/${lang}/contact`}
-                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group"
+                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.quickLinks.contact}
                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -214,11 +214,11 @@ export function Footer({ dictionary, lang }: FooterProps) {
                   <h3 className="font-semibold font-display text-cream-100 text-lg mb-5">
                     {dictionary.footer.sports.title}
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-1">
                     <li>
                       <Link
                         href={`/${lang}`}
-                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group"
+                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.sports.football}
                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -227,7 +227,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                     <li>
                       <Link
                         href={`/${lang}`}
-                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group"
+                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.sports.golf}
                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -236,7 +236,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                     <li>
                       <Link
                         href={`/${lang}`}
-                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group"
+                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.sports.tennis}
                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -245,7 +245,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                     <li>
                       <Link
                         href={`/${lang}`}
-                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group"
+                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.sports.basketball}
                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -265,7 +265,7 @@ export function Footer({ dictionary, lang }: FooterProps) {
                     </p>
                     <Link
                       href={`/${lang}/contact`}
-                      className="inline-flex items-center gap-2 bg-coral-600 hover:bg-coral-700 text-white px-4 py-2.5 rounded-full text-sm font-medium transition-colors"
+                      className="inline-flex items-center justify-center gap-2 bg-coral-600 hover:bg-coral-700 text-white px-5 py-3 min-h-[44px] rounded-full text-sm font-medium transition-colors"
                     >
                       Kontakt os
                       <ArrowUpRight size={16} />
@@ -300,17 +300,17 @@ export function Footer({ dictionary, lang }: FooterProps) {
                 />
               </a>
 
-              {/* Legal Links */}
-              <div className="flex gap-6">
+              {/* Legal Links - touch-friendly tap targets */}
+              <div className="flex gap-4 sm:gap-6">
                 <Link
                   href={`/${lang}`}
-                  className="text-xs text-cream-100/50 hover:text-coral-500 transition-colors"
+                  className="text-sm text-cream-100/50 hover:text-coral-500 transition-colors min-h-[44px] flex items-center py-2"
                 >
                   {dictionary.footer.bottom.privacy}
                 </Link>
                 <Link
                   href={`/${lang}`}
-                  className="text-xs text-cream-100/50 hover:text-coral-500 transition-colors"
+                  className="text-sm text-cream-100/50 hover:text-coral-500 transition-colors min-h-[44px] flex items-center py-2"
                 >
                   {dictionary.footer.bottom.terms}
                 </Link>

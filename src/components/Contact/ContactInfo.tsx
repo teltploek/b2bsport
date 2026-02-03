@@ -18,10 +18,10 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
   const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
       {/* Contact Details Card */}
       <div className="lg:col-span-1">
-        <div className="bg-forest-900 rounded-3xl p-8 h-full shadow-xl">
+        <div className="bg-forest-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 h-full shadow-xl">
           <h2 className="text-2xl font-display font-bold text-cream-100 mb-8">
             {dict.contactInfo?.title || 'Kontakt os'}
           </h2>
@@ -92,7 +92,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
             </div>
           </div>
 
-          {/* Social Links */}
+          {/* Social Links - touch-friendly 44px min tap targets */}
           <div className="pt-6 mt-6 border-t border-cream-100/10">
             <h3 className="font-semibold text-cream-100 mb-4">
               {dict.contactInfo?.followUs || 'Følg os'}
@@ -102,7 +102,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                 href="https://www.linkedin.com/company/b2b-sport-danmark"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all"
+                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -111,7 +111,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                 href="https://facebook.com/b2bsport"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all"
+                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -120,7 +120,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                 href="https://instagram.com/b2bsport"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all"
+                className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center bg-forest-800/50 rounded-xl text-cream-200 hover:bg-coral-600 hover:text-white transition-all"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -133,9 +133,9 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
       {/* Office Location Cards */}
       <div className="lg:col-span-2 flex flex-col gap-6">
         {/* Sjælland Office */}
-        <div className="bg-cream-100 rounded-3xl overflow-hidden shadow-xl flex-1">
+        <div className="bg-cream-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl flex-1">
           <div className="flex flex-col md:flex-row h-full">
-            <div className="md:w-1/2 h-48 md:h-auto">
+            <div className="md:w-1/2 h-48 sm:h-56 md:h-auto min-h-[180px]">
               <Map
                 apiKey={googleMapsApiKey}
                 center={{ lat: 55.683526, lng: 12.464582 }}
@@ -143,13 +143,13 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                 title={dict.contactInfo?.offices?.sjaelland?.name || "Sjælland Kontor"}
               />
             </div>
-            <div className="md:w-1/2 p-8 flex flex-col justify-center">
+            <div className="md:w-1/2 p-5 sm:p-8 flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-forest-900/10 rounded-xl">
                   <MapPin className="h-5 w-5 text-coral-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-display font-bold text-forest-900">
+                  <h3 className="text-lg sm:text-xl font-display font-bold text-forest-900">
                     {dict.contactInfo?.offices?.sjaelland?.name || 'Sjælland Kontor'}
                   </h3>
                   <span className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-semibold bg-coral-600 text-white">
@@ -157,8 +157,8 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                   </span>
                 </div>
               </div>
-              <p className="text-forest-700 text-lg font-medium">{dict.contactInfo?.offices?.sjaelland?.address1 || 'Rødovrevej 151'}</p>
-              <p className="text-forest-700 text-lg font-medium mb-4">{dict.contactInfo?.offices?.sjaelland?.address2 || '2610 Rødovre'}</p>
+              <p className="text-forest-700 text-base sm:text-lg font-medium">{dict.contactInfo?.offices?.sjaelland?.address1 || 'Rødovrevej 151'}</p>
+              <p className="text-forest-700 text-base sm:text-lg font-medium mb-4">{dict.contactInfo?.offices?.sjaelland?.address2 || '2610 Rødovre'}</p>
               <p className="text-forest-600 text-sm pt-4 border-t border-forest-200">
                 {dict.contactInfo?.offices?.sjaelland?.serves || 'Betjener: København og omegn'}
               </p>
@@ -166,7 +166,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                 href="https://maps.google.com/?q=Rødovrevej+151,+2610+Rødovre"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-coral-600 font-semibold mt-4 group"
+                className="inline-flex items-center gap-2 text-coral-600 font-semibold mt-4 group min-h-[44px] py-2"
               >
                 {dict.contactInfo?.getDirections || 'Få rutevejledning'}
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -176,9 +176,9 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
         </div>
 
         {/* Jylland & Fyn Office */}
-        <div className="bg-cream-100 rounded-3xl overflow-hidden shadow-xl flex-1">
+        <div className="bg-cream-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl flex-1">
           <div className="flex flex-col md:flex-row h-full">
-            <div className="md:w-1/2 h-48 md:h-auto">
+            <div className="md:w-1/2 h-48 sm:h-56 md:h-auto min-h-[180px]">
               <Map
                 apiKey={googleMapsApiKey}
                 center={{ lat: 55.353508, lng: 8.774580 }}
@@ -186,13 +186,13 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                 title={dict.contactInfo?.offices?.jylland?.name || "Jylland & Fyn Kontor"}
               />
             </div>
-            <div className="md:w-1/2 p-8 flex flex-col justify-center">
+            <div className="md:w-1/2 p-5 sm:p-8 flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-forest-900/10 rounded-xl">
                   <MapPin className="h-5 w-5 text-coral-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-display font-bold text-forest-900">
+                  <h3 className="text-lg sm:text-xl font-display font-bold text-forest-900">
                     {dict.contactInfo?.offices?.jylland?.name || 'Jylland & Fyn Kontor'}
                   </h3>
                   <span className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-semibold bg-forest-900/10 text-forest-800">
@@ -200,8 +200,8 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                   </span>
                 </div>
               </div>
-              <p className="text-forest-700 text-lg font-medium">{dict.contactInfo?.offices?.jylland?.address1 || 'Industrivej 41'}</p>
-              <p className="text-forest-700 text-lg font-medium mb-4">{dict.contactInfo?.offices?.jylland?.address2 || '6760 Ribe'}</p>
+              <p className="text-forest-700 text-base sm:text-lg font-medium">{dict.contactInfo?.offices?.jylland?.address1 || 'Industrivej 41'}</p>
+              <p className="text-forest-700 text-base sm:text-lg font-medium mb-4">{dict.contactInfo?.offices?.jylland?.address2 || '6760 Ribe'}</p>
               <p className="text-forest-600 text-sm pt-4 border-t border-forest-200">
                 {dict.contactInfo?.offices?.jylland?.serves || 'Betjener: Jylland og Fyn'}
               </p>
@@ -209,7 +209,7 @@ export default function ContactInfo({ dict }: ContactInfoProps) {
                 href="https://maps.google.com/?q=Industrivej+41,+6760+Ribe"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-coral-600 font-semibold mt-4 group"
+                className="inline-flex items-center gap-2 text-coral-600 font-semibold mt-4 group min-h-[44px] py-2"
               >
                 {dict.contactInfo?.getDirections || 'Få rutevejledning'}
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
