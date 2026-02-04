@@ -17,7 +17,7 @@ interface HeroProps {
 
 export default function Hero({ dictionary, locale }: HeroProps) {
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] overflow-hidden">
+    <section className="relative min-h-[400px] md:min-h-[480px] lg:min-h-[540px] overflow-hidden">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -35,7 +35,7 @@ export default function Hero({ dictionary, locale }: HeroProps) {
       <div className="absolute inset-0 bg-forest-900/70" />
 
       {/* Content Container */}
-      <div className="relative z-10 h-full min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-end">
+      <div className="relative z-10 h-full min-h-[400px] md:min-h-[480px] lg:min-h-[540px] flex items-end">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16 lg:pb-20">
           {/* Overlapping Content Card */}
           <div className="max-w-2xl">
