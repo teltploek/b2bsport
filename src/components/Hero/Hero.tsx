@@ -18,7 +18,7 @@ interface HeroProps {
 
 export default function Hero({ dictionary, locale }: HeroProps) {
   return (
-    <section className="relative h-[100svh] overflow-hidden flex flex-col">
+    <section className="relative min-h-[85svh] max-h-[100svh] overflow-hidden flex flex-col">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover scale-105"
