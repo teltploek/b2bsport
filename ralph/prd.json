@@ -1,0 +1,35 @@
+{
+  "project": "B2B Sport Website Fixes",
+  "branchName": "ralph/website-redesign",
+  "description": "Fix hero stats visibility (above the fold) and map pin color (match header green)",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Adjust hero height for stats visibility",
+      "description": "As a visitor, I want to see the stats section without scrolling so that I immediately understand the company's scale and capabilities.",
+      "acceptanceCriteria": [
+        "Hero section height reduced from 100svh to ensure stats bar is visible above the fold",
+        "Stats bar visible on mobile (375px+), tablet (768px+), and desktop (1024px+, 1080p+) viewports",
+        "Hero content (headline, subtitle, CTAs) remains properly centered and readable",
+        "Video background still covers the hero area appropriately",
+        "npm run typecheck passes",
+        "Visual verification: Navigate to / and confirm stats bar (50+ Klubber, 100% Digital, 24/7 Platform) is fully visible without scrolling"
+      ],
+      "priority": 1,
+      "passes": true
+    },
+    {
+      "id": "US-002",
+      "title": "Update map pin SVG color",
+      "description": "As a visitor, I want the map pins to use consistent brand colors so the design feels cohesive.",
+      "acceptanceCriteria": [
+        "Map pin SVG fill color changed from #16a34a to #1a3a2f (forest-900)",
+        "Both office location maps display pins with the updated color",
+        "npm run typecheck passes",
+        "Visual verification: Navigate to /contact and confirm map pins show the darker forest green color matching the site header"
+      ],
+      "priority": 2,
+      "passes": true
+    }
+  ]
+}

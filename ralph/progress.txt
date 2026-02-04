@@ -1,0 +1,33 @@
+# Ralph Progress Log
+Started: ons.  4 feb. 2026 08:06:20 CET
+---
+
+## Codebase Patterns
+- Hero heights defined in `src/components/Hero/Hero.tsx` using Tailwind min-h classes
+- Welcome section with stats ("50+ klubber") follows immediately after Hero in homepage
+- Translations: Update all three files (da.json, en.json, de.json) together
+
+- Map pins use SVG at `/public/images/map-pin.svg` - both Map.tsx and SimpleMap.tsx reference this file
+---
+
+## 2026-02-04 - US-002
+- **What was implemented**: Changed map pin SVG color from #16a34a (green-600) to #1a3a2f (forest-900) for brand consistency
+- **Files changed**:
+  - `public/images/map-pin.svg` - Updated fill color on line 3
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - Map pin is a shared SVG asset at `/public/images/map-pin.svg`
+  - Both `src/components/Map/Map.tsx` and `src/components/Map/SimpleMap.tsx` reference this same SVG
+  - To change map pin color site-wide, only need to update the single SVG file
+---
+
+## 2026-02-04 - US-001
+- **What was implemented**: Reduced hero section heights to ensure stats/Welcome section is visible above the fold
+- **Files changed**:
+  - `src/components/Hero/Hero.tsx` - Reduced min-h values from 600/700/800px to 400/480/540px (mobile/tablet/desktop)
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - Hero uses min-h-[Xpx] pattern for responsive heights
+  - Content card in hero overlaps with translate-y classes for visual effect
+  - Welcome section contains the "50+ klubber" stats that needs to be visible above fold
+---
