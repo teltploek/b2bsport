@@ -2,6 +2,7 @@ import { getDictionary } from '@/i18n/get-dictionary'
 import { Locale } from '@/i18n/config'
 import Link from 'next/link'
 import { ArrowRight, Zap, Target, Users, Check, X, LogIn, ShoppingBag, Truck } from 'lucide-react'
+import SubpageHero from '@/components/Hero/SubpageHero'
 
 export default async function WhatWeDo({
   params: { locale },
@@ -12,49 +13,13 @@ export default async function WhatWeDo({
 
   return (
     <main className="min-h-screen">
-      {/* Hero Section with Video Background and Overlapping Card */}
-      <section className="relative min-h-[500px] md:min-h-[550px] lg:min-h-[600px] overflow-hidden">
-        {/* Video Background */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-        >
-          <source src="/videos/background-02.webm" type="video/webm" />
-          <source src="/videos/background-02.mp4" type="video/mp4" />
-        </video>
-
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-forest-900/75" />
-
-        {/* Content Container */}
-        <div className="relative z-10 h-full min-h-[500px] md:min-h-[550px] lg:min-h-[600px] flex items-end">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16">
-            {/* Overlapping Content Card */}
-            <div className="max-w-2xl">
-              <div className="bg-cream-100 rounded-3xl p-8 md:p-10 lg:p-12 shadow-2xl transform translate-y-8 md:translate-y-12">
-                {/* Pill-shaped Category Tag */}
-                <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold bg-forest-900 text-cream-100 mb-6">
-                  {dictionary.whatWeDoPage?.hero?.tag || 'Hvad vi gør'}
-                </span>
-
-                {/* Large Headline */}
-                <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 leading-[1.1] tracking-tight mb-4">
-                  {dictionary.whatWeDoPage?.hero?.title || 'Din klub fortjener bedre'}
-                </h1>
-
-                {/* Subtitle */}
-                <p className="text-lg md:text-xl text-forest-700 leading-relaxed">
-                  {dictionary.whatWeDoPage?.hero?.subtitle || 'Slip for tidskrævende administration og få mere tid til det, der virkelig betyder noget - jeres sport'}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <SubpageHero
+        tag={dictionary.whatWeDoPage?.hero?.tag || 'Hvad vi gør'}
+        title={dictionary.whatWeDoPage?.hero?.title || 'Din klub fortjener bedre'}
+        subtitle={dictionary.whatWeDoPage?.hero?.subtitle || 'Slip for tidskrævende administration og få mere tid til det, der virkelig betyder noget - jeres sport'}
+        videoSrc="/videos/background-02"
+      />
 
       {/* Mission Section - Modern Solution */}
       <section className="py-20 md:py-28 bg-cream-200">
@@ -294,7 +259,7 @@ export default async function WhatWeDo({
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="group inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-forest-900 bg-coral-600 rounded-full hover:bg-coral-500 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white bg-coral-600 rounded-full hover:bg-coral-500 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             {dictionary.whatWeDoPage?.goToMarket?.cta || 'Kontakt os'}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
