@@ -1,3 +1,8 @@
+'use client'
+
+import { ReactFlow, Background, Node, Edge } from '@xyflow/react'
+import '@xyflow/react/dist/style.css'
+
 interface WorkflowProps {
   dictionary: {
     workflow?: {
@@ -7,6 +12,18 @@ interface WorkflowProps {
   }
   locale: string
 }
+
+// Placeholder nodes for basic canvas setup
+const initialNodes: Node[] = [
+  {
+    id: '1',
+    type: 'default',
+    position: { x: 250, y: 100 },
+    data: { label: 'Workflow Step' },
+  },
+]
+
+const initialEdges: Edge[] = []
 
 export default function Workflow({ dictionary }: WorkflowProps) {
   const content = dictionary.workflow || {
@@ -27,9 +44,21 @@ export default function Workflow({ dictionary }: WorkflowProps) {
           </p>
         </div>
 
-        {/* Placeholder for workflow visualization */}
-        <div className="text-center text-forest-600">
-          {/* Workflow visualization will be added in US-002 */}
+        {/* React Flow Canvas */}
+        <div className="h-[300px] w-full rounded-xl overflow-hidden">
+          <ReactFlow
+            nodes={initialNodes}
+            edges={initialEdges}
+            fitView
+            panOnDrag={false}
+            zoomOnScroll={false}
+            nodesDraggable={false}
+            zoomOnPinch={false}
+            preventScrolling={false}
+            proOptions={{ hideAttribution: true }}
+          >
+            <Background color="#e5e7eb" gap={16} />
+          </ReactFlow>
         </div>
       </div>
     </section>
