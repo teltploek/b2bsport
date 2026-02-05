@@ -57,9 +57,9 @@ interface ValuePropositionProps {
 
 export default function ValueProposition({ dictionary, locale }: ValuePropositionProps) {
   const content = dictionary.valueProposition || {
-    tag: 'Fordele',
-    title: 'En nemmere måde at bestille klubbens udstyr',
-    subtitle: 'Vi arbejder på at gøre bestilling af sportsudstyr digital og nem. Slip for Excel-ark, emails frem og tilbage, og tidskrævende administration.',
+    tag: 'Alt-i-én løsning',
+    title: 'Alt hvad din klub har brug for',
+    subtitle: 'Platform, support og partnerskab - alt sammen inkluderet. Ikke separate planer, men én komplet løsning til jeres klub.',
     mainCTA: 'Se hvordan vi gør det',
     socialProof: 'klubber',
     features: {
