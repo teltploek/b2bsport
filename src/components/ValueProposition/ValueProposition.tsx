@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { TrendingUp, Clock, CheckCircle, Users, ArrowRight, Star, Zap, Shield } from 'lucide-react'
+import { TrendingUp, Clock, CheckCircle, Users, ArrowRight, Zap, Shield } from 'lucide-react'
 
 interface ValuePropositionProps {
   dictionary: {
@@ -96,7 +96,7 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
       cta: 'Se platformen',
     },
     support: {
-      badge: 'Anbefalet',
+      badge: 'Support',
       title: 'Personlig support',
       description: 'Dedikeret hjælp fra start til mål - vi kender jeres sport',
       features: [
@@ -125,7 +125,6 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
     {
       ...cards.platform,
       icon: Zap,
-      featured: false,
       bgColor: 'bg-cream-100',
       textColor: 'text-forest-900',
       badgeColor: 'bg-forest-900/10 text-forest-800',
@@ -133,15 +132,13 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
     {
       ...cards.support,
       icon: Shield,
-      featured: true,
-      bgColor: 'bg-forest-900',
-      textColor: 'text-cream-100',
-      badgeColor: 'bg-coral-600 text-white',
+      bgColor: 'bg-cream-100',
+      textColor: 'text-forest-900',
+      badgeColor: 'bg-forest-900/10 text-forest-800',
     },
     {
       ...cards.partnership,
       icon: Users,
-      featured: false,
       bgColor: 'bg-cream-100',
       textColor: 'text-forest-900',
       badgeColor: 'bg-forest-900/10 text-forest-800',
@@ -171,33 +168,20 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
             return (
               <div
                 key={index}
-                className={`relative rounded-3xl p-6 sm:p-8 ${card.bgColor} ${
-                  card.featured ? 'ring-2 ring-coral-600 md:-translate-y-4' : ''
-                } shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}
+                className={`relative rounded-3xl p-6 sm:p-8 ${card.bgColor} shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}
               >
                 {/* Badge */}
                 <span
                   className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide ${card.badgeColor} mb-6`}
                 >
-                  {card.featured && (
-                    <Star className="w-3 h-3 mr-1 fill-current" />
-                  )}
                   {card.badge}
                 </span>
 
                 {/* Icon */}
                 <div
-                  className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
-                    card.featured
-                      ? 'bg-coral-600'
-                      : 'bg-forest-900 group-hover:bg-coral-600'
-                  } transition-colors duration-300`}
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-forest-900 group-hover:bg-coral-600 transition-colors duration-300"
                 >
-                  <Icon
-                    className={`w-7 h-7 ${
-                      card.featured ? 'text-white' : 'text-cream-100'
-                    }`}
-                  />
+                  <Icon className="w-7 h-7 text-cream-100" />
                 </div>
 
                 {/* Title */}
@@ -208,11 +192,7 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
                 </h3>
 
                 {/* Description */}
-                <p
-                  className={`text-base ${
-                    card.featured ? 'text-cream-200' : 'text-forest-700'
-                  } mb-6 leading-relaxed`}
-                >
+                <p className="text-base text-forest-700 mb-6 leading-relaxed">
                   {card.description}
                 </p>
 
@@ -221,15 +201,9 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
                   {card.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className={`flex items-start gap-2 text-sm ${
-                        card.featured ? 'text-cream-200' : 'text-forest-700'
-                      }`}
+                      className="flex items-start gap-2 text-sm text-forest-700"
                     >
-                      <CheckCircle
-                        className={`w-5 h-5 flex-shrink-0 ${
-                          card.featured ? 'text-coral-400' : 'text-coral-600'
-                        }`}
-                      />
+                      <CheckCircle className="w-5 h-5 flex-shrink-0 text-coral-600" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -237,16 +211,8 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
 
                 {/* CTA Button - min-h-[44px] for touch-friendly tap target */}
                 <Link
-                  href={
-                    index === 1
-                      ? `/${locale}/contact`
-                      : `/${locale}/what-we-do`
-                  }
-                  className={`inline-flex items-center justify-center w-full px-6 py-3.5 min-h-[48px] rounded-full text-base font-bold transition-all duration-200 group/btn ${
-                    card.featured
-                      ? 'bg-coral-600 text-white hover:bg-coral-700 shadow-lg hover:shadow-xl'
-                      : 'bg-forest-900 text-cream-100 hover:bg-forest-800'
-                  }`}
+                  href={`/${locale}/contact`}
+                  className="inline-flex items-center justify-center w-full px-6 py-3.5 min-h-[48px] rounded-full text-base font-bold transition-all duration-200 group/btn bg-forest-900 text-cream-100 hover:bg-forest-800"
                 >
                   {card.cta}
                   <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-200 group-hover/btn:translate-x-1" />
