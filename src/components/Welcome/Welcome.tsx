@@ -31,8 +31,8 @@ export default function Welcome({ dictionary, locale }: WelcomeProps) {
       title: 'Alt samlet ét sted',
     },
     rightCard: {
-      tag: 'Voksende netværk',
-      title: 'Bliv en del af rejsen',
+      tag: 'Kvalitetsbrands',
+      title: 'Anerkendte mærker',
     },
   }
 
@@ -126,20 +126,20 @@ export default function Welcome({ dictionary, locale }: WelcomeProps) {
 
                 {/* Card Content */}
                 <div className="mt-auto">
-                  {/* Icon/Avatars Stack */}
-                  <div className="flex -space-x-3 mb-4">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div
-                        key={i}
-                        className="w-10 h-10 rounded-full bg-forest-700 border-2 border-cream-100 flex items-center justify-center"
-                      >
-                        <svg className="w-5 h-5 text-cream-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                      </div>
-                    ))}
-                    <div className="w-10 h-10 rounded-full bg-coral-600 border-2 border-cream-100 flex items-center justify-center text-xs font-bold text-white">
-                      +
+                  {/* Brand Icon Placeholders */}
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    {/* Placeholder brand shapes - monotone, ready for real logos */}
+                    <div className="w-12 h-12 rounded-lg bg-forest-100 border border-forest-200 flex items-center justify-center">
+                      <div className="w-6 h-6 rounded-full bg-forest-300" />
+                    </div>
+                    <div className="w-12 h-12 rounded-lg bg-forest-100 border border-forest-200 flex items-center justify-center">
+                      <div className="w-6 h-4 rounded bg-forest-300" />
+                    </div>
+                    <div className="w-12 h-12 rounded-lg bg-forest-100 border border-forest-200 flex items-center justify-center">
+                      <div className="w-5 h-5 rounded-sm bg-forest-300 transform rotate-45" />
+                    </div>
+                    <div className="w-12 h-12 rounded-lg bg-forest-100 border border-forest-200 flex items-center justify-center">
+                      <div className="w-7 h-3 rounded-full bg-forest-300" />
                     </div>
                   </div>
                   <h3 className="font-display text-xl md:text-2xl font-bold text-forest-900 leading-tight">
