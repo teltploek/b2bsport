@@ -1,70 +1,96 @@
 {
-  "project": "B2B Sport - Content Credibility & Layout Fixes",
+  "project": "B2B Sport - Interactive Workflow Section",
   "branchName": "ralph/website-redesign",
-  "description": "Replace unverifiable statistics with honest language, transform partner section into brand showcase, and fix ValueProposition to not look like pricing tiers",
+  "description": "Add a new homepage section with an animated flowchart visualizing the club equipment ordering workflow using xyflow",
   "userStories": [
     {
       "id": "US-001",
-      "title": "Replace 50+ klubber statistics with honest language",
-      "description": "As marketing, I want to replace specific club numbers with vaguer but honest language so we don't get caught making claims we can't back up.",
+      "title": "Create base WorkflowSection component structure",
+      "description": "As a developer, I need a new section component that will house the interactive flowchart.",
       "acceptanceCriteria": [
-        "Welcome component: Replace '50+ klubber' badge with honest alternative (e.g., 'Voksende netværk' or 'Nye partnere')",
-        "Welcome component: Replace 'Stolte partnere' title with something like 'Bliv en del af rejsen' or 'Klubber der er med'",
-        "Experience component: Replace '50+ Stolte klubpartnere' stat with capability-focused message (e.g., 'Klar til din klub')",
-        "ValueProposition component: Remove the '50+ klubber' social proof from featured card",
-        "Update all three dictionary files (da.json, en.json, de.json) with equivalent translations",
-        "npm run typecheck passes",
-        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm no '50+' text appears anywhere on homepage"
+        "Create /src/components/Workflow/Workflow.tsx component",
+        "Add section with consistent styling (padding, max-width) matching other homepage sections",
+        "Include section header with title and subtitle from dictionary",
+        "Add dictionary entries for workflow.title, workflow.subtitle in all three language files (da.json, en.json, de.json)",
+        "Title should be something like 'Fra bestilling til levering' (From order to delivery)",
+        "npm run typecheck passes"
       ],
       "priority": 1,
       "passes": true
     },
     {
       "id": "US-002",
-      "title": "Transform partner section into supplier brands showcase",
-      "description": "As a visitor, I want to see which equipment brands B2B Sport works with so I understand they have legitimate supplier relationships.",
+      "title": "Install and configure xyflow",
+      "description": "As a developer, I need the xyflow library installed and configured for the workflow visualization.",
       "acceptanceCriteria": [
-        "Welcome component right card: Replace fake partner avatars with concept of 'brands we work with'",
-        "Show 3-4 placeholder brand icon shapes (styled monotone circles/squares) that can be swapped for real logos later",
-        "Update card title to 'Anerkendte brands' or 'Kvalitetsbrands' or similar",
-        "Maintain the decorative corner bracket styling",
-        "Update all three dictionary files (da.json, en.json, de.json)",
-        "npm run typecheck passes",
-        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm the right card in Welcome section shows brand-related content instead of partner avatars"
+        "Install @xyflow/react package via npm",
+        "Verify package installs without peer dependency conflicts",
+        "Create basic React Flow canvas inside Workflow component",
+        "Configure flow with fitView and disabled interactions (panOnDrag: false, zoomOnScroll: false, nodesDraggable: false, zoomOnPinch: false, preventScrolling: false)",
+        "Use dynamic import if needed to avoid SSR issues with Next.js",
+        "npm run typecheck passes"
       ],
       "priority": 2,
       "passes": false
     },
     {
       "id": "US-003",
-      "title": "Remove pricing-tier appearance from ValueProposition",
-      "description": "As a visitor, I want to understand the three cards as features/benefits, not as mutually exclusive pricing plans.",
+      "title": "Design workflow nodes with B2B Sport styling",
+      "description": "As a visitor, I want the flowchart nodes to match the website's visual design language.",
       "acceptanceCriteria": [
-        "Remove 'Anbefalet' badge from the middle card - use a descriptive badge instead",
-        "Remove the elevated styling (-translate-y-4) from featured card - make all cards equal height",
-        "Change all cards to same background style (all use light background)",
-        "Remove the ring border that makes middle card look premium",
-        "All three CTAs should point to /contact",
-        "Update badge text to be feature-descriptive (e.g., 'Digital', 'Support', 'Partnerskab')",
-        "Update all three dictionary files if badge text changes",
-        "npm run typecheck passes",
-        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm three cards appear equal with no elevated or highlighted card"
+        "Create custom node component in /src/components/Workflow/WorkflowNode.tsx",
+        "Style nodes with B2B Sport colors (cream, coral, forest palette)",
+        "Each node has: Lucide icon, title text",
+        "Nodes use rounded corners (rounded-xl), subtle shadows consistent with site design",
+        "Use Lucide icons matching rest of site",
+        "npm run typecheck passes"
       ],
       "priority": 3,
       "passes": false
     },
     {
       "id": "US-004",
-      "title": "Refine ValueProposition section header",
-      "description": "As a visitor, I want the section title to clearly communicate these are platform capabilities, not service tiers.",
+      "title": "Implement workflow process steps",
+      "description": "As a visitor, I want to see the typical equipment ordering workflow visualized as connected steps.",
       "acceptanceCriteria": [
-        "Update section title to something clearer about capabilities (e.g., 'Alt hvad din klub har brug for' or 'Platform. Support. Partnerskab.')",
-        "Subtitle should reinforce these are features you get together, not plans you choose between",
-        "Update all three dictionary files (da.json, en.json, de.json)",
+        "Define 6 workflow nodes: 1) Opret klub (UserPlus icon), 2) Se aftalepriser (Tag icon), 3) Saml bestilling (ShoppingCart icon), 4) Godkend internt (CheckCircle icon), 5) Bekræft ordre (Send icon), 6) Spor levering (Truck icon)",
+        "Add dictionary entries for each node title in all three language files",
+        "Nodes arranged in horizontal flow on desktop",
+        "Edges/connections between nodes styled with coral color",
+        "Use animated edges (animated: true) for visual interest",
         "npm run typecheck passes",
-        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm new section header text appears"
+        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm workflow section shows 6 connected nodes"
       ],
       "priority": 4,
+      "passes": false
+    },
+    {
+      "id": "US-005",
+      "title": "Add Workflow section to homepage",
+      "description": "As a visitor, I want to see the workflow section on the homepage in a logical position.",
+      "acceptanceCriteria": [
+        "Import and add Workflow component to homepage (/src/app/[locale]/page.tsx)",
+        "Position after ValueProposition section, before SportsGrid",
+        "Section has appropriate spacing/margin relative to adjacent sections",
+        "npm run typecheck passes",
+        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm workflow section appears between ValueProposition and SportsGrid"
+      ],
+      "priority": 5,
+      "passes": false
+    },
+    {
+      "id": "US-006",
+      "title": "Ensure responsive behavior",
+      "description": "As a mobile visitor, I want the workflow to display appropriately on smaller screens.",
+      "acceptanceCriteria": [
+        "On mobile (< 768px): nodes stack vertically or use simplified 2-column grid view",
+        "Flow container has appropriate height on all screen sizes",
+        "No horizontal scroll caused by flow on mobile",
+        "Consider hiding React Flow on mobile and showing a simple styled list instead",
+        "npm run typecheck passes",
+        "Visual verification: Run npm run dev, open http://localhost:3000/da in mobile viewport (375px width) and confirm workflow section is readable and usable"
+      ],
+      "priority": 6,
       "passes": false
     }
   ]
