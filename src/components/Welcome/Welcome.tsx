@@ -31,8 +31,8 @@ export default function Welcome({ dictionary, locale }: WelcomeProps) {
       title: 'Alt samlet ét sted',
     },
     rightCard: {
-      tag: '50+ klubber',
-      title: 'Stolte partnere',
+      tag: 'Voksende netværk',
+      title: 'Bliv en del af rejsen',
     },
   }
 

@@ -120,8 +120,8 @@ export default function Hero({ dictionary, locale }: HeroProps) {
           <div className="flex items-center justify-between py-4 text-sm">
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-2 text-cream-200/70">
-                <span className="text-2xl font-display font-bold text-white">50+</span>
-                <span className="text-xs uppercase tracking-wider">Klubber</span>
+                <span className="text-2xl font-display font-bold text-white">Klar</span>
+                <span className="text-xs uppercase tracking-wider">Til dig</span>
               </div>
               <div className="hidden sm:flex items-center gap-2 text-cream-200/70">
                 <span className="text-2xl font-display font-bold text-white">100%</span>

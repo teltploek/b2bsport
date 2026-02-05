@@ -25,8 +25,8 @@
       "title": "Alles an einem Ort"
     },
     "rightCard": {
-      "tag": "50+ Vereine",
-      "title": "Stolze Partner"
+      "tag": "Wachsendes Netzwerk",
+      "title": "Werden Sie Teil der Reise"
     }
   },
   "valueProposition": {
@@ -144,7 +144,7 @@
     "stats": {
       "timeSaved": "75% weniger Zeit für Verwaltung",
       "errorReduction": "90% weniger Bestellfehler",
-      "clubs": "50+ Vereine nutzen es bereits",
+      "clubs": "Vereine in ganz Dänemark",
       "satisfaction": "4,9/5 Kundenzufriedenheit"
     }
   },
@@ -161,8 +161,8 @@
     "descriptionHighlight": "einfach, schnell und zuverlässig",
     "descriptionSuffix": "die Vereinsausrüstung zu verwalten.",
     "stat": {
-      "value": "50+",
-      "label": "Stolze Vereinspartner"
+      "value": "Bereit",
+      "label": "Für Ihren Verein"
     },
     "verifiedPartner": "Verifizierter Partner",
     "users": {

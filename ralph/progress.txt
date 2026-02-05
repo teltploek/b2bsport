@@ -1,33 +1,28 @@
 # Ralph Progress Log
-Started: ons.  4 feb. 2026 08:06:20 CET
----
+Started: 2026-02-04
 
 ## Codebase Patterns
-- Hero heights defined in `src/components/Hero/Hero.tsx` using Tailwind min-h classes
-- Welcome section with stats ("50+ klubber") follows immediately after Hero in homepage
 - Translations: Update all three files (da.json, en.json, de.json) together
+- Hero: Full-screen design with video background, gradient overlays, stats bar at bottom
+- Hero height: Use min-h-[85svh] max-h-[100svh] to show stats bar above fold
+- Stats bar is part of the Hero component flex layout (not a separate component)
 
-- Map pins use SVG at `/public/images/map-pin.svg` - both Map.tsx and SimpleMap.tsx reference this file
 ---
 
-## 2026-02-04 - US-002
-- **What was implemented**: Changed map pin SVG color from #16a34a (green-600) to #1a3a2f (forest-900) for brand consistency
+## 2026-02-05 - US-001 (Content Credibility PRD)
+- **What was implemented**: Replaced unverifiable "50+" statistics with honest, capability-focused language across all homepage components
 - **Files changed**:
-  - `public/images/map-pin.svg` - Updated fill color on line 3
+  - `src/components/Welcome/Welcome.tsx` - Updated fallback values from '50+ klubber' to 'Voksende netværk', 'Stolte partnere' to 'Bliv en del af rejsen'
+  - `src/components/Experience/Experience.tsx` - Updated fallback stat from '50+' / 'Stolte klubpartnere' to 'Klar' / 'Til din klub'
+  - `src/components/ValueProposition/ValueProposition.tsx` - Removed social proof section (mini avatars + 50+ klubber) from featured card
+  - `src/components/Hero/Hero.tsx` - Updated stats bar from '50+' / 'Klubber' to 'Klar' / 'Til dig'
+  - `src/dictionaries/da.json` - Updated welcome.rightCard, experience.stat, clubSystem.stats.clubs with honest alternatives
+  - `src/dictionaries/en.json` - Updated with English equivalents ('Growing network', 'Ready', 'For your club', etc.)
+  - `src/dictionaries/de.json` - Updated with German equivalents ('Wachsendes Netzwerk', 'Bereit', 'Für Ihren Verein', etc.)
 - **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed no '50+' text appears on /da homepage; new text ('Voksende netværk', 'Bliv en del af rejsen') confirmed present
 - **Learnings for future iterations:**
-  - Map pin is a shared SVG asset at `/public/images/map-pin.svg`
-  - Both `src/components/Map/Map.tsx` and `src/components/Map/SimpleMap.tsx` reference this same SVG
-  - To change map pin color site-wide, only need to update the single SVG file
----
-
-## 2026-02-04 - US-001
-- **What was implemented**: Reduced hero section heights to ensure stats/Welcome section is visible above the fold
-- **Files changed**:
-  - `src/components/Hero/Hero.tsx` - Reduced min-h values from 600/700/800px to 400/480/540px (mobile/tablet/desktop)
-- **Validation**: PASSED - typecheck, lint, and build all succeed
-- **Learnings for future iterations:**
-  - Hero uses min-h-[Xpx] pattern for responsive heights
-  - Content card in hero overlaps with translate-y classes for visual effect
-  - Welcome section contains the "50+ klubber" stats that needs to be visible above fold
+  - Hero component also has a stats bar that can contain statistics - don't forget it when cleaning up numbers
+  - The ValueProposition social proof section was hardcoded, not dictionary-driven
+  - Always update fallback values in component defaults AND dictionary files
 ---

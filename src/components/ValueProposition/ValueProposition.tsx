@@ -252,40 +252,6 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
                   <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-200 group-hover/btn:translate-x-1" />
                 </Link>
 
-                {/* Social proof for featured card */}
-                {card.featured && (
-                  <div className="mt-6 pt-6 border-t border-forest-700">
-                    <div className="flex items-center justify-center gap-3">
-                      {/* Mini avatars */}
-                      <div className="flex -space-x-2">
-                        {[1, 2, 3, 4].map((i) => (
-                          <div
-                            key={i}
-                            className="w-8 h-8 rounded-full bg-forest-700 border-2 border-forest-900 flex items-center justify-center"
-                          >
-                            <svg
-                              className="w-4 h-4 text-cream-100"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                              />
-                            </svg>
-                          </div>
-                        ))}
-                      </div>
-                      <div className="text-xs text-cream-200">
-                        <span className="font-bold text-cream-100">50+</span>{' '}
-                        {content.socialProof || 'klubber'}
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             )
           })}

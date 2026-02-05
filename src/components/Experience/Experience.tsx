@@ -28,8 +28,8 @@ export default function Experience({ dictionary, locale }: ExperienceProps) {
     description: 'Med års erfaring i sportsbranchen forstår vi klubbernes behov. Vores mission er at gøre det',
     descriptionHighlight: 'nemt, hurtigt og pålideligt',
     stat: {
-      value: '50+',
-      label: 'Stolte klubpartnere',
+      value: 'Klar',
+      label: 'Til din klub',
     },
     solutions: {
       title: 'Komplette løsninger',

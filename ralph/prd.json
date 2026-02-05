@@ -1,35 +1,71 @@
 {
-  "project": "B2B Sport Website Fixes",
+  "project": "B2B Sport - Content Credibility & Layout Fixes",
   "branchName": "ralph/website-redesign",
-  "description": "Fix hero stats visibility (above the fold) and map pin color (match header green)",
+  "description": "Replace unverifiable statistics with honest language, transform partner section into brand showcase, and fix ValueProposition to not look like pricing tiers",
   "userStories": [
     {
       "id": "US-001",
-      "title": "Adjust hero height for stats visibility",
-      "description": "As a visitor, I want to see the stats section without scrolling so that I immediately understand the company's scale and capabilities.",
+      "title": "Replace 50+ klubber statistics with honest language",
+      "description": "As marketing, I want to replace specific club numbers with vaguer but honest language so we don't get caught making claims we can't back up.",
       "acceptanceCriteria": [
-        "Hero section height reduced from 100svh to ensure stats bar is visible above the fold",
-        "Stats bar visible on mobile (375px+), tablet (768px+), and desktop (1024px+, 1080p+) viewports",
-        "Hero content (headline, subtitle, CTAs) remains properly centered and readable",
-        "Video background still covers the hero area appropriately",
+        "Welcome component: Replace '50+ klubber' badge with honest alternative (e.g., 'Voksende netværk' or 'Nye partnere')",
+        "Welcome component: Replace 'Stolte partnere' title with something like 'Bliv en del af rejsen' or 'Klubber der er med'",
+        "Experience component: Replace '50+ Stolte klubpartnere' stat with capability-focused message (e.g., 'Klar til din klub')",
+        "ValueProposition component: Remove the '50+ klubber' social proof from featured card",
+        "Update all three dictionary files (da.json, en.json, de.json) with equivalent translations",
         "npm run typecheck passes",
-        "Visual verification: Navigate to / and confirm stats bar (50+ Klubber, 100% Digital, 24/7 Platform) is fully visible without scrolling"
+        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm no '50+' text appears anywhere on homepage"
       ],
       "priority": 1,
       "passes": true
     },
     {
       "id": "US-002",
-      "title": "Update map pin SVG color",
-      "description": "As a visitor, I want the map pins to use consistent brand colors so the design feels cohesive.",
+      "title": "Transform partner section into supplier brands showcase",
+      "description": "As a visitor, I want to see which equipment brands B2B Sport works with so I understand they have legitimate supplier relationships.",
       "acceptanceCriteria": [
-        "Map pin SVG fill color changed from #16a34a to #1a3a2f (forest-900)",
-        "Both office location maps display pins with the updated color",
+        "Welcome component right card: Replace fake partner avatars with concept of 'brands we work with'",
+        "Show 3-4 placeholder brand icon shapes (styled monotone circles/squares) that can be swapped for real logos later",
+        "Update card title to 'Anerkendte brands' or 'Kvalitetsbrands' or similar",
+        "Maintain the decorative corner bracket styling",
+        "Update all three dictionary files (da.json, en.json, de.json)",
         "npm run typecheck passes",
-        "Visual verification: Navigate to /contact and confirm map pins show the darker forest green color matching the site header"
+        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm the right card in Welcome section shows brand-related content instead of partner avatars"
       ],
       "priority": 2,
-      "passes": true
+      "passes": false
+    },
+    {
+      "id": "US-003",
+      "title": "Remove pricing-tier appearance from ValueProposition",
+      "description": "As a visitor, I want to understand the three cards as features/benefits, not as mutually exclusive pricing plans.",
+      "acceptanceCriteria": [
+        "Remove 'Anbefalet' badge from the middle card - use a descriptive badge instead",
+        "Remove the elevated styling (-translate-y-4) from featured card - make all cards equal height",
+        "Change all cards to same background style (all use light background)",
+        "Remove the ring border that makes middle card look premium",
+        "All three CTAs should point to /contact",
+        "Update badge text to be feature-descriptive (e.g., 'Digital', 'Support', 'Partnerskab')",
+        "Update all three dictionary files if badge text changes",
+        "npm run typecheck passes",
+        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm three cards appear equal with no elevated or highlighted card"
+      ],
+      "priority": 3,
+      "passes": false
+    },
+    {
+      "id": "US-004",
+      "title": "Refine ValueProposition section header",
+      "description": "As a visitor, I want the section title to clearly communicate these are platform capabilities, not service tiers.",
+      "acceptanceCriteria": [
+        "Update section title to something clearer about capabilities (e.g., 'Alt hvad din klub har brug for' or 'Platform. Support. Partnerskab.')",
+        "Subtitle should reinforce these are features you get together, not plans you choose between",
+        "Update all three dictionary files (da.json, en.json, de.json)",
+        "npm run typecheck passes",
+        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm new section header text appears"
+      ],
+      "priority": 4,
+      "passes": false
     }
   ]
 }

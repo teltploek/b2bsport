@@ -25,8 +25,8 @@
       "title": "Alt samlet ét sted"
     },
     "rightCard": {
-      "tag": "50+ klubber",
-      "title": "Stolte partnere"
+      "tag": "Voksende netværk",
+      "title": "Bliv en del af rejsen"
     }
   },
   "valueProposition": {
@@ -144,7 +144,7 @@
     "stats": {
       "timeSaved": "75% mindre tid på administration",
       "errorReduction": "90% færre fejl i ordrer",
-      "clubs": "50+ klubber bruger allerede systemet",
+      "clubs": "Klubber over hele Danmark",
       "satisfaction": "4.9/5 i kundetilfredshed"
     }
   },
@@ -161,8 +161,8 @@
     "descriptionHighlight": "nemt, hurtigt og pålideligt",
     "descriptionSuffix": "at håndtere klubbens udstyr.",
     "stat": {
-      "value": "50+",
-      "label": "Stolte klubpartnere"
+      "value": "Klar",
+      "label": "Til din klub"
     },
     "verifiedPartner": "Verificeret partner",
     "users": {
