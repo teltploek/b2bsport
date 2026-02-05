@@ -92,6 +92,18 @@
     },
     "socialProof": "klubber"
   },
+  "workflow": {
+    "title": "Fra bestilling til levering",
+    "subtitle": "Følg jeres udstyr hele vejen - fra første klik til levering på døren",
+    "nodes": {
+      "createClub": "Opret klub",
+      "viewPrices": "Se aftalepriser",
+      "collectOrder": "Saml bestilling",
+      "approveInternal": "Godkend internt",
+      "confirmOrder": "Bekræft ordre",
+      "trackDelivery": "Spor levering"
+    }
+  },
   "team": {
     "tag": "Vores team",
     "title": "Mød teamet",

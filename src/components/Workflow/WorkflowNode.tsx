@@ -4,7 +4,7 @@ import { memo } from 'react'
 import { Handle, Position } from '@xyflow/react'
 import type { LucideIcon } from 'lucide-react'
 
-export interface WorkflowNodeData {
+export interface WorkflowNodeData extends Record<string, unknown> {
   label: string
   icon: LucideIcon
 }

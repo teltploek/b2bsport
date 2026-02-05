@@ -92,6 +92,18 @@
     },
     "socialProof": "Vereine"
   },
+  "workflow": {
+    "title": "Von der Bestellung bis zur Lieferung",
+    "subtitle": "Verfolgen Sie Ihre Ausrüstung den ganzen Weg - vom ersten Klick bis zur Lieferung an Ihrer Tür",
+    "nodes": {
+      "createClub": "Verein erstellen",
+      "viewPrices": "Preise ansehen",
+      "collectOrder": "Bestellung sammeln",
+      "approveInternal": "Interne Genehmigung",
+      "confirmOrder": "Bestellung bestätigen",
+      "trackDelivery": "Lieferung verfolgen"
+    }
+  },
   "team": {
     "tag": "Unser Team",
     "title": "Das Team kennenlernen",
