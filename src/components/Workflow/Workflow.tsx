@@ -10,6 +10,8 @@ import {
   CheckCircle,
   Send,
   Truck,
+  ChevronDown,
+  LucideIcon,
 } from 'lucide-react'
 import WorkflowNode, { WorkflowNodeData } from './WorkflowNode'
 
@@ -45,24 +47,79 @@ const defaultEdgeOptions = {
   animated: true,
 }
 
+// Mobile workflow step component
+function MobileWorkflowStep({
+  icon: Icon,
+  label,
+  stepNumber,
+  isLast,
+}: {
+  icon: LucideIcon
+  label: string
+  stepNumber: number
+  isLast: boolean
+}) {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="bg-cream-100 border border-cream-300 rounded-xl px-4 py-3 shadow-sm w-full max-w-[200px]">
+        <div className="flex items-center gap-3">
+          <div className="flex-shrink-0 w-10 h-10 bg-coral-500 rounded-lg flex items-center justify-center">
+            <Icon className="w-5 h-5 text-white" strokeWidth={2} />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-xs text-forest-500 font-medium">
+              Trin {stepNumber}
+            </span>
+            <span className="font-display font-semibold text-sm text-forest-900 leading-tight">
+              {label}
+            </span>
+          </div>
+        </div>
+      </div>
+      {!isLast && (
+        <div className="py-2">
+          <ChevronDown className="w-5 h-5 text-coral-500" />
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Workflow({ dictionary }: WorkflowProps) {
   const content = dictionary.workflow || {
     title: 'Fra bestilling til levering',
     subtitle: 'Følg jeres udstyr hele vejen - fra første klik til levering på døren',
   }
 
-  // Node definitions with icons and positions for horizontal layout
-  const nodes: Node<WorkflowNodeData>[] = useMemo(() => {
-    const nodeLabels = content.nodes || {
-      createClub: 'Opret klub',
-      viewPrices: 'Se aftalepriser',
-      collectOrder: 'Saml bestilling',
-      approveInternal: 'Godkend internt',
-      confirmOrder: 'Bekræft ordre',
-      trackDelivery: 'Spor levering',
-    }
+  const nodeLabels = useMemo(
+    () =>
+      content.nodes || {
+        createClub: 'Opret klub',
+        viewPrices: 'Se aftalepriser',
+        collectOrder: 'Saml bestilling',
+        approveInternal: 'Godkend internt',
+        confirmOrder: 'Bekræft ordre',
+        trackDelivery: 'Spor levering',
+      },
+    [content.nodes]
+  )
 
-    return [
+  // Mobile steps data
+  const mobileSteps: { icon: LucideIcon; label: string }[] = useMemo(
+    () => [
+      { icon: UserPlus, label: nodeLabels.createClub || 'Opret klub' },
+      { icon: Tag, label: nodeLabels.viewPrices || 'Se aftalepriser' },
+      { icon: ShoppingCart, label: nodeLabels.collectOrder || 'Saml bestilling' },
+      { icon: CheckCircle, label: nodeLabels.approveInternal || 'Godkend internt' },
+      { icon: Send, label: nodeLabels.confirmOrder || 'Bekræft ordre' },
+      { icon: Truck, label: nodeLabels.trackDelivery || 'Spor levering' },
+    ],
+    [nodeLabels]
+  )
+
+  // Node definitions with icons and positions for horizontal layout
+  const nodes: Node<WorkflowNodeData>[] = useMemo(
+    () => [
       {
         id: 'node-1',
         type: 'workflowNode',
@@ -79,13 +136,19 @@ export default function Workflow({ dictionary }: WorkflowProps) {
         id: 'node-3',
         type: 'workflowNode',
         position: { x: 400, y: 50 },
-        data: { label: nodeLabels.collectOrder || 'Saml bestilling', icon: ShoppingCart },
+        data: {
+          label: nodeLabels.collectOrder || 'Saml bestilling',
+          icon: ShoppingCart,
+        },
       },
       {
         id: 'node-4',
         type: 'workflowNode',
         position: { x: 600, y: 50 },
-        data: { label: nodeLabels.approveInternal || 'Godkend internt', icon: CheckCircle },
+        data: {
+          label: nodeLabels.approveInternal || 'Godkend internt',
+          icon: CheckCircle,
+        },
       },
       {
         id: 'node-5',
@@ -99,8 +162,9 @@ export default function Workflow({ dictionary }: WorkflowProps) {
         position: { x: 1000, y: 50 },
         data: { label: nodeLabels.trackDelivery || 'Spor levering', icon: Truck },
       },
-    ]
-  }, [content.nodes])
+    ],
+    [nodeLabels]
+  )
 
   // Edges connecting nodes in sequence
   const edges: Edge[] = useMemo(
@@ -118,7 +182,7 @@ export default function Workflow({ dictionary }: WorkflowProps) {
     <section className="bg-semantic-background-secondary py-20 md:py-28 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 leading-[1.1] tracking-tight mb-6">
             {content.title}
           </h2>
@@ -127,8 +191,21 @@ export default function Workflow({ dictionary }: WorkflowProps) {
           </p>
         </div>
 
-        {/* React Flow Canvas */}
-        <div className="h-[200px] w-full rounded-xl overflow-hidden">
+        {/* Mobile: Vertical list (hidden on md+) */}
+        <div className="md:hidden flex flex-col items-center">
+          {mobileSteps.map((step, index) => (
+            <MobileWorkflowStep
+              key={index}
+              icon={step.icon}
+              label={step.label}
+              stepNumber={index + 1}
+              isLast={index === mobileSteps.length - 1}
+            />
+          ))}
+        </div>
+
+        {/* Desktop: React Flow Canvas (hidden on mobile) */}
+        <div className="hidden md:block h-[200px] w-full rounded-xl overflow-hidden">
           <ReactFlow
             nodes={nodes}
             edges={edges}
