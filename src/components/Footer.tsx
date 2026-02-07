@@ -14,6 +14,8 @@ interface FooterProps {
         about: string
         clubSystem: string
         contact: string
+        forBrands?: string
+        forClubs?: string
       }
       sports: {
         title: string
@@ -194,6 +196,24 @@ export function Footer({ dictionary, lang }: FooterProps) {
                         className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
                       >
                         {dictionary.footer.quickLinks.about}
+                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={`/${lang}/for-brands`}
+                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
+                      >
+                        {dictionary.footer.quickLinks.forBrands || 'For brands'}
+                        <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={`/${lang}/for-clubs`}
+                        className="text-cream-100/70 hover:text-coral-500 transition-colors text-sm flex items-center gap-1 group min-h-[44px] py-2"
+                      >
+                        {dictionary.footer.quickLinks.forClubs || 'For klubber'}
                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Link>
                     </li>

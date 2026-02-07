@@ -298,3 +298,21 @@ Started: 2026-02-04
   - Phone numbers were inconsistent in 3 places: ContactSection component (hardcoded), ContactCTA fallback, and some dictionary entries — all now unified to +45 69 15 35 45
   - Copyright year was hardcoded in dictionary strings — update annually
 ---
+
+## 2026-02-07 - US-011 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Added navigation structure for For Brands and For Clubs audience pages
+- **Files changed**:
+  - `src/dictionaries/da.json` - Added nav.forBrands/forClubs and footer.quickLinks.forBrands/forClubs
+  - `src/dictionaries/en.json` - Same
+  - `src/dictionaries/de.json` - Same
+  - `src/components/Navigation/Navigation.tsx` - Added forBrands/forClubs to nav interface and navItems array (after What We Do)
+  - `src/components/Footer.tsx` - Added forBrands/forClubs to quickLinks interface and JSX
+  - `src/app/[locale]/for-brands/page.tsx` - New placeholder page with SubpageHero
+  - `src/app/[locale]/for-clubs/page.tsx` - New placeholder page with SubpageHero
+- **Validation**: PASSED - typecheck, lint, and build all succeed (60 pages generated, up from 54)
+- **Visual verification**: PASSED - Nav items appear on homepage, both pages return 200
+- **Learnings for future iterations:**
+  - The Navigation component is at src/components/Navigation/Navigation.tsx (not Header.tsx as referenced in PRD)
+  - Footer uses `lang` prop (not `locale`) for URL building
+  - Placeholder pages use SubpageHero component for consistent styling
+---

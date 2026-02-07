@@ -6,7 +6,9 @@
     "sports": "Sports",
     "contact": "Contact",
     "demo": "Book demo",
-    "clubSystem": "Club System"
+    "clubSystem": "Club System",
+    "forBrands": "For Brands",
+    "forClubs": "For Clubs"
   },
   "hero": {
     "tag": "The partnership platform for Danish sport",
@@ -708,7 +710,9 @@
       "home": "Home",
       "about": "About",
       "clubSystem": "Club System",
-      "contact": "Contact"
+      "contact": "Contact",
+      "forBrands": "For Brands",
+      "forClubs": "For Clubs"
     },
     "sports": {
       "title": "Sports",

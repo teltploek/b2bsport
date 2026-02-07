@@ -219,7 +219,7 @@
         "Visual verification: Navigate to http://localhost:3000 and confirm new nav items appear in header and link to their pages without 404"
       ],
       "priority": 11,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {

@@ -6,7 +6,9 @@
     "sports": "Sportsgrene",
     "contact": "Kontakt",
     "demo": "Book demo",
-    "clubSystem": "Klubsystem"
+    "clubSystem": "Klubsystem",
+    "forBrands": "For brands",
+    "forClubs": "For klubber"
   },
   "hero": {
     "tag": "Partnerskabsplatformen for dansk sport",
@@ -708,7 +710,9 @@
       "home": "Forside",
       "about": "Om os",
       "clubSystem": "Klubsystem",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "forBrands": "For brands",
+      "forClubs": "For klubber"
     },
     "sports": {
       "title": "Sportsgrene",

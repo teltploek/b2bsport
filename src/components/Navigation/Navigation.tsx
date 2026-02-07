@@ -18,6 +18,8 @@ interface NavigationProps {
       contact: string
       demo: string
       clubSystem: string
+      forBrands?: string
+      forClubs?: string
     }
   }
   locale: string
@@ -30,6 +32,8 @@ export default function Navigation({ dictionary, locale }: NavigationProps) {
   const navItems = [
     { href: `/${locale}`, label: dictionary.nav.home || 'Forside', id: 'home' },
     { href: `/${locale}/what-we-do`, label: dictionary.nav.whatWeDo || 'Hvad vi gør', id: 'whatWeDo' },
+    { href: `/${locale}/for-brands`, label: dictionary.nav.forBrands || 'For brands', id: 'forBrands' },
+    { href: `/${locale}/for-clubs`, label: dictionary.nav.forClubs || 'For klubber', id: 'forClubs' },
     { href: `/${locale}/contact`, label: dictionary.nav.contact || 'Kontakt', id: 'contact' },
   ]
 

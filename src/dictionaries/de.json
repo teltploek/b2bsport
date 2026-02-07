@@ -6,7 +6,9 @@
     "sports": "Sportarten",
     "contact": "Kontakt",
     "demo": "Demo buchen",
-    "clubSystem": "Klubsystem"
+    "clubSystem": "Klubsystem",
+    "forBrands": "Für Marken",
+    "forClubs": "Für Vereine"
   },
   "hero": {
     "tag": "Die Partnerschaftsplattform für dänischen Sport",
@@ -708,7 +710,9 @@
       "home": "Startseite",
       "about": "Über uns",
       "clubSystem": "Klubsystem",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "forBrands": "Für Marken",
+      "forClubs": "Für Vereine"
     },
     "sports": {
       "title": "Sportarten",
