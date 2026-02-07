@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef, useEffect, useCallback } from 'react'
 import { ReactFlow, Node, Edge } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 import {
@@ -217,7 +217,11 @@ function MobileWorkflowStep({
 }
 
 // Convert workflow steps to React Flow nodes
-function stepsToNodes(steps: WorkflowStep[]): Node<WorkflowNodeData>[] {
+function stepsToNodes(
+  steps: WorkflowStep[],
+  visibleUpTo: number,
+  activeIndex: number
+): Node<WorkflowNodeData>[] {
   const positions = getScatteredPositions(steps.length)
   return steps.map((step, index) => ({
     id: `node-${index + 1}`,
@@ -229,15 +233,20 @@ function stepsToNodes(steps: WorkflowStep[]): Node<WorkflowNodeData>[] {
       description: step.description,
       stat: step.stat,
     },
+    className: index <= visibleUpTo ? 'workflow-node-visible' : 'workflow-node-hidden',
+    style: index === activeIndex
+      ? { animation: 'workflowPulse 0.6s ease-in-out 3' }
+      : undefined,
   }))
 }
 
 // Convert workflow steps to React Flow edges
-function stepsToEdges(steps: WorkflowStep[]): Edge[] {
+function stepsToEdges(steps: WorkflowStep[], visibleUpTo: number): Edge[] {
   return steps.slice(1).map((_, index) => ({
     id: `edge-${index + 1}-${index + 2}`,
     source: `node-${index + 1}`,
     target: `node-${index + 2}`,
+    className: index + 1 <= visibleUpTo ? 'workflow-edge-visible' : 'workflow-edge-hidden',
   }))
 }
 
@@ -297,15 +306,80 @@ export default function Workflow({
   const showTabs = resolvedWorkflows.length > 1
   const activeWorkflow = resolvedWorkflows[activeTab] || resolvedWorkflows[0]
 
+  // Animation state
+  const [visibleStepIndex, setVisibleStepIndex] = useState(-1)
+  const [activeStepIndex, setActiveStepIndex] = useState(-1)
+  const [isInView, setIsInView] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([])
+
+  const clearTimers = useCallback(() => {
+    timersRef.current.forEach(clearTimeout)
+    timersRef.current = []
+  }, [])
+
+  // Reset animation when tab changes or when entering view
+  const startAnimation = useCallback(() => {
+    clearTimers()
+    setVisibleStepIndex(-1)
+    setActiveStepIndex(-1)
+
+    const stepCount = activeWorkflow.steps.length
+    // Reveal nodes one by one: 400ms per node + 300ms delay between
+    for (let i = 0; i < stepCount; i++) {
+      const nodeDelay = i * 700 // 400ms transition + 300ms gap
+      const timer = setTimeout(() => {
+        setVisibleStepIndex(i)
+        setActiveStepIndex(i)
+        // Remove pulse after showing next node (or after 1.8s for last)
+        const pulseTimer = setTimeout(() => {
+          setActiveStepIndex((prev) => (prev === i ? -1 : prev))
+        }, i === stepCount - 1 ? 1800 : 600)
+        timersRef.current.push(pulseTimer)
+      }, nodeDelay + 200) // 200ms initial delay
+      timersRef.current.push(timer)
+    }
+  }, [activeWorkflow.steps.length, clearTimers])
+
+  // Intersection Observer
+  useEffect(() => {
+    const section = sectionRef.current
+    if (!section) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting)
+      },
+      { threshold: 0.3 }
+    )
+    observer.observe(section)
+
+    return () => {
+      observer.disconnect()
+      clearTimers()
+    }
+  }, [clearTimers])
+
+  // Trigger animation when section enters view or tab changes
+  useEffect(() => {
+    if (isInView) {
+      startAnimation()
+    } else {
+      clearTimers()
+      setVisibleStepIndex(-1)
+      setActiveStepIndex(-1)
+    }
+  }, [isInView, activeTab, startAnimation, clearTimers])
+
   // Build nodes and edges for current active workflow
   const nodes = useMemo(
-    () => stepsToNodes(activeWorkflow.steps),
-    [activeWorkflow.steps]
+    () => stepsToNodes(activeWorkflow.steps, visibleStepIndex, activeStepIndex),
+    [activeWorkflow.steps, visibleStepIndex, activeStepIndex]
   )
 
   const edges = useMemo(
-    () => stepsToEdges(activeWorkflow.steps),
-    [activeWorkflow.steps]
+    () => stepsToEdges(activeWorkflow.steps, visibleStepIndex),
+    [activeWorkflow.steps, visibleStepIndex]
   )
 
   // Mobile steps for current active workflow
@@ -321,7 +395,34 @@ export default function Workflow({
   )
 
   return (
-    <section className="bg-semantic-background-secondary py-12 md:py-16 lg:py-20">
+    <section ref={sectionRef} className="bg-semantic-background-secondary py-12 md:py-16 lg:py-20">
+      {/* Animation CSS */}
+      <style>{`
+        .workflow-node-hidden {
+          opacity: 0;
+          transform: scale(0.8);
+          transition: opacity 400ms ease-out, transform 400ms ease-out;
+        }
+        .workflow-node-visible {
+          opacity: 1;
+          transform: scale(1);
+          transition: opacity 400ms ease-out, transform 400ms ease-out;
+        }
+        .workflow-edge-hidden .react-flow__edge-path {
+          stroke-dasharray: 200;
+          stroke-dashoffset: 200;
+          transition: stroke-dashoffset 300ms ease-out;
+        }
+        .workflow-edge-visible .react-flow__edge-path {
+          stroke-dasharray: 200;
+          stroke-dashoffset: 0;
+          transition: stroke-dashoffset 300ms ease-out;
+        }
+        @keyframes workflowPulse {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(249, 123, 95, 0); }
+          50% { box-shadow: 0 0 0 4px rgba(249, 123, 95, 0.4); }
+        }
+      `}</style>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         {!hideHeader && (
