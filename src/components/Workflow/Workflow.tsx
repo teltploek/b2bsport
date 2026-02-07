@@ -278,11 +278,11 @@ export default function Workflow({
   )
 
   return (
-    <section className="bg-semantic-background-secondary py-20 md:py-28 lg:py-32">
+    <section className="bg-semantic-background-secondary py-12 md:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         {!hideHeader && (
-          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 leading-[1.1] tracking-tight mb-6">
               {content.title}
             </h2>
@@ -294,7 +294,7 @@ export default function Workflow({
 
         {/* Tab Navigation */}
         {showTabs && (
-          <div className="flex flex-wrap justify-center gap-2 mb-10 md:mb-14">
+          <div className="flex flex-wrap justify-center gap-2 mb-6 md:mb-10">
             {resolvedWorkflows.map((wf, index) => (
               <button
                 key={wf.id}
