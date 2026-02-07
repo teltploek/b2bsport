@@ -229,3 +229,17 @@ Started: 2026-02-04
   - The `stats.first` replaces "#1 Klubpartner" with a text-only stat (no large number prefix)
   - Hero.tsx titleLine1/titleLine2 pattern allows flexible two-line title rendering while keeping `title` for backward compat
 ---
+
+## 2026-02-07 - US-006 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated Welcome section content in all 3 languages with concept-aligned messaging
+- **Files changed**:
+  - `src/dictionaries/da.json` - Updated welcome: title to "Farvel Excel-ark. Hej digital klubstyring.", description, CTA, left card ("Ét overblik"/"Alle aftaler samlet"), right card ("Struktureret"/"Foruddefinerede priser")
+  - `src/dictionaries/en.json` - Updated welcome: "Goodbye spreadsheets. Hello digital club management." with EN equivalents
+  - `src/dictionaries/de.json` - Updated welcome: "Tschüss Tabellen. Hallo digitale Clubverwaltung." with DE equivalents
+  - `src/components/Welcome/Welcome.tsx` - Updated fallback values to match new DA content
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - DA homepage confirmed with "Farvel Excel-ark", "Alle aftaler samlet", "Foruddefinerede priser"
+- **Learnings for future iterations:**
+  - Always update fallback values in component defaults when changing dictionary content
+  - The Welcome component CTA links to /contact — when updating CTA text, consider if the destination still makes sense
+---

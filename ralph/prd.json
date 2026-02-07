@@ -128,7 +128,7 @@
         "Visual verification: Navigate to http://localhost:3000 and confirm Welcome section text is updated"
       ],
       "priority": 6,
-      "passes": false,
+      "passes": true,
       "notes": "Note: DA title should be 'Farvel Excel-ark. Hej digital klubstyring.' — the existing catchy phrase from the concept doc"
     },
     {

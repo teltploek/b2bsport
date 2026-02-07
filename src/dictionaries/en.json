@@ -25,16 +25,16 @@
   },
   "welcome": {
     "tag": "Welcome",
-    "title": "We make it easy to be a sports club",
-    "description": "B2B Sport is Denmark's first fully digital platform for ordering sports equipment. We help clubs save time, avoid errors, and gain full control over their equipment.",
-    "cta": "Get in touch",
+    "title": "Goodbye spreadsheets. Hello digital club management.",
+    "description": "B2B Sport brings all partnerships, agreements, and orders into one platform — so brands can scale and clubs can focus on the sport.",
+    "cta": "See how it works",
     "leftCard": {
-      "tag": "Digital platform",
-      "title": "Everything in one place"
+      "tag": "One overview",
+      "title": "All agreements centralized"
     },
     "rightCard": {
-      "tag": "Quality brands",
-      "title": "Recognized brands"
+      "tag": "Structured",
+      "title": "Pre-defined pricing"
     }
   },
   "valueProposition": {
