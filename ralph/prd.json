@@ -1,97 +1,283 @@
 {
-  "project": "B2B Sport - Interactive Workflow Section",
+  "project": "B2B Sport - Content Overhaul & Multi-Workflow System",
   "branchName": "ralph/website-redesign",
-  "description": "Add a new homepage section with an animated flowchart visualizing the club equipment ordering workflow using xyflow",
+  "description": "Replace placeholder content with concept-aligned messaging across all pages (DA/EN/DE), refactor Workflow component to support multiple real-life workflows with carousel/tabs, and create new audience pages (For Brands, For Clubs). Tone: real company, real people — Danish club-focused warmth with hybrid B2B platform positioning.",
+  "patternReferences": {
+    "workflowComponent": "src/components/Workflow/Workflow.tsx",
+    "workflowNode": "src/components/Workflow/WorkflowNode.tsx",
+    "heroComponent": "src/components/Hero/Hero.tsx",
+    "homePage": "src/app/[locale]/page.tsx",
+    "whatWeDoPage": "src/app/[locale]/what-we-do/page.tsx",
+    "contactPage": "src/app/[locale]/contact/page.tsx",
+    "headerComponent": "src/components/Header.tsx",
+    "footerComponent": "src/components/Footer.tsx",
+    "subpageHeroComponent": "src/components/SubpageHero.tsx",
+    "dictionaryDa": "src/dictionaries/da.json",
+    "dictionaryEn": "src/dictionaries/en.json",
+    "dictionaryDe": "src/dictionaries/de.json",
+    "tailwindConfig": "tailwind.config.ts",
+    "baseBranch": "ralph/website-redesign"
+  },
   "userStories": [
     {
       "id": "US-001",
-      "title": "Create base WorkflowSection component structure",
-      "description": "As a developer, I need a new section component that will house the interactive flowchart.",
+      "title": "Refactor Workflow component to support multiple workflows with tabs",
+      "description": "As a developer, I need the Workflow component to accept and display multiple workflow configurations with tab navigation, so we can showcase different workflows on different pages.",
       "acceptanceCriteria": [
-        "Create /src/components/Workflow/Workflow.tsx component",
-        "Add section with consistent styling (padding, max-width) matching other homepage sections",
-        "Include section header with title and subtitle from dictionary",
-        "Add dictionary entries for workflow.title, workflow.subtitle in all three language files (da.json, en.json, de.json)",
-        "Title should be something like 'Fra bestilling til levering' (From order to delivery)",
-        "npm run typecheck passes"
+        "Workflow component accepts a `workflows` array prop, each entry with: id, title, steps[] (each step has label and iconKey string)",
+        "When multiple workflows are provided, render tab buttons above the flow canvas to switch between them",
+        "When a single workflow is provided, render without tabs (page-specific mode)",
+        "Tab styling uses existing design tokens: active tab bg-forest-900 text-cream-100, inactive text-forest-600",
+        "Desktop React Flow canvas updates nodes/edges when switching tabs",
+        "Mobile vertical step list updates when switching tabs",
+        "Icon mapping: iconKey strings (e.g. 'UserPlus', 'ShoppingCart') map to lucide-react components via a lookup object in the component",
+        "Backward compatible: if old-format single workflow props are passed, still renders correctly",
+        "npm run typecheck passes",
+        "Visual verification: Navigate to http://localhost:3000 and confirm Workflow section still renders (will show single workflow until US-004 integrates multi-workflow data)"
       ],
       "priority": 1,
-      "passes": true
+      "passes": false,
+      "notes": ""
     },
     {
       "id": "US-002",
-      "title": "Install and configure xyflow",
-      "description": "As a developer, I need the xyflow library installed and configured for the workflow visualization.",
+      "title": "Add process-based workflow data to dictionaries",
+      "description": "As a content author, I need process-based workflow content in all three language files so the homepage can display real platform workflows.",
       "acceptanceCriteria": [
-        "Install @xyflow/react package via npm",
-        "Verify package installs without peer dependency conflicts",
-        "Create basic React Flow canvas inside Workflow component",
-        "Configure flow with fitView and disabled interactions (panOnDrag: false, zoomOnScroll: false, nodesDraggable: false, zoomOnPinch: false, preventScrolling: false)",
-        "Use dynamic import if needed to avoid SSR issues with Next.js",
+        "Add workflow.workflows array to da.json, en.json, and de.json with 3 process-based workflows",
+        "Workflow 1 - Club Onboarding: steps are Register Club (UserPlus), Configure Profile (Settings), Set Up Staff (Users), Create Agreement (FileText), Activate Portal (Zap), Club Goes Live (CheckCircle)",
+        "Workflow 2 - Order Lifecycle: steps are Browse Catalog (Search), Add to Cart (ShoppingCart), Submit for Approval (Send), Admin Approves (CheckCircle), Order Confirmed (Package), Track Delivery (Truck)",
+        "Workflow 3 - Agreement Management: steps are Create Template (FileText), Set Terms & Pricing (Tag), Assign to Club (Building2), Club Accepts (ThumbsUp), Monitor Usage (BarChart3), Renew (RefreshCw)",
+        "Each workflow object has: id, title, subtitle, steps[] with label and iconKey",
+        "Keep existing workflow.title and workflow.subtitle as section-level headers but update to: DA 'Sådan fungerer platformen' / EN 'How the platform works' / DE 'So funktioniert die Plattform'",
+        "Update section subtitle to: DA 'Fra klub-oprettelse til levering — alt sker ét sted' / EN 'From club onboarding to delivery — everything happens in one place' / DE 'Von der Club-Einrichtung bis zur Lieferung — alles an einem Ort'",
+        "All three languages have complete translations for all workflow titles, subtitles, and step labels",
         "npm run typecheck passes"
       ],
       "priority": 2,
-      "passes": false
+      "passes": false,
+      "notes": ""
     },
     {
       "id": "US-003",
-      "title": "Design workflow nodes with B2B Sport styling",
-      "description": "As a visitor, I want the flowchart nodes to match the website's visual design language.",
+      "title": "Add audience-based workflow data to dictionaries",
+      "description": "As a content author, I need audience-based workflow content in all three language files for use on audience-specific pages.",
       "acceptanceCriteria": [
-        "Create custom node component in /src/components/Workflow/WorkflowNode.tsx",
-        "Style nodes with B2B Sport colors (cream, coral, forest palette)",
-        "Each node has: Lucide icon, title text",
-        "Nodes use rounded corners (rounded-xl), subtle shadows consistent with site design",
-        "Use Lucide icons matching rest of site",
+        "Add audienceWorkflows key to da.json, en.json, and de.json with 3 audience-based workflows",
+        "Workflow 1 - Brand Admin: steps are Onboard Club (UserPlus), Create Agreement (FileText), Configure Products (Package), Monitor Orders (BarChart3), Renew Partnerships (RefreshCw), Scale Network (TrendingUp)",
+        "Workflow 2 - Club Admin: steps are Accept Agreement (CheckCircle), Set Up Staff Access (Users), Define Budgets (Wallet), Approve Orders (ClipboardCheck), Track Spending (PieChart), Manage Renewals (RefreshCw)",
+        "Workflow 3 - Coach / Staff: steps are Log In (LogIn), View Products (Search), Check Team Sizes (Ruler), Place Order (ShoppingCart), Track Status (Clock), Receive Delivery (Truck)",
+        "Each workflow has: id, title, subtitle, steps[] with label and iconKey",
+        "All three languages have complete translations",
         "npm run typecheck passes"
       ],
       "priority": 3,
-      "passes": false
+      "passes": false,
+      "notes": ""
     },
     {
       "id": "US-004",
-      "title": "Implement workflow process steps",
-      "description": "As a visitor, I want to see the typical equipment ordering workflow visualized as connected steps.",
+      "title": "Integrate multi-workflow tabs into homepage",
+      "description": "As a visitor on the homepage, I want to see multiple platform workflows in a tabbed view so I understand the different processes the platform handles.",
       "acceptanceCriteria": [
-        "Define 6 workflow nodes: 1) Opret klub (UserPlus icon), 2) Se aftalepriser (Tag icon), 3) Saml bestilling (ShoppingCart icon), 4) Godkend internt (CheckCircle icon), 5) Bekræft ordre (Send icon), 6) Spor levering (Truck icon)",
-        "Add dictionary entries for each node title in all three language files",
-        "Nodes arranged in horizontal flow on desktop",
-        "Edges/connections between nodes styled with coral color",
-        "Use animated edges (animated: true) for visual interest",
+        "Homepage passes all 3 process-based workflows from dictionary to the Workflow component",
+        "Workflow component renders with tab navigation showing 3 workflow titles",
+        "First workflow (Club Onboarding) is selected by default",
+        "Clicking tabs switches the displayed workflow on both desktop and mobile",
+        "Section header shows updated title from dictionary (e.g. 'Sådan fungerer platformen')",
         "npm run typecheck passes",
-        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm workflow section shows 6 connected nodes"
+        "Visual verification: Navigate to http://localhost:3000 and confirm tabbed workflows appear with 3 tabs, clicking each tab changes the workflow steps shown"
       ],
       "priority": 4,
-      "passes": false
+      "passes": false,
+      "notes": ""
     },
     {
       "id": "US-005",
-      "title": "Add Workflow section to homepage",
-      "description": "As a visitor, I want to see the workflow section on the homepage in a logical position.",
+      "title": "Update Hero section content and fix hardcoded text",
+      "description": "As a visitor, I want the hero section to clearly communicate B2B Sport's value with messaging pulled from the dictionary, not hardcoded in Danish.",
       "acceptanceCriteria": [
-        "Import and add Workflow component to homepage (/src/app/[locale]/page.tsx)",
-        "Position after ValueProposition section, before SportsGrid",
-        "Section has appropriate spacing/margin relative to adjacent sections",
+        "Remove hardcoded Danish title from Hero.tsx (lines with 'Hele Danmarks' and 'klubpartner') — use dictionary values instead",
+        "Update hero dictionary structure: add titleLine1 and titleLine2 fields for two-line rendering",
+        "DA: tag 'Partnerskabsplatformen for dansk sport', titleLine1 'Hele Danmarks', titleLine2 'klubpartner', subtitle 'Administrer klubber, aftaler og bestillinger — samlet ét sted.'",
+        "EN: tag 'The partnership platform for Danish sport', titleLine1 'Denmark\\'s', titleLine2 'club partner', subtitle 'Manage clubs, agreements, and orders — all in one place.'",
+        "DE: tag 'Die Partnerschaftsplattform für dänischen Sport', titleLine1 'Dänemarks', titleLine2 'Clubpartner', subtitle 'Verwalten Sie Clubs, Vereinbarungen und Bestellungen — alles an einem Ort.'",
+        "Update CTA labels: primary 'Bliv partner'/'Become a partner'/'Partner werden', secondary 'Se platformen'/'See the platform'/'Plattform ansehen'",
+        "Update stats bar: replace first stat with 'Færre fejl, mere sport'/'Less admin, more sport'/'Weniger Admin, mehr Sport' — keep '100% Digital' and '24/7 Platform'",
+        "Hero.tsx reads titleLine1 and titleLine2 from dictionary for the two-line title rendering",
         "npm run typecheck passes",
-        "Visual verification: Run npm run dev, navigate to http://localhost:3000/da and confirm workflow section appears between ValueProposition and SportsGrid"
+        "Visual verification: Navigate to http://localhost:3000 and confirm hero displays updated text. Navigate to http://localhost:3000/en and confirm English text renders correctly."
       ],
       "priority": 5,
-      "passes": false
+      "passes": false,
+      "notes": ""
     },
     {
       "id": "US-006",
-      "title": "Ensure responsive behavior",
-      "description": "As a mobile visitor, I want the workflow to display appropriately on smaller screens.",
+      "title": "Update Welcome section content",
+      "description": "As a visitor, I want the welcome section to communicate the platform's core value of replacing fragmented tools with one centralized workspace.",
       "acceptanceCriteria": [
-        "On mobile (< 768px): nodes stack vertically or use simplified 2-column grid view",
-        "Flow container has appropriate height on all screen sizes",
-        "No horizontal scroll caused by flow on mobile",
-        "Consider hiding React Flow on mobile and showing a simple styled list instead",
+        "Update welcome dictionary content in all 3 languages",
+        "DA: title 'Farvel Excel-ark. Hej digital klubstyring.' (the catchy phrase from the concept doc), description 'B2B Sport samler alle partnerskaber, aftaler og bestillinger i én platform — så brands kan skalere og klubber kan fokusere på sporten.'",
+        "EN: title 'Goodbye spreadsheets. Hello digital club management.', description 'B2B Sport brings all partnerships, agreements, and orders into one platform — so brands can scale and clubs can focus on the sport.'",
+        "DE: title 'Tschüss Tabellen. Hallo digitale Clubverwaltung.', description 'B2B Sport vereint alle Partnerschaften, Vereinbarungen und Bestellungen auf einer Plattform — damit Marken skalieren und Clubs sich auf den Sport konzentrieren können.'",
+        "Left card: DA tag 'Ét overblik' title 'Alle aftaler samlet' / EN tag 'One overview' title 'All agreements centralized' / DE tag 'Ein Überblick' title 'Alle Vereinbarungen zentral'",
+        "Right card: DA tag 'Struktureret' title 'Foruddefinerede priser' / EN tag 'Structured' title 'Pre-defined pricing' / DE tag 'Strukturiert' title 'Vordefinierte Preise'",
+        "CTA updated: DA 'Se hvordan det virker' / EN 'See how it works' / DE 'So funktioniert es'",
         "npm run typecheck passes",
-        "Visual verification: Run npm run dev, open http://localhost:3000/da in mobile viewport (375px width) and confirm workflow section is readable and usable"
+        "Visual verification: Navigate to http://localhost:3000 and confirm Welcome section text is updated"
       ],
       "priority": 6,
-      "passes": false
+      "passes": false,
+      "notes": "Note: DA title should be 'Farvel Excel-ark. Hej digital klubstyring.' — the existing catchy phrase from the concept doc"
+    },
+    {
+      "id": "US-007",
+      "title": "Update Value Proposition section content",
+      "description": "As a visitor, I want the value proposition section to clearly differentiate B2B Sport's offering across platform, support, and partnership pillars.",
+      "acceptanceCriteria": [
+        "Update valueProposition dictionary content in all 3 languages",
+        "Section tag: DA 'Bygget til B2B sport' / EN 'Built for B2B sports' / DE 'Für B2B-Sport gebaut'",
+        "Section title: DA 'Struktur på partnerskaber, effektivitet i bestillinger' / EN 'Structured partnerships, efficient ordering' / DE 'Strukturierte Partnerschaften, effiziente Bestellungen'",
+        "Section subtitle: DA 'Platform, support og partnerskab — bygget til den måde B2B sport faktisk fungerer.' / EN 'Platform, support, and partnership — built for how B2B sports actually works.' / DE 'Plattform, Support und Partnerschaft — gebaut für die Art, wie B2B-Sport tatsächlich funktioniert.'",
+        "Platform card: title 'Centraliseret platform' with features: Agreement templates, Role-based access, Order tracking within agreements, Real-time dashboards — in all 3 languages",
+        "Support card: title 'Personlig support' with features: Dedicated contact person, Sport-specific guidance, Onboarding assistance, Fast response time — in all 3 languages",
+        "Partnership card: title 'Skalerbart partnerskab' with features: Manage 50 or 500 clubs, Reusable agreement templates, Proactive renewal alerts, Branded self-service portal — in all 3 languages",
+        "npm run typecheck passes",
+        "Visual verification: Navigate to http://localhost:3000 and confirm Value Proposition section displays updated cards and features"
+      ],
+      "priority": 7,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-008",
+      "title": "Update Experience section and ContactCTA content",
+      "description": "As a visitor, I want the Experience section and Contact CTA to use credible, concept-aligned messaging.",
+      "acceptanceCriteria": [
+        "Update experience dictionary in all 3 languages",
+        "DA: title 'Én fælles sandhedskilde', titleHighlight 'for alle partnerskaber', description reflects concept: 'Når et spørgsmål opstår om en ordre, en aftale eller en kontakt — er svaret i platformen. Ikke i en indbakke, ikke på et skrivebord, ikke i nogens hukommelse.'",
+        "EN: title 'A single source of truth', titleHighlight 'for all partnerships', description 'When a question comes up about an order, an agreement, or a contact — the answer is in the platform. Not in someone\\'s inbox, not on someone\\'s desktop, not in someone\\'s memory.'",
+        "DE equivalent translations",
+        "Replace stat '1000+ Users' with DA 'Klar / til at skalere' / EN 'Ready / to scale' / DE 'Bereit / zu skalieren'",
+        "Solutions items updated: DA 'Centraliseret partnerskabsstyring', 'Aftaleskabeloner med klare vilkår', 'Rollebaseret adgang på tværs af organisationer', 'Realtids-dashboards per brugerniveau' — with EN/DE equivalents",
+        "Update contactCTA dictionary: DA title 'Klar til at professionalisere jeres partnerskaber?' / EN 'Ready to professionalize your partnerships?' / DE 'Bereit, Ihre Partnerschaften zu professionalisieren?'",
+        "contactCTA subtitle: DA 'Lad os vise jer hvordan B2B Sport kan bringe struktur til jeres klub- og leverandørrelationer' / EN 'Let us show you how B2B Sport can bring structure to your club and supplier relationships' / DE equivalent",
+        "npm run typecheck passes",
+        "Visual verification: Navigate to http://localhost:3000 and confirm Experience and ContactCTA sections show updated text"
+      ],
+      "priority": 8,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-009",
+      "title": "Update What We Do page content",
+      "description": "As a visitor on the What We Do page, I want content that explains the full partnership lifecycle, not just the ordering process.",
+      "acceptanceCriteria": [
+        "Update whatWeDoPage dictionary in all 3 languages",
+        "Hero: DA tag 'Hvad vi gør', title 'Partnerskaber fortjener bedre værktøjer', subtitle 'B2B Sport erstatter spredte processer med én samlet platform for brands, distributører og klubber.' — with EN/DE equivalents",
+        "Mission section 3 cards: 1) 'Onboarding der virker' — registrer og organiser partnerklubber, 2) 'Aftaler med struktur' — genbrugelige aftaleskabeloner med rabatter og vilkår, 3) 'Bestillinger med kontekst' — ordrer inden for aktive aftaler med korrekte priser — with EN/DE equivalents",
+        "Comparison 'current way' items updated: spreadsheets, email threads, disconnected tools, manual tracking, expired agreements falling through cracks — with EN/DE equivalents",
+        "Comparison 'our way' items updated: centralized platform, structured agreements, role-based access, real-time dashboards, proactive renewal alerts — with EN/DE equivalents",
+        "Process section 3 steps: 1) 'Opret og organiser' — clubs, agreements, staff, 2) 'Bestil med tillid' — within pre-negotiated terms, 3) 'Følg med i realtid' — dashboards and tracking — with EN/DE equivalents",
+        "CTA section: DA 'Klar til at se platformen i aktion?' / EN 'Ready to see the platform in action?' / DE 'Bereit, die Plattform in Aktion zu sehen?'",
+        "npm run typecheck passes",
+        "Visual verification: Navigate to http://localhost:3000/what-we-do and confirm all sections show updated content"
+      ],
+      "priority": 9,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-010",
+      "title": "Update Contact page and footer content",
+      "description": "As a visitor, I want the contact page and footer to reflect consistent, concept-aligned messaging and accurate company information.",
+      "acceptanceCriteria": [
+        "Update contactPage.hero dictionary: DA title 'Lad os tale om jeres partnerskaber' / EN 'Let\\'s talk about your partnerships' / DE 'Sprechen wir über Ihre Partnerschaften' — subtitle updated to concept messaging",
+        "Update footer.company.description: DA 'Den centraliserede platform der forbinder sports-brands, distributører og klubber — erstatter manuelle processer med ét struktureret arbejdsrum.' / EN/DE equivalents",
+        "Update footer.bottom.copyright year to 2026",
+        "Fix inconsistent contact info: ensure phone is +45 69 15 35 45 and email is info@b2bsport.dk everywhere (contactPage, contactInfo, footer, contactCTA)",
+        "All 3 languages updated consistently",
+        "npm run typecheck passes"
+      ],
+      "priority": 10,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-011",
+      "title": "Add navigation structure for new audience pages",
+      "description": "As a developer, I need navigation entries and routing prepared for the For Brands and For Clubs pages.",
+      "acceptanceCriteria": [
+        "Add nav dictionary entries: nav.forBrands (DA 'For brands' / EN 'For Brands' / DE 'Für Marken') and nav.forClubs (DA 'For klubber' / EN 'For Clubs' / DE 'Für Vereine')",
+        "Add nav items to Header component, positioned after the What We Do link",
+        "Add entries to footer quick links section",
+        "Navigation items link to /for-brands and /for-clubs respectively",
+        "Create placeholder page files at src/app/[locale]/for-brands/page.tsx and src/app/[locale]/for-clubs/page.tsx that render a simple heading (will be fleshed out in US-012 and US-013)",
+        "npm run typecheck passes",
+        "Visual verification: Navigate to http://localhost:3000 and confirm new nav items appear in header and link to their pages without 404"
+      ],
+      "priority": 11,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-012",
+      "title": "Create For Brands & Suppliers page",
+      "description": "As a brand/supplier visitor, I want a dedicated page explaining how B2B Sport helps me scale club partnerships, manage agreements, and streamline ordering.",
+      "acceptanceCriteria": [
+        "Create full page at src/app/[locale]/for-brands/page.tsx (replace placeholder from US-011)",
+        "Add forBrandsPage dictionary content in all 3 languages",
+        "Section 1 - Hero: SubpageHero component with title DA 'Stop med at administrere partnerskaber i regneark' / EN 'Stop managing partnerships in spreadsheets' / DE equivalent. Uses video background-03 if available, falls back to background-01",
+        "Section 2 - Benefits grid: 4 cards covering brand benefits: Scale partnerships without scaling headcount, Reduce order errors and disputes, Retain more clubs with proactive alerts, Professionalize with branded self-service portal — in all 3 languages",
+        "Section 3 - Workflow: Renders the Brand Admin audience workflow (single, no tabs) using the Workflow component from US-001 with data from audienceWorkflows in dictionary",
+        "Section 4 - Features: List of platform capabilities — Agreement templates, Role-based access, Dashboard intelligence, Order management within agreements — in all 3 languages",
+        "Section 5 - CTA: DA 'Klar til at skalere jeres klubnetværk?' with 'Book demo' and 'Kontakt os' buttons",
+        "Page follows existing visual style (forest/coral/cream palette, same typography and spacing as What We Do page)",
+        "npm run typecheck passes",
+        "Visual verification: Navigate to http://localhost:3000/for-brands and confirm page renders with all 5 sections"
+      ],
+      "priority": 12,
+      "passes": false,
+      "notes": "Reuse existing component patterns from the What We Do page (SubpageHero, grid layouts, CTA sections). Video background-03.webm/.mp4 may not exist yet — use background-01 as fallback."
+    },
+    {
+      "id": "US-013",
+      "title": "Create For Clubs page",
+      "description": "As a club administrator visitor, I want a dedicated page explaining how B2B Sport gives my club centralized supplier management, controlled delegation, and spending transparency.",
+      "acceptanceCriteria": [
+        "Create full page at src/app/[locale]/for-clubs/page.tsx (replace placeholder from US-011)",
+        "Add forClubsPage dictionary content in all 3 languages",
+        "Section 1 - Hero: SubpageHero with title DA 'Én platform for alle leverandørrelationer' / EN 'One platform for every supplier relationship' / DE equivalent. Uses video background-04 if available, falls back to background-02",
+        "Section 2 - Benefits grid: 3-4 cards covering club benefits: Centralized supplier relationships, Controlled delegation to staff, Transparency on terms and spending, Single source of truth — in all 3 languages",
+        "Section 3 - Workflow: Renders Club Admin + Coach/Staff workflows (tabbed, 2 tabs) using the Workflow component from US-001 with data from audienceWorkflows in dictionary",
+        "Section 4 - Role explanation: Visual section showing Club Admin vs Coach/Staff access levels — what each role can see and do, styled as a comparison or two-column layout — in all 3 languages",
+        "Section 5 - CTA: DA 'Klar til at tage kontrol over jeres udstyr?' with 'Book demo' and 'Kontakt os' buttons",
+        "Page follows existing visual style",
+        "npm run typecheck passes",
+        "Visual verification: Navigate to http://localhost:3000/for-clubs and confirm page renders with all 5 sections including tabbed workflows"
+      ],
+      "priority": 13,
+      "passes": false,
+      "notes": "Reuse existing component patterns. Video background-04.webm/.mp4 may not exist yet — use background-02 as fallback."
+    },
+    {
+      "id": "US-014",
+      "title": "Enhance sport-specific landing pages with concept content",
+      "description": "As a visitor browsing a sport-specific page, I want content that connects the sport to B2B Sport's platform value.",
+      "acceptanceCriteria": [
+        "Update sportsPage dictionary content in all 3 languages",
+        "Benefits section rewritten: DA 'Digital bestilling inden for klubaftaler' / 'Spor hver ordre fra forespørgsel til levering' / 'Personale kan bestille selvstændigt — inden for rammerne' / 'Én platform for alt jeres [sport]-udstyr' — with EN/DE equivalents",
+        "CTA updated: DA 'Se hvordan [sport]-klubber bruger platformen' / EN 'See how [sport] clubs use the platform' / DE 'Sehen Sie, wie [Sport]-Clubs die Plattform nutzen'",
+        "Add sportsPage.workflow dictionary content: a simplified 4-step Coach ordering workflow: View catalog (Search), Select & customize (Settings), Place order (ShoppingCart), Track delivery (Truck) — in all 3 languages",
+        "Sport landing page template renders the compact workflow section using Workflow component (single workflow, no tabs)",
+        "npm run typecheck passes",
+        "Visual verification: Navigate to a sport page (e.g. http://localhost:3000/sports/football or first available sport route) and confirm updated benefits text and workflow section appear"
+      ],
+      "priority": 14,
+      "passes": false,
+      "notes": "Check existing sport routes in the codebase to verify correct URL path for visual verification."
     }
   ]
 }
