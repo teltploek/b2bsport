@@ -38,9 +38,9 @@
     }
   },
   "valueProposition": {
-    "tag": "All-in-one solution",
-    "title": "Everything your club needs",
-    "subtitle": "Platform, support, and partnership - all included. Not separate plans, but one complete solution for your club.",
+    "tag": "Built for B2B sports",
+    "title": "Structured partnerships, efficient ordering",
+    "subtitle": "Platform, support, and partnership — built for how B2B sports actually works.",
     "mainCTA": "See how we do it",
     "features": {
       "digital": {
@@ -62,38 +62,38 @@
     },
     "cards": {
       "platform": {
-        "badge": "Digital platform",
-        "title": "100% Digital ordering",
+        "badge": "Platform",
+        "title": "Centralized platform",
         "description": "Everything your club needs, in one modern platform",
         "features": [
-          "Pre-loaded price agreements",
-          "Complete order history",
-          "Easy member management",
-          "Automatic approvals"
+          "Agreement templates",
+          "Role-based access",
+          "Order tracking within agreements",
+          "Real-time dashboards"
         ],
         "cta": "See the platform"
       },
       "support": {
         "badge": "Support",
         "title": "Personal support",
-        "description": "Dedicated help from start to finish - we know your sport",
+        "description": "Dedicated help from start to finish — we know your sport",
         "features": [
           "Dedicated contact person",
-          "Fast response time",
-          "Sport-specific advice",
-          "Onboarding support"
+          "Sport-specific guidance",
+          "Onboarding assistance",
+          "Fast response time"
         ],
         "cta": "Contact us"
       },
       "partnership": {
         "badge": "Partnership",
-        "title": "Long-term collaboration",
-        "description": "More than a supplier - we become your equipment partner",
+        "title": "Scalable partnership",
+        "description": "More than a supplier — we become your equipment partner",
         "features": [
-          "Fixed club agreements",
-          "Volume discounts",
-          "Budget predictability",
-          "Priority delivery"
+          "Manage 50 or 500 clubs",
+          "Reusable agreement templates",
+          "Proactive renewal alerts",
+          "Branded self-service portal"
         ],
         "cta": "Become a partner"
       }

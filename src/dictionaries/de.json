@@ -38,9 +38,9 @@
     }
   },
   "valueProposition": {
-    "tag": "Alles-in-einem Lösung",
-    "title": "Alles was Ihr Verein braucht",
-    "subtitle": "Plattform, Support und Partnerschaft - alles inklusive. Keine separaten Pläne, sondern eine komplette Lösung für Ihren Verein.",
+    "tag": "Für B2B-Sport gebaut",
+    "title": "Strukturierte Partnerschaften, effiziente Bestellungen",
+    "subtitle": "Plattform, Support und Partnerschaft — gebaut für die Art, wie B2B-Sport tatsächlich funktioniert.",
     "mainCTA": "So machen wir es",
     "features": {
       "digital": {
@@ -62,38 +62,38 @@
     },
     "cards": {
       "platform": {
-        "badge": "Digitale Plattform",
-        "title": "100% Digitale Bestellung",
+        "badge": "Plattform",
+        "title": "Zentralisierte Plattform",
         "description": "Alles, was Ihr Verein braucht, in einer modernen Plattform",
         "features": [
-          "Vorgeladene Preisvereinbarungen",
-          "Vollständige Bestellhistorie",
-          "Einfache Mitgliederverwaltung",
-          "Automatische Genehmigungen"
+          "Vereinbarungsvorlagen",
+          "Rollenbasierter Zugang",
+          "Bestellverfolgung innerhalb von Vereinbarungen",
+          "Echtzeit-Dashboards"
         ],
         "cta": "Plattform ansehen"
       },
       "support": {
         "badge": "Support",
         "title": "Persönlicher Support",
-        "description": "Engagierte Hilfe von Anfang bis Ende - wir kennen Ihren Sport",
+        "description": "Engagierte Hilfe von Anfang bis Ende — wir kennen Ihren Sport",
         "features": [
           "Dedizierter Ansprechpartner",
-          "Schnelle Reaktionszeit",
           "Sportspezifische Beratung",
-          "Onboarding-Unterstützung"
+          "Onboarding-Unterstützung",
+          "Schnelle Reaktionszeit"
         ],
         "cta": "Kontaktieren Sie uns"
       },
       "partnership": {
         "badge": "Partnerschaft",
-        "title": "Langfristige Zusammenarbeit",
-        "description": "Mehr als ein Lieferant - wir werden Ihr Ausrüstungspartner",
+        "title": "Skalierbares Partnerschaften",
+        "description": "Mehr als ein Lieferant — wir werden Ihr Ausrüstungspartner",
         "features": [
-          "Feste Vereinsvereinbarungen",
-          "Mengenrabatte",
-          "Budgetvorhersehbarkeit",
-          "Prioritätslieferung"
+          "50 oder 500 Clubs verwalten",
+          "Wiederverwendbare Vereinbarungsvorlagen",
+          "Proaktive Erneuerungshinweise",
+          "Marken-Self-Service-Portal"
         ],
         "cta": "Partner werden"
       }

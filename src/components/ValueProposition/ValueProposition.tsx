@@ -57,9 +57,9 @@ interface ValuePropositionProps {
 
 export default function ValueProposition({ dictionary, locale }: ValuePropositionProps) {
   const content = dictionary.valueProposition || {
-    tag: 'Alt-i-én løsning',
-    title: 'Alt hvad din klub har brug for',
-    subtitle: 'Platform, support og partnerskab - alt sammen inkluderet. Ikke separate planer, men én komplet løsning til jeres klub.',
+    tag: 'Bygget til B2B sport',
+    title: 'Struktur på partnerskaber, effektivitet i bestillinger',
+    subtitle: 'Platform, support og partnerskab — bygget til den måde B2B sport faktisk fungerer.',
     mainCTA: 'Se hvordan vi gør det',
     socialProof: 'klubber',
     features: {
@@ -84,38 +84,38 @@ export default function ValueProposition({ dictionary, locale }: ValuePropositio
 
   const cards = content.cards || {
     platform: {
-      badge: 'Digital platform',
-      title: '100% Digital bestilling',
+      badge: 'Platform',
+      title: 'Centraliseret platform',
       description: 'Alt hvad din klub behøver, samlet i én moderne platform',
       features: [
-        'Forudindlæste prisaftaler',
-        'Komplet ordrehistorik',
-        'Nem medlemsstyring',
-        'Automatiske godkendelser',
+        'Aftaleskabeloner',
+        'Rollebaseret adgang',
+        'Ordresporing inden for aftaler',
+        'Realtids-dashboards',
       ],
       cta: 'Se platformen',
     },
     support: {
       badge: 'Support',
       title: 'Personlig support',
-      description: 'Dedikeret hjælp fra start til mål - vi kender jeres sport',
+      description: 'Dedikeret hjælp fra start til mål — vi kender jeres sport',
       features: [
         'Dedikeret kontaktperson',
+        'Sportsspecifik rådgivning',
+        'Onboarding-assistance',
         'Hurtig responstid',
-        'Sportsspecifikke rådgivning',
-        'Onboarding support',
       ],
       cta: 'Kontakt os',
     },
     partnership: {
       badge: 'Partnerskab',
-      title: 'Langsigtet samarbejde',
-      description: 'Mere end en leverandør - vi bliver jeres udstyrspartner',
+      title: 'Skalerbart partnerskab',
+      description: 'Mere end en leverandør — vi bliver jeres udstyrspartner',
       features: [
-        'Faste klubaftaler',
-        'Mængderabatter',
-        'Forudsigelighed i budget',
-        'Prioriteret levering',
+        'Håndter 50 eller 500 klubber',
+        'Genbrugelige aftaleskabeloner',
+        'Proaktive fornyelses-advarsler',
+        'Brandede selvbetjeningsportaler',
       ],
       cta: 'Bliv partner',
     },

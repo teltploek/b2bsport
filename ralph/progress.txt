@@ -243,3 +243,16 @@ Started: 2026-02-04
   - Always update fallback values in component defaults when changing dictionary content
   - The Welcome component CTA links to /contact — when updating CTA text, consider if the destination still makes sense
 ---
+
+## 2026-02-07 - US-007 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated Value Proposition section with B2B-focused content across all 3 languages
+- **Files changed**:
+  - `src/dictionaries/da.json` - Updated valueProposition: tag "Bygget til B2B sport", title, subtitle, platform card ("Centraliseret platform" with agreement templates, role-based access, order tracking, dashboards), support card updated features, partnership card ("Skalerbart partnerskab" with 50/500 clubs, reusable templates, proactive alerts, branded portal)
+  - `src/dictionaries/en.json` - EN equivalents: "Built for B2B sports", "Centralized platform", "Scalable partnership"
+  - `src/dictionaries/de.json` - DE equivalents: "Für B2B-Sport gebaut", "Zentralisierte Plattform", "Skalierbares Partnerschaften"
+  - `src/components/ValueProposition/ValueProposition.tsx` - Updated fallback values for tag, title, subtitle, and all card content
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - ValueProposition has both `features` (small inline features) and `cards` (main card grid) — both need updating for content changes
+  - The component has two layers of fallbacks: `content` for section header and `cards` for card data
+---
