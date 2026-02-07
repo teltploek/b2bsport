@@ -119,12 +119,12 @@
         "title": "Club-Onboarding",
         "subtitle": "Erste Schritte auf der Plattform",
         "steps": [
-          { "label": "Club registrieren", "iconKey": "UserPlus" },
-          { "label": "Profil konfigurieren", "iconKey": "Settings" },
-          { "label": "Personal einrichten", "iconKey": "Users" },
-          { "label": "Vereinbarung erstellen", "iconKey": "FileText" },
-          { "label": "Portal aktivieren", "iconKey": "Zap" },
-          { "label": "Club ist live", "iconKey": "CheckCircle" }
+          { "label": "Club registrieren", "iconKey": "UserPlus", "description": "Clubprofil und Teamstruktur einrichten", "stat": "~2 Min" },
+          { "label": "Profil konfigurieren", "iconKey": "Settings", "description": "Logo, Farben und Kontaktdaten hinzufügen", "stat": "Voll anpassbar" },
+          { "label": "Personal einrichten", "iconKey": "Users", "description": "Trainer und Personal mit rollenbasiertem Zugang einladen", "stat": "Unbegrenzte Benutzer" },
+          { "label": "Vereinbarung erstellen", "iconKey": "FileText", "description": "Mit Lieferantenvereinbarungen und festen Preisen verbinden", "stat": "Vorkonfiguriert" },
+          { "label": "Portal aktivieren", "iconKey": "Zap", "description": "Ihr Bestellportal sofort live schalten", "stat": "1-Klick" },
+          { "label": "Club ist live", "iconKey": "CheckCircle", "description": "Sofort mit der Ausrüstungsbestellung beginnen", "stat": "100% digital" }
         ]
       },
       {
@@ -132,12 +132,12 @@
         "title": "Bestellablauf",
         "subtitle": "Vom Katalog bis zur Lieferung",
         "steps": [
-          { "label": "Katalog durchsuchen", "iconKey": "Search" },
-          { "label": "In den Warenkorb", "iconKey": "ShoppingCart" },
-          { "label": "Zur Genehmigung senden", "iconKey": "Send" },
-          { "label": "Admin genehmigt", "iconKey": "CheckCircle" },
-          { "label": "Bestellung bestätigt", "iconKey": "Package" },
-          { "label": "Lieferung verfolgen", "iconKey": "Truck" }
+          { "label": "Katalog durchsuchen", "iconKey": "Search", "description": "Produkte innerhalb Ihrer Vereinbarung ansehen", "stat": "Vorgeladene Preise" },
+          { "label": "In den Warenkorb", "iconKey": "ShoppingCart", "description": "Größen, Farben und Mengen auswählen", "stat": "Pro-Spieler Optionen" },
+          { "label": "Zur Genehmigung senden", "iconKey": "Send", "description": "An Club-Admin zur Prüfung senden", "stat": "Sofortige Benachrichtigung" },
+          { "label": "Admin genehmigt", "iconKey": "CheckCircle", "description": "Club-Admin prüft und genehmigt die Bestellung", "stat": "1-Klick Genehmigung" },
+          { "label": "Bestellung bestätigt", "iconKey": "Package", "description": "Bestellung automatisch an Lieferanten gesendet", "stat": "Null manuelle Arbeit" },
+          { "label": "Lieferung verfolgen", "iconKey": "Truck", "description": "Ihre Bestellung vom Lager bis zur Tür verfolgen", "stat": "Echtzeit" }
         ]
       },
       {
@@ -145,12 +145,12 @@
         "title": "Vereinbarungsverwaltung",
         "subtitle": "Strukturierte Partnerschaften",
         "steps": [
-          { "label": "Vorlage erstellen", "iconKey": "FileText" },
-          { "label": "Konditionen & Preise festlegen", "iconKey": "Tag" },
-          { "label": "Club zuweisen", "iconKey": "Building2" },
-          { "label": "Club akzeptiert", "iconKey": "ThumbsUp" },
-          { "label": "Nutzung überwachen", "iconKey": "BarChart3" },
-          { "label": "Verlängern", "iconKey": "RefreshCw" }
+          { "label": "Vorlage erstellen", "iconKey": "FileText", "description": "Wiederverwendbare Vereinbarungsvorlagen erstellen", "stat": "Drag & Drop" },
+          { "label": "Konditionen & Preise festlegen", "iconKey": "Tag", "description": "Preise, Rabatte und Produktpaletten definieren", "stat": "Pro-Club Preise" },
+          { "label": "Club zuweisen", "iconKey": "Building2", "description": "Vereinbarungen einem oder vielen Clubs zuweisen", "stat": "Massenzuweisung" },
+          { "label": "Club akzeptiert", "iconKey": "ThumbsUp", "description": "Club prüft und aktiviert die Vereinbarung", "stat": "Digitale Signatur" },
+          { "label": "Nutzung überwachen", "iconKey": "BarChart3", "description": "Bestellungen, Ausgaben und Einhaltung verfolgen", "stat": "Live-Dashboards" },
+          { "label": "Verlängern", "iconKey": "RefreshCw", "description": "Vereinbarungen mit einem Klick verlängern oder aktualisieren", "stat": "Auto-Verlängerung" }
         ]
       }
     ]
@@ -161,12 +161,12 @@
       "title": "Marken-Administrator",
       "subtitle": "Clubnetzwerke und Partnerschaften verwalten",
       "steps": [
-        { "label": "Club einbinden", "iconKey": "UserPlus" },
-        { "label": "Vereinbarung erstellen", "iconKey": "FileText" },
-        { "label": "Produkte konfigurieren", "iconKey": "Package" },
-        { "label": "Bestellungen überwachen", "iconKey": "BarChart3" },
-        { "label": "Partnerschaften erneuern", "iconKey": "RefreshCw" },
-        { "label": "Netzwerk skalieren", "iconKey": "TrendingUp" }
+        { "label": "Club einbinden", "iconKey": "UserPlus", "description": "Einen neuen Club in Ihr Netzwerk aufnehmen", "stat": "~5 Min Einrichtung" },
+        { "label": "Vereinbarung erstellen", "iconKey": "FileText", "description": "Konditionen, Preise und Produktzugang festlegen", "stat": "Wiederverwendbare Vorlagen" },
+        { "label": "Produkte konfigurieren", "iconKey": "Package", "description": "Definieren welche Produkte Clubs bestellen können", "stat": "Volle Katalogkontrolle" },
+        { "label": "Bestellungen überwachen", "iconKey": "BarChart3", "description": "Alle Club-Bestellungen in Echtzeit verfolgen", "stat": "Live-Überblick" },
+        { "label": "Partnerschaften erneuern", "iconKey": "RefreshCw", "description": "Vereinbarungen mit aktualisierten Konditionen verlängern", "stat": "1-Klick Verlängerung" },
+        { "label": "Netzwerk skalieren", "iconKey": "TrendingUp", "description": "Von 5 auf 500 Clubs nahtlos wachsen", "stat": "Kein Extra-Aufwand" }
       ]
     },
     {
@@ -174,12 +174,12 @@
       "title": "Club-Administrator",
       "subtitle": "Vereinbarungen, Budgets und Zugang steuern",
       "steps": [
-        { "label": "Vereinbarung akzeptieren", "iconKey": "CheckCircle" },
-        { "label": "Mitarbeiterzugang einrichten", "iconKey": "Users" },
-        { "label": "Budgets definieren", "iconKey": "Wallet" },
-        { "label": "Bestellungen genehmigen", "iconKey": "ClipboardCheck" },
-        { "label": "Ausgaben verfolgen", "iconKey": "PieChart" },
-        { "label": "Verlängerungen verwalten", "iconKey": "RefreshCw" }
+        { "label": "Vereinbarung akzeptieren", "iconKey": "CheckCircle", "description": "Lieferantenvereinbarung prüfen und aktivieren", "stat": "Digitale Annahme" },
+        { "label": "Mitarbeiterzugang einrichten", "iconKey": "Users", "description": "Trainer einladen und Berechtigungen definieren", "stat": "Rollenbasierter Zugang" },
+        { "label": "Budgets definieren", "iconKey": "Wallet", "description": "Ausgabenlimits pro Team oder Saison festlegen", "stat": "Volle Kontrolle" },
+        { "label": "Bestellungen genehmigen", "iconKey": "ClipboardCheck", "description": "Mitarbeiterbestellungen prüfen und genehmigen", "stat": "1-Klick Genehmigung" },
+        { "label": "Ausgaben verfolgen", "iconKey": "PieChart", "description": "Budgetnutzung über alle Teams überwachen", "stat": "Echtzeit-Einblicke" },
+        { "label": "Verlängerungen verwalten", "iconKey": "RefreshCw", "description": "Vereinbarungsverlängerungen zentral verwalten", "stat": "Proaktive Warnungen" }
       ]
     },
     {
@@ -187,12 +187,12 @@
       "title": "Trainer / Personal",
       "subtitle": "Ausrüstung schnell und einfach bestellen",
       "steps": [
-        { "label": "Einloggen", "iconKey": "LogIn" },
-        { "label": "Produkte ansehen", "iconKey": "Search" },
-        { "label": "Teamgrößen prüfen", "iconKey": "Ruler" },
-        { "label": "Bestellung aufgeben", "iconKey": "ShoppingCart" },
-        { "label": "Status verfolgen", "iconKey": "Clock" },
-        { "label": "Lieferung empfangen", "iconKey": "Truck" }
+        { "label": "Einloggen", "iconKey": "LogIn", "description": "Auf das Bestellportal Ihres Clubs zugreifen", "stat": "Sicherer Login" },
+        { "label": "Produkte ansehen", "iconKey": "Search", "description": "Vorab genehmigte Produkte und Preise durchsuchen", "stat": "Vorgeladener Katalog" },
+        { "label": "Teamgrößen prüfen", "iconKey": "Ruler", "description": "Größen für jeden Spieler auswählen", "stat": "Pro-Spieler Größen" },
+        { "label": "Bestellung aufgeben", "iconKey": "ShoppingCart", "description": "Bestellung zur Admin-Genehmigung einreichen", "stat": "~3 Min" },
+        { "label": "Status verfolgen", "iconKey": "Clock", "description": "Ihre Bestellung durch jede Phase verfolgen", "stat": "Echtzeit-Updates" },
+        { "label": "Lieferung empfangen", "iconKey": "Truck", "description": "Ausrüstung direkt an Ihren Club geliefert", "stat": "Tür-zu-Tür" }
       ]
     }
   ],
@@ -928,10 +928,10 @@
       "title": "Vom Katalog bis zur Lieferung",
       "subtitle": "So bestellen Sie Ausrüstung für Ihr Team",
       "steps": [
-        { "label": "Katalog durchsuchen", "iconKey": "Search" },
-        { "label": "Anpassen & auswählen", "iconKey": "Settings" },
-        { "label": "Bestellung aufgeben", "iconKey": "ShoppingCart" },
-        { "label": "Lieferung verfolgen", "iconKey": "Truck" }
+        { "label": "Katalog durchsuchen", "iconKey": "Search", "description": "Ausrüstung innerhalb Ihrer Vereinbarung finden", "stat": "Feste Preise" },
+        { "label": "Anpassen & auswählen", "iconKey": "Settings", "description": "Größen, Farben und Optionen wählen", "stat": "Pro-Spieler" },
+        { "label": "Bestellung aufgeben", "iconKey": "ShoppingCart", "description": "Mit einem Klick zur Genehmigung einreichen", "stat": "~2 Min" },
+        { "label": "Lieferung verfolgen", "iconKey": "Truck", "description": "Vom Lager bis zu Ihrem Club verfolgen", "stat": "Echtzeit" }
       ]
     }
   },

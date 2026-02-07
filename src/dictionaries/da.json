@@ -119,12 +119,12 @@
         "title": "Klub-onboarding",
         "subtitle": "Kom i gang med platformen",
         "steps": [
-          { "label": "Registrer klub", "iconKey": "UserPlus" },
-          { "label": "Konfigurer profil", "iconKey": "Settings" },
-          { "label": "Opsæt personale", "iconKey": "Users" },
-          { "label": "Opret aftale", "iconKey": "FileText" },
-          { "label": "Aktiver portal", "iconKey": "Zap" },
-          { "label": "Klubben er live", "iconKey": "CheckCircle" }
+          { "label": "Registrer klub", "iconKey": "UserPlus", "description": "Opret klubprofil og holdstruktur", "stat": "~2 min" },
+          { "label": "Konfigurer profil", "iconKey": "Settings", "description": "Tilføj logo, farver og kontaktoplysninger", "stat": "Fuld tilpasning" },
+          { "label": "Opsæt personale", "iconKey": "Users", "description": "Inviter trænere og personale med rollebaseret adgang", "stat": "Ubegrænset brugere" },
+          { "label": "Opret aftale", "iconKey": "FileText", "description": "Forbind med leverandøraftaler og faste priser", "stat": "Forudkonfigureret" },
+          { "label": "Aktiver portal", "iconKey": "Zap", "description": "Gå live med jeres bestillingsportal med det samme", "stat": "1-klik" },
+          { "label": "Klubben er live", "iconKey": "CheckCircle", "description": "Begynd at bestille udstyr med det samme", "stat": "100% digitalt" }
         ]
       },
       {
@@ -132,12 +132,12 @@
         "title": "Ordreforløb",
         "subtitle": "Fra katalog til levering",
         "steps": [
-          { "label": "Gennemse katalog", "iconKey": "Search" },
-          { "label": "Tilføj til kurv", "iconKey": "ShoppingCart" },
-          { "label": "Send til godkendelse", "iconKey": "Send" },
-          { "label": "Admin godkender", "iconKey": "CheckCircle" },
-          { "label": "Ordre bekræftet", "iconKey": "Package" },
-          { "label": "Spor levering", "iconKey": "Truck" }
+          { "label": "Gennemse katalog", "iconKey": "Search", "description": "Se produkter inden for jeres aftale", "stat": "Forudindlæste priser" },
+          { "label": "Tilføj til kurv", "iconKey": "ShoppingCart", "description": "Vælg størrelser, farver og antal", "stat": "Per-spiller valg" },
+          { "label": "Send til godkendelse", "iconKey": "Send", "description": "Send til klubadmin for gennemgang", "stat": "Øjeblikkelig notifikation" },
+          { "label": "Admin godkender", "iconKey": "CheckCircle", "description": "Klubadmin gennemgår og godkender ordren", "stat": "1-klik godkendelse" },
+          { "label": "Ordre bekræftet", "iconKey": "Package", "description": "Ordre sendt til leverandør automatisk", "stat": "Nul manuelt arbejde" },
+          { "label": "Spor levering", "iconKey": "Truck", "description": "Følg din ordre fra lager til dør", "stat": "Realtid" }
         ]
       },
       {
@@ -145,12 +145,12 @@
         "title": "Aftalestyring",
         "subtitle": "Strukturerede partnerskaber",
         "steps": [
-          { "label": "Opret skabelon", "iconKey": "FileText" },
-          { "label": "Sæt vilkår & priser", "iconKey": "Tag" },
-          { "label": "Tildel til klub", "iconKey": "Building2" },
-          { "label": "Klub accepterer", "iconKey": "ThumbsUp" },
-          { "label": "Overvåg forbrug", "iconKey": "BarChart3" },
-          { "label": "Forny", "iconKey": "RefreshCw" }
+          { "label": "Opret skabelon", "iconKey": "FileText", "description": "Byg genanvendelige aftaleskabeloner", "stat": "Træk & slip" },
+          { "label": "Sæt vilkår & priser", "iconKey": "Tag", "description": "Definer priser, rabatter og produktudvalg", "stat": "Per-klub priser" },
+          { "label": "Tildel til klub", "iconKey": "Building2", "description": "Forbind aftaler til en eller mange klubber", "stat": "Massetildeling" },
+          { "label": "Klub accepterer", "iconKey": "ThumbsUp", "description": "Klubben gennemgår og aktiverer aftalen", "stat": "Digital signatur" },
+          { "label": "Overvåg forbrug", "iconKey": "BarChart3", "description": "Følg ordrer, forbrug og overholdelse", "stat": "Live dashboards" },
+          { "label": "Forny", "iconKey": "RefreshCw", "description": "Forlæng eller opdater aftaler med ét klik", "stat": "Auto-fornyelse" }
         ]
       }
     ]
@@ -161,12 +161,12 @@
       "title": "Brand-administrator",
       "subtitle": "Administrer klubnetværk og partnerskaber",
       "steps": [
-        { "label": "Onboard klub", "iconKey": "UserPlus" },
-        { "label": "Opret aftale", "iconKey": "FileText" },
-        { "label": "Konfigurer produkter", "iconKey": "Package" },
-        { "label": "Overvåg ordrer", "iconKey": "BarChart3" },
-        { "label": "Forny partnerskaber", "iconKey": "RefreshCw" },
-        { "label": "Skalér netværk", "iconKey": "TrendingUp" }
+        { "label": "Onboard klub", "iconKey": "UserPlus", "description": "Tilføj en ny klub til dit netværk", "stat": "~5 min opsætning" },
+        { "label": "Opret aftale", "iconKey": "FileText", "description": "Sæt vilkår, priser og produktadgang", "stat": "Genanvendelige skabeloner" },
+        { "label": "Konfigurer produkter", "iconKey": "Package", "description": "Definer hvilke produkter klubber kan bestille", "stat": "Fuld katalogkontrol" },
+        { "label": "Overvåg ordrer", "iconKey": "BarChart3", "description": "Følg alle klubordrer i realtid", "stat": "Live overblik" },
+        { "label": "Forny partnerskaber", "iconKey": "RefreshCw", "description": "Forlæng aftaler med opdaterede vilkår", "stat": "1-klik fornyelse" },
+        { "label": "Skalér netværk", "iconKey": "TrendingUp", "description": "Voks fra 5 til 500 klubber problemfrit", "stat": "Ingen ekstra admin" }
       ]
     },
     {
@@ -174,12 +174,12 @@
       "title": "Klubadministrator",
       "subtitle": "Styr aftaler, budgetter og adgang",
       "steps": [
-        { "label": "Accepter aftale", "iconKey": "CheckCircle" },
-        { "label": "Opsæt personaleadgang", "iconKey": "Users" },
-        { "label": "Definer budgetter", "iconKey": "Wallet" },
-        { "label": "Godkend ordrer", "iconKey": "ClipboardCheck" },
-        { "label": "Følg forbrug", "iconKey": "PieChart" },
-        { "label": "Administrer fornyelser", "iconKey": "RefreshCw" }
+        { "label": "Accepter aftale", "iconKey": "CheckCircle", "description": "Gennemgå og aktiver leverandøraftale", "stat": "Digital accept" },
+        { "label": "Opsæt personaleadgang", "iconKey": "Users", "description": "Inviter trænere og definer rettigheder", "stat": "Rollebaseret adgang" },
+        { "label": "Definer budgetter", "iconKey": "Wallet", "description": "Sæt forbrugsgrænser per hold eller sæson", "stat": "Fuld kontrol" },
+        { "label": "Godkend ordrer", "iconKey": "ClipboardCheck", "description": "Gennemgå og godkend personaleordrer", "stat": "1-klik godkendelse" },
+        { "label": "Følg forbrug", "iconKey": "PieChart", "description": "Overvåg budgetforbrug på tværs af hold", "stat": "Realtidsindsigt" },
+        { "label": "Administrer fornyelser", "iconKey": "RefreshCw", "description": "Håndter aftalefornyelser centralt", "stat": "Proaktive advarsler" }
       ]
     },
     {
@@ -187,12 +187,12 @@
       "title": "Træner / Personale",
       "subtitle": "Bestil udstyr hurtigt og nemt",
       "steps": [
-        { "label": "Log ind", "iconKey": "LogIn" },
-        { "label": "Se produkter", "iconKey": "Search" },
-        { "label": "Tjek holdstørrelser", "iconKey": "Ruler" },
-        { "label": "Afgiv ordre", "iconKey": "ShoppingCart" },
-        { "label": "Følg status", "iconKey": "Clock" },
-        { "label": "Modtag levering", "iconKey": "Truck" }
+        { "label": "Log ind", "iconKey": "LogIn", "description": "Få adgang til din klubs bestillingsportal", "stat": "Sikker login" },
+        { "label": "Se produkter", "iconKey": "Search", "description": "Gennemse forhåndsgodkendte produkter og priser", "stat": "Forudindlæst katalog" },
+        { "label": "Tjek holdstørrelser", "iconKey": "Ruler", "description": "Vælg størrelser for hver spiller", "stat": "Per-spiller størrelse" },
+        { "label": "Afgiv ordre", "iconKey": "ShoppingCart", "description": "Send ordre til admin-godkendelse", "stat": "~3 min" },
+        { "label": "Følg status", "iconKey": "Clock", "description": "Følg din ordre gennem hvert trin", "stat": "Realtidsopdateringer" },
+        { "label": "Modtag levering", "iconKey": "Truck", "description": "Få udstyr leveret til din klub", "stat": "Dør-til-dør" }
       ]
     }
   ],
@@ -928,10 +928,10 @@
       "title": "Fra katalog til levering",
       "subtitle": "Sådan bestiller du udstyr til dit hold",
       "steps": [
-        { "label": "Gennemse katalog", "iconKey": "Search" },
-        { "label": "Tilpas og vælg", "iconKey": "Settings" },
-        { "label": "Afgiv bestilling", "iconKey": "ShoppingCart" },
-        { "label": "Spor levering", "iconKey": "Truck" }
+        { "label": "Gennemse katalog", "iconKey": "Search", "description": "Find udstyr inden for jeres aftale", "stat": "Faste priser" },
+        { "label": "Tilpas og vælg", "iconKey": "Settings", "description": "Vælg størrelser, farver og muligheder", "stat": "Per-spiller" },
+        { "label": "Afgiv bestilling", "iconKey": "ShoppingCart", "description": "Send til godkendelse med ét klik", "stat": "~2 min" },
+        { "label": "Spor levering", "iconKey": "Truck", "description": "Følg fra lager til din klub", "stat": "Realtid" }
       ]
     }
   },

@@ -119,12 +119,12 @@
         "title": "Club Onboarding",
         "subtitle": "Get started on the platform",
         "steps": [
-          { "label": "Register Club", "iconKey": "UserPlus" },
-          { "label": "Configure Profile", "iconKey": "Settings" },
-          { "label": "Set Up Staff", "iconKey": "Users" },
-          { "label": "Create Agreement", "iconKey": "FileText" },
-          { "label": "Activate Portal", "iconKey": "Zap" },
-          { "label": "Club Goes Live", "iconKey": "CheckCircle" }
+          { "label": "Register Club", "iconKey": "UserPlus", "description": "Set up your club profile and team structure", "stat": "~2 min" },
+          { "label": "Configure Profile", "iconKey": "Settings", "description": "Add logo, colors, and contact details", "stat": "Fully customizable" },
+          { "label": "Set Up Staff", "iconKey": "Users", "description": "Invite coaches and staff with role-based access", "stat": "Unlimited users" },
+          { "label": "Create Agreement", "iconKey": "FileText", "description": "Link to supplier agreements with pre-set pricing", "stat": "Pre-configured" },
+          { "label": "Activate Portal", "iconKey": "Zap", "description": "Go live with your ordering portal instantly", "stat": "1-click" },
+          { "label": "Club Goes Live", "iconKey": "CheckCircle", "description": "Start ordering equipment right away", "stat": "100% digital" }
         ]
       },
       {
@@ -132,12 +132,12 @@
         "title": "Order Lifecycle",
         "subtitle": "From catalog to delivery",
         "steps": [
-          { "label": "Browse Catalog", "iconKey": "Search" },
-          { "label": "Add to Cart", "iconKey": "ShoppingCart" },
-          { "label": "Submit for Approval", "iconKey": "Send" },
-          { "label": "Admin Approves", "iconKey": "CheckCircle" },
-          { "label": "Order Confirmed", "iconKey": "Package" },
-          { "label": "Track Delivery", "iconKey": "Truck" }
+          { "label": "Browse Catalog", "iconKey": "Search", "description": "View products within your agreement", "stat": "Pre-loaded prices" },
+          { "label": "Add to Cart", "iconKey": "ShoppingCart", "description": "Select sizes, colors, and quantities", "stat": "Per-player options" },
+          { "label": "Submit for Approval", "iconKey": "Send", "description": "Send to club admin for review", "stat": "Instant notification" },
+          { "label": "Admin Approves", "iconKey": "CheckCircle", "description": "Club admin reviews and approves the order", "stat": "1-click approval" },
+          { "label": "Order Confirmed", "iconKey": "Package", "description": "Order sent to supplier automatically", "stat": "Zero manual work" },
+          { "label": "Track Delivery", "iconKey": "Truck", "description": "Follow your order from warehouse to door", "stat": "Real-time" }
         ]
       },
       {
@@ -145,12 +145,12 @@
         "title": "Agreement Management",
         "subtitle": "Structured partnerships",
         "steps": [
-          { "label": "Create Template", "iconKey": "FileText" },
-          { "label": "Set Terms & Pricing", "iconKey": "Tag" },
-          { "label": "Assign to Club", "iconKey": "Building2" },
-          { "label": "Club Accepts", "iconKey": "ThumbsUp" },
-          { "label": "Monitor Usage", "iconKey": "BarChart3" },
-          { "label": "Renew", "iconKey": "RefreshCw" }
+          { "label": "Create Template", "iconKey": "FileText", "description": "Build reusable agreement templates", "stat": "Drag & drop" },
+          { "label": "Set Terms & Pricing", "iconKey": "Tag", "description": "Define prices, discounts, and product ranges", "stat": "Per-club pricing" },
+          { "label": "Assign to Club", "iconKey": "Building2", "description": "Link agreements to one or many clubs", "stat": "Bulk assign" },
+          { "label": "Club Accepts", "iconKey": "ThumbsUp", "description": "Club reviews and activates the agreement", "stat": "Digital signature" },
+          { "label": "Monitor Usage", "iconKey": "BarChart3", "description": "Track orders, spending, and compliance", "stat": "Live dashboards" },
+          { "label": "Renew", "iconKey": "RefreshCw", "description": "Extend or update agreements with one click", "stat": "Auto-renewal" }
         ]
       }
     ]
@@ -161,12 +161,12 @@
       "title": "Brand Admin",
       "subtitle": "Manage club networks and partnerships",
       "steps": [
-        { "label": "Onboard Club", "iconKey": "UserPlus" },
-        { "label": "Create Agreement", "iconKey": "FileText" },
-        { "label": "Configure Products", "iconKey": "Package" },
-        { "label": "Monitor Orders", "iconKey": "BarChart3" },
-        { "label": "Renew Partnerships", "iconKey": "RefreshCw" },
-        { "label": "Scale Network", "iconKey": "TrendingUp" }
+        { "label": "Onboard Club", "iconKey": "UserPlus", "description": "Add a new club to your network", "stat": "~5 min setup" },
+        { "label": "Create Agreement", "iconKey": "FileText", "description": "Set terms, prices, and product access", "stat": "Reusable templates" },
+        { "label": "Configure Products", "iconKey": "Package", "description": "Define which products clubs can order", "stat": "Full catalog control" },
+        { "label": "Monitor Orders", "iconKey": "BarChart3", "description": "Track all club orders in real-time", "stat": "Live overview" },
+        { "label": "Renew Partnerships", "iconKey": "RefreshCw", "description": "Extend agreements with updated terms", "stat": "1-click renewal" },
+        { "label": "Scale Network", "iconKey": "TrendingUp", "description": "Grow from 5 to 500 clubs seamlessly", "stat": "No extra admin" }
       ]
     },
     {
@@ -174,12 +174,12 @@
       "title": "Club Admin",
       "subtitle": "Control agreements, budgets, and access",
       "steps": [
-        { "label": "Accept Agreement", "iconKey": "CheckCircle" },
-        { "label": "Set Up Staff Access", "iconKey": "Users" },
-        { "label": "Define Budgets", "iconKey": "Wallet" },
-        { "label": "Approve Orders", "iconKey": "ClipboardCheck" },
-        { "label": "Track Spending", "iconKey": "PieChart" },
-        { "label": "Manage Renewals", "iconKey": "RefreshCw" }
+        { "label": "Accept Agreement", "iconKey": "CheckCircle", "description": "Review and activate supplier agreement", "stat": "Digital acceptance" },
+        { "label": "Set Up Staff Access", "iconKey": "Users", "description": "Invite coaches and define permissions", "stat": "Role-based access" },
+        { "label": "Define Budgets", "iconKey": "Wallet", "description": "Set spending limits per team or season", "stat": "Full control" },
+        { "label": "Approve Orders", "iconKey": "ClipboardCheck", "description": "Review and approve staff orders", "stat": "1-click approval" },
+        { "label": "Track Spending", "iconKey": "PieChart", "description": "Monitor budget usage across teams", "stat": "Real-time insights" },
+        { "label": "Manage Renewals", "iconKey": "RefreshCw", "description": "Handle agreement renewals centrally", "stat": "Proactive alerts" }
       ]
     },
     {
@@ -187,12 +187,12 @@
       "title": "Coach / Staff",
       "subtitle": "Order equipment quickly and easily",
       "steps": [
-        { "label": "Log In", "iconKey": "LogIn" },
-        { "label": "View Products", "iconKey": "Search" },
-        { "label": "Check Team Sizes", "iconKey": "Ruler" },
-        { "label": "Place Order", "iconKey": "ShoppingCart" },
-        { "label": "Track Status", "iconKey": "Clock" },
-        { "label": "Receive Delivery", "iconKey": "Truck" }
+        { "label": "Log In", "iconKey": "LogIn", "description": "Access your club's ordering portal", "stat": "Secure login" },
+        { "label": "View Products", "iconKey": "Search", "description": "Browse pre-approved products and prices", "stat": "Pre-loaded catalog" },
+        { "label": "Check Team Sizes", "iconKey": "Ruler", "description": "Select sizes for each player", "stat": "Per-player sizing" },
+        { "label": "Place Order", "iconKey": "ShoppingCart", "description": "Submit order for admin approval", "stat": "~3 min" },
+        { "label": "Track Status", "iconKey": "Clock", "description": "Follow your order through each stage", "stat": "Real-time updates" },
+        { "label": "Receive Delivery", "iconKey": "Truck", "description": "Get equipment delivered to your club", "stat": "Door-to-door" }
       ]
     }
   ],
@@ -927,10 +927,10 @@
       "title": "From catalog to delivery",
       "subtitle": "How you order equipment for your team",
       "steps": [
-        { "label": "Browse catalog", "iconKey": "Search" },
-        { "label": "Customize & select", "iconKey": "Settings" },
-        { "label": "Place order", "iconKey": "ShoppingCart" },
-        { "label": "Track delivery", "iconKey": "Truck" }
+        { "label": "Browse catalog", "iconKey": "Search", "description": "Find equipment within your agreement", "stat": "Pre-set prices" },
+        { "label": "Customize & select", "iconKey": "Settings", "description": "Choose sizes, colors, and options", "stat": "Per-player" },
+        { "label": "Place order", "iconKey": "ShoppingCart", "description": "Submit for approval in one click", "stat": "~2 min" },
+        { "label": "Track delivery", "iconKey": "Truck", "description": "Follow from warehouse to your club", "stat": "Real-time" }
       ]
     }
   },
