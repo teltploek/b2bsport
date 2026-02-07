@@ -700,6 +700,67 @@
       "submitError": "An error occurred. Please try again."
     }
   },
+  "forBrandsPage": {
+    "hero": {
+      "tag": "For brands & suppliers",
+      "title": "Stop managing partnerships in spreadsheets",
+      "subtitle": "B2B Sport gives you one platform to scale club networks, manage agreements, and streamline ordering."
+    },
+    "benefits": {
+      "tag": "Benefits",
+      "title": "Why brands choose B2B Sport",
+      "cards": [
+        {
+          "title": "Scale without hiring",
+          "description": "Manage 50 or 500 clubs from one platform — without extra headcount."
+        },
+        {
+          "title": "Fewer order errors",
+          "description": "Structured agreements and approval flows reduce errors and disputes."
+        },
+        {
+          "title": "Retain more clubs",
+          "description": "Proactive renewal alerts and dashboards keep partnerships active."
+        },
+        {
+          "title": "Professional branded portals",
+          "description": "Give clubs a self-service portal with your brand and pricing."
+        }
+      ]
+    },
+    "workflow": {
+      "title": "Your workflow as a brand administrator",
+      "subtitle": "From onboarding to scaling — everything in the platform"
+    },
+    "features": {
+      "tag": "Platform features",
+      "title": "Everything you need to drive partnerships",
+      "items": [
+        {
+          "title": "Agreement templates",
+          "description": "Create reusable templates with discounts, terms, and product categories."
+        },
+        {
+          "title": "Role-based access",
+          "description": "Give club admins and staff the right access levels."
+        },
+        {
+          "title": "Dashboard intelligence",
+          "description": "Real-time overview of orders, revenue, and club activity."
+        },
+        {
+          "title": "Order management within agreements",
+          "description": "All orders happen within active agreements with correct pricing."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to scale your club network?",
+      "subtitle": "Let us show you how B2B Sport can transform your partnerships.",
+      "primaryCTA": "Book demo",
+      "secondaryCTA": "Contact us"
+    }
+  },
   "footer": {
     "company": {
       "title": "B2BSport",

@@ -700,6 +700,67 @@
       "submitError": "Der opstod en fejl. Prøv venligst igen."
     }
   },
+  "forBrandsPage": {
+    "hero": {
+      "tag": "For brands & leverandører",
+      "title": "Stop med at administrere partnerskaber i regneark",
+      "subtitle": "B2B Sport giver jer én platform til at skalere klubnetværk, administrere aftaler og strømline bestillinger."
+    },
+    "benefits": {
+      "tag": "Fordele",
+      "title": "Hvorfor brands vælger B2B Sport",
+      "cards": [
+        {
+          "title": "Skalér uden at ansætte",
+          "description": "Administrer 50 eller 500 klubber fra én platform — uden ekstra personale."
+        },
+        {
+          "title": "Færre ordrefejl",
+          "description": "Strukturerede aftaler og godkendelsesflows reducerer fejl og tvister."
+        },
+        {
+          "title": "Fasthold flere klubber",
+          "description": "Proaktive fornyelses-advarsler og dashboards holder partnerskaber aktive."
+        },
+        {
+          "title": "Professionelt brandede portaler",
+          "description": "Giv klubber en selvbetjeningsportal med jeres brand og priser."
+        }
+      ]
+    },
+    "workflow": {
+      "title": "Jeres workflow som brand-administrator",
+      "subtitle": "Fra onboarding til skalering — alt i platformen"
+    },
+    "features": {
+      "tag": "Platform-funktioner",
+      "title": "Alt hvad I behøver for at drive partnerskaber",
+      "items": [
+        {
+          "title": "Aftaleskabeloner",
+          "description": "Opret genbrugelige skabeloner med rabatter, vilkår og produktkategorier."
+        },
+        {
+          "title": "Rollebaseret adgang",
+          "description": "Giv klubadministratorer og personale de rette adgangsniveauer."
+        },
+        {
+          "title": "Dashboard-intelligens",
+          "description": "Realtids-overblik over ordrer, omsætning og klubaktivitet."
+        },
+        {
+          "title": "Ordrestyring inden for aftaler",
+          "description": "Alle ordrer sker inden for aktive aftaler med korrekte priser."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Klar til at skalere jeres klubnetværk?",
+      "subtitle": "Lad os vise jer hvordan B2B Sport kan transformere jeres partnerskaber.",
+      "primaryCTA": "Book demo",
+      "secondaryCTA": "Kontakt os"
+    }
+  },
   "footer": {
     "company": {
       "title": "B2BSport",

@@ -700,6 +700,67 @@
       "submitError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
     }
   },
+  "forBrandsPage": {
+    "hero": {
+      "tag": "Für Marken & Lieferanten",
+      "title": "Hören Sie auf, Partnerschaften in Tabellen zu verwalten",
+      "subtitle": "B2B Sport gibt Ihnen eine Plattform, um Club-Netzwerke zu skalieren, Vereinbarungen zu verwalten und Bestellungen zu rationalisieren."
+    },
+    "benefits": {
+      "tag": "Vorteile",
+      "title": "Warum Marken B2B Sport wählen",
+      "cards": [
+        {
+          "title": "Skalieren ohne einzustellen",
+          "description": "Verwalten Sie 50 oder 500 Clubs von einer Plattform — ohne zusätzliches Personal."
+        },
+        {
+          "title": "Weniger Bestellfehler",
+          "description": "Strukturierte Vereinbarungen und Genehmigungsabläufe reduzieren Fehler und Streitigkeiten."
+        },
+        {
+          "title": "Mehr Clubs halten",
+          "description": "Proaktive Erneuerungshinweise und Dashboards halten Partnerschaften aktiv."
+        },
+        {
+          "title": "Professionelle Markenportale",
+          "description": "Geben Sie Clubs ein Self-Service-Portal mit Ihrer Marke und Preisgestaltung."
+        }
+      ]
+    },
+    "workflow": {
+      "title": "Ihr Workflow als Marken-Administrator",
+      "subtitle": "Vom Onboarding bis zur Skalierung — alles in der Plattform"
+    },
+    "features": {
+      "tag": "Plattform-Funktionen",
+      "title": "Alles was Sie brauchen, um Partnerschaften zu führen",
+      "items": [
+        {
+          "title": "Vereinbarungsvorlagen",
+          "description": "Erstellen Sie wiederverwendbare Vorlagen mit Rabatten, Bedingungen und Produktkategorien."
+        },
+        {
+          "title": "Rollenbasierter Zugang",
+          "description": "Geben Sie Club-Admins und Personal die richtigen Zugangsebenen."
+        },
+        {
+          "title": "Dashboard-Intelligenz",
+          "description": "Echtzeit-Überblick über Bestellungen, Umsatz und Club-Aktivität."
+        },
+        {
+          "title": "Bestellverwaltung innerhalb von Vereinbarungen",
+          "description": "Alle Bestellungen erfolgen innerhalb aktiver Vereinbarungen mit korrekten Preisen."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Ihr Club-Netzwerk zu skalieren?",
+      "subtitle": "Lassen Sie uns zeigen, wie B2B Sport Ihre Partnerschaften transformieren kann.",
+      "primaryCTA": "Demo buchen",
+      "secondaryCTA": "Kontakt aufnehmen"
+    }
+  },
   "footer": {
     "company": {
       "title": "B2BSport",
