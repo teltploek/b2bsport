@@ -17,7 +17,7 @@ function WorkflowNode({ data }: WorkflowNodeProps) {
   const Icon = data.icon
 
   return (
-    <div className="bg-cream-100 border border-cream-300 rounded-xl px-4 py-3 shadow-sm hover:shadow-md transition-shadow min-w-[140px]">
+    <div className="bg-cream-100 border border-cream-300 rounded-xl px-4 py-3 shadow-sm min-w-[140px]">
       {/* Hidden handles for edge connections */}
       <Handle
         type="target"

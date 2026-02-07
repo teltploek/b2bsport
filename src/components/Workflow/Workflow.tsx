@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { ReactFlow, Background, Node, Edge } from '@xyflow/react'
+import { ReactFlow, Node, Edge } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 import {
   UserPlus,
@@ -326,7 +326,7 @@ export default function Workflow({
         </div>
 
         {/* Desktop: React Flow Canvas (hidden on mobile) */}
-        <div className="hidden md:block h-[280px] w-full rounded-xl overflow-hidden">
+        <div className="hidden md:block h-[280px] w-full rounded-xl overflow-hidden [&_.react-flow]:cursor-default">
           <ReactFlow
             key={activeWorkflow.id}
             nodes={nodes}
@@ -340,10 +340,10 @@ export default function Workflow({
             nodesDraggable={false}
             zoomOnPinch={false}
             preventScrolling={false}
+            nodesConnectable={false}
+            elementsSelectable={false}
             proOptions={{ hideAttribution: true }}
-          >
-            <Background color="#e5e7eb" gap={16} />
-          </ReactFlow>
+          />
         </div>
       </div>
     </section>
