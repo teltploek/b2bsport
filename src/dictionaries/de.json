@@ -145,6 +145,47 @@
       }
     ]
   },
+  "audienceWorkflows": [
+    {
+      "id": "brand-admin",
+      "title": "Marken-Administrator",
+      "subtitle": "Clubnetzwerke und Partnerschaften verwalten",
+      "steps": [
+        { "label": "Club einbinden", "iconKey": "UserPlus" },
+        { "label": "Vereinbarung erstellen", "iconKey": "FileText" },
+        { "label": "Produkte konfigurieren", "iconKey": "Package" },
+        { "label": "Bestellungen überwachen", "iconKey": "BarChart3" },
+        { "label": "Partnerschaften erneuern", "iconKey": "RefreshCw" },
+        { "label": "Netzwerk skalieren", "iconKey": "TrendingUp" }
+      ]
+    },
+    {
+      "id": "club-admin",
+      "title": "Club-Administrator",
+      "subtitle": "Vereinbarungen, Budgets und Zugang steuern",
+      "steps": [
+        { "label": "Vereinbarung akzeptieren", "iconKey": "CheckCircle" },
+        { "label": "Mitarbeiterzugang einrichten", "iconKey": "Users" },
+        { "label": "Budgets definieren", "iconKey": "Wallet" },
+        { "label": "Bestellungen genehmigen", "iconKey": "ClipboardCheck" },
+        { "label": "Ausgaben verfolgen", "iconKey": "PieChart" },
+        { "label": "Verlängerungen verwalten", "iconKey": "RefreshCw" }
+      ]
+    },
+    {
+      "id": "coach-staff",
+      "title": "Trainer / Personal",
+      "subtitle": "Ausrüstung schnell und einfach bestellen",
+      "steps": [
+        { "label": "Einloggen", "iconKey": "LogIn" },
+        { "label": "Produkte ansehen", "iconKey": "Search" },
+        { "label": "Teamgrößen prüfen", "iconKey": "Ruler" },
+        { "label": "Bestellung aufgeben", "iconKey": "ShoppingCart" },
+        { "label": "Status verfolgen", "iconKey": "Clock" },
+        { "label": "Lieferung empfangen", "iconKey": "Truck" }
+      ]
+    }
+  ],
   "team": {
     "tag": "Unser Team",
     "title": "Das Team kennenlernen",

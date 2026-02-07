@@ -145,6 +145,47 @@
       }
     ]
   },
+  "audienceWorkflows": [
+    {
+      "id": "brand-admin",
+      "title": "Brand-administrator",
+      "subtitle": "Administrer klubnetværk og partnerskaber",
+      "steps": [
+        { "label": "Onboard klub", "iconKey": "UserPlus" },
+        { "label": "Opret aftale", "iconKey": "FileText" },
+        { "label": "Konfigurer produkter", "iconKey": "Package" },
+        { "label": "Overvåg ordrer", "iconKey": "BarChart3" },
+        { "label": "Forny partnerskaber", "iconKey": "RefreshCw" },
+        { "label": "Skalér netværk", "iconKey": "TrendingUp" }
+      ]
+    },
+    {
+      "id": "club-admin",
+      "title": "Klubadministrator",
+      "subtitle": "Styr aftaler, budgetter og adgang",
+      "steps": [
+        { "label": "Accepter aftale", "iconKey": "CheckCircle" },
+        { "label": "Opsæt personaleadgang", "iconKey": "Users" },
+        { "label": "Definer budgetter", "iconKey": "Wallet" },
+        { "label": "Godkend ordrer", "iconKey": "ClipboardCheck" },
+        { "label": "Følg forbrug", "iconKey": "PieChart" },
+        { "label": "Administrer fornyelser", "iconKey": "RefreshCw" }
+      ]
+    },
+    {
+      "id": "coach-staff",
+      "title": "Træner / Personale",
+      "subtitle": "Bestil udstyr hurtigt og nemt",
+      "steps": [
+        { "label": "Log ind", "iconKey": "LogIn" },
+        { "label": "Se produkter", "iconKey": "Search" },
+        { "label": "Tjek holdstørrelser", "iconKey": "Ruler" },
+        { "label": "Afgiv ordre", "iconKey": "ShoppingCart" },
+        { "label": "Følg status", "iconKey": "Clock" },
+        { "label": "Modtag levering", "iconKey": "Truck" }
+      ]
+    }
+  ],
   "team": {
     "tag": "Vores team",
     "title": "Mød teamet",

@@ -145,6 +145,47 @@
       }
     ]
   },
+  "audienceWorkflows": [
+    {
+      "id": "brand-admin",
+      "title": "Brand Admin",
+      "subtitle": "Manage club networks and partnerships",
+      "steps": [
+        { "label": "Onboard Club", "iconKey": "UserPlus" },
+        { "label": "Create Agreement", "iconKey": "FileText" },
+        { "label": "Configure Products", "iconKey": "Package" },
+        { "label": "Monitor Orders", "iconKey": "BarChart3" },
+        { "label": "Renew Partnerships", "iconKey": "RefreshCw" },
+        { "label": "Scale Network", "iconKey": "TrendingUp" }
+      ]
+    },
+    {
+      "id": "club-admin",
+      "title": "Club Admin",
+      "subtitle": "Control agreements, budgets, and access",
+      "steps": [
+        { "label": "Accept Agreement", "iconKey": "CheckCircle" },
+        { "label": "Set Up Staff Access", "iconKey": "Users" },
+        { "label": "Define Budgets", "iconKey": "Wallet" },
+        { "label": "Approve Orders", "iconKey": "ClipboardCheck" },
+        { "label": "Track Spending", "iconKey": "PieChart" },
+        { "label": "Manage Renewals", "iconKey": "RefreshCw" }
+      ]
+    },
+    {
+      "id": "coach-staff",
+      "title": "Coach / Staff",
+      "subtitle": "Order equipment quickly and easily",
+      "steps": [
+        { "label": "Log In", "iconKey": "LogIn" },
+        { "label": "View Products", "iconKey": "Search" },
+        { "label": "Check Team Sizes", "iconKey": "Ruler" },
+        { "label": "Place Order", "iconKey": "ShoppingCart" },
+        { "label": "Track Status", "iconKey": "Clock" },
+        { "label": "Receive Delivery", "iconKey": "Truck" }
+      ]
+    }
+  ],
   "team": {
     "tag": "Our team",
     "title": "Meet the team",
