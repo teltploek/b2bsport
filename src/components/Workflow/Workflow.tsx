@@ -119,13 +119,35 @@ const nodeTypes = {
   workflowNode: WorkflowNode,
 }
 
-// Edge styling with coral color
+// Edge styling with coral color and smooth curves
 const defaultEdgeOptions = {
+  type: 'smoothstep' as const,
   style: {
     strokeWidth: 2,
     stroke: '#F97B5F', // coral-500
   },
   animated: true,
+}
+
+// Predefined scattered positions for 6-step workflows (mind-map feel)
+const scatteredPositions6 = [
+  { x: 0, y: 60 },
+  { x: 220, y: 0 },
+  { x: 410, y: 100 },
+  { x: 640, y: 20 },
+  { x: 830, y: 110 },
+  { x: 1040, y: 40 },
+]
+
+// Generate deterministic scattered positions for any step count
+function getScatteredPositions(count: number): { x: number; y: number }[] {
+  if (count === 6) return scatteredPositions6
+  const yOffsets = [60, 0, 100, 20, 110, 40, 70, 10, 90, 30]
+  const baseGap = count <= 4 ? 250 : count <= 6 ? 200 : 160
+  return Array.from({ length: count }, (_, i) => ({
+    x: i * baseGap + ((i * 37 + 13) % 30) - 15,
+    y: yOffsets[i % yOffsets.length],
+  }))
 }
 
 // Scattered offsets for organic look on mobile (x and y)
@@ -180,10 +202,11 @@ function MobileWorkflowStep({
 
 // Convert workflow steps to React Flow nodes
 function stepsToNodes(steps: WorkflowStep[]): Node<WorkflowNodeData>[] {
+  const positions = getScatteredPositions(steps.length)
   return steps.map((step, index) => ({
     id: `node-${index + 1}`,
     type: 'workflowNode',
-    position: { x: index * 200, y: index % 2 === 0 ? 0 : 140 },
+    position: positions[index],
     data: {
       label: step.label,
       icon: iconMap[step.iconKey] || CheckCircle,
@@ -326,7 +349,7 @@ export default function Workflow({
         </div>
 
         {/* Desktop: React Flow Canvas (hidden on mobile) */}
-        <div className="hidden md:block h-[280px] w-full rounded-xl overflow-hidden [&_.react-flow]:cursor-default">
+        <div className="hidden md:block h-[340px] w-full rounded-xl overflow-hidden [&_.react-flow]:cursor-default">
           <ReactFlow
             key={activeWorkflow.id}
             nodes={nodes}
