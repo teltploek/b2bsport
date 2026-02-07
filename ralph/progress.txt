@@ -284,3 +284,17 @@ Started: 2026-02-04
   - What We Do page had hardcoded Danish comparison items in JSX that were never connected to dictionary — now uses currentWayItems/ourWayItems arrays
   - The old dictionary had a `comparison` object with named keys; the new format uses arrays for simpler iteration
 ---
+
+## 2026-02-07 - US-010 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated Contact page hero, footer description/copyright, and fixed inconsistent phone numbers
+- **Files changed**:
+  - `src/dictionaries/da.json` - Updated contactPage.hero title "Lad os tale om jeres partnerskaber", footer description, copyright year 2025→2026, fixed phone numbers
+  - `src/dictionaries/en.json` - EN equivalents + phone fixes + copyright year
+  - `src/dictionaries/de.json` - DE equivalents + phone fixes + copyright year
+  - `src/components/ContactSection/ContactSection.tsx` - Fixed hardcoded phone from +45 30 50 79 15 to +45 69 15 35 45
+  - `src/components/ContactCTA/ContactCTA.tsx` - Fixed fallback phone from +45 70 27 46 46 to +45 69 15 35 45
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - Phone numbers were inconsistent in 3 places: ContactSection component (hardcoded), ContactCTA fallback, and some dictionary entries — all now unified to +45 69 15 35 45
+  - Copyright year was hardcoded in dictionary strings — update annually
+---

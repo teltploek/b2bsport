@@ -22,7 +22,7 @@ export default function ContactCTA({ dictionary, locale }: ContactCTAProps) {
     subtitle: "Lad os vise jer hvordan B2B Sport kan bringe struktur til jeres klub- og leverandørrelationer",
     primaryCTA: "Book demo",
     secondaryCTA: "Kontakt os",
-    phone: "+45 70 27 46 46",
+    phone: "+45 69 15 35 45",
     email: "info@b2bsport.dk"
   }
 

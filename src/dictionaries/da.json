@@ -624,8 +624,8 @@
   "contactPage": {
     "hero": {
       "tag": "Kontakt os",
-      "title": "Lad os tale om jeres klubs fremtid",
-      "subtitle": "Vi er klar til at hjælpe jer med at revolutionere jeres udstyrshåndtering"
+      "title": "Lad os tale om jeres partnerskaber",
+      "subtitle": "Vi er klar til at hjælpe jer med at professionalisere jeres partnerskaber og leverandørrelationer"
     },
     "info": {
       "title": "Kontakt information",
@@ -637,7 +637,7 @@
       },
       "phone": {
         "label": "Telefon",
-        "value": "+45 30 50 79 15"
+        "value": "+45 69 15 35 45"
       },
       "email": {
         "label": "Email",
@@ -701,7 +701,7 @@
   "footer": {
     "company": {
       "title": "B2BSport",
-      "description": "Danmarks første fuldt digitale platform for bestilling af sportsudstyr. Vi gør det nemt at være sportsklub."
+      "description": "Den centraliserede platform der forbinder sports-brands, distributører og klubber — erstatter manuelle processer med ét struktureret arbejdsrum."
     },
     "quickLinks": {
       "title": "Hurtige links",
@@ -734,7 +734,7 @@
       "cta": "Kontakt os"
     },
     "bottom": {
-      "copyright": "© 2025 B2B Sport & Promotion Group ApS. Alle rettigheder forbeholdes.",
+      "copyright": "© 2026 B2B Sport & Promotion Group ApS. Alle rettigheder forbeholdes.",
       "privacy": "Privatlivspolitik",
       "terms": "Vilkår og betingelser"
     }

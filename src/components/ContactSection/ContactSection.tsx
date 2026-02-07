@@ -57,10 +57,10 @@ export default function ContactSection({ dictionary, locale }: ContactSectionPro
               <Phone className="h-10 w-10 text-white/90 mb-4" />
               <h3 className="text-lg font-semibold text-white/95 mb-2">Telefon</h3>
               <a 
-                href="tel:+4530507915" 
+                href="tel:+4569153545"
                 className="text-white/90 hover:text-white/80 hover:underline transition-all text-sm"
               >
-                +45 30 50 79 15
+                +45 69 15 35 45
               </a>
             </div>
 <div className={cn(

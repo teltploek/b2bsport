@@ -624,8 +624,8 @@
   "contactPage": {
     "hero": {
       "tag": "Kontakt",
-      "title": "Sprechen wir über die Zukunft Ihres Vereins",
-      "subtitle": "Wir sind bereit, Ihnen bei der Revolutionierung Ihrer Ausrüstungsverwaltung zu helfen"
+      "title": "Sprechen wir über Ihre Partnerschaften",
+      "subtitle": "Wir sind bereit, Ihnen bei der Professionalisierung Ihrer Partnerschaften und Lieferantenbeziehungen zu helfen"
     },
     "info": {
       "title": "Kontaktinformationen",
@@ -637,7 +637,7 @@
       },
       "phone": {
         "label": "Telefon",
-        "value": "+45 30 50 79 15"
+        "value": "+45 69 15 35 45"
       },
       "email": {
         "label": "E-Mail",
@@ -701,7 +701,7 @@
   "footer": {
     "company": {
       "title": "B2BSport",
-      "description": "Dänemarks erste vollständig digitale Plattform für die Bestellung von Sportausrüstung. Wir machen es einfach, ein Sportverein zu sein."
+      "description": "Die zentralisierte Plattform, die Sport-Marken, Distributoren und Clubs verbindet — ersetzt manuelle Prozesse durch einen strukturierten Arbeitsbereich."
     },
     "quickLinks": {
       "title": "Schnelllinks",
@@ -719,7 +719,7 @@
     },
     "contact": {
       "title": "Kontakt",
-      "phone": "+45 30 50 79 15",
+      "phone": "+45 69 15 35 45",
       "email": "kontakt@b2bsport.dk",
       "address": "Rødovrevej 151, 2610 Rødovre"
     },
@@ -733,7 +733,7 @@
       "cta": "Kontakt aufnehmen"
     },
     "bottom": {
-      "copyright": "© 2025 B2B Sport & Promotion Group ApS. Alle Rechte vorbehalten.",
+      "copyright": "© 2026 B2B Sport & Promotion Group ApS. Alle Rechte vorbehalten.",
       "privacy": "Datenschutzrichtlinie",
       "terms": "Allgemeine Geschäftsbedingungen"
     }

@@ -624,8 +624,8 @@
   "contactPage": {
     "hero": {
       "tag": "Contact us",
-      "title": "Let's talk about your club's future",
-      "subtitle": "We're ready to help you revolutionize your equipment management"
+      "title": "Let's talk about your partnerships",
+      "subtitle": "We're ready to help you professionalize your partnerships and supplier relationships"
     },
     "info": {
       "title": "Contact Information",
@@ -637,7 +637,7 @@
       },
       "phone": {
         "label": "Phone",
-        "value": "+45 30 50 79 15"
+        "value": "+45 69 15 35 45"
       },
       "email": {
         "label": "Email",
@@ -701,7 +701,7 @@
   "footer": {
     "company": {
       "title": "B2BSport",
-      "description": "Denmark's first fully digital platform for ordering sports equipment. We make it easy to be a sports club."
+      "description": "The centralized platform connecting sports brands, distributors, and clubs — replacing manual processes with one structured workspace."
     },
     "quickLinks": {
       "title": "Quick Links",
@@ -719,7 +719,7 @@
     },
     "contact": {
       "title": "Contact",
-      "phone": "+45 30 50 79 15",
+      "phone": "+45 69 15 35 45",
       "email": "contact@b2bsport.dk",
       "address": "Rødovrevej 151, 2610 Rødovre"
     },
@@ -733,7 +733,7 @@
       "cta": "Contact us"
     },
     "bottom": {
-      "copyright": "© 2025 B2B Sport & Promotion Group ApS. All rights reserved.",
+      "copyright": "© 2026 B2B Sport & Promotion Group ApS. All rights reserved.",
       "privacy": "Privacy Policy",
       "terms": "Terms and Conditions"
     }
