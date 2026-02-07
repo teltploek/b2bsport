@@ -238,19 +238,19 @@ function stepsToNodes(
       },
       className: isVisible ? 'workflow-node-visible' : 'workflow-node-hidden',
       style: index === activeIndex
-        ? { animation: 'workflowPulse 0.6s ease-in-out 3' }
+        ? { animation: 'workflowPulse 1.2s ease-in-out 2' }
         : undefined,
     }
   })
 }
 
-// Convert workflow steps to React Flow edges
-function stepsToEdges(steps: WorkflowStep[], visibleUpTo: number, fadingOut: boolean): Edge[] {
+// Convert workflow steps to React Flow edges (uses separate visibleEdgeIndex)
+function stepsToEdges(steps: WorkflowStep[], visibleEdgeUpTo: number, fadingOut: boolean): Edge[] {
   return steps.slice(1).map((_, index) => ({
     id: `edge-${index + 1}-${index + 2}`,
     source: `node-${index + 1}`,
     target: `node-${index + 2}`,
-    className: index + 1 <= visibleUpTo && !fadingOut ? 'workflow-edge-visible' : 'workflow-edge-hidden',
+    className: index <= visibleEdgeUpTo && !fadingOut ? 'workflow-edge-visible' : 'workflow-edge-hidden',
   }))
 }
 
@@ -312,6 +312,7 @@ export default function Workflow({
 
   // Animation state
   const [visibleStepIndex, setVisibleStepIndex] = useState(-1)
+  const [visibleEdgeIndex, setVisibleEdgeIndex] = useState(-1)
   const [activeStepIndex, setActiveStepIndex] = useState(-1)
   const [isFadingOut, setIsFadingOut] = useState(false)
   const [isInView, setIsInView] = useState(false)
@@ -325,41 +326,65 @@ export default function Workflow({
   }, [])
 
   // Animation cycle: reveal → hold → fade out → pause → restart
+  // Cinematic sequence: Node N → pause → Edge N→N+1 → pause → Node N+1 → ...
   const startAnimation = useCallback(() => {
     clearTimers()
     setVisibleStepIndex(-1)
+    setVisibleEdgeIndex(-1)
     setActiveStepIndex(-1)
     setIsFadingOut(false)
 
     const stepCount = activeWorkflow.steps.length
-    // Reveal nodes one by one: 400ms per node + 300ms delay between
+    let elapsed = 500 // 500ms initial delay before first node
+
+    // Schedule interleaved node and edge reveals
     for (let i = 0; i < stepCount; i++) {
-      const nodeDelay = i * 700 // 400ms transition + 300ms gap
-      const timer = setTimeout(() => {
+      const nodeTime = elapsed
+
+      // Reveal node i
+      const nodeTimer = setTimeout(() => {
         setVisibleStepIndex(i)
         setActiveStepIndex(i)
-        // Remove pulse after showing next node (or after 1.8s for last)
+        // Clear pulse after duration (2000ms for non-last, 3000ms for last)
+        const pulseDuration = i === stepCount - 1 ? 3000 : 2000
         const pulseTimer = setTimeout(() => {
           setActiveStepIndex((prev) => (prev === i ? -1 : prev))
-        }, i === stepCount - 1 ? 1800 : 600)
+        }, pulseDuration)
         timersRef.current.push(pulseTimer)
-      }, nodeDelay + 200) // 200ms initial delay
-      timersRef.current.push(timer)
+      }, nodeTime)
+      timersRef.current.push(nodeTimer)
+
+      // After node reveal transition (1500ms) + pause (800ms), draw edge to next node
+      if (i < stepCount - 1) {
+        elapsed += 1500 + 800 // node transition + pause before edge
+        const edgeTime = elapsed
+
+        const edgeTimer = setTimeout(() => {
+          setVisibleEdgeIndex(i) // edge index i = edge from node i to node i+1
+        }, edgeTime)
+        timersRef.current.push(edgeTimer)
+
+        // After edge draw (800ms) + pause (700ms), next node appears
+        elapsed += 800 + 700 // edge transition + pause before next node
+      }
     }
 
-    // After all nodes revealed: hold 2.5s, then fade out, then restart
-    const totalRevealTime = 200 + (stepCount - 1) * 700 + 1800 // initial delay + reveals + last pulse
+    // Total time = elapsed at last node + last node's pulse (3000ms)
+    const totalRevealTime = elapsed + 3000
+
+    // Hold for 4000ms after all nodes revealed, then fade out and restart
     const holdTimer = setTimeout(() => {
       if (!isInViewRef.current) return
       // Fade out all nodes and edges
       setIsFadingOut(true)
       setActiveStepIndex(-1)
 
-      // After fade-out (300ms) + pause (200ms), restart
+      // After fade-out (800ms) + pause (200ms), reset and restart
       const restartTimer = setTimeout(() => {
         if (!isInViewRef.current) return
         setIsFadingOut(false)
         setVisibleStepIndex(-1)
+        setVisibleEdgeIndex(-1)
         // Small delay before restarting the reveal cycle
         const cycleTimer = setTimeout(() => {
           if (isInViewRef.current) {
@@ -367,9 +392,9 @@ export default function Workflow({
           }
         }, 100)
         timersRef.current.push(cycleTimer)
-      }, 500) // 300ms fade-out + 200ms pause
+      }, 1000) // 800ms fade-out + 200ms pause
       timersRef.current.push(restartTimer)
-    }, totalRevealTime + 2500) // hold for 2.5s after complete
+    }, totalRevealTime + 4000) // hold for 4s after complete
     timersRef.current.push(holdTimer)
   }, [activeWorkflow.steps.length, clearTimers])
 
@@ -400,6 +425,7 @@ export default function Workflow({
     } else {
       clearTimers()
       setVisibleStepIndex(-1)
+      setVisibleEdgeIndex(-1)
       setActiveStepIndex(-1)
       setIsFadingOut(false)
     }
@@ -412,8 +438,8 @@ export default function Workflow({
   )
 
   const edges = useMemo(
-    () => stepsToEdges(activeWorkflow.steps, visibleStepIndex, isFadingOut),
-    [activeWorkflow.steps, visibleStepIndex, isFadingOut]
+    () => stepsToEdges(activeWorkflow.steps, visibleEdgeIndex, isFadingOut),
+    [activeWorkflow.steps, visibleEdgeIndex, isFadingOut]
   )
 
   // Mobile steps for current active workflow
@@ -435,22 +461,22 @@ export default function Workflow({
         .workflow-node-hidden {
           opacity: 0;
           transform: scale(0.8);
-          transition: opacity 400ms ease-out, transform 400ms ease-out;
+          transition: opacity 800ms ease-out, transform 800ms ease-out;
         }
         .workflow-node-visible {
           opacity: 1;
           transform: scale(1);
-          transition: opacity 400ms ease-out, transform 400ms ease-out;
+          transition: opacity 1500ms ease-out, transform 1500ms ease-out;
         }
         .workflow-edge-hidden .react-flow__edge-path {
           stroke-dasharray: 200;
           stroke-dashoffset: 200;
-          transition: stroke-dashoffset 300ms ease-out;
+          transition: stroke-dashoffset 800ms ease-out;
         }
         .workflow-edge-visible .react-flow__edge-path {
           stroke-dasharray: 200;
           stroke-dashoffset: 0;
-          transition: stroke-dashoffset 300ms ease-out;
+          transition: stroke-dashoffset 800ms ease-out;
         }
         @keyframes workflowPulse {
           0%, 100% { box-shadow: 0 0 0 0 rgba(249, 123, 95, 0); }
