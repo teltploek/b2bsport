@@ -6,6 +6,7 @@ Started: 2026-02-04
 - Hero: Full-screen design with video background, gradient overlays, stats bar at bottom
 - Hero height: Use min-h-[85svh] max-h-[100svh] to show stats bar above fold
 - Stats bar is part of the Hero component flex layout (not a separate component)
+- xyflow: Use 'use client' directive, import CSS from '@xyflow/react/dist/style.css', disable interactions for read-only flows
 
 ---
 
@@ -25,4 +26,150 @@ Started: 2026-02-04
   - Hero component also has a stats bar that can contain statistics - don't forget it when cleaning up numbers
   - The ValueProposition social proof section was hardcoded, not dictionary-driven
   - Always update fallback values in component defaults AND dictionary files
+---
+
+## 2026-02-05 - US-002 (Content Credibility PRD)
+- **What was implemented**: Transformed the Welcome component's right card from fake partner avatars into a supplier brands showcase
+- **Files changed**:
+  - `src/components/Welcome/Welcome.tsx` - Replaced avatar stack with 4 placeholder brand icon shapes (2x2 grid with monotone circles/squares/rectangles), updated fallback values
+  - `src/dictionaries/da.json` - Updated welcome.rightCard.tag to 'Kvalitetsbrands', title to 'Anerkendte mærker'
+  - `src/dictionaries/en.json` - Updated welcome.rightCard.tag to 'Quality brands', title to 'Recognized brands'
+  - `src/dictionaries/de.json` - Updated welcome.rightCard.tag to 'Qualitätsmarken', title to 'Anerkannte Marken'
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed 'Kvalitetsbrands' and 'Anerkendte mærker' text appear on /da homepage; old 'Voksende netværk' text no longer present
+- **Learnings for future iterations:**
+  - The Welcome component's right card maintains decorative corner brackets via CSS borders - keep these when modifying the card
+  - Brand placeholder icons use forest-100/200/300 colors for monotone effect that can be replaced with real logos later
+---
+
+## 2026-02-05 - US-003 (Content Credibility PRD)
+- **What was implemented**: Removed pricing-tier appearance from ValueProposition component - all three cards now appear equal
+- **Files changed**:
+  - `src/components/ValueProposition/ValueProposition.tsx` - Removed featured styling, ring border, translate-y-4, dark background; unified all cards with bg-cream-100; updated all CTAs to /contact; removed Star icon import
+  - `src/dictionaries/da.json` - Changed support card badge from 'Anbefalet' to 'Support'
+  - `src/dictionaries/en.json` - Changed support card badge from 'Recommended' to 'Support'
+  - `src/dictionaries/de.json` - Changed support card badge from 'Empfohlen' to 'Support'
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed 'Anbefalet' text no longer appears; new badges ('Digital platform', 'Support', 'Partnerskab') confirmed present
+- **Learnings for future iterations:**
+  - The ValueProposition component had featured styling spread across multiple places (cardData config, className conditionals, icon styling) - need to check all conditional `featured` checks
+  - When removing a feature flag like `featured`, also clean up unused imports (Star icon in this case)
+---
+
+## 2026-02-05 - US-004 (Content Credibility PRD)
+- **What was implemented**: Refined ValueProposition section header to clearly communicate platform capabilities rather than pricing tiers
+- **Files changed**:
+  - `src/components/ValueProposition/ValueProposition.tsx` - Updated fallback tag, title, and subtitle
+  - `src/dictionaries/da.json` - Changed tag to 'Alt-i-én løsning', title to 'Alt hvad din klub har brug for', subtitle now explicitly states not separate plans
+  - `src/dictionaries/en.json` - Changed tag to 'All-in-one solution', title to 'Everything your club needs', matching subtitle
+  - `src/dictionaries/de.json` - Changed tag to 'Alles-in-einem Lösung', title to 'Alles was Ihr Verein braucht', matching subtitle
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed 'Alt hvad din klub har brug for', 'Alt-i-én løsning', and 'Ikke separate planer' all appear on /da homepage
+- **Learnings for future iterations:**
+  - The ValueProposition component section header content is stored in both dictionary files AND component fallback defaults - update both
+  - Subtitle is key for messaging - use it to explicitly counter any misinterpretation (e.g., "not separate plans")
+---
+
+## 2026-02-05 - US-001 (Interactive Workflow Section PRD)
+- **What was implemented**: Created base Workflow section component structure with consistent styling
+- **Files changed**:
+  - `src/components/Workflow/Workflow.tsx` - New component with section header, uses bg-semantic-background-secondary for alternating section background
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - Dictionary entries for workflow.title and workflow.subtitle already existed in all three language files
+  - Use bg-semantic-background-secondary for alternating section backgrounds (matches pattern of other sections)
+  - Section styling pattern: py-20 md:py-28 lg:py-32 for padding, max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 for container
+---
+
+## 2026-02-05 - US-002 (Interactive Workflow Section PRD)
+- **What was implemented**: Installed and configured @xyflow/react for the workflow visualization
+- **Files changed**:
+  - `package.json` - Added @xyflow/react@12.10.0 dependency
+  - `package-lock.json` - Updated with xyflow dependencies
+  - `src/components/Workflow/Workflow.tsx` - Added 'use client' directive, imported ReactFlow, Background, Node, Edge; created basic canvas with disabled interactions (panOnDrag, zoomOnScroll, nodesDraggable, zoomOnPinch, preventScrolling all false); added fitView and proOptions to hide attribution
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - @xyflow/react requires 'use client' directive in Next.js 14 for SSR compatibility
+  - Import CSS from '@xyflow/react/dist/style.css' for default styles
+  - Use proOptions={{ hideAttribution: true }} to hide the React Flow watermark
+  - For read-only flows, disable all interactions: panOnDrag, zoomOnScroll, nodesDraggable, zoomOnPinch, preventScrolling
+---
+
+## 2026-02-05 - US-003 (Interactive Workflow Section PRD)
+- **What was implemented**: Created custom WorkflowNode component with B2B Sport styling
+- **Files changed**:
+  - `src/components/Workflow/WorkflowNode.tsx` - New custom node component with:
+    - Cream-100 background with cream-300 border
+    - Rounded-xl corners and subtle shadow (shadow-sm with hover:shadow-md transition)
+    - Coral-500 icon container with white Lucide icon
+    - Forest-900 text for node labels
+    - Left/right handles styled with coral-500 for edge connections
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - xyflow custom nodes: Use simple prop interface `{ data: YourDataType }` instead of NodeProps generic for cleaner typing
+  - Style handles with !important prefix classes for visibility: `!bg-coral-500 !w-2 !h-2 !border-0`
+  - Memo wrap custom nodes with `memo()` for React Flow performance optimization
+---
+
+## 2026-02-05 - US-004 (Interactive Workflow Section PRD)
+- **What was implemented**: Defined 6 workflow nodes with icons and animated coral-colored edges
+- **Files changed**:
+  - `src/components/Workflow/Workflow.tsx` - Added 6 workflow nodes with Lucide icons (UserPlus, Tag, ShoppingCart, CheckCircle, Send, Truck), horizontal positions, animated edges with coral styling, custom node types registration
+  - `src/components/Workflow/WorkflowNode.tsx` - Updated WorkflowNodeData interface to extend Record<string, unknown> for xyflow compatibility
+  - `src/dictionaries/da.json` - Added workflow.nodes object with 6 Danish labels
+  - `src/dictionaries/en.json` - Added workflow.nodes object with 6 English labels
+  - `src/dictionaries/de.json` - Added workflow.nodes object with 6 German labels
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: SKIPPED - Component not yet on homepage (US-005 adds it to the page)
+- **Learnings for future iterations:**
+  - xyflow Node data type must extend Record<string, unknown> for TypeScript compatibility
+  - Use defaultEdgeOptions to apply global edge styling (stroke color, animation)
+  - Move data inside useMemo callbacks to avoid dependency warnings
+---
+
+## 2026-02-05 - US-005 (Interactive Workflow Section PRD)
+- **What was implemented**: Added Workflow section to homepage between ValueProposition and SportsGrid
+- **Files changed**:
+  - `src/app/[locale]/page.tsx` - Imported Workflow component and added it after ValueProposition, before SportsGrid
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed 'Fra bestilling til levering', 'Opret klub', and 'Spor levering' appear on /da homepage
+- **Learnings for future iterations:**
+  - Homepage component ordering follows the visual page flow from top to bottom
+  - The Workflow component uses bg-semantic-background-secondary which provides visual alternation with adjacent sections
+---
+
+## 2026-02-05 - US-006 (Interactive Workflow Section PRD)
+- **What was implemented**: Added responsive behavior to Workflow section with mobile-friendly vertical list layout
+- **Files changed**:
+  - `src/components/Workflow/Workflow.tsx` - Added MobileWorkflowStep component, responsive visibility classes (md:hidden for mobile list, hidden md:block for React Flow canvas), step numbers with "Trin N" labels, ChevronDown connectors between steps
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed responsive classes (md:hidden, hidden md:block) present in rendered HTML
+- **Learnings for future iterations:**
+  - For xyflow components that are too wide for mobile, hide React Flow and show a simplified list with `md:hidden` / `hidden md:block` pattern
+  - Mobile workflow steps can use ChevronDown icons as visual connectors instead of xyflow edges
+  - Extracted nodeLabels to shared useMemo to avoid duplication between mobile and desktop versions
+---
+
+## 2026-02-07 - US-001 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Refactored Workflow component to support multiple workflows with tab navigation
+- **Files changed**:
+  - `src/components/Workflow/Workflow.tsx` - Major refactor:
+    - Added `workflows` array prop and `hideHeader` prop
+    - Added `WorkflowDefinition` and `WorkflowStep` interfaces
+    - Built `iconMap` lookup object mapping string keys (e.g. 'UserPlus') to Lucide components
+    - Added tab navigation with active/inactive styling (bg-forest-900/text-cream-100 vs text-forest-600)
+    - Tabs only render when multiple workflows are provided
+    - React Flow canvas uses `key={activeWorkflow.id}` to re-render on tab switch
+    - Mobile step list also updates based on active tab
+    - Backward compatible: still renders old-format single workflow with nodes object
+    - Helper functions: `stepsToNodes`, `stepsToEdges`, `oldNodesToSteps`
+    - Fixed lint warning by wrapping `content` in useMemo
+  - `ralph/prd.json` - Marked US-001 as passes: true
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed Workflow section still renders on /da homepage with existing single workflow
+- **Learnings for future iterations:**
+  - The Workflow component now supports 3 input modes: (1) `workflows` prop directly, (2) `dictionary.workflow.workflows` array, (3) old `dictionary.workflow.nodes` format
+  - Use `key={activeWorkflow.id}` on ReactFlow to force re-mount when switching tabs (fitView recalculates)
+  - The `iconMap` object maps 23 Lucide icon string keys — add new ones there when needed
+  - `hideHeader` prop allows embedding Workflow in other pages without section title/subtitle
 ---

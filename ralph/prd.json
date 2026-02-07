@@ -36,7 +36,7 @@
         "Visual verification: Navigate to http://localhost:3000 and confirm Workflow section still renders (will show single workflow until US-004 integrates multi-workflow data)"
       ],
       "priority": 1,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {
