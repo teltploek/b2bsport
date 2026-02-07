@@ -522,70 +522,72 @@
   "whatWeDoPage": {
     "hero": {
       "tag": "Hvad vi gør",
-      "title": "Din klub fortjener bedre",
-      "subtitle": "Slip for tidskrævende administration og få mere tid til det, der virkelig betyder noget - jeres sport"
+      "title": "Partnerskaber fortjener bedre værktøjer",
+      "subtitle": "B2B Sport erstatter spredte processer med én samlet platform for brands, distributører og klubber."
     },
     "mission": {
-      "tag": "Moderne løsning",
-      "title": "Endelig en moderne løsning",
-      "subtitle": "Tusindvis af timer spildes hvert år på manuel håndtering af klubbens udstyr. Det stopper nu.",
+      "tag": "Hvorfor B2B Sport",
+      "title": "Tre søjler — én platform",
+      "subtitle": "Fra onboarding til fornyelse — alt sker ét sted.",
       "points": {
         "saveTime": {
-          "title": "Spar tid hver uge",
-          "description": "Ingen mere copy-paste mellem mails og Excel-ark"
+          "title": "Onboarding der virker",
+          "description": "Registrer og organiser partnerklubber hurtigt og struktureret"
         },
         "rightPrices": {
-          "title": "Altid de rigtige priser",
-          "description": "Jeres aftaler er allerede på plads - ingen overraskelser"
+          "title": "Aftaler med struktur",
+          "description": "Genbrugelige aftaleskabeloner med rabatter og vilkår"
         },
         "trackEverything": {
-          "title": "Hold styr på alt",
-          "description": "Fra medlemsønsker til leverancer - alt samlet ét sted"
+          "title": "Bestillinger med kontekst",
+          "description": "Ordrer inden for aktive aftaler med korrekte priser"
         }
       }
     },
     "differentiator": {
       "tag": "Sammenligning",
       "title": "Se forskellen selv",
-      "subtitle": "Hvorfor bruge timer på noget, der kan tage minutter?",
+      "subtitle": "Fra spredte processer til én samlet platform",
       "currentWay": "Sådan gør I nu",
-      "ourWay": "Sådan kunne det være",
-      "comparison": {
-        "excelChaos": "Excel-ark sendt frem og tilbage",
-        "emailPingPong": "Uendelige email-tråde om ordrer",
-        "manualPrices": "Manuel opdatering af priser",
-        "uncertainDelivery": "Usikkerhed om leveringstider",
-        "lostOrders": "Ordrer der forsvinder i indbakken",
-        "oneSystem": "Ét system til alt",
-        "instantOrders": "Bestil direkte med klubbens priser",
-        "automaticUpdates": "Automatiske opdateringer",
-        "trackDelivery": "Følg leverancer i realtid",
-        "completeOverview": "Komplet overblik altid"
-      }
+      "ourWay": "Sådan kan det være",
+      "currentWayItems": [
+        "Regneark sendt frem og tilbage",
+        "Uendelige email-tråde om ordrer",
+        "Adskilte værktøjer uden sammenhæng",
+        "Manuel opfølgning på aftaler",
+        "Udløbne aftaler der falder mellem to stole"
+      ],
+      "ourWayItems": [
+        "Centraliseret platform til alt",
+        "Strukturerede aftaler med klare vilkår",
+        "Rollebaseret adgang for alle parter",
+        "Realtids-dashboards og overblik",
+        "Proaktive fornyelses-advarsler"
+      ]
     },
     "process": {
       "tag": "Processen",
-      "title": "Så nemt er det",
-      "subtitle": "Bestil klubbens udstyr uden besvær",
+      "title": "Tre trin — fuld kontrol",
+      "subtitle": "Fra oprettelse til levering — alt i platformen",
       "steps": {
         "login": {
-          "title": "Log ind",
-          "description": "Jeres klub får egen adgang med alle aftaler klar"
+          "title": "Opret og organiser",
+          "description": "Klubber, aftaler og personale — alt struktureret fra starten"
         },
         "select": {
-          "title": "Vælg udstyr",
-          "description": "Find præcis det I skal bruge - priserne er allerede aftalt"
+          "title": "Bestil med tillid",
+          "description": "Inden for forhandlede vilkår med korrekte priser"
         },
         "delivery": {
-          "title": "Modtag levering",
-          "description": "Følg jeres ordre hele vejen og få besked ved levering"
+          "title": "Følg med i realtid",
+          "description": "Dashboards og sporing for alle brugerniveauer"
         }
       }
     },
     "goToMarket": {
       "tag": "Kom i gang",
-      "title": "Start jeres digitale rejse i dag",
-      "subtitle": "Bliv en af de første klubber der slipper for tidsspilde og administration. Vi er klar til at vise jer hvordan.",
+      "title": "Klar til at se platformen i aktion?",
+      "subtitle": "Lad os vise jer hvordan B2B Sport kan bringe struktur til jeres partnerskaber.",
       "description": "Vi arbejder på at gøre det nemt at være sportsklub. Kontakt os for at høre, hvordan vi kan hjælpe jer.",
       "cta": "Kontakt os"
     }

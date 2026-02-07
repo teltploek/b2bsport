@@ -271,3 +271,16 @@ Started: 2026-02-04
   - The description rendering had a hardcoded suffix "at håndtere klubbens udstyr." — now uses descriptionSuffix from dictionary
   - When descriptionHighlight is empty string, the span is conditionally hidden
 ---
+
+## 2026-02-07 - US-009 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated What We Do page with partnership lifecycle content
+- **Files changed**:
+  - `src/app/[locale]/what-we-do/page.tsx` - Replaced hardcoded comparison lists with dictionary-driven currentWayItems/ourWayItems arrays
+  - `src/dictionaries/da.json` - Updated whatWeDoPage: hero "Partnerskaber fortjener bedre værktøjer", mission cards (Onboarding/Aftaler/Bestillinger), comparison items, process steps (Opret/Bestil/Følg), CTA "Klar til at se platformen i aktion?"
+  - `src/dictionaries/en.json` - EN equivalents
+  - `src/dictionaries/de.json` - DE equivalents
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - What We Do page had hardcoded Danish comparison items in JSX that were never connected to dictionary — now uses currentWayItems/ourWayItems arrays
+  - The old dictionary had a `comparison` object with named keys; the new format uses arrays for simpler iteration
+---

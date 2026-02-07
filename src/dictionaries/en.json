@@ -293,70 +293,72 @@
   "whatWeDoPage": {
     "hero": {
       "tag": "What we do",
-      "title": "Your club deserves better",
-      "subtitle": "Eliminate time-consuming administration and get more time for what really matters - your sport"
+      "title": "Partnerships deserve better tools",
+      "subtitle": "B2B Sport replaces fragmented processes with one unified platform for brands, distributors, and clubs."
     },
     "mission": {
-      "tag": "Modern solution",
-      "title": "Finally a modern solution",
-      "subtitle": "Thousands of hours are wasted every year on manual equipment handling. That stops now.",
+      "tag": "Why B2B Sport",
+      "title": "Three pillars — one platform",
+      "subtitle": "From onboarding to renewal — everything happens in one place.",
       "points": {
         "saveTime": {
-          "title": "Save time every week",
-          "description": "No more copy-paste between emails and Excel sheets"
+          "title": "Onboarding that works",
+          "description": "Register and organize partner clubs quickly and systematically"
         },
         "rightPrices": {
-          "title": "Always the right prices",
-          "description": "Your agreements are already in place - no surprises"
+          "title": "Structured agreements",
+          "description": "Reusable agreement templates with discounts and terms"
         },
         "trackEverything": {
-          "title": "Keep track of everything",
-          "description": "From member requests to deliveries - everything in one place"
+          "title": "Orders with context",
+          "description": "Orders within active agreements with correct pricing"
         }
       }
     },
     "differentiator": {
       "tag": "Comparison",
       "title": "See the difference yourself",
-      "subtitle": "Why spend hours on something that could take minutes?",
+      "subtitle": "From fragmented processes to one unified platform",
       "currentWay": "How you do it now",
       "ourWay": "How it could be",
-      "comparison": {
-        "excelChaos": "Excel sheets sent back and forth",
-        "emailPingPong": "Endless email threads about orders",
-        "manualPrices": "Manual price updates",
-        "uncertainDelivery": "Uncertainty about delivery times",
-        "lostOrders": "Orders lost in the inbox",
-        "oneSystem": "One system for everything",
-        "instantOrders": "Order directly with club prices",
-        "automaticUpdates": "Automatic updates",
-        "trackDelivery": "Track deliveries in real-time",
-        "completeOverview": "Complete overview always"
-      }
+      "currentWayItems": [
+        "Spreadsheets sent back and forth",
+        "Endless email threads about orders",
+        "Disconnected tools without context",
+        "Manual follow-up on agreements",
+        "Expired agreements falling through the cracks"
+      ],
+      "ourWayItems": [
+        "Centralized platform for everything",
+        "Structured agreements with clear terms",
+        "Role-based access for all parties",
+        "Real-time dashboards and overview",
+        "Proactive renewal alerts"
+      ]
     },
     "process": {
       "tag": "The process",
-      "title": "It's that easy",
-      "subtitle": "Order club equipment without hassle",
+      "title": "Three steps — full control",
+      "subtitle": "From setup to delivery — everything in the platform",
       "steps": {
         "login": {
-          "title": "Log in",
-          "description": "Your club gets its own access with all agreements ready"
+          "title": "Create and organize",
+          "description": "Clubs, agreements, and staff — all structured from the start"
         },
         "select": {
-          "title": "Choose equipment",
-          "description": "Find exactly what you need - prices are already agreed"
+          "title": "Order with confidence",
+          "description": "Within pre-negotiated terms with correct pricing"
         },
         "delivery": {
-          "title": "Receive delivery",
-          "description": "Track your order all the way and get notified on delivery"
+          "title": "Track in real time",
+          "description": "Dashboards and tracking for all user levels"
         }
       }
     },
     "goToMarket": {
       "tag": "Get started",
-      "title": "Start your digital journey today",
-      "subtitle": "Be one of the first clubs to eliminate wasted time and administration. We're ready to show you how.",
+      "title": "Ready to see the platform in action?",
+      "subtitle": "Let us show you how B2B Sport can bring structure to your partnerships.",
       "description": "We're working to make it easy to be a sports club. Contact us to hear how we can help you.",
       "cta": "Contact us"
     }

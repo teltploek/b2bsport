@@ -110,13 +110,13 @@ export default async function WhatWeDo({
                 </h3>
               </div>
               <ul className="space-y-4">
-                {[
-                  'Venter på Excel-ark fra leverandøren',
-                  'Sender lister rundt på mail til trænere',
-                  'Samler og retter fejl manuelt',
-                  'Tjekker priser frem og tilbage',
-                  'Håber på at ordren er rigtig'
-                ].map((item, index) => (
+                {(dictionary.whatWeDoPage?.differentiator?.currentWayItems || [
+                  'Regneark sendt frem og tilbage',
+                  'Uendelige email-tråde om ordrer',
+                  'Adskilte værktøjer uden sammenhæng',
+                  'Manuel opfølgning på aftaler',
+                  'Udløbne aftaler der falder mellem to stole'
+                ]).map((item: string, index: number) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="w-6 h-6 rounded-full bg-coral-600/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <X className="w-4 h-4 text-coral-600" />
@@ -138,13 +138,13 @@ export default async function WhatWeDo({
                 </h3>
               </div>
               <ul className="space-y-4">
-                {[
-                  'Log ind når det passer jer',
-                  'Trænere bestiller direkte i systemet',
-                  'Alt samles automatisk - ingen fejl',
-                  'Jeres priser er låst fra start',
-                  'Følg ordren hele vejen til levering'
-                ].map((item, index) => (
+                {(dictionary.whatWeDoPage?.differentiator?.ourWayItems || [
+                  'Centraliseret platform til alt',
+                  'Strukturerede aftaler med klare vilkår',
+                  'Rollebaseret adgang for alle parter',
+                  'Realtids-dashboards og overblik',
+                  'Proaktive fornyelses-advarsler'
+                ]).map((item: string, index: number) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="w-6 h-6 rounded-full bg-coral-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-4 h-4 text-white" />

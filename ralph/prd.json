@@ -186,7 +186,7 @@
         "Visual verification: Navigate to http://localhost:3000/what-we-do and confirm all sections show updated content"
       ],
       "priority": 9,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {
