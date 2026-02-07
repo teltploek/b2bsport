@@ -18,7 +18,7 @@ export default function ContactHero({ dict }: ContactHeroProps) {
       tag={dict.contactPage?.hero?.tag || 'Kontakt os'}
       title={dict.contactPage?.hero?.title || 'Lad os tale om jeres klubs fremtid'}
       subtitle={dict.contactPage?.hero?.subtitle || 'Vi er klar til at hjælpe jer med at revolutionere jeres udstyrshåndtering'}
-      videoSrc="/videos/background-04"
+      videoSrc="/videos/bg02"
     />
   )
 }
