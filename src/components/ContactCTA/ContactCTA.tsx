@@ -18,8 +18,8 @@ interface ContactCTAProps {
 
 export default function ContactCTA({ dictionary, locale }: ContactCTAProps) {
   const content = dictionary.contactCTA || {
-    title: "Klar til at revolutionere jeres klubadministration?",
-    subtitle: "Book en uforpligtende demo og se hvordan vores system kan spare jer tid og penge",
+    title: "Klar til at professionalisere jeres partnerskaber?",
+    subtitle: "Lad os vise jer hvordan B2B Sport kan bringe struktur til jeres klub- og leverandørrelationer",
     primaryCTA: "Book demo",
     secondaryCTA: "Kontakt os",
     phone: "+45 70 27 46 46",

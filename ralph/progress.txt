@@ -256,3 +256,18 @@ Started: 2026-02-04
   - ValueProposition has both `features` (small inline features) and `cards` (main card grid) — both need updating for content changes
   - The component has two layers of fallbacks: `content` for section header and `cards` for card data
 ---
+
+## 2026-02-07 - US-008 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated Experience section and ContactCTA with concept-aligned messaging
+- **Files changed**:
+  - `src/components/Experience/Experience.tsx` - Added users/verifiedPartner/descriptionSuffix to interface; replaced hardcoded "1000+"/"Brugere" with dictionary values; replaced hardcoded "Verificeret partner" with dictionary value; fixed description rendering to use descriptionSuffix instead of hardcoded Danish
+  - `src/components/ContactCTA/ContactCTA.tsx` - Updated fallback title/subtitle
+  - `src/dictionaries/da.json` - Updated experience (title "Én fælles sandhedskilde", stat "Klar / til at skalere", solutions with platform-focused items) and contactCTA (title "Klar til at professionalisere jeres partnerskaber?")
+  - `src/dictionaries/en.json` - EN equivalents: "A single source of truth", "Ready / to scale", "Ready to professionalize your partnerships?"
+  - `src/dictionaries/de.json` - DE equivalents
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - Experience component had 3 hardcoded Danish strings in JSX: "Verificeret partner", "1000+", "Brugere" — now all dictionary-driven
+  - The description rendering had a hardcoded suffix "at håndtere klubbens udstyr." — now uses descriptionSuffix from dictionary
+  - When descriptionHighlight is empty string, the span is conditionally hidden
+---

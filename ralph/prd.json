@@ -167,7 +167,7 @@
         "Visual verification: Navigate to http://localhost:3000 and confirm Experience and ContactCTA sections show updated text"
       ],
       "priority": 8,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {

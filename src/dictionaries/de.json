@@ -209,8 +209,8 @@
     }
   },
   "contactCTA": {
-    "title": "Bereit, Ihre Vereinsverwaltung zu revolutionieren?",
-    "subtitle": "Lassen Sie uns zeigen, wie Sie Zeit und Geld bei der Vereinsausrüstung sparen können",
+    "title": "Bereit, Ihre Partnerschaften zu professionalisieren?",
+    "subtitle": "Lassen Sie uns zeigen, wie B2B Sport Struktur in Ihre Club- und Lieferantenbeziehungen bringen kann",
     "primaryCTA": "Demo buchen",
     "secondaryCTA": "Kontakt aufnehmen",
     "phone": "+45 69 15 35 45",
@@ -256,28 +256,28 @@
     "learnMore": "Mehr über das System erfahren"
   },
   "experience": {
-    "tag": "Erfahrung & Qualität",
-    "title": "Wir stärken",
-    "titleHighlight": "dänische Sportvereine",
-    "description": "Mit jahrelanger Erfahrung in der Sportbranche verstehen wir die Bedürfnisse der Vereine. Unsere Mission ist es,",
-    "descriptionHighlight": "einfach, schnell und zuverlässig",
-    "descriptionSuffix": "die Vereinsausrüstung zu verwalten.",
+    "tag": "Eine einzige Wahrheitsquelle",
+    "title": "Eine einzige Wahrheitsquelle",
+    "titleHighlight": "für alle Partnerschaften",
+    "description": "Wenn eine Frage zu einer Bestellung, einer Vereinbarung oder einem Kontakt auftaucht — die Antwort ist in der Plattform. Nicht im Posteingang, nicht auf einem Schreibtisch, nicht in jemandes Erinnerung.",
+    "descriptionHighlight": "",
+    "descriptionSuffix": "",
     "stat": {
       "value": "Bereit",
-      "label": "Für Ihren Verein"
+      "label": "zu skalieren"
     },
     "verifiedPartner": "Verifizierter Partner",
     "users": {
-      "count": "1000+",
-      "label": "Nutzer"
+      "count": "Bereit",
+      "label": "zu skalieren"
     },
     "solutions": {
-      "title": "Komplette Lösungen",
+      "title": "Plattformvorteile",
       "items": [
-        "Digitale Bestellplattform",
-        "Vorgeladene Preisvereinbarungen",
-        "Komplettes Markensortiment",
-        "Persönlicher Support"
+        "Zentralisierte Partnerschaftsverwaltung",
+        "Vereinbarungsvorlagen mit klaren Bedingungen",
+        "Rollenbasierter Zugang über Organisationen hinweg",
+        "Echtzeit-Dashboards pro Benutzerebene"
       ]
     },
     "cta": "Partner werden"

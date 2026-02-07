@@ -209,8 +209,8 @@
     }
   },
   "contactCTA": {
-    "title": "Klar til at revolutionere jeres klubadministration?",
-    "subtitle": "Lad os vise jer hvordan I kan spare tid og penge på klubbens udstyr",
+    "title": "Klar til at professionalisere jeres partnerskaber?",
+    "subtitle": "Lad os vise jer hvordan B2B Sport kan bringe struktur til jeres klub- og leverandørrelationer",
     "primaryCTA": "Book demo",
     "secondaryCTA": "Kontakt os",
     "phone": "+45 69 15 35 45",
@@ -256,28 +256,28 @@
     "learnMore": "Læs mere om systemet"
   },
   "experience": {
-    "tag": "Erfaring & kvalitet",
-    "title": "Vi styrker",
-    "titleHighlight": "danske sportsklubber",
-    "description": "Med års erfaring i sportsbranchen forstår vi klubbernes behov. Vores mission er at gøre det",
-    "descriptionHighlight": "nemt, hurtigt og pålideligt",
-    "descriptionSuffix": "at håndtere klubbens udstyr.",
+    "tag": "Én fælles sandhedskilde",
+    "title": "Én fælles sandhedskilde",
+    "titleHighlight": "for alle partnerskaber",
+    "description": "Når et spørgsmål opstår om en ordre, en aftale eller en kontakt — er svaret i platformen. Ikke i en indbakke, ikke på et skrivebord, ikke i nogens hukommelse.",
+    "descriptionHighlight": "",
+    "descriptionSuffix": "",
     "stat": {
       "value": "Klar",
-      "label": "Til din klub"
+      "label": "til at skalere"
     },
     "verifiedPartner": "Verificeret partner",
     "users": {
-      "count": "1000+",
-      "label": "Brugere"
+      "count": "Klar",
+      "label": "til at skalere"
     },
     "solutions": {
-      "title": "Komplette løsninger",
+      "title": "Platformsfordele",
       "items": [
-        "Digital platform til bestilling",
-        "Forudindlæste prisaftaler",
-        "Komplet sortiment af brands",
-        "Personlig support"
+        "Centraliseret partnerskabsstyring",
+        "Aftaleskabeloner med klare vilkår",
+        "Rollebaseret adgang på tværs af organisationer",
+        "Realtids-dashboards per brugerniveau"
       ]
     },
     "cta": "Bliv partner"

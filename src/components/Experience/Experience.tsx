@@ -6,8 +6,14 @@ interface ExperienceProps {
       titleHighlight: string
       description: string
       descriptionHighlight: string
+      descriptionSuffix?: string
       stat: {
         value: string
+        label: string
+      }
+      verifiedPartner?: string
+      users?: {
+        count: string
         label: string
       }
       solutions: {
@@ -22,22 +28,28 @@ interface ExperienceProps {
 
 export default function Experience({ dictionary, locale }: ExperienceProps) {
   const content = dictionary.experience || {
-    tag: 'Erfaring & kvalitet',
-    title: 'Vi styrker',
-    titleHighlight: 'danske sportsklubber',
-    description: 'Med års erfaring i sportsbranchen forstår vi klubbernes behov. Vores mission er at gøre det',
-    descriptionHighlight: 'nemt, hurtigt og pålideligt',
+    tag: 'Én fælles sandhedskilde',
+    title: 'Én fælles sandhedskilde',
+    titleHighlight: 'for alle partnerskaber',
+    description: 'Når et spørgsmål opstår om en ordre, en aftale eller en kontakt — er svaret i platformen. Ikke i en indbakke, ikke på et skrivebord, ikke i nogens hukommelse.',
+    descriptionHighlight: '',
+    descriptionSuffix: '',
     stat: {
       value: 'Klar',
-      label: 'Til din klub',
+      label: 'til at skalere',
+    },
+    verifiedPartner: 'Verificeret partner',
+    users: {
+      count: 'Klar',
+      label: 'til at skalere',
     },
     solutions: {
-      title: 'Komplette løsninger',
+      title: 'Platformsfordele',
       items: [
-        'Digital platform til bestilling',
-        'Forudindlæste prisaftaler',
-        'Komplet sortiment af brands',
-        'Personlig support',
+        'Centraliseret partnerskabsstyring',
+        'Aftaleskabeloner med klare vilkår',
+        'Rollebaseret adgang på tværs af organisationer',
+        'Realtids-dashboards per brugerniveau',
       ],
     },
     cta: 'Bliv partner',
@@ -92,7 +104,7 @@ export default function Experience({ dictionary, locale }: ExperienceProps) {
                     </svg>
                   </div>
                   <span className="font-display text-base md:text-lg font-bold text-white">
-                    Verificeret partner
+                    {content.verifiedPartner || 'Verificeret partner'}
                   </span>
                 </div>
               </div>
@@ -114,8 +126,8 @@ export default function Experience({ dictionary, locale }: ExperienceProps) {
                     ))}
                   </div>
                   <div className="text-xs">
-                    <span className="font-bold text-forest-900">1000+</span>
-                    <span className="text-forest-600 block">Brugere</span>
+                    <span className="font-bold text-forest-900">{content.users?.count || 'Klar'}</span>
+                    <span className="text-forest-600 block">{content.users?.label || 'til at skalere'}</span>
                   </div>
                 </div>
               </div>
@@ -137,9 +149,11 @@ export default function Experience({ dictionary, locale }: ExperienceProps) {
 
             {/* Description with highlighted text */}
             <p className="text-lg md:text-xl text-forest-700 leading-relaxed mb-8">
-              {content.description}{' '}
-              <span className="font-semibold text-forest-900">{content.descriptionHighlight}</span>
-              {' '}at håndtere klubbens udstyr.
+              {content.description}
+              {content.descriptionHighlight && (
+                <>{' '}<span className="font-semibold text-forest-900">{content.descriptionHighlight}</span></>
+              )}
+              {content.descriptionSuffix && <>{' '}{content.descriptionSuffix}</>}
             </p>
 
             {/* Solutions callout box */}

@@ -209,8 +209,8 @@
     }
   },
   "contactCTA": {
-    "title": "Ready to revolutionize your club administration?",
-    "subtitle": "Let us show you how you can save time and money on club equipment",
+    "title": "Ready to professionalize your partnerships?",
+    "subtitle": "Let us show you how B2B Sport can bring structure to your club and supplier relationships",
     "primaryCTA": "Book demo",
     "secondaryCTA": "Contact us",
     "phone": "+45 69 15 35 45",
@@ -256,28 +256,28 @@
     "learnMore": "Learn more about the system"
   },
   "experience": {
-    "tag": "Experience & quality",
-    "title": "We empower",
-    "titleHighlight": "Danish sports clubs",
-    "description": "With years of experience in the sports industry, we understand club needs. Our mission is to make it",
-    "descriptionHighlight": "easy, fast and reliable",
-    "descriptionSuffix": "to manage club equipment.",
+    "tag": "A single source of truth",
+    "title": "A single source of truth",
+    "titleHighlight": "for all partnerships",
+    "description": "When a question comes up about an order, an agreement, or a contact — the answer is in the platform. Not in someone's inbox, not on someone's desktop, not in someone's memory.",
+    "descriptionHighlight": "",
+    "descriptionSuffix": "",
     "stat": {
       "value": "Ready",
-      "label": "For your club"
+      "label": "to scale"
     },
     "verifiedPartner": "Verified partner",
     "users": {
-      "count": "1000+",
-      "label": "Users"
+      "count": "Ready",
+      "label": "to scale"
     },
     "solutions": {
-      "title": "Complete solutions",
+      "title": "Platform benefits",
       "items": [
-        "Digital ordering platform",
-        "Pre-loaded price agreements",
-        "Complete brand assortment",
-        "Personal support"
+        "Centralized partnership management",
+        "Agreement templates with clear terms",
+        "Role-based access across organizations",
+        "Real-time dashboards per user level"
       ]
     },
     "cta": "Become a partner"
