@@ -93,8 +93,8 @@
     "socialProof": "klubber"
   },
   "workflow": {
-    "title": "Fra bestilling til levering",
-    "subtitle": "Følg jeres udstyr hele vejen - fra første klik til levering på døren",
+    "title": "Sådan fungerer platformen",
+    "subtitle": "Fra klub-oprettelse til levering — alt sker ét sted",
     "nodes": {
       "createClub": "Opret klub",
       "viewPrices": "Se aftalepriser",
@@ -102,7 +102,48 @@
       "approveInternal": "Godkend internt",
       "confirmOrder": "Bekræft ordre",
       "trackDelivery": "Spor levering"
-    }
+    },
+    "workflows": [
+      {
+        "id": "club-onboarding",
+        "title": "Klub-onboarding",
+        "subtitle": "Kom i gang med platformen",
+        "steps": [
+          { "label": "Registrer klub", "iconKey": "UserPlus" },
+          { "label": "Konfigurer profil", "iconKey": "Settings" },
+          { "label": "Opsæt personale", "iconKey": "Users" },
+          { "label": "Opret aftale", "iconKey": "FileText" },
+          { "label": "Aktiver portal", "iconKey": "Zap" },
+          { "label": "Klubben er live", "iconKey": "CheckCircle" }
+        ]
+      },
+      {
+        "id": "order-lifecycle",
+        "title": "Ordreforløb",
+        "subtitle": "Fra katalog til levering",
+        "steps": [
+          { "label": "Gennemse katalog", "iconKey": "Search" },
+          { "label": "Tilføj til kurv", "iconKey": "ShoppingCart" },
+          { "label": "Send til godkendelse", "iconKey": "Send" },
+          { "label": "Admin godkender", "iconKey": "CheckCircle" },
+          { "label": "Ordre bekræftet", "iconKey": "Package" },
+          { "label": "Spor levering", "iconKey": "Truck" }
+        ]
+      },
+      {
+        "id": "agreement-management",
+        "title": "Aftalestyring",
+        "subtitle": "Strukturerede partnerskaber",
+        "steps": [
+          { "label": "Opret skabelon", "iconKey": "FileText" },
+          { "label": "Sæt vilkår & priser", "iconKey": "Tag" },
+          { "label": "Tildel til klub", "iconKey": "Building2" },
+          { "label": "Klub accepterer", "iconKey": "ThumbsUp" },
+          { "label": "Overvåg forbrug", "iconKey": "BarChart3" },
+          { "label": "Forny", "iconKey": "RefreshCw" }
+        ]
+      }
+    ]
   },
   "team": {
     "tag": "Vores team",

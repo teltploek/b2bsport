@@ -93,8 +93,8 @@
     "socialProof": "clubs"
   },
   "workflow": {
-    "title": "From order to delivery",
-    "subtitle": "Track your equipment all the way - from first click to delivery at your door",
+    "title": "How the platform works",
+    "subtitle": "From club onboarding to delivery — everything happens in one place",
     "nodes": {
       "createClub": "Create club",
       "viewPrices": "View prices",
@@ -102,7 +102,48 @@
       "approveInternal": "Internal approval",
       "confirmOrder": "Confirm order",
       "trackDelivery": "Track delivery"
-    }
+    },
+    "workflows": [
+      {
+        "id": "club-onboarding",
+        "title": "Club Onboarding",
+        "subtitle": "Get started on the platform",
+        "steps": [
+          { "label": "Register Club", "iconKey": "UserPlus" },
+          { "label": "Configure Profile", "iconKey": "Settings" },
+          { "label": "Set Up Staff", "iconKey": "Users" },
+          { "label": "Create Agreement", "iconKey": "FileText" },
+          { "label": "Activate Portal", "iconKey": "Zap" },
+          { "label": "Club Goes Live", "iconKey": "CheckCircle" }
+        ]
+      },
+      {
+        "id": "order-lifecycle",
+        "title": "Order Lifecycle",
+        "subtitle": "From catalog to delivery",
+        "steps": [
+          { "label": "Browse Catalog", "iconKey": "Search" },
+          { "label": "Add to Cart", "iconKey": "ShoppingCart" },
+          { "label": "Submit for Approval", "iconKey": "Send" },
+          { "label": "Admin Approves", "iconKey": "CheckCircle" },
+          { "label": "Order Confirmed", "iconKey": "Package" },
+          { "label": "Track Delivery", "iconKey": "Truck" }
+        ]
+      },
+      {
+        "id": "agreement-management",
+        "title": "Agreement Management",
+        "subtitle": "Structured partnerships",
+        "steps": [
+          { "label": "Create Template", "iconKey": "FileText" },
+          { "label": "Set Terms & Pricing", "iconKey": "Tag" },
+          { "label": "Assign to Club", "iconKey": "Building2" },
+          { "label": "Club Accepts", "iconKey": "ThumbsUp" },
+          { "label": "Monitor Usage", "iconKey": "BarChart3" },
+          { "label": "Renew", "iconKey": "RefreshCw" }
+        ]
+      }
+    ]
   },
   "team": {
     "tag": "Our team",

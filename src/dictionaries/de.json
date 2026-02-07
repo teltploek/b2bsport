@@ -93,8 +93,8 @@
     "socialProof": "Vereine"
   },
   "workflow": {
-    "title": "Von der Bestellung bis zur Lieferung",
-    "subtitle": "Verfolgen Sie Ihre Ausrüstung den ganzen Weg - vom ersten Klick bis zur Lieferung an Ihrer Tür",
+    "title": "So funktioniert die Plattform",
+    "subtitle": "Von der Club-Einrichtung bis zur Lieferung — alles an einem Ort",
     "nodes": {
       "createClub": "Verein erstellen",
       "viewPrices": "Preise ansehen",
@@ -102,7 +102,48 @@
       "approveInternal": "Interne Genehmigung",
       "confirmOrder": "Bestellung bestätigen",
       "trackDelivery": "Lieferung verfolgen"
-    }
+    },
+    "workflows": [
+      {
+        "id": "club-onboarding",
+        "title": "Club-Onboarding",
+        "subtitle": "Erste Schritte auf der Plattform",
+        "steps": [
+          { "label": "Club registrieren", "iconKey": "UserPlus" },
+          { "label": "Profil konfigurieren", "iconKey": "Settings" },
+          { "label": "Personal einrichten", "iconKey": "Users" },
+          { "label": "Vereinbarung erstellen", "iconKey": "FileText" },
+          { "label": "Portal aktivieren", "iconKey": "Zap" },
+          { "label": "Club ist live", "iconKey": "CheckCircle" }
+        ]
+      },
+      {
+        "id": "order-lifecycle",
+        "title": "Bestellablauf",
+        "subtitle": "Vom Katalog bis zur Lieferung",
+        "steps": [
+          { "label": "Katalog durchsuchen", "iconKey": "Search" },
+          { "label": "In den Warenkorb", "iconKey": "ShoppingCart" },
+          { "label": "Zur Genehmigung senden", "iconKey": "Send" },
+          { "label": "Admin genehmigt", "iconKey": "CheckCircle" },
+          { "label": "Bestellung bestätigt", "iconKey": "Package" },
+          { "label": "Lieferung verfolgen", "iconKey": "Truck" }
+        ]
+      },
+      {
+        "id": "agreement-management",
+        "title": "Vereinbarungsverwaltung",
+        "subtitle": "Strukturierte Partnerschaften",
+        "steps": [
+          { "label": "Vorlage erstellen", "iconKey": "FileText" },
+          { "label": "Konditionen & Preise festlegen", "iconKey": "Tag" },
+          { "label": "Club zuweisen", "iconKey": "Building2" },
+          { "label": "Club akzeptiert", "iconKey": "ThumbsUp" },
+          { "label": "Nutzung überwachen", "iconKey": "BarChart3" },
+          { "label": "Verlängern", "iconKey": "RefreshCw" }
+        ]
+      }
+    ]
   },
   "team": {
     "tag": "Unser Team",
