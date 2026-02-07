@@ -896,33 +896,43 @@
       }
     },
     "benefits": {
-      "title": "Derfor vælger klubber os",
+      "title": "Derfor vælger klubber platformen",
       "digitalOrdering": {
-        "title": "100% Digital bestilling",
-        "description": "Slut med Excel-ark. Bestil alt online med jeres forudindlæste priser."
+        "title": "Digital bestilling inden for klubaftaler",
+        "description": "Bestil udstyr direkte på platformen — inden for jeres aktive aftaler og forudforhandlede priser."
       },
       "fastDelivery": {
-        "title": "Hurtig levering",
-        "description": "2-3 dages levering på lagervarer. Altid opdateret lagerstatus."
+        "title": "Spor hver ordre fra start til levering",
+        "description": "Realtids-ordresporing for klubadministratorer og trænere. Altid overblik over status."
       },
       "clubAgreements": {
-        "title": "Klubaftaler",
-        "description": "Jeres priser er allerede forhandlet og indlæst. Ingen overraskelser."
+        "title": "Personale kan bestille selvstændigt",
+        "description": "Trænere og holdledere bestiller selv — inden for de budgetter og aftaler I har defineret."
       },
       "support": {
-        "title": "Dedikeret support",
-        "description": "Personlig rådgivning fra eksperter der kender jeres sport."
+        "title": "Én platform for alt jeres udstyr",
+        "description": "Holdtøj, træningsudstyr, tilbehør og personalisering — alt samlet med klubbens leverandøraftaler."
       }
     },
     "cta": {
-      "title": "Klar til at digitalisere jeres udstyrshåndtering?",
-      "subtitle": "Book en demo og se hvordan vi kan hjælpe jeres klub",
+      "title": "Se hvordan klubber bruger platformen",
+      "subtitle": "Oplev hvordan platformen forenkler udstyrshåndtering for klubber i hele Danmark",
       "button": "Book demo for",
       "contact": "Kontakt os"
     },
     "brands": {
       "title": "Vi arbejder med de bedste mærker",
       "subtitle": "Kvalitetsudstyr fra anerkendte producenter"
+    },
+    "workflow": {
+      "title": "Fra katalog til levering",
+      "subtitle": "Sådan bestiller du udstyr til dit hold",
+      "steps": [
+        { "label": "Gennemse katalog", "iconKey": "Search" },
+        { "label": "Tilpas og vælg", "iconKey": "Settings" },
+        { "label": "Afgiv bestilling", "iconKey": "ShoppingCart" },
+        { "label": "Spor levering", "iconKey": "Truck" }
+      ]
     }
   },
   "notFound": {

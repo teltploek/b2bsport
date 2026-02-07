@@ -896,33 +896,43 @@
       }
     },
     "benefits": {
-      "title": "Warum Vereine uns wählen",
+      "title": "Warum Vereine die Plattform wählen",
       "digitalOrdering": {
-        "title": "100% Digitale Bestellung",
-        "description": "Keine Excel-Tabellen mehr. Bestellen Sie alles online mit Ihren vorgeladenen Preisen."
+        "title": "Digitale Bestellung innerhalb von Vereinsvereinbarungen",
+        "description": "Bestellen Sie Ausrüstung direkt auf der Plattform — innerhalb Ihrer aktiven Vereinbarungen und vorverhandelten Preise."
       },
       "fastDelivery": {
-        "title": "Schnelle Lieferung",
-        "description": "2-3 Tage Lieferung bei Lagerware. Immer aktualisierter Lagerbestand."
+        "title": "Jede Bestellung von Anfang bis Lieferung verfolgen",
+        "description": "Echtzeit-Bestellverfolgung für Vereinsadministratoren und Trainer. Immer Überblick über den Status."
       },
       "clubAgreements": {
-        "title": "Vereinsvereinbarungen",
-        "description": "Ihre Preise sind bereits ausgehandelt und geladen. Keine Überraschungen."
+        "title": "Mitarbeiter können selbstständig bestellen",
+        "description": "Trainer und Teamleiter bestellen selbst — innerhalb der Budgets und Vereinbarungen, die Sie festgelegt haben."
       },
       "support": {
-        "title": "Dedizierter Support",
-        "description": "Persönliche Beratung von Experten, die Ihren Sport kennen."
+        "title": "Eine Plattform für Ihre gesamte Ausrüstung",
+        "description": "Teamkleidung, Trainingsausrüstung, Zubehör und Personalisierung — alles zusammen mit den Lieferantenvereinbarungen Ihres Vereins."
       }
     },
     "cta": {
-      "title": "Bereit, Ihre Ausrüstungsverwaltung zu digitalisieren?",
-      "subtitle": "Buchen Sie eine Demo und sehen Sie, wie wir Ihrem Verein helfen können",
+      "title": "Sehen Sie, wie Vereine die Plattform nutzen",
+      "subtitle": "Erleben Sie, wie die Plattform die Ausrüstungsverwaltung für Vereine in ganz Dänemark vereinfacht",
       "button": "Demo buchen für",
       "contact": "Kontaktieren Sie uns"
     },
     "brands": {
       "title": "Wir arbeiten mit den besten Marken",
       "subtitle": "Qualitätsausrüstung von anerkannten Herstellern"
+    },
+    "workflow": {
+      "title": "Vom Katalog bis zur Lieferung",
+      "subtitle": "So bestellen Sie Ausrüstung für Ihr Team",
+      "steps": [
+        { "label": "Katalog durchsuchen", "iconKey": "Search" },
+        { "label": "Anpassen & auswählen", "iconKey": "Settings" },
+        { "label": "Bestellung aufgeben", "iconKey": "ShoppingCart" },
+        { "label": "Lieferung verfolgen", "iconKey": "Truck" }
+      ]
     }
   },
   "notFound": {

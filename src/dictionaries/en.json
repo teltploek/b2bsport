@@ -895,33 +895,43 @@
       }
     },
     "benefits": {
-      "title": "Why clubs choose us",
+      "title": "Why clubs choose the platform",
       "digitalOrdering": {
-        "title": "100% Digital ordering",
-        "description": "No more Excel sheets. Order everything online with your pre-loaded prices."
+        "title": "Digital ordering within club agreements",
+        "description": "Order equipment directly on the platform — within your active agreements and pre-negotiated prices."
       },
       "fastDelivery": {
-        "title": "Fast delivery",
-        "description": "2-3 day delivery on stock items. Always updated inventory status."
+        "title": "Track every order from start to delivery",
+        "description": "Real-time order tracking for club administrators and coaches. Always have an overview of status."
       },
       "clubAgreements": {
-        "title": "Club agreements",
-        "description": "Your prices are already negotiated and loaded. No surprises."
+        "title": "Staff can order independently",
+        "description": "Coaches and team leaders order on their own — within the budgets and agreements you've defined."
       },
       "support": {
-        "title": "Dedicated support",
-        "description": "Personal advice from experts who know your sport."
+        "title": "One platform for all your equipment",
+        "description": "Team wear, training gear, accessories, and customization — all gathered with your club's supplier agreements."
       }
     },
     "cta": {
-      "title": "Ready to digitalize your equipment management?",
-      "subtitle": "Book a demo and see how we can help your club",
+      "title": "See how clubs use the platform",
+      "subtitle": "Experience how the platform simplifies equipment management for clubs across Denmark",
       "button": "Book demo for",
       "contact": "Contact us"
     },
     "brands": {
       "title": "We work with the best brands",
       "subtitle": "Quality equipment from recognized manufacturers"
+    },
+    "workflow": {
+      "title": "From catalog to delivery",
+      "subtitle": "How you order equipment for your team",
+      "steps": [
+        { "label": "Browse catalog", "iconKey": "Search" },
+        { "label": "Customize & select", "iconKey": "Settings" },
+        { "label": "Place order", "iconKey": "ShoppingCart" },
+        { "label": "Track delivery", "iconKey": "Truck" }
+      ]
     }
   },
   "notFound": {
