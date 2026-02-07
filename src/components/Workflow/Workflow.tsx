@@ -131,21 +131,21 @@ const defaultEdgeOptions = {
   animated: true,
 }
 
-// Predefined scattered positions for 6-step workflows (mind-map feel)
+// Predefined scattered positions for 6-step workflows (mind-map feel, spread across full width)
 const scatteredPositions6 = [
-  { x: 0, y: 60 },
-  { x: 220, y: 0 },
-  { x: 410, y: 100 },
-  { x: 640, y: 20 },
-  { x: 830, y: 110 },
-  { x: 1040, y: 40 },
+  { x: 0, y: 80 },
+  { x: 280, y: 0 },
+  { x: 560, y: 130 },
+  { x: 880, y: 20 },
+  { x: 1160, y: 140 },
+  { x: 1440, y: 50 },
 ]
 
 // Generate deterministic scattered positions for any step count
 function getScatteredPositions(count: number): { x: number; y: number }[] {
   if (count === 6) return scatteredPositions6
-  const yOffsets = [60, 0, 100, 20, 110, 40, 70, 10, 90, 30]
-  const baseGap = count <= 4 ? 250 : count <= 6 ? 200 : 160
+  const yOffsets = [80, 0, 130, 20, 140, 50, 70, 10, 120, 30]
+  const baseGap = count <= 4 ? 320 : count <= 6 ? 280 : 220
   return Array.from({ length: count }, (_, i) => ({
     x: i * baseGap + ((i * 37 + 13) % 30) - 15,
     y: yOffsets[i % yOffsets.length],
@@ -532,7 +532,7 @@ export default function Workflow({
         </div>
 
         {/* Desktop: React Flow Canvas (hidden on mobile) */}
-        <div className="hidden md:block h-[340px] w-full rounded-xl overflow-hidden [&_.react-flow]:cursor-default">
+        <div className="hidden md:block h-[420px] w-full rounded-xl overflow-hidden [&_.react-flow]:cursor-default">
           <ReactFlow
             key={activeWorkflow.id}
             nodes={nodes}
@@ -540,7 +540,7 @@ export default function Workflow({
             nodeTypes={nodeTypes}
             defaultEdgeOptions={defaultEdgeOptions}
             fitView
-            fitViewOptions={{ padding: 0.2 }}
+            fitViewOptions={{ padding: 0.35 }}
             panOnDrag={false}
             zoomOnScroll={false}
             nodesDraggable={false}
