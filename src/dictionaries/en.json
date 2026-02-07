@@ -761,6 +761,74 @@
       "secondaryCTA": "Contact us"
     }
   },
+  "forClubsPage": {
+    "hero": {
+      "tag": "For clubs",
+      "title": "One platform for every supplier relationship",
+      "subtitle": "Stop juggling between emails, spreadsheets, and phone calls. Bring all your supplier agreements, orders, and budgets into one place."
+    },
+    "benefits": {
+      "tag": "Benefits",
+      "title": "Why clubs choose B2B Sport",
+      "cards": [
+        {
+          "title": "Centralized supplier relationships",
+          "description": "All your supplier agreements in one place. No more searching for terms in old emails."
+        },
+        {
+          "title": "Controlled delegation",
+          "description": "Let coaches and team leaders order equipment — within the boundaries you set. Budgets and approvals managed centrally."
+        },
+        {
+          "title": "Spending transparency",
+          "description": "See exactly what was ordered, by whom, and at what price. Real-time overview of all budgets and orders."
+        },
+        {
+          "title": "Single source of truth",
+          "description": "No more scattered information. Agreements, prices, orders, and contacts — everything in the platform."
+        }
+      ]
+    },
+    "workflow": {
+      "title": "Your workflow in the platform",
+      "subtitle": "See how the platform supports your daily work — regardless of your role"
+    },
+    "roles": {
+      "tag": "Roles & access",
+      "title": "Who does what in the platform",
+      "subtitle": "Clear role distribution ensures efficiency and control",
+      "admin": {
+        "title": "Club Administrator",
+        "description": "Has full oversight and management responsibility",
+        "capabilities": [
+          "Accept and manage supplier agreements",
+          "Set up staff access levels",
+          "Define budgets per team or department",
+          "Approve orders above budget limits",
+          "Monitor spending via dashboards",
+          "Handle agreement renewals"
+        ]
+      },
+      "staff": {
+        "title": "Coach / Team Leader",
+        "description": "Orders quickly and easily within boundaries",
+        "capabilities": [
+          "Log in and see available equipment",
+          "Browse products within agreements",
+          "Check team sizes and needs",
+          "Place orders with one click",
+          "Track order status in real-time",
+          "Receive delivery notifications"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to take control of your equipment?",
+      "subtitle": "Let us show you how B2B Sport can simplify your equipment management and supplier relationships.",
+      "primaryCTA": "Book demo",
+      "secondaryCTA": "Contact us"
+    }
+  },
   "footer": {
     "company": {
       "title": "B2BSport",

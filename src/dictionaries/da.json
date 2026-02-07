@@ -761,6 +761,74 @@
       "secondaryCTA": "Kontakt os"
     }
   },
+  "forClubsPage": {
+    "hero": {
+      "tag": "For klubber",
+      "title": "Én platform for alle leverandørrelationer",
+      "subtitle": "Stop med at jonglere mellem e-mails, regneark og telefonopkald. Saml alle jeres leverandøraftaler, bestillinger og budgetter ét sted."
+    },
+    "benefits": {
+      "tag": "Fordele",
+      "title": "Hvorfor klubber vælger B2B Sport",
+      "cards": [
+        {
+          "title": "Centraliserede leverandørrelationer",
+          "description": "Alle jeres leverandøraftaler samlet ét sted. Slut med at lede efter vilkår i gamle e-mails."
+        },
+        {
+          "title": "Kontrolleret delegation",
+          "description": "Lad trænere og holdledere bestille udstyr — inden for de rammer I sætter. Budgetter og godkendelser styres centralt."
+        },
+        {
+          "title": "Gennemsigtighed i forbrug",
+          "description": "Se præcis hvad der er bestilt, af hvem og til hvilken pris. Realtids-overblik over alle budgetter og ordrer."
+        },
+        {
+          "title": "Én sandhedskilde",
+          "description": "Ingen flere spredte informationer. Aftaler, priser, ordrer og kontakter — alt samlet i platformen."
+        }
+      ]
+    },
+    "workflow": {
+      "title": "Jeres workflow i platformen",
+      "subtitle": "Se hvordan platformen understøtter jeres daglige arbejde — uanset jeres rolle"
+    },
+    "roles": {
+      "tag": "Roller og adgang",
+      "title": "Hvem gør hvad i platformen",
+      "subtitle": "Klar rollefordeling sikrer effektivitet og kontrol",
+      "admin": {
+        "title": "Klubadministrator",
+        "description": "Har fuldt overblik og styringsansvar",
+        "capabilities": [
+          "Acceptér og administrér leverandøraftaler",
+          "Opsæt personalets adgangsniveauer",
+          "Definér budgetter per hold eller afdeling",
+          "Godkend ordrer over budgetgrænser",
+          "Overvåg forbrug via dashboards",
+          "Håndtér aftalefornyelser"
+        ]
+      },
+      "staff": {
+        "title": "Træner / Holdleder",
+        "description": "Bestiller hurtigt og enkelt inden for rammerne",
+        "capabilities": [
+          "Log ind og se tilgængeligt udstyr",
+          "Gennemse produkter inden for aftaler",
+          "Tjek holdstørrelser og behov",
+          "Afgiv bestillinger med ét klik",
+          "Følg ordrestatus i realtid",
+          "Modtag leveringsnotifikationer"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Klar til at tage kontrol over jeres udstyr?",
+      "subtitle": "Lad os vise jer hvordan B2B Sport kan forenkle jeres udstyrshåndtering og leverandørrelationer.",
+      "primaryCTA": "Book demo",
+      "secondaryCTA": "Kontakt os"
+    }
+  },
   "footer": {
     "company": {
       "title": "B2BSport",

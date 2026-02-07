@@ -761,6 +761,75 @@
       "secondaryCTA": "Kontakt aufnehmen"
     }
   },
+  "forClubsPage": {
+    "hero": {
+      "tag": "Für Vereine",
+      "title": "Eine Plattform für alle Lieferantenbeziehungen",
+      "subtitle": "Schluss mit dem Jonglieren zwischen E-Mails, Tabellen und Telefonaten. Vereinen Sie alle Lieferantenvereinbarungen, Bestellungen und Budgets an einem Ort."
+    },
+    "benefits": {
+      "tag": "Vorteile",
+      "title": "Warum Vereine B2B Sport wählen",
+      "cards": [
+        {
+          "title": "Zentralisierte Lieferantenbeziehungen",
+          "description": "Alle Lieferantenvereinbarungen an einem Ort. Schluss mit der Suche nach Konditionen in alten E-Mails."
+        },
+        {
+          "title": "Kontrollierte Delegation",
+          "description": "Lassen Sie Trainer und Teamleiter Ausrüstung bestellen — innerhalb der von Ihnen gesetzten Grenzen. Budgets und Genehmigungen werden zentral verwaltet."
+        },
+        {
+          "title": "Ausgabentransparenz",
+          "description": "Sehen Sie genau, was bestellt wurde, von wem und zu welchem Preis. Echtzeit-Überblick über alle Budgets und Bestellungen."
+        },
+        {
+          "title": "Eine einzige Wahrheitsquelle",
+          "description": "Keine verstreuten Informationen mehr. Vereinbarungen, Preise, Bestellungen und Kontakte — alles in der Plattform."
+        }
+      ]
+    },
+    "workflow": {
+      "tag": "Arbeitsablauf",
+      "title": "Ihr Arbeitsablauf in der Plattform",
+      "subtitle": "Sehen Sie, wie die Plattform Ihre tägliche Arbeit unterstützt — unabhängig von Ihrer Rolle"
+    },
+    "roles": {
+      "tag": "Rollen & Zugang",
+      "title": "Wer macht was in der Plattform",
+      "subtitle": "Klare Rollenverteilung gewährleistet Effizienz und Kontrolle",
+      "admin": {
+        "title": "Clubadministrator",
+        "description": "Hat volle Übersicht und Verwaltungsverantwortung",
+        "capabilities": [
+          "Lieferantenvereinbarungen akzeptieren und verwalten",
+          "Zugangsstufen für Mitarbeiter einrichten",
+          "Budgets pro Team oder Abteilung definieren",
+          "Bestellungen über Budgetgrenzen genehmigen",
+          "Ausgaben über Dashboards überwachen",
+          "Vereinbarungsverlängerungen handhaben"
+        ]
+      },
+      "staff": {
+        "title": "Trainer / Teamleiter",
+        "description": "Bestellt schnell und einfach innerhalb der Grenzen",
+        "capabilities": [
+          "Einloggen und verfügbare Ausrüstung sehen",
+          "Produkte innerhalb von Vereinbarungen durchsuchen",
+          "Teamgrößen und Bedarf prüfen",
+          "Bestellungen mit einem Klick aufgeben",
+          "Bestellstatus in Echtzeit verfolgen",
+          "Lieferbenachrichtigungen erhalten"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Bereit, die Kontrolle über Ihre Ausrüstung zu übernehmen?",
+      "subtitle": "Lassen Sie uns zeigen, wie B2B Sport Ihr Ausrüstungsmanagement und Ihre Lieferantenbeziehungen vereinfachen kann.",
+      "primaryCTA": "Demo buchen",
+      "secondaryCTA": "Kontaktieren Sie uns"
+    }
+  },
   "footer": {
     "company": {
       "title": "B2BSport",
