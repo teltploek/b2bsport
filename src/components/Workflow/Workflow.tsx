@@ -220,33 +220,37 @@ function MobileWorkflowStep({
 function stepsToNodes(
   steps: WorkflowStep[],
   visibleUpTo: number,
-  activeIndex: number
+  activeIndex: number,
+  fadingOut: boolean
 ): Node<WorkflowNodeData>[] {
   const positions = getScatteredPositions(steps.length)
-  return steps.map((step, index) => ({
-    id: `node-${index + 1}`,
-    type: 'workflowNode',
-    position: positions[index],
-    data: {
-      label: step.label,
-      icon: iconMap[step.iconKey] || CheckCircle,
-      description: step.description,
-      stat: step.stat,
-    },
-    className: index <= visibleUpTo ? 'workflow-node-visible' : 'workflow-node-hidden',
-    style: index === activeIndex
-      ? { animation: 'workflowPulse 0.6s ease-in-out 3' }
-      : undefined,
-  }))
+  return steps.map((step, index) => {
+    const isVisible = index <= visibleUpTo && !fadingOut
+    return {
+      id: `node-${index + 1}`,
+      type: 'workflowNode',
+      position: positions[index],
+      data: {
+        label: step.label,
+        icon: iconMap[step.iconKey] || CheckCircle,
+        description: step.description,
+        stat: step.stat,
+      },
+      className: isVisible ? 'workflow-node-visible' : 'workflow-node-hidden',
+      style: index === activeIndex
+        ? { animation: 'workflowPulse 0.6s ease-in-out 3' }
+        : undefined,
+    }
+  })
 }
 
 // Convert workflow steps to React Flow edges
-function stepsToEdges(steps: WorkflowStep[], visibleUpTo: number): Edge[] {
+function stepsToEdges(steps: WorkflowStep[], visibleUpTo: number, fadingOut: boolean): Edge[] {
   return steps.slice(1).map((_, index) => ({
     id: `edge-${index + 1}-${index + 2}`,
     source: `node-${index + 1}`,
     target: `node-${index + 2}`,
-    className: index + 1 <= visibleUpTo ? 'workflow-edge-visible' : 'workflow-edge-hidden',
+    className: index + 1 <= visibleUpTo && !fadingOut ? 'workflow-edge-visible' : 'workflow-edge-hidden',
   }))
 }
 
@@ -309,20 +313,23 @@ export default function Workflow({
   // Animation state
   const [visibleStepIndex, setVisibleStepIndex] = useState(-1)
   const [activeStepIndex, setActiveStepIndex] = useState(-1)
+  const [isFadingOut, setIsFadingOut] = useState(false)
   const [isInView, setIsInView] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([])
+  const isInViewRef = useRef(false)
 
   const clearTimers = useCallback(() => {
     timersRef.current.forEach(clearTimeout)
     timersRef.current = []
   }, [])
 
-  // Reset animation when tab changes or when entering view
+  // Animation cycle: reveal → hold → fade out → pause → restart
   const startAnimation = useCallback(() => {
     clearTimers()
     setVisibleStepIndex(-1)
     setActiveStepIndex(-1)
+    setIsFadingOut(false)
 
     const stepCount = activeWorkflow.steps.length
     // Reveal nodes one by one: 400ms per node + 300ms delay between
@@ -339,6 +346,31 @@ export default function Workflow({
       }, nodeDelay + 200) // 200ms initial delay
       timersRef.current.push(timer)
     }
+
+    // After all nodes revealed: hold 2.5s, then fade out, then restart
+    const totalRevealTime = 200 + (stepCount - 1) * 700 + 1800 // initial delay + reveals + last pulse
+    const holdTimer = setTimeout(() => {
+      if (!isInViewRef.current) return
+      // Fade out all nodes and edges
+      setIsFadingOut(true)
+      setActiveStepIndex(-1)
+
+      // After fade-out (300ms) + pause (200ms), restart
+      const restartTimer = setTimeout(() => {
+        if (!isInViewRef.current) return
+        setIsFadingOut(false)
+        setVisibleStepIndex(-1)
+        // Small delay before restarting the reveal cycle
+        const cycleTimer = setTimeout(() => {
+          if (isInViewRef.current) {
+            startAnimation()
+          }
+        }, 100)
+        timersRef.current.push(cycleTimer)
+      }, 500) // 300ms fade-out + 200ms pause
+      timersRef.current.push(restartTimer)
+    }, totalRevealTime + 2500) // hold for 2.5s after complete
+    timersRef.current.push(holdTimer)
   }, [activeWorkflow.steps.length, clearTimers])
 
   // Intersection Observer
@@ -348,6 +380,7 @@ export default function Workflow({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
+        isInViewRef.current = entry.isIntersecting
         setIsInView(entry.isIntersecting)
       },
       { threshold: 0.3 }
@@ -368,18 +401,19 @@ export default function Workflow({
       clearTimers()
       setVisibleStepIndex(-1)
       setActiveStepIndex(-1)
+      setIsFadingOut(false)
     }
   }, [isInView, activeTab, startAnimation, clearTimers])
 
   // Build nodes and edges for current active workflow
   const nodes = useMemo(
-    () => stepsToNodes(activeWorkflow.steps, visibleStepIndex, activeStepIndex),
-    [activeWorkflow.steps, visibleStepIndex, activeStepIndex]
+    () => stepsToNodes(activeWorkflow.steps, visibleStepIndex, activeStepIndex, isFadingOut),
+    [activeWorkflow.steps, visibleStepIndex, activeStepIndex, isFadingOut]
   )
 
   const edges = useMemo(
-    () => stepsToEdges(activeWorkflow.steps, visibleStepIndex),
-    [activeWorkflow.steps, visibleStepIndex]
+    () => stepsToEdges(activeWorkflow.steps, visibleStepIndex, isFadingOut),
+    [activeWorkflow.steps, visibleStepIndex, isFadingOut]
   )
 
   // Mobile steps for current active workflow
