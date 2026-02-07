@@ -214,3 +214,18 @@ Started: 2026-02-04
   - The Workflow component's data resolution chain means integration stories may be complete before the integration story itself is worked on — always verify first
   - `timeout` command is not available on macOS by default — use tool timeouts instead
 ---
+
+## 2026-02-07 - US-005 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated Hero section to use dictionary-driven content and removed hardcoded Danish text
+- **Files changed**:
+  - `src/components/Hero/Hero.tsx` - Added titleLine1/titleLine2 to HeroProps interface; replaced hardcoded "Hele Danmarks" / "klubpartner" with dictionary values; stats bar now reads from dictionary.hero.stats instead of hardcoded values; removed hardcoded "Danmarks førende klubplatform" tagline
+  - `src/dictionaries/da.json` - Updated hero: tag to "Partnerskabsplatformen for dansk sport", added titleLine1/titleLine2, updated subtitle, CTA labels ("Bliv partner"/"Se platformen"), added stats object with "Færre fejl, mere sport"
+  - `src/dictionaries/en.json` - Updated hero: tag, titleLine1/titleLine2, subtitle, CTA labels ("Become a partner"/"See the platform"), stats with "Less admin, more sport"
+  - `src/dictionaries/de.json` - Updated hero: tag, titleLine1/titleLine2, subtitle, CTA labels ("Partner werden"/"Plattform ansehen"), stats with "Weniger Admin, mehr Sport"
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - DA and EN homepages confirmed with updated text; no hardcoded Danish text remains on EN page
+- **Learnings for future iterations:**
+  - Hero stats bar had hardcoded text in 4 places (3 stats + tagline) — now all dictionary-driven
+  - The `stats.first` replaces "#1 Klubpartner" with a text-only stat (no large number prefix)
+  - Hero.tsx titleLine1/titleLine2 pattern allows flexible two-line title rendering while keeping `title` for backward compat
+---

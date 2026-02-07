@@ -9,11 +9,19 @@
     "clubSystem": "Klubsystem"
   },
   "hero": {
-    "tag": "Digitale Sportausrüstungs-Plattform",
-    "title": "Ganz Dänemarks Vereinspartner",
-    "subtitle": "Wir bauen eine digitale Lösung für Sportausrüstungsbestellungen",
-    "cta": "Kontakt aufnehmen",
-    "ctaSecondary": "Erfahren Sie mehr"
+    "tag": "Die Partnerschaftsplattform für dänischen Sport",
+    "titleLine1": "Dänemarks",
+    "titleLine2": "Clubpartner",
+    "title": "Dänemarks Clubpartner",
+    "subtitle": "Verwalten Sie Clubs, Vereinbarungen und Bestellungen — alles an einem Ort.",
+    "cta": "Partner werden",
+    "ctaSecondary": "Plattform ansehen",
+    "stats": {
+      "first": "Weniger Admin, mehr Sport",
+      "second": "100% Digital",
+      "third": "24/7 Platform",
+      "tagline": "Die Partnerschaftsplattform für dänischen Sport"
+    }
   },
   "welcome": {
     "tag": "Willkommen",

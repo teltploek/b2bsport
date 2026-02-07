@@ -5,9 +5,17 @@ interface HeroProps {
     hero: {
       tag?: string
       title: string
+      titleLine1?: string
+      titleLine2?: string
       subtitle: string
       cta: string
       ctaSecondary?: string
+      stats?: {
+        first?: string
+        second?: string
+        third?: string
+        tagline?: string
+      }
     }
     cta: {
       bookDemo: string
@@ -63,8 +71,10 @@ export default function Hero({ dictionary, locale }: HeroProps) {
             <h1
               className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-[0.95] tracking-tight mb-8 animate-fade-in-up animation-delay-100"
             >
-              <span className="block">Hele Danmarks</span>
-              <span className="block text-cream-200/90">klubpartner</span>
+              <span className="block">{dictionary.hero.titleLine1 || dictionary.hero.title}</span>
+              {dictionary.hero.titleLine2 && (
+                <span className="block text-cream-200/90">{dictionary.hero.titleLine2}</span>
+              )}
             </h1>
 
             {/* Subtitle with refined styling */}
@@ -120,21 +130,18 @@ export default function Hero({ dictionary, locale }: HeroProps) {
           <div className="flex items-center justify-between py-4 text-sm">
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-2 text-cream-200/70">
-                <span className="text-2xl font-display font-bold text-white">Klar</span>
-                <span className="text-xs uppercase tracking-wider">Til dig</span>
+                <span className="text-xs uppercase tracking-wider">{dictionary.hero.stats?.first || 'Færre fejl, mere sport'}</span>
               </div>
               <div className="hidden sm:flex items-center gap-2 text-cream-200/70">
-                <span className="text-2xl font-display font-bold text-white">100%</span>
-                <span className="text-xs uppercase tracking-wider">Digital</span>
+                <span className="text-2xl font-display font-bold text-white">{dictionary.hero.stats?.second || '100% Digital'}</span>
               </div>
               <div className="hidden md:flex items-center gap-2 text-cream-200/70">
-                <span className="text-2xl font-display font-bold text-white">24/7</span>
-                <span className="text-xs uppercase tracking-wider">Platform</span>
+                <span className="text-2xl font-display font-bold text-white">{dictionary.hero.stats?.third || '24/7 Platform'}</span>
               </div>
             </div>
             <div className="hidden sm:block h-4 w-px bg-cream-100/20" />
             <div className="text-cream-200/50 text-xs tracking-wider uppercase hidden sm:block">
-              Danmarks førende klubplatform
+              {dictionary.hero.stats?.tagline || 'Partnerskabsplatformen for dansk sport'}
             </div>
           </div>
         </div>

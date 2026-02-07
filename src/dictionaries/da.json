@@ -9,11 +9,19 @@
     "clubSystem": "Klubsystem"
   },
   "hero": {
-    "tag": "Digital sportsudstyr platform",
+    "tag": "Partnerskabsplatformen for dansk sport",
+    "titleLine1": "Hele Danmarks",
+    "titleLine2": "klubpartner",
     "title": "Hele Danmarks klubpartner",
-    "subtitle": "Vi bygger en digital løsning for bestilling af sportsudstyr",
-    "cta": "Kontakt os",
-    "ctaSecondary": "Se hvordan"
+    "subtitle": "Administrer klubber, aftaler og bestillinger — samlet ét sted.",
+    "cta": "Bliv partner",
+    "ctaSecondary": "Se platformen",
+    "stats": {
+      "first": "Færre fejl, mere sport",
+      "second": "100% Digital",
+      "third": "24/7 Platform",
+      "tagline": "Partnerskabsplatformen for dansk sport"
+    }
   },
   "welcome": {
     "tag": "Velkommen",

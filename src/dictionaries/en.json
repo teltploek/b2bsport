@@ -9,11 +9,19 @@
     "clubSystem": "Club System"
   },
   "hero": {
-    "tag": "Digital sports equipment platform",
-    "title": "All of Denmark's club partner",
-    "subtitle": "We're building a digital solution for sports equipment ordering",
-    "cta": "Contact us",
-    "ctaSecondary": "See how"
+    "tag": "The partnership platform for Danish sport",
+    "titleLine1": "Denmark's",
+    "titleLine2": "club partner",
+    "title": "Denmark's club partner",
+    "subtitle": "Manage clubs, agreements, and orders — all in one place.",
+    "cta": "Become a partner",
+    "ctaSecondary": "See the platform",
+    "stats": {
+      "first": "Less admin, more sport",
+      "second": "100% Digital",
+      "third": "24/7 Platform",
+      "tagline": "The partnership platform for Danish sport"
+    }
   },
   "welcome": {
     "tag": "Welcome",

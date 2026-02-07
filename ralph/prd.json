@@ -109,7 +109,7 @@
         "Visual verification: Navigate to http://localhost:3000 and confirm hero displays updated text. Navigate to http://localhost:3000/en and confirm English text renders correctly."
       ],
       "priority": 5,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {
