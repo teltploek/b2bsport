@@ -63,6 +63,8 @@ const iconMap: Record<string, LucideIcon> = {
 interface WorkflowStep {
   label: string
   iconKey: string
+  description?: string
+  stat?: string
 }
 
 // Single workflow definition (new format)
@@ -164,12 +166,16 @@ const mobileOffsets = [
 function MobileWorkflowStep({
   icon: Icon,
   label,
+  description,
+  stat,
   stepNumber,
   isLast,
   offsetClass,
 }: {
   icon: LucideIcon
   label: string
+  description?: string
+  stat?: string
   stepNumber: number
   isLast: boolean
   offsetClass: string
@@ -181,13 +187,23 @@ function MobileWorkflowStep({
           <div className="flex-shrink-0 w-10 h-10 bg-coral-500 rounded-lg flex items-center justify-center">
             <Icon className="w-5 h-5 text-white" strokeWidth={2} />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col min-w-0">
             <span className="text-xs text-forest-500 font-medium">
               Trin {stepNumber}
             </span>
             <span className="font-display font-semibold text-sm text-forest-900 leading-tight">
               {label}
             </span>
+            {description && (
+              <span className="text-xs text-forest-600 leading-tight mt-0.5 truncate">
+                {description}
+              </span>
+            )}
+            {stat && (
+              <span className="text-xs text-coral-600 font-semibold leading-tight mt-0.5">
+                {stat}
+              </span>
+            )}
           </div>
         </div>
       </div>
@@ -210,6 +226,8 @@ function stepsToNodes(steps: WorkflowStep[]): Node<WorkflowNodeData>[] {
     data: {
       label: step.label,
       icon: iconMap[step.iconKey] || CheckCircle,
+      description: step.description,
+      stat: step.stat,
     },
   }))
 }
@@ -296,6 +314,8 @@ export default function Workflow({
       activeWorkflow.steps.map((step) => ({
         icon: iconMap[step.iconKey] || CheckCircle,
         label: step.label,
+        description: step.description,
+        stat: step.stat,
       })),
     [activeWorkflow.steps]
   )
@@ -341,6 +361,8 @@ export default function Workflow({
               key={`${activeWorkflow.id}-${index}`}
               icon={step.icon}
               label={step.label}
+              description={step.description}
+              stat={step.stat}
               stepNumber={index + 1}
               isLast={index === mobileSteps.length - 1}
               offsetClass={mobileOffsets[index % mobileOffsets.length]}
