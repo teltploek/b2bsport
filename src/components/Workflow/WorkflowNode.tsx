@@ -19,7 +19,7 @@ function WorkflowNode({ data }: WorkflowNodeProps) {
   const Icon = data.icon
 
   return (
-    <div className="bg-cream-100 border border-cream-300 rounded-xl px-4 py-3 shadow-sm min-w-[200px]">
+    <div className="bg-cream-100 border border-cream-300 rounded-xl px-6 py-5 shadow-sm min-w-[260px]">
       {/* Hidden handles for edge connections */}
       <Handle
         type="target"
@@ -27,21 +27,21 @@ function WorkflowNode({ data }: WorkflowNodeProps) {
         className="!bg-coral-500 !w-2 !h-2 !border-0"
       />
 
-      <div className="flex items-center gap-3">
-        <div className="flex-shrink-0 w-10 h-10 bg-coral-500 rounded-lg flex items-center justify-center">
-          <Icon className="w-5 h-5 text-white" strokeWidth={2} />
+      <div className="flex items-center gap-4">
+        <div className="flex-shrink-0 w-14 h-14 bg-coral-500 rounded-xl flex items-center justify-center">
+          <Icon className="w-7 h-7 text-white" strokeWidth={1.8} />
         </div>
         <div className="flex flex-col min-w-0">
-          <span className="font-display font-semibold text-sm text-forest-900 leading-tight">
+          <span className="font-display font-bold text-lg text-forest-900 leading-tight">
             {data.label}
           </span>
           {data.description && (
-            <span className="text-xs text-forest-600 leading-tight mt-0.5 truncate">
+            <span className="text-base text-forest-600 leading-snug mt-1">
               {data.description}
             </span>
           )}
           {data.stat && (
-            <span className="text-xs text-coral-600 font-semibold leading-tight mt-0.5">
+            <span className="text-base text-coral-600 font-semibold leading-snug mt-1">
               {data.stat}
             </span>
           )}

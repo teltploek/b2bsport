@@ -182,25 +182,25 @@ function MobileWorkflowStep({
 }) {
   return (
     <div className={`flex flex-col items-center ${offsetClass}`}>
-      <div className="bg-cream-100 border border-cream-300 rounded-xl px-4 py-3 shadow-sm w-full max-w-[200px]">
-        <div className="flex items-center gap-3">
-          <div className="flex-shrink-0 w-10 h-10 bg-coral-500 rounded-lg flex items-center justify-center">
-            <Icon className="w-5 h-5 text-white" strokeWidth={2} />
+      <div className="bg-cream-100 border border-cream-300 rounded-xl px-5 py-4 shadow-sm w-full max-w-[280px]">
+        <div className="flex items-center gap-4">
+          <div className="flex-shrink-0 w-12 h-12 bg-coral-500 rounded-xl flex items-center justify-center">
+            <Icon className="w-6 h-6 text-white" strokeWidth={1.8} />
           </div>
           <div className="flex flex-col min-w-0">
             <span className="text-xs text-forest-500 font-medium">
               Trin {stepNumber}
             </span>
-            <span className="font-display font-semibold text-sm text-forest-900 leading-tight">
+            <span className="font-display font-bold text-base text-forest-900 leading-tight">
               {label}
             </span>
             {description && (
-              <span className="text-xs text-forest-600 leading-tight mt-0.5 truncate">
+              <span className="text-sm text-forest-600 leading-snug mt-0.5">
                 {description}
               </span>
             )}
             {stat && (
-              <span className="text-xs text-coral-600 font-semibold leading-tight mt-0.5">
+              <span className="text-sm text-coral-600 font-semibold leading-snug mt-0.5">
                 {stat}
               </span>
             )}
