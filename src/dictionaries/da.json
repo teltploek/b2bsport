@@ -6,16 +6,43 @@
     "sports": "Sportsgrene",
     "contact": "Kontakt",
     "demo": "Book demo",
-    "clubSystem": "Klubsystem"
+    "clubSystem": "Klubsystem",
+    "forBrands": "For brands",
+    "forClubs": "For klubber"
   },
   "hero": {
+    "tag": "Partnerskabsplatformen for dansk sport",
+    "titleLine1": "Hele Danmarks",
+    "titleLine2": "klubpartner",
     "title": "Hele Danmarks klubpartner",
-    "subtitle": "Vi bygger en digital løsning for bestilling af sportsudstyr",
-    "cta": "Kontakt os"
+    "subtitle": "Administrer klubber, aftaler og bestillinger — samlet ét sted.",
+    "cta": "Bliv partner",
+    "ctaSecondary": "Se platformen",
+    "stats": {
+      "first": "Færre fejl, mere sport",
+      "second": "100% Digital",
+      "third": "24/7 Platform",
+      "tagline": "Partnerskabsplatformen for dansk sport"
+    }
+  },
+  "welcome": {
+    "tag": "Velkommen",
+    "title": "Farvel Excel-ark. Hej digital klubstyring.",
+    "description": "B2B Sport samler alle partnerskaber, aftaler og bestillinger i én platform — så brands kan skalere og klubber kan fokusere på sporten.",
+    "cta": "Se hvordan det virker",
+    "leftCard": {
+      "tag": "Ét overblik",
+      "title": "Alle aftaler samlet"
+    },
+    "rightCard": {
+      "tag": "Struktureret",
+      "title": "Foruddefinerede priser"
+    }
   },
   "valueProposition": {
-    "title": "En nemmere måde at bestille klubbens udstyr",
-    "subtitle": "Vi arbejder på at gøre bestilling af sportsudstyr digital og nem. Slip for Excel-ark, emails frem og tilbage, og tidskrævende administration.",
+    "tag": "Bygget til B2B sport",
+    "title": "Struktur på partnerskaber, effektivitet i bestillinger",
+    "subtitle": "Platform, support og partnerskab — bygget til den måde B2B sport faktisk fungerer.",
     "mainCTA": "Se hvordan vi gør det",
     "features": {
       "digital": {
@@ -34,9 +61,143 @@
         "title": "Fuld support",
         "description": "Vi hjælper dig hele vejen fra start til mål"
       }
-    }
+    },
+    "cards": {
+      "platform": {
+        "badge": "Platform",
+        "title": "Centraliseret platform",
+        "description": "Alt hvad din klub behøver, samlet i én moderne platform",
+        "features": [
+          "Aftaleskabeloner",
+          "Rollebaseret adgang",
+          "Ordresporing inden for aftaler",
+          "Realtids-dashboards"
+        ],
+        "cta": "Se platformen"
+      },
+      "support": {
+        "badge": "Support",
+        "title": "Personlig support",
+        "description": "Dedikeret hjælp fra start til mål — vi kender jeres sport",
+        "features": [
+          "Dedikeret kontaktperson",
+          "Sportsspecifik rådgivning",
+          "Onboarding-assistance",
+          "Hurtig responstid"
+        ],
+        "cta": "Kontakt os"
+      },
+      "partnership": {
+        "badge": "Partnerskab",
+        "title": "Skalerbart partnerskab",
+        "description": "Mere end en leverandør — vi bliver jeres udstyrspartner",
+        "features": [
+          "Håndter 50 eller 500 klubber",
+          "Genbrugelige aftaleskabeloner",
+          "Proaktive fornyelses-advarsler",
+          "Brandede selvbetjeningsportaler"
+        ],
+        "cta": "Bliv partner"
+      }
+    },
+    "socialProof": "klubber"
   },
+  "workflow": {
+    "title": "Sådan fungerer platformen",
+    "subtitle": "Fra klub-oprettelse til levering — alt sker ét sted",
+    "nodes": {
+      "createClub": "Opret klub",
+      "viewPrices": "Se aftalepriser",
+      "collectOrder": "Saml bestilling",
+      "approveInternal": "Godkend internt",
+      "confirmOrder": "Bekræft ordre",
+      "trackDelivery": "Spor levering"
+    },
+    "workflows": [
+      {
+        "id": "club-onboarding",
+        "title": "Klub-onboarding",
+        "subtitle": "Kom i gang med platformen",
+        "steps": [
+          { "label": "Registrer klub", "iconKey": "UserPlus", "description": "Opret klubprofil og holdstruktur", "stat": "~2 min" },
+          { "label": "Konfigurer profil", "iconKey": "Settings", "description": "Tilføj logo, farver og kontaktoplysninger", "stat": "Fuld tilpasning" },
+          { "label": "Opsæt personale", "iconKey": "Users", "description": "Inviter trænere og personale med rollebaseret adgang", "stat": "Ubegrænset brugere" },
+          { "label": "Opret aftale", "iconKey": "FileText", "description": "Forbind med leverandøraftaler og faste priser", "stat": "Forudkonfigureret" },
+          { "label": "Aktiver portal", "iconKey": "Zap", "description": "Gå live med jeres bestillingsportal med det samme", "stat": "1-klik" },
+          { "label": "Klubben er live", "iconKey": "CheckCircle", "description": "Begynd at bestille udstyr med det samme", "stat": "100% digitalt" }
+        ]
+      },
+      {
+        "id": "order-lifecycle",
+        "title": "Ordreforløb",
+        "subtitle": "Fra katalog til levering",
+        "steps": [
+          { "label": "Gennemse katalog", "iconKey": "Search", "description": "Se produkter inden for jeres aftale", "stat": "Forudindlæste priser" },
+          { "label": "Tilføj til kurv", "iconKey": "ShoppingCart", "description": "Vælg størrelser, farver og antal", "stat": "Per-spiller valg" },
+          { "label": "Send til godkendelse", "iconKey": "Send", "description": "Send til klubadmin for gennemgang", "stat": "Øjeblikkelig notifikation" },
+          { "label": "Admin godkender", "iconKey": "CheckCircle", "description": "Klubadmin gennemgår og godkender ordren", "stat": "1-klik godkendelse" },
+          { "label": "Ordre bekræftet", "iconKey": "Package", "description": "Ordre sendt til leverandør automatisk", "stat": "Nul manuelt arbejde" },
+          { "label": "Spor levering", "iconKey": "Truck", "description": "Følg din ordre fra lager til dør", "stat": "Realtid" }
+        ]
+      },
+      {
+        "id": "agreement-management",
+        "title": "Aftalestyring",
+        "subtitle": "Strukturerede partnerskaber",
+        "steps": [
+          { "label": "Opret skabelon", "iconKey": "FileText", "description": "Byg genanvendelige aftaleskabeloner", "stat": "Træk & slip" },
+          { "label": "Sæt vilkår & priser", "iconKey": "Tag", "description": "Definer priser, rabatter og produktudvalg", "stat": "Per-klub priser" },
+          { "label": "Tildel til klub", "iconKey": "Building2", "description": "Forbind aftaler til en eller mange klubber", "stat": "Massetildeling" },
+          { "label": "Klub accepterer", "iconKey": "ThumbsUp", "description": "Klubben gennemgår og aktiverer aftalen", "stat": "Digital signatur" },
+          { "label": "Overvåg forbrug", "iconKey": "BarChart3", "description": "Følg ordrer, forbrug og overholdelse", "stat": "Live dashboards" },
+          { "label": "Forny", "iconKey": "RefreshCw", "description": "Forlæng eller opdater aftaler med ét klik", "stat": "Auto-fornyelse" }
+        ]
+      }
+    ]
+  },
+  "audienceWorkflows": [
+    {
+      "id": "brand-admin",
+      "title": "Brand-administrator",
+      "subtitle": "Administrer klubnetværk og partnerskaber",
+      "steps": [
+        { "label": "Onboard klub", "iconKey": "UserPlus", "description": "Tilføj en ny klub til dit netværk", "stat": "~5 min opsætning" },
+        { "label": "Opret aftale", "iconKey": "FileText", "description": "Sæt vilkår, priser og produktadgang", "stat": "Genanvendelige skabeloner" },
+        { "label": "Konfigurer produkter", "iconKey": "Package", "description": "Definer hvilke produkter klubber kan bestille", "stat": "Fuld katalogkontrol" },
+        { "label": "Overvåg ordrer", "iconKey": "BarChart3", "description": "Følg alle klubordrer i realtid", "stat": "Live overblik" },
+        { "label": "Forny partnerskaber", "iconKey": "RefreshCw", "description": "Forlæng aftaler med opdaterede vilkår", "stat": "1-klik fornyelse" },
+        { "label": "Skalér netværk", "iconKey": "TrendingUp", "description": "Voks fra 5 til 500 klubber problemfrit", "stat": "Ingen ekstra admin" }
+      ]
+    },
+    {
+      "id": "club-admin",
+      "title": "Klubadministrator",
+      "subtitle": "Styr aftaler, budgetter og adgang",
+      "steps": [
+        { "label": "Accepter aftale", "iconKey": "CheckCircle", "description": "Gennemgå og aktiver leverandøraftale", "stat": "Digital accept" },
+        { "label": "Opsæt personaleadgang", "iconKey": "Users", "description": "Inviter trænere og definer rettigheder", "stat": "Rollebaseret adgang" },
+        { "label": "Definer budgetter", "iconKey": "Wallet", "description": "Sæt forbrugsgrænser per hold eller sæson", "stat": "Fuld kontrol" },
+        { "label": "Godkend ordrer", "iconKey": "ClipboardCheck", "description": "Gennemgå og godkend personaleordrer", "stat": "1-klik godkendelse" },
+        { "label": "Følg forbrug", "iconKey": "PieChart", "description": "Overvåg budgetforbrug på tværs af hold", "stat": "Realtidsindsigt" },
+        { "label": "Administrer fornyelser", "iconKey": "RefreshCw", "description": "Håndter aftalefornyelser centralt", "stat": "Proaktive advarsler" }
+      ]
+    },
+    {
+      "id": "coach-staff",
+      "title": "Træner / Personale",
+      "subtitle": "Bestil udstyr hurtigt og nemt",
+      "steps": [
+        { "label": "Log ind", "iconKey": "LogIn", "description": "Få adgang til din klubs bestillingsportal", "stat": "Sikker login" },
+        { "label": "Se produkter", "iconKey": "Search", "description": "Gennemse forhåndsgodkendte produkter og priser", "stat": "Forudindlæst katalog" },
+        { "label": "Tjek holdstørrelser", "iconKey": "Ruler", "description": "Vælg størrelser for hver spiller", "stat": "Per-spiller størrelse" },
+        { "label": "Afgiv ordre", "iconKey": "ShoppingCart", "description": "Send ordre til admin-godkendelse", "stat": "~3 min" },
+        { "label": "Følg status", "iconKey": "Clock", "description": "Følg din ordre gennem hvert trin", "stat": "Realtidsopdateringer" },
+        { "label": "Modtag levering", "iconKey": "Truck", "description": "Få udstyr leveret til din klub", "stat": "Dør-til-dør" }
+      ]
+    }
+  ],
   "team": {
+    "tag": "Vores team",
     "title": "Mød teamet",
     "subtitle": "Et dedikeret team af eksperter der arbejder for at revolutionere sportsudstyrsbranchen",
     "roles": {
@@ -50,12 +211,20 @@
     }
   },
   "contactCTA": {
-    "title": "Klar til at revolutionere jeres klubadministration?",
-    "subtitle": "Lad os vise jer hvordan I kan spare tid og penge på klubbens udstyr",
+    "title": "Klar til at professionalisere jeres partnerskaber?",
+    "subtitle": "Lad os vise jer hvordan B2B Sport kan bringe struktur til jeres klub- og leverandørrelationer",
     "primaryCTA": "Book demo",
     "secondaryCTA": "Kontakt os",
     "phone": "+45 69 15 35 45",
     "email": "info@b2bsport.dk"
+  },
+  "contactSection": {
+    "title": "Klar til at revolutionere jeres klubadministration?",
+    "subtitle": "Kom i gang med Danmarks første fuldt digitale platform for sportsudstyr bestilling",
+    "email": "Email",
+    "phone": "Telefon",
+    "hours": "Åbningstider",
+    "hoursValue": "Man-Fre: 8:00 - 16:00"
   },
   "clubSystem": {
     "title": "Fremtiden for sportsudstyr bestilling",
@@ -63,7 +232,14 @@
     "benefits": {
       "realtime": "Følg dine ordrer i realtid",
       "agreements": "Dine aftaler er allerede indlæst",
-      "simple": "Udfyld kun de tomme felter"
+      "simple": "Udfyld kun de tomme felter",
+      "autoConfirmation": "Automatisk ordrebekræftelse"
+    },
+    "problems": {
+      "excelSheets": "Excel-ark sendt frem og tilbage",
+      "outdatedPrices": "Uopdaterede prislister",
+      "manualHandling": "Manuel ordrehåndtering",
+      "noOverview": "Ingen overblik over status"
     },
     "comparison": {
       "before": "Før: Excel-kaos og email ping-pong",
@@ -72,7 +248,7 @@
     "stats": {
       "timeSaved": "75% mindre tid på administration",
       "errorReduction": "90% færre fejl i ordrer",
-      "clubs": "50+ klubber bruger allerede systemet",
+      "clubs": "Klubber over hele Danmark",
       "satisfaction": "4.9/5 i kundetilfredshed"
     }
   },
@@ -81,13 +257,60 @@
     "bookDemo": "Book en demo",
     "learnMore": "Læs mere om systemet"
   },
+  "experience": {
+    "tag": "Én fælles sandhedskilde",
+    "title": "Én fælles sandhedskilde",
+    "titleHighlight": "for alle partnerskaber",
+    "description": "Når et spørgsmål opstår om en ordre, en aftale eller en kontakt — er svaret i platformen. Ikke i en indbakke, ikke på et skrivebord, ikke i nogens hukommelse.",
+    "descriptionHighlight": "",
+    "descriptionSuffix": "",
+    "stat": {
+      "value": "Klar",
+      "label": "til at skalere"
+    },
+    "verifiedPartner": "Verificeret partner",
+    "users": {
+      "count": "Klar",
+      "label": "til at skalere"
+    },
+    "solutions": {
+      "title": "Platformsfordele",
+      "items": [
+        "Centraliseret partnerskabsstyring",
+        "Aftaleskabeloner med klare vilkår",
+        "Rollebaseret adgang på tværs af organisationer",
+        "Realtids-dashboards per brugerniveau"
+      ]
+    },
+    "cta": "Bliv partner"
+  },
   "sports": {
-    "title": "Vi leverer til alle sportsgrene",
-    "subtitle": "Klubber, foreninger og efterskoler - vi leverer til alle sportsgrene"
+    "tag": "Sportsgrene",
+    "title": "Udstyr til alle sportsgrene",
+    "subtitle": "Fra fodbold til golf - vi leverer kvalitetsudstyr til klubber i hele Danmark",
+    "description": "Uanset hvilken sport din klub dyrker, har vi det rette udstyr. Vores digitale platform gør det nemt at bestille alt fra holdtøj til træningsudstyr.",
+    "viewAll": "Se alle sportsgrene",
+    "exploreSport": "Udforsk"
   },
   "about": {
     "title": "Om B2BSport",
-    "subtitle": "Vi digitaliserer sportsudstyrsbranchen"
+    "subtitle": "Vi digitaliserer sportsudstyrsbranchen",
+    "digest": {
+      "innovation": {
+        "title": "IT-drevet innovation",
+        "description": "Vi bruger teknologi til at forenkle jeres hverdag"
+      },
+      "transparency": {
+        "title": "Fuld transparens",
+        "description": "Realtids-indsigt i ordrer, leverancer og økonomi"
+      },
+      "implementation": {
+        "title": "Hurtig implementering",
+        "description": "Op og køre på få timer - ikke dage"
+      },
+      "readMore": "Læs mere om os →",
+      "tagline": "Digital transformation"
+    }
   },
   "brands": {
     "title": "Vi arbejder med de bedste",
@@ -300,48 +523,73 @@
   },
   "whatWeDoPage": {
     "hero": {
-      "title": "Din klub fortjener bedre",
-      "subtitle": "Slip for tidskrævende administration og få mere tid til det, der virkelig betyder noget - jeres sport"
+      "tag": "Hvad vi gør",
+      "title": "Partnerskaber fortjener bedre værktøjer",
+      "subtitle": "B2B Sport erstatter spredte processer med én samlet platform for brands, distributører og klubber."
     },
     "mission": {
-      "title": "Endelig en moderne løsning",
-      "subtitle": "Tusindvis af timer spildes hvert år på manuel håndtering af klubbens udstyr. Det stopper nu.",
+      "tag": "Hvorfor B2B Sport",
+      "title": "Tre søjler — én platform",
+      "subtitle": "Fra onboarding til fornyelse — alt sker ét sted.",
       "points": {
         "saveTime": {
-          "title": "Spar tid hver uge",
-          "description": "Ingen mere copy-paste mellem mails og Excel-ark"
+          "title": "Onboarding der virker",
+          "description": "Registrer og organiser partnerklubber hurtigt og struktureret"
         },
         "rightPrices": {
-          "title": "Altid de rigtige priser",
-          "description": "Jeres aftaler er allerede på plads - ingen overraskelser"
+          "title": "Aftaler med struktur",
+          "description": "Genbrugelige aftaleskabeloner med rabatter og vilkår"
         },
         "trackEverything": {
-          "title": "Hold styr på alt",
-          "description": "Fra medlemsønsker til leverancer - alt samlet ét sted"
+          "title": "Bestillinger med kontekst",
+          "description": "Ordrer inden for aktive aftaler med korrekte priser"
         }
       }
     },
     "differentiator": {
+      "tag": "Sammenligning",
       "title": "Se forskellen selv",
-      "subtitle": "Hvorfor bruge timer på noget, der kan tage minutter?",
+      "subtitle": "Fra spredte processer til én samlet platform",
       "currentWay": "Sådan gør I nu",
-      "ourWay": "Sådan kunne det være",
-      "comparison": {
-        "excelChaos": "Excel-ark sendt frem og tilbage",
-        "emailPingPong": "Uendelige email-tråde om ordrer",
-        "manualPrices": "Manuel opdatering af priser",
-        "uncertainDelivery": "Usikkerhed om leveringstider",
-        "lostOrders": "Ordrer der forsvinder i indbakken",
-        "oneSystem": "Ét system til alt",
-        "instantOrders": "Bestil direkte med klubbens priser",
-        "automaticUpdates": "Automatiske opdateringer",
-        "trackDelivery": "Følg leverancer i realtid",
-        "completeOverview": "Komplet overblik altid"
+      "ourWay": "Sådan kan det være",
+      "currentWayItems": [
+        "Regneark sendt frem og tilbage",
+        "Uendelige email-tråde om ordrer",
+        "Adskilte værktøjer uden sammenhæng",
+        "Manuel opfølgning på aftaler",
+        "Udløbne aftaler der falder mellem to stole"
+      ],
+      "ourWayItems": [
+        "Centraliseret platform til alt",
+        "Strukturerede aftaler med klare vilkår",
+        "Rollebaseret adgang for alle parter",
+        "Realtids-dashboards og overblik",
+        "Proaktive fornyelses-advarsler"
+      ]
+    },
+    "process": {
+      "tag": "Processen",
+      "title": "Tre trin — fuld kontrol",
+      "subtitle": "Fra oprettelse til levering — alt i platformen",
+      "steps": {
+        "login": {
+          "title": "Opret og organiser",
+          "description": "Klubber, aftaler og personale — alt struktureret fra starten"
+        },
+        "select": {
+          "title": "Bestil med tillid",
+          "description": "Inden for forhandlede vilkår med korrekte priser"
+        },
+        "delivery": {
+          "title": "Følg med i realtid",
+          "description": "Dashboards og sporing for alle brugerniveauer"
+        }
       }
     },
     "goToMarket": {
-      "title": "Klar til fremtiden?",
-      "subtitle": "Start jeres digitale transformation i dag",
+      "tag": "Kom i gang",
+      "title": "Klar til at se platformen i aktion?",
+      "subtitle": "Lad os vise jer hvordan B2B Sport kan bringe struktur til jeres partnerskaber.",
       "description": "Vi arbejder på at gøre det nemt at være sportsklub. Kontakt os for at høre, hvordan vi kan hjælpe jer.",
       "cta": "Kontakt os"
     }
@@ -372,12 +620,14 @@
         "address2": "6760 Ribe",
         "serves": "Betjener: Jylland og Fyn"
       }
-    }
+    },
+    "getDirections": "Få rutevejledning"
   },
   "contactPage": {
     "hero": {
-      "title": "Lad os tale om jeres klubs fremtid",
-      "subtitle": "Vi er klar til at hjælpe jer med at revolutionere jeres udstyrshåndtering"
+      "tag": "Kontakt os",
+      "title": "Lad os tale om jeres partnerskaber",
+      "subtitle": "Vi er klar til at hjælpe jer med at professionalisere jeres partnerskaber og leverandørrelationer"
     },
     "info": {
       "title": "Kontakt information",
@@ -389,7 +639,7 @@
       },
       "phone": {
         "label": "Telefon",
-        "value": "+45 30 50 79 15"
+        "value": "+45 69 15 35 45"
       },
       "email": {
         "label": "Email",
@@ -450,17 +700,148 @@
       "submitError": "Der opstod en fejl. Prøv venligst igen."
     }
   },
+  "forBrandsPage": {
+    "hero": {
+      "tag": "For brands & leverandører",
+      "title": "Stop med at administrere partnerskaber i regneark",
+      "subtitle": "B2B Sport giver jer én platform til at skalere klubnetværk, administrere aftaler og strømline bestillinger."
+    },
+    "benefits": {
+      "tag": "Fordele",
+      "title": "Hvorfor brands vælger B2B Sport",
+      "cards": [
+        {
+          "title": "Skalér uden at ansætte",
+          "description": "Administrer 50 eller 500 klubber fra én platform — uden ekstra personale."
+        },
+        {
+          "title": "Færre ordrefejl",
+          "description": "Strukturerede aftaler og godkendelsesflows reducerer fejl og tvister."
+        },
+        {
+          "title": "Fasthold flere klubber",
+          "description": "Proaktive fornyelses-advarsler og dashboards holder partnerskaber aktive."
+        },
+        {
+          "title": "Professionelt brandede portaler",
+          "description": "Giv klubber en selvbetjeningsportal med jeres brand og priser."
+        }
+      ]
+    },
+    "workflow": {
+      "title": "Jeres workflow som brand-administrator",
+      "subtitle": "Fra onboarding til skalering — alt i platformen"
+    },
+    "features": {
+      "tag": "Platform-funktioner",
+      "title": "Alt hvad I behøver for at drive partnerskaber",
+      "items": [
+        {
+          "title": "Aftaleskabeloner",
+          "description": "Opret genbrugelige skabeloner med rabatter, vilkår og produktkategorier."
+        },
+        {
+          "title": "Rollebaseret adgang",
+          "description": "Giv klubadministratorer og personale de rette adgangsniveauer."
+        },
+        {
+          "title": "Dashboard-intelligens",
+          "description": "Realtids-overblik over ordrer, omsætning og klubaktivitet."
+        },
+        {
+          "title": "Ordrestyring inden for aftaler",
+          "description": "Alle ordrer sker inden for aktive aftaler med korrekte priser."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Klar til at skalere jeres klubnetværk?",
+      "subtitle": "Lad os vise jer hvordan B2B Sport kan transformere jeres partnerskaber.",
+      "primaryCTA": "Book demo",
+      "secondaryCTA": "Kontakt os"
+    }
+  },
+  "forClubsPage": {
+    "hero": {
+      "tag": "For klubber",
+      "title": "Én platform for alle leverandørrelationer",
+      "subtitle": "Stop med at jonglere mellem e-mails, regneark og telefonopkald. Saml alle jeres leverandøraftaler, bestillinger og budgetter ét sted."
+    },
+    "benefits": {
+      "tag": "Fordele",
+      "title": "Hvorfor klubber vælger B2B Sport",
+      "cards": [
+        {
+          "title": "Centraliserede leverandørrelationer",
+          "description": "Alle jeres leverandøraftaler samlet ét sted. Slut med at lede efter vilkår i gamle e-mails."
+        },
+        {
+          "title": "Kontrolleret delegation",
+          "description": "Lad trænere og holdledere bestille udstyr — inden for de rammer I sætter. Budgetter og godkendelser styres centralt."
+        },
+        {
+          "title": "Gennemsigtighed i forbrug",
+          "description": "Se præcis hvad der er bestilt, af hvem og til hvilken pris. Realtids-overblik over alle budgetter og ordrer."
+        },
+        {
+          "title": "Én sandhedskilde",
+          "description": "Ingen flere spredte informationer. Aftaler, priser, ordrer og kontakter — alt samlet i platformen."
+        }
+      ]
+    },
+    "workflow": {
+      "title": "Jeres workflow i platformen",
+      "subtitle": "Se hvordan platformen understøtter jeres daglige arbejde — uanset jeres rolle"
+    },
+    "roles": {
+      "tag": "Roller og adgang",
+      "title": "Hvem gør hvad i platformen",
+      "subtitle": "Klar rollefordeling sikrer effektivitet og kontrol",
+      "admin": {
+        "title": "Klubadministrator",
+        "description": "Har fuldt overblik og styringsansvar",
+        "capabilities": [
+          "Acceptér og administrér leverandøraftaler",
+          "Opsæt personalets adgangsniveauer",
+          "Definér budgetter per hold eller afdeling",
+          "Godkend ordrer over budgetgrænser",
+          "Overvåg forbrug via dashboards",
+          "Håndtér aftalefornyelser"
+        ]
+      },
+      "staff": {
+        "title": "Træner / Holdleder",
+        "description": "Bestiller hurtigt og enkelt inden for rammerne",
+        "capabilities": [
+          "Log ind og se tilgængeligt udstyr",
+          "Gennemse produkter inden for aftaler",
+          "Tjek holdstørrelser og behov",
+          "Afgiv bestillinger med ét klik",
+          "Følg ordrestatus i realtid",
+          "Modtag leveringsnotifikationer"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Klar til at tage kontrol over jeres udstyr?",
+      "subtitle": "Lad os vise jer hvordan B2B Sport kan forenkle jeres udstyrshåndtering og leverandørrelationer.",
+      "primaryCTA": "Book demo",
+      "secondaryCTA": "Kontakt os"
+    }
+  },
   "footer": {
     "company": {
       "title": "B2BSport",
-      "description": "Danmarks første fuldt digitale platform for bestilling af sportsudstyr. Vi gør det nemt at være sportsklub."
+      "description": "Den centraliserede platform der forbinder sports-brands, distributører og klubber — erstatter manuelle processer med ét struktureret arbejdsrum."
     },
     "quickLinks": {
       "title": "Hurtige links",
       "home": "Forside",
       "about": "Om os",
       "clubSystem": "Klubsystem",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "forBrands": "For brands",
+      "forClubs": "For klubber"
     },
     "sports": {
       "title": "Sportsgrene",
@@ -476,8 +857,17 @@
       "address": "Sjælland: Rødovrevej 151, 2610 Rødovre",
       "address2": "Jylland & Fyn: Industrivej 41, 6760 Ribe"
     },
+    "offices": {
+      "sjaelland": "Sjælland",
+      "jyllandFyn": "Jylland & Fyn"
+    },
+    "partnerCard": {
+      "title": "Bliv partner",
+      "description": "Klar til at digitalisere jeres klub?",
+      "cta": "Kontakt os"
+    },
     "bottom": {
-      "copyright": "© 2025 B2BSport A/S. Alle rettigheder forbeholdes.",
+      "copyright": "© 2026 B2B Sport & Promotion Group ApS. Alle rettigheder forbeholdes.",
       "privacy": "Privatlivspolitik",
       "terms": "Vilkår og betingelser"
     }
@@ -506,33 +896,43 @@
       }
     },
     "benefits": {
-      "title": "Derfor vælger klubber os",
+      "title": "Derfor vælger klubber platformen",
       "digitalOrdering": {
-        "title": "100% Digital bestilling",
-        "description": "Slut med Excel-ark. Bestil alt online med jeres forudindlæste priser."
+        "title": "Digital bestilling inden for klubaftaler",
+        "description": "Bestil udstyr direkte på platformen — inden for jeres aktive aftaler og forudforhandlede priser."
       },
       "fastDelivery": {
-        "title": "Hurtig levering",
-        "description": "2-3 dages levering på lagervarer. Altid opdateret lagerstatus."
+        "title": "Spor hver ordre fra start til levering",
+        "description": "Realtids-ordresporing for klubadministratorer og trænere. Altid overblik over status."
       },
       "clubAgreements": {
-        "title": "Klubaftaler",
-        "description": "Jeres priser er allerede forhandlet og indlæst. Ingen overraskelser."
+        "title": "Personale kan bestille selvstændigt",
+        "description": "Trænere og holdledere bestiller selv — inden for de budgetter og aftaler I har defineret."
       },
       "support": {
-        "title": "Dedikeret support",
-        "description": "Personlig rådgivning fra eksperter der kender jeres sport."
+        "title": "Én platform for alt jeres udstyr",
+        "description": "Holdtøj, træningsudstyr, tilbehør og personalisering — alt samlet med klubbens leverandøraftaler."
       }
     },
     "cta": {
-      "title": "Klar til at digitalisere jeres udstyrshåndtering?",
-      "subtitle": "Book en demo og se hvordan vi kan hjælpe jeres klub",
+      "title": "Se hvordan klubber bruger platformen",
+      "subtitle": "Oplev hvordan platformen forenkler udstyrshåndtering for klubber i hele Danmark",
       "button": "Book demo for",
       "contact": "Kontakt os"
     },
     "brands": {
       "title": "Vi arbejder med de bedste mærker",
       "subtitle": "Kvalitetsudstyr fra anerkendte producenter"
+    },
+    "workflow": {
+      "title": "Fra katalog til levering",
+      "subtitle": "Sådan bestiller du udstyr til dit hold",
+      "steps": [
+        { "label": "Gennemse katalog", "iconKey": "Search", "description": "Find udstyr inden for jeres aftale", "stat": "Faste priser" },
+        { "label": "Tilpas og vælg", "iconKey": "Settings", "description": "Vælg størrelser, farver og muligheder", "stat": "Per-spiller" },
+        { "label": "Afgiv bestilling", "iconKey": "ShoppingCart", "description": "Send til godkendelse med ét klik", "stat": "~2 min" },
+        { "label": "Spor levering", "iconKey": "Truck", "description": "Følg fra lager til din klub", "stat": "Realtid" }
+      ]
     }
   },
   "notFound": {

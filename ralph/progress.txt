@@ -1,0 +1,318 @@
+# Ralph Progress Log
+Started: 2026-02-04
+
+## Codebase Patterns
+- Translations: Update all three files (da.json, en.json, de.json) together
+- Hero: Full-screen design with video background, gradient overlays, stats bar at bottom
+- Hero height: Use min-h-[85svh] max-h-[100svh] to show stats bar above fold
+- Stats bar is part of the Hero component flex layout (not a separate component)
+- xyflow: Use 'use client' directive, import CSS from '@xyflow/react/dist/style.css', disable interactions for read-only flows
+
+---
+
+## 2026-02-05 - US-001 (Content Credibility PRD)
+- **What was implemented**: Replaced unverifiable "50+" statistics with honest, capability-focused language across all homepage components
+- **Files changed**:
+  - `src/components/Welcome/Welcome.tsx` - Updated fallback values from '50+ klubber' to 'Voksende netværk', 'Stolte partnere' to 'Bliv en del af rejsen'
+  - `src/components/Experience/Experience.tsx` - Updated fallback stat from '50+' / 'Stolte klubpartnere' to 'Klar' / 'Til din klub'
+  - `src/components/ValueProposition/ValueProposition.tsx` - Removed social proof section (mini avatars + 50+ klubber) from featured card
+  - `src/components/Hero/Hero.tsx` - Updated stats bar from '50+' / 'Klubber' to 'Klar' / 'Til dig'
+  - `src/dictionaries/da.json` - Updated welcome.rightCard, experience.stat, clubSystem.stats.clubs with honest alternatives
+  - `src/dictionaries/en.json` - Updated with English equivalents ('Growing network', 'Ready', 'For your club', etc.)
+  - `src/dictionaries/de.json` - Updated with German equivalents ('Wachsendes Netzwerk', 'Bereit', 'Für Ihren Verein', etc.)
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed no '50+' text appears on /da homepage; new text ('Voksende netværk', 'Bliv en del af rejsen') confirmed present
+- **Learnings for future iterations:**
+  - Hero component also has a stats bar that can contain statistics - don't forget it when cleaning up numbers
+  - The ValueProposition social proof section was hardcoded, not dictionary-driven
+  - Always update fallback values in component defaults AND dictionary files
+---
+
+## 2026-02-05 - US-002 (Content Credibility PRD)
+- **What was implemented**: Transformed the Welcome component's right card from fake partner avatars into a supplier brands showcase
+- **Files changed**:
+  - `src/components/Welcome/Welcome.tsx` - Replaced avatar stack with 4 placeholder brand icon shapes (2x2 grid with monotone circles/squares/rectangles), updated fallback values
+  - `src/dictionaries/da.json` - Updated welcome.rightCard.tag to 'Kvalitetsbrands', title to 'Anerkendte mærker'
+  - `src/dictionaries/en.json` - Updated welcome.rightCard.tag to 'Quality brands', title to 'Recognized brands'
+  - `src/dictionaries/de.json` - Updated welcome.rightCard.tag to 'Qualitätsmarken', title to 'Anerkannte Marken'
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed 'Kvalitetsbrands' and 'Anerkendte mærker' text appear on /da homepage; old 'Voksende netværk' text no longer present
+- **Learnings for future iterations:**
+  - The Welcome component's right card maintains decorative corner brackets via CSS borders - keep these when modifying the card
+  - Brand placeholder icons use forest-100/200/300 colors for monotone effect that can be replaced with real logos later
+---
+
+## 2026-02-05 - US-003 (Content Credibility PRD)
+- **What was implemented**: Removed pricing-tier appearance from ValueProposition component - all three cards now appear equal
+- **Files changed**:
+  - `src/components/ValueProposition/ValueProposition.tsx` - Removed featured styling, ring border, translate-y-4, dark background; unified all cards with bg-cream-100; updated all CTAs to /contact; removed Star icon import
+  - `src/dictionaries/da.json` - Changed support card badge from 'Anbefalet' to 'Support'
+  - `src/dictionaries/en.json` - Changed support card badge from 'Recommended' to 'Support'
+  - `src/dictionaries/de.json` - Changed support card badge from 'Empfohlen' to 'Support'
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed 'Anbefalet' text no longer appears; new badges ('Digital platform', 'Support', 'Partnerskab') confirmed present
+- **Learnings for future iterations:**
+  - The ValueProposition component had featured styling spread across multiple places (cardData config, className conditionals, icon styling) - need to check all conditional `featured` checks
+  - When removing a feature flag like `featured`, also clean up unused imports (Star icon in this case)
+---
+
+## 2026-02-05 - US-004 (Content Credibility PRD)
+- **What was implemented**: Refined ValueProposition section header to clearly communicate platform capabilities rather than pricing tiers
+- **Files changed**:
+  - `src/components/ValueProposition/ValueProposition.tsx` - Updated fallback tag, title, and subtitle
+  - `src/dictionaries/da.json` - Changed tag to 'Alt-i-én løsning', title to 'Alt hvad din klub har brug for', subtitle now explicitly states not separate plans
+  - `src/dictionaries/en.json` - Changed tag to 'All-in-one solution', title to 'Everything your club needs', matching subtitle
+  - `src/dictionaries/de.json` - Changed tag to 'Alles-in-einem Lösung', title to 'Alles was Ihr Verein braucht', matching subtitle
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed 'Alt hvad din klub har brug for', 'Alt-i-én løsning', and 'Ikke separate planer' all appear on /da homepage
+- **Learnings for future iterations:**
+  - The ValueProposition component section header content is stored in both dictionary files AND component fallback defaults - update both
+  - Subtitle is key for messaging - use it to explicitly counter any misinterpretation (e.g., "not separate plans")
+---
+
+## 2026-02-05 - US-001 (Interactive Workflow Section PRD)
+- **What was implemented**: Created base Workflow section component structure with consistent styling
+- **Files changed**:
+  - `src/components/Workflow/Workflow.tsx` - New component with section header, uses bg-semantic-background-secondary for alternating section background
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - Dictionary entries for workflow.title and workflow.subtitle already existed in all three language files
+  - Use bg-semantic-background-secondary for alternating section backgrounds (matches pattern of other sections)
+  - Section styling pattern: py-20 md:py-28 lg:py-32 for padding, max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 for container
+---
+
+## 2026-02-05 - US-002 (Interactive Workflow Section PRD)
+- **What was implemented**: Installed and configured @xyflow/react for the workflow visualization
+- **Files changed**:
+  - `package.json` - Added @xyflow/react@12.10.0 dependency
+  - `package-lock.json` - Updated with xyflow dependencies
+  - `src/components/Workflow/Workflow.tsx` - Added 'use client' directive, imported ReactFlow, Background, Node, Edge; created basic canvas with disabled interactions (panOnDrag, zoomOnScroll, nodesDraggable, zoomOnPinch, preventScrolling all false); added fitView and proOptions to hide attribution
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - @xyflow/react requires 'use client' directive in Next.js 14 for SSR compatibility
+  - Import CSS from '@xyflow/react/dist/style.css' for default styles
+  - Use proOptions={{ hideAttribution: true }} to hide the React Flow watermark
+  - For read-only flows, disable all interactions: panOnDrag, zoomOnScroll, nodesDraggable, zoomOnPinch, preventScrolling
+---
+
+## 2026-02-05 - US-003 (Interactive Workflow Section PRD)
+- **What was implemented**: Created custom WorkflowNode component with B2B Sport styling
+- **Files changed**:
+  - `src/components/Workflow/WorkflowNode.tsx` - New custom node component with:
+    - Cream-100 background with cream-300 border
+    - Rounded-xl corners and subtle shadow (shadow-sm with hover:shadow-md transition)
+    - Coral-500 icon container with white Lucide icon
+    - Forest-900 text for node labels
+    - Left/right handles styled with coral-500 for edge connections
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - xyflow custom nodes: Use simple prop interface `{ data: YourDataType }` instead of NodeProps generic for cleaner typing
+  - Style handles with !important prefix classes for visibility: `!bg-coral-500 !w-2 !h-2 !border-0`
+  - Memo wrap custom nodes with `memo()` for React Flow performance optimization
+---
+
+## 2026-02-05 - US-004 (Interactive Workflow Section PRD)
+- **What was implemented**: Defined 6 workflow nodes with icons and animated coral-colored edges
+- **Files changed**:
+  - `src/components/Workflow/Workflow.tsx` - Added 6 workflow nodes with Lucide icons (UserPlus, Tag, ShoppingCart, CheckCircle, Send, Truck), horizontal positions, animated edges with coral styling, custom node types registration
+  - `src/components/Workflow/WorkflowNode.tsx` - Updated WorkflowNodeData interface to extend Record<string, unknown> for xyflow compatibility
+  - `src/dictionaries/da.json` - Added workflow.nodes object with 6 Danish labels
+  - `src/dictionaries/en.json` - Added workflow.nodes object with 6 English labels
+  - `src/dictionaries/de.json` - Added workflow.nodes object with 6 German labels
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: SKIPPED - Component not yet on homepage (US-005 adds it to the page)
+- **Learnings for future iterations:**
+  - xyflow Node data type must extend Record<string, unknown> for TypeScript compatibility
+  - Use defaultEdgeOptions to apply global edge styling (stroke color, animation)
+  - Move data inside useMemo callbacks to avoid dependency warnings
+---
+
+## 2026-02-05 - US-005 (Interactive Workflow Section PRD)
+- **What was implemented**: Added Workflow section to homepage between ValueProposition and SportsGrid
+- **Files changed**:
+  - `src/app/[locale]/page.tsx` - Imported Workflow component and added it after ValueProposition, before SportsGrid
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed 'Fra bestilling til levering', 'Opret klub', and 'Spor levering' appear on /da homepage
+- **Learnings for future iterations:**
+  - Homepage component ordering follows the visual page flow from top to bottom
+  - The Workflow component uses bg-semantic-background-secondary which provides visual alternation with adjacent sections
+---
+
+## 2026-02-05 - US-006 (Interactive Workflow Section PRD)
+- **What was implemented**: Added responsive behavior to Workflow section with mobile-friendly vertical list layout
+- **Files changed**:
+  - `src/components/Workflow/Workflow.tsx` - Added MobileWorkflowStep component, responsive visibility classes (md:hidden for mobile list, hidden md:block for React Flow canvas), step numbers with "Trin N" labels, ChevronDown connectors between steps
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed responsive classes (md:hidden, hidden md:block) present in rendered HTML
+- **Learnings for future iterations:**
+  - For xyflow components that are too wide for mobile, hide React Flow and show a simplified list with `md:hidden` / `hidden md:block` pattern
+  - Mobile workflow steps can use ChevronDown icons as visual connectors instead of xyflow edges
+  - Extracted nodeLabels to shared useMemo to avoid duplication between mobile and desktop versions
+---
+
+## 2026-02-07 - US-001 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Refactored Workflow component to support multiple workflows with tab navigation
+- **Files changed**:
+  - `src/components/Workflow/Workflow.tsx` - Major refactor:
+    - Added `workflows` array prop and `hideHeader` prop
+    - Added `WorkflowDefinition` and `WorkflowStep` interfaces
+    - Built `iconMap` lookup object mapping string keys (e.g. 'UserPlus') to Lucide components
+    - Added tab navigation with active/inactive styling (bg-forest-900/text-cream-100 vs text-forest-600)
+    - Tabs only render when multiple workflows are provided
+    - React Flow canvas uses `key={activeWorkflow.id}` to re-render on tab switch
+    - Mobile step list also updates based on active tab
+    - Backward compatible: still renders old-format single workflow with nodes object
+    - Helper functions: `stepsToNodes`, `stepsToEdges`, `oldNodesToSteps`
+    - Fixed lint warning by wrapping `content` in useMemo
+  - `ralph/prd.json` - Marked US-001 as passes: true
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - curl confirmed Workflow section still renders on /da homepage with existing single workflow
+- **Learnings for future iterations:**
+  - The Workflow component now supports 3 input modes: (1) `workflows` prop directly, (2) `dictionary.workflow.workflows` array, (3) old `dictionary.workflow.nodes` format
+  - Use `key={activeWorkflow.id}` on ReactFlow to force re-mount when switching tabs (fitView recalculates)
+  - The `iconMap` object maps 23 Lucide icon string keys — add new ones there when needed
+  - `hideHeader` prop allows embedding Workflow in other pages without section title/subtitle
+---
+
+## 2026-02-07 - US-002 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Added 3 process-based workflow datasets to all three dictionary files and updated section headers
+- **Files changed**:
+  - `src/dictionaries/da.json` - Updated workflow.title/subtitle, added workflow.workflows array with 3 workflows (Club Onboarding, Order Lifecycle, Agreement Management)
+  - `src/dictionaries/en.json` - Same structure with English translations
+  - `src/dictionaries/de.json` - Same structure with German translations
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - The workflow.nodes object is kept for backward compatibility alongside the new workflow.workflows array
+  - All 16 icon keys used in the process workflows are already present in the Workflow component's iconMap
+  - Each workflow in the workflows array has: id, title, subtitle, steps[] with label and iconKey
+---
+
+## 2026-02-07 - US-003 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Added 3 audience-based workflow datasets to all three dictionary files
+- **Files changed**:
+  - `src/dictionaries/da.json` - Added audienceWorkflows array with Brand Admin, Club Admin, and Coach/Staff workflows in Danish
+  - `src/dictionaries/en.json` - Same structure with English translations
+  - `src/dictionaries/de.json` - Same structure with German translations
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - All icon keys needed for audience workflows (Wallet, ClipboardCheck, PieChart, LogIn, Ruler, Clock, TrendingUp) were already in the Workflow component's iconMap
+  - audienceWorkflows is a top-level dictionary key (not nested under workflow) to keep process and audience workflows separate
+  - The audienceWorkflows data will be consumed by US-012 (For Brands page) and US-013 (For Clubs page)
+---
+
+## 2026-02-07 - US-004 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Verified that multi-workflow tabbed view is fully integrated on homepage — no additional code changes needed
+- **How it works**: US-001 refactored the Workflow component to support `workflows` arrays with tab navigation, and US-002 added 3 process workflows to dictionaries. Since the homepage already passes `dictionary` to `<Workflow>`, the component automatically detects `dictionary.workflow.workflows` and renders tabs.
+- **Verification results**:
+  - DA homepage shows 3 tabs: "Klub-onboarding", "Ordreforløb", "Aftalestyring"
+  - EN homepage shows 3 tabs: "Club Onboarding", "Order Lifecycle", "Agreement Management"
+  - Section header shows "Sådan fungerer platformen" / "How the platform works"
+  - Active tab has `bg-forest-900 text-cream-100` styling
+  - First tab (Club Onboarding) selected by default via `useState(0)`
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - The Workflow component's data resolution chain means integration stories may be complete before the integration story itself is worked on — always verify first
+  - `timeout` command is not available on macOS by default — use tool timeouts instead
+---
+
+## 2026-02-07 - US-005 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated Hero section to use dictionary-driven content and removed hardcoded Danish text
+- **Files changed**:
+  - `src/components/Hero/Hero.tsx` - Added titleLine1/titleLine2 to HeroProps interface; replaced hardcoded "Hele Danmarks" / "klubpartner" with dictionary values; stats bar now reads from dictionary.hero.stats instead of hardcoded values; removed hardcoded "Danmarks førende klubplatform" tagline
+  - `src/dictionaries/da.json` - Updated hero: tag to "Partnerskabsplatformen for dansk sport", added titleLine1/titleLine2, updated subtitle, CTA labels ("Bliv partner"/"Se platformen"), added stats object with "Færre fejl, mere sport"
+  - `src/dictionaries/en.json` - Updated hero: tag, titleLine1/titleLine2, subtitle, CTA labels ("Become a partner"/"See the platform"), stats with "Less admin, more sport"
+  - `src/dictionaries/de.json` - Updated hero: tag, titleLine1/titleLine2, subtitle, CTA labels ("Partner werden"/"Plattform ansehen"), stats with "Weniger Admin, mehr Sport"
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - DA and EN homepages confirmed with updated text; no hardcoded Danish text remains on EN page
+- **Learnings for future iterations:**
+  - Hero stats bar had hardcoded text in 4 places (3 stats + tagline) — now all dictionary-driven
+  - The `stats.first` replaces "#1 Klubpartner" with a text-only stat (no large number prefix)
+  - Hero.tsx titleLine1/titleLine2 pattern allows flexible two-line title rendering while keeping `title` for backward compat
+---
+
+## 2026-02-07 - US-006 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated Welcome section content in all 3 languages with concept-aligned messaging
+- **Files changed**:
+  - `src/dictionaries/da.json` - Updated welcome: title to "Farvel Excel-ark. Hej digital klubstyring.", description, CTA, left card ("Ét overblik"/"Alle aftaler samlet"), right card ("Struktureret"/"Foruddefinerede priser")
+  - `src/dictionaries/en.json` - Updated welcome: "Goodbye spreadsheets. Hello digital club management." with EN equivalents
+  - `src/dictionaries/de.json` - Updated welcome: "Tschüss Tabellen. Hallo digitale Clubverwaltung." with DE equivalents
+  - `src/components/Welcome/Welcome.tsx` - Updated fallback values to match new DA content
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Visual verification**: PASSED - DA homepage confirmed with "Farvel Excel-ark", "Alle aftaler samlet", "Foruddefinerede priser"
+- **Learnings for future iterations:**
+  - Always update fallback values in component defaults when changing dictionary content
+  - The Welcome component CTA links to /contact — when updating CTA text, consider if the destination still makes sense
+---
+
+## 2026-02-07 - US-007 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated Value Proposition section with B2B-focused content across all 3 languages
+- **Files changed**:
+  - `src/dictionaries/da.json` - Updated valueProposition: tag "Bygget til B2B sport", title, subtitle, platform card ("Centraliseret platform" with agreement templates, role-based access, order tracking, dashboards), support card updated features, partnership card ("Skalerbart partnerskab" with 50/500 clubs, reusable templates, proactive alerts, branded portal)
+  - `src/dictionaries/en.json` - EN equivalents: "Built for B2B sports", "Centralized platform", "Scalable partnership"
+  - `src/dictionaries/de.json` - DE equivalents: "Für B2B-Sport gebaut", "Zentralisierte Plattform", "Skalierbares Partnerschaften"
+  - `src/components/ValueProposition/ValueProposition.tsx` - Updated fallback values for tag, title, subtitle, and all card content
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - ValueProposition has both `features` (small inline features) and `cards` (main card grid) — both need updating for content changes
+  - The component has two layers of fallbacks: `content` for section header and `cards` for card data
+---
+
+## 2026-02-07 - US-008 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated Experience section and ContactCTA with concept-aligned messaging
+- **Files changed**:
+  - `src/components/Experience/Experience.tsx` - Added users/verifiedPartner/descriptionSuffix to interface; replaced hardcoded "1000+"/"Brugere" with dictionary values; replaced hardcoded "Verificeret partner" with dictionary value; fixed description rendering to use descriptionSuffix instead of hardcoded Danish
+  - `src/components/ContactCTA/ContactCTA.tsx` - Updated fallback title/subtitle
+  - `src/dictionaries/da.json` - Updated experience (title "Én fælles sandhedskilde", stat "Klar / til at skalere", solutions with platform-focused items) and contactCTA (title "Klar til at professionalisere jeres partnerskaber?")
+  - `src/dictionaries/en.json` - EN equivalents: "A single source of truth", "Ready / to scale", "Ready to professionalize your partnerships?"
+  - `src/dictionaries/de.json` - DE equivalents
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - Experience component had 3 hardcoded Danish strings in JSX: "Verificeret partner", "1000+", "Brugere" — now all dictionary-driven
+  - The description rendering had a hardcoded suffix "at håndtere klubbens udstyr." — now uses descriptionSuffix from dictionary
+  - When descriptionHighlight is empty string, the span is conditionally hidden
+---
+
+## 2026-02-07 - US-009 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated What We Do page with partnership lifecycle content
+- **Files changed**:
+  - `src/app/[locale]/what-we-do/page.tsx` - Replaced hardcoded comparison lists with dictionary-driven currentWayItems/ourWayItems arrays
+  - `src/dictionaries/da.json` - Updated whatWeDoPage: hero "Partnerskaber fortjener bedre værktøjer", mission cards (Onboarding/Aftaler/Bestillinger), comparison items, process steps (Opret/Bestil/Følg), CTA "Klar til at se platformen i aktion?"
+  - `src/dictionaries/en.json` - EN equivalents
+  - `src/dictionaries/de.json` - DE equivalents
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - What We Do page had hardcoded Danish comparison items in JSX that were never connected to dictionary — now uses currentWayItems/ourWayItems arrays
+  - The old dictionary had a `comparison` object with named keys; the new format uses arrays for simpler iteration
+---
+
+## 2026-02-07 - US-010 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Updated Contact page hero, footer description/copyright, and fixed inconsistent phone numbers
+- **Files changed**:
+  - `src/dictionaries/da.json` - Updated contactPage.hero title "Lad os tale om jeres partnerskaber", footer description, copyright year 2025→2026, fixed phone numbers
+  - `src/dictionaries/en.json` - EN equivalents + phone fixes + copyright year
+  - `src/dictionaries/de.json` - DE equivalents + phone fixes + copyright year
+  - `src/components/ContactSection/ContactSection.tsx` - Fixed hardcoded phone from +45 30 50 79 15 to +45 69 15 35 45
+  - `src/components/ContactCTA/ContactCTA.tsx` - Fixed fallback phone from +45 70 27 46 46 to +45 69 15 35 45
+- **Validation**: PASSED - typecheck, lint, and build all succeed
+- **Learnings for future iterations:**
+  - Phone numbers were inconsistent in 3 places: ContactSection component (hardcoded), ContactCTA fallback, and some dictionary entries — all now unified to +45 69 15 35 45
+  - Copyright year was hardcoded in dictionary strings — update annually
+---
+
+## 2026-02-07 - US-011 (Content Overhaul & Multi-Workflow PRD)
+- **What was implemented**: Added navigation structure for For Brands and For Clubs audience pages
+- **Files changed**:
+  - `src/dictionaries/da.json` - Added nav.forBrands/forClubs and footer.quickLinks.forBrands/forClubs
+  - `src/dictionaries/en.json` - Same
+  - `src/dictionaries/de.json` - Same
+  - `src/components/Navigation/Navigation.tsx` - Added forBrands/forClubs to nav interface and navItems array (after What We Do)
+  - `src/components/Footer.tsx` - Added forBrands/forClubs to quickLinks interface and JSX
+  - `src/app/[locale]/for-brands/page.tsx` - New placeholder page with SubpageHero
+  - `src/app/[locale]/for-clubs/page.tsx` - New placeholder page with SubpageHero
+- **Validation**: PASSED - typecheck, lint, and build all succeed (60 pages generated, up from 54)
+- **Visual verification**: PASSED - Nav items appear on homepage, both pages return 200
+- **Learnings for future iterations:**
+  - The Navigation component is at src/components/Navigation/Navigation.tsx (not Header.tsx as referenced in PRD)
+  - Footer uses `lang` prop (not `locale`) for URL building
+  - Placeholder pages use SubpageHero component for consistent styling
+---

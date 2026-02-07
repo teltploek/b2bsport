@@ -6,16 +6,43 @@
     "sports": "Sports",
     "contact": "Contact",
     "demo": "Book demo",
-    "clubSystem": "Club System"
+    "clubSystem": "Club System",
+    "forBrands": "For Brands",
+    "forClubs": "For Clubs"
   },
   "hero": {
-    "title": "All of Denmark's club partner",
-    "subtitle": "We're building a digital solution for sports equipment ordering",
-    "cta": "Contact us"
+    "tag": "The partnership platform for Danish sport",
+    "titleLine1": "Denmark's",
+    "titleLine2": "club partner",
+    "title": "Denmark's club partner",
+    "subtitle": "Manage clubs, agreements, and orders — all in one place.",
+    "cta": "Become a partner",
+    "ctaSecondary": "See the platform",
+    "stats": {
+      "first": "Less admin, more sport",
+      "second": "100% Digital",
+      "third": "24/7 Platform",
+      "tagline": "The partnership platform for Danish sport"
+    }
+  },
+  "welcome": {
+    "tag": "Welcome",
+    "title": "Goodbye spreadsheets. Hello digital club management.",
+    "description": "B2B Sport brings all partnerships, agreements, and orders into one platform — so brands can scale and clubs can focus on the sport.",
+    "cta": "See how it works",
+    "leftCard": {
+      "tag": "One overview",
+      "title": "All agreements centralized"
+    },
+    "rightCard": {
+      "tag": "Structured",
+      "title": "Pre-defined pricing"
+    }
   },
   "valueProposition": {
-    "title": "An easier way to order club equipment",
-    "subtitle": "We're working to make sports equipment ordering digital and simple. No more Excel sheets, back-and-forth emails, and time-consuming administration.",
+    "tag": "Built for B2B sports",
+    "title": "Structured partnerships, efficient ordering",
+    "subtitle": "Platform, support, and partnership — built for how B2B sports actually works.",
     "mainCTA": "See how we do it",
     "features": {
       "digital": {
@@ -34,9 +61,143 @@
         "title": "Full support",
         "description": "We help you all the way from start to finish"
       }
-    }
+    },
+    "cards": {
+      "platform": {
+        "badge": "Platform",
+        "title": "Centralized platform",
+        "description": "Everything your club needs, in one modern platform",
+        "features": [
+          "Agreement templates",
+          "Role-based access",
+          "Order tracking within agreements",
+          "Real-time dashboards"
+        ],
+        "cta": "See the platform"
+      },
+      "support": {
+        "badge": "Support",
+        "title": "Personal support",
+        "description": "Dedicated help from start to finish — we know your sport",
+        "features": [
+          "Dedicated contact person",
+          "Sport-specific guidance",
+          "Onboarding assistance",
+          "Fast response time"
+        ],
+        "cta": "Contact us"
+      },
+      "partnership": {
+        "badge": "Partnership",
+        "title": "Scalable partnership",
+        "description": "More than a supplier — we become your equipment partner",
+        "features": [
+          "Manage 50 or 500 clubs",
+          "Reusable agreement templates",
+          "Proactive renewal alerts",
+          "Branded self-service portal"
+        ],
+        "cta": "Become a partner"
+      }
+    },
+    "socialProof": "clubs"
   },
+  "workflow": {
+    "title": "How the platform works",
+    "subtitle": "From club onboarding to delivery — everything happens in one place",
+    "nodes": {
+      "createClub": "Create club",
+      "viewPrices": "View prices",
+      "collectOrder": "Collect order",
+      "approveInternal": "Internal approval",
+      "confirmOrder": "Confirm order",
+      "trackDelivery": "Track delivery"
+    },
+    "workflows": [
+      {
+        "id": "club-onboarding",
+        "title": "Club Onboarding",
+        "subtitle": "Get started on the platform",
+        "steps": [
+          { "label": "Register Club", "iconKey": "UserPlus", "description": "Set up your club profile and team structure", "stat": "~2 min" },
+          { "label": "Configure Profile", "iconKey": "Settings", "description": "Add logo, colors, and contact details", "stat": "Fully customizable" },
+          { "label": "Set Up Staff", "iconKey": "Users", "description": "Invite coaches and staff with role-based access", "stat": "Unlimited users" },
+          { "label": "Create Agreement", "iconKey": "FileText", "description": "Link to supplier agreements with pre-set pricing", "stat": "Pre-configured" },
+          { "label": "Activate Portal", "iconKey": "Zap", "description": "Go live with your ordering portal instantly", "stat": "1-click" },
+          { "label": "Club Goes Live", "iconKey": "CheckCircle", "description": "Start ordering equipment right away", "stat": "100% digital" }
+        ]
+      },
+      {
+        "id": "order-lifecycle",
+        "title": "Order Lifecycle",
+        "subtitle": "From catalog to delivery",
+        "steps": [
+          { "label": "Browse Catalog", "iconKey": "Search", "description": "View products within your agreement", "stat": "Pre-loaded prices" },
+          { "label": "Add to Cart", "iconKey": "ShoppingCart", "description": "Select sizes, colors, and quantities", "stat": "Per-player options" },
+          { "label": "Submit for Approval", "iconKey": "Send", "description": "Send to club admin for review", "stat": "Instant notification" },
+          { "label": "Admin Approves", "iconKey": "CheckCircle", "description": "Club admin reviews and approves the order", "stat": "1-click approval" },
+          { "label": "Order Confirmed", "iconKey": "Package", "description": "Order sent to supplier automatically", "stat": "Zero manual work" },
+          { "label": "Track Delivery", "iconKey": "Truck", "description": "Follow your order from warehouse to door", "stat": "Real-time" }
+        ]
+      },
+      {
+        "id": "agreement-management",
+        "title": "Agreement Management",
+        "subtitle": "Structured partnerships",
+        "steps": [
+          { "label": "Create Template", "iconKey": "FileText", "description": "Build reusable agreement templates", "stat": "Drag & drop" },
+          { "label": "Set Terms & Pricing", "iconKey": "Tag", "description": "Define prices, discounts, and product ranges", "stat": "Per-club pricing" },
+          { "label": "Assign to Club", "iconKey": "Building2", "description": "Link agreements to one or many clubs", "stat": "Bulk assign" },
+          { "label": "Club Accepts", "iconKey": "ThumbsUp", "description": "Club reviews and activates the agreement", "stat": "Digital signature" },
+          { "label": "Monitor Usage", "iconKey": "BarChart3", "description": "Track orders, spending, and compliance", "stat": "Live dashboards" },
+          { "label": "Renew", "iconKey": "RefreshCw", "description": "Extend or update agreements with one click", "stat": "Auto-renewal" }
+        ]
+      }
+    ]
+  },
+  "audienceWorkflows": [
+    {
+      "id": "brand-admin",
+      "title": "Brand Admin",
+      "subtitle": "Manage club networks and partnerships",
+      "steps": [
+        { "label": "Onboard Club", "iconKey": "UserPlus", "description": "Add a new club to your network", "stat": "~5 min setup" },
+        { "label": "Create Agreement", "iconKey": "FileText", "description": "Set terms, prices, and product access", "stat": "Reusable templates" },
+        { "label": "Configure Products", "iconKey": "Package", "description": "Define which products clubs can order", "stat": "Full catalog control" },
+        { "label": "Monitor Orders", "iconKey": "BarChart3", "description": "Track all club orders in real-time", "stat": "Live overview" },
+        { "label": "Renew Partnerships", "iconKey": "RefreshCw", "description": "Extend agreements with updated terms", "stat": "1-click renewal" },
+        { "label": "Scale Network", "iconKey": "TrendingUp", "description": "Grow from 5 to 500 clubs seamlessly", "stat": "No extra admin" }
+      ]
+    },
+    {
+      "id": "club-admin",
+      "title": "Club Admin",
+      "subtitle": "Control agreements, budgets, and access",
+      "steps": [
+        { "label": "Accept Agreement", "iconKey": "CheckCircle", "description": "Review and activate supplier agreement", "stat": "Digital acceptance" },
+        { "label": "Set Up Staff Access", "iconKey": "Users", "description": "Invite coaches and define permissions", "stat": "Role-based access" },
+        { "label": "Define Budgets", "iconKey": "Wallet", "description": "Set spending limits per team or season", "stat": "Full control" },
+        { "label": "Approve Orders", "iconKey": "ClipboardCheck", "description": "Review and approve staff orders", "stat": "1-click approval" },
+        { "label": "Track Spending", "iconKey": "PieChart", "description": "Monitor budget usage across teams", "stat": "Real-time insights" },
+        { "label": "Manage Renewals", "iconKey": "RefreshCw", "description": "Handle agreement renewals centrally", "stat": "Proactive alerts" }
+      ]
+    },
+    {
+      "id": "coach-staff",
+      "title": "Coach / Staff",
+      "subtitle": "Order equipment quickly and easily",
+      "steps": [
+        { "label": "Log In", "iconKey": "LogIn", "description": "Access your club's ordering portal", "stat": "Secure login" },
+        { "label": "View Products", "iconKey": "Search", "description": "Browse pre-approved products and prices", "stat": "Pre-loaded catalog" },
+        { "label": "Check Team Sizes", "iconKey": "Ruler", "description": "Select sizes for each player", "stat": "Per-player sizing" },
+        { "label": "Place Order", "iconKey": "ShoppingCart", "description": "Submit order for admin approval", "stat": "~3 min" },
+        { "label": "Track Status", "iconKey": "Clock", "description": "Follow your order through each stage", "stat": "Real-time updates" },
+        { "label": "Receive Delivery", "iconKey": "Truck", "description": "Get equipment delivered to your club", "stat": "Door-to-door" }
+      ]
+    }
+  ],
   "team": {
+    "tag": "Our team",
     "title": "Meet the team",
     "subtitle": "A dedicated team of experts working to revolutionize the sports equipment industry",
     "roles": {
@@ -50,12 +211,20 @@
     }
   },
   "contactCTA": {
-    "title": "Ready to revolutionize your club administration?",
-    "subtitle": "Let us show you how you can save time and money on club equipment",
+    "title": "Ready to professionalize your partnerships?",
+    "subtitle": "Let us show you how B2B Sport can bring structure to your club and supplier relationships",
     "primaryCTA": "Book demo",
     "secondaryCTA": "Contact us",
     "phone": "+45 69 15 35 45",
     "email": "info@b2bsport.dk"
+  },
+  "contactSection": {
+    "title": "Ready to revolutionize your club administration?",
+    "subtitle": "Get started with Denmark's first fully digital platform for sports equipment ordering",
+    "email": "Email",
+    "phone": "Phone",
+    "hours": "Opening hours",
+    "hoursValue": "Mon-Fri: 8:00 AM - 4:00 PM"
   },
   "clubSystem": {
     "title": "The future of sports equipment ordering",
@@ -63,7 +232,14 @@
     "benefits": {
       "realtime": "Track your orders in real-time",
       "agreements": "Your agreements are already loaded",
-      "simple": "Just fill in the empty fields"
+      "simple": "Just fill in the empty fields",
+      "autoConfirmation": "Automatic order confirmation"
+    },
+    "problems": {
+      "excelSheets": "Excel sheets sent back and forth",
+      "outdatedPrices": "Outdated price lists",
+      "manualHandling": "Manual order handling",
+      "noOverview": "No overview of status"
     },
     "comparison": {
       "before": "Before: Excel chaos and email ping-pong",
@@ -72,7 +248,7 @@
     "stats": {
       "timeSaved": "75% less time on admin",
       "errorReduction": "90% fewer order errors",
-      "clubs": "50+ clubs already using it",
+      "clubs": "Clubs across Denmark",
       "satisfaction": "4.9/5 customer satisfaction"
     }
   },
@@ -81,54 +257,110 @@
     "bookDemo": "Book a demo",
     "learnMore": "Learn more about the system"
   },
+  "experience": {
+    "tag": "A single source of truth",
+    "title": "A single source of truth",
+    "titleHighlight": "for all partnerships",
+    "description": "When a question comes up about an order, an agreement, or a contact — the answer is in the platform. Not in someone's inbox, not on someone's desktop, not in someone's memory.",
+    "descriptionHighlight": "",
+    "descriptionSuffix": "",
+    "stat": {
+      "value": "Ready",
+      "label": "to scale"
+    },
+    "verifiedPartner": "Verified partner",
+    "users": {
+      "count": "Ready",
+      "label": "to scale"
+    },
+    "solutions": {
+      "title": "Platform benefits",
+      "items": [
+        "Centralized partnership management",
+        "Agreement templates with clear terms",
+        "Role-based access across organizations",
+        "Real-time dashboards per user level"
+      ]
+    },
+    "cta": "Become a partner"
+  },
   "sports": {
-    "title": "We deliver to all sports",
-    "subtitle": "Clubs, associations and boarding schools - we deliver to all sports"
+    "tag": "Sports",
+    "title": "Equipment for all sports",
+    "subtitle": "From football to golf - we deliver quality equipment to clubs across Denmark",
+    "description": "Whatever sport your club plays, we have the right equipment. Our digital platform makes it easy to order everything from team wear to training gear.",
+    "viewAll": "View all sports",
+    "exploreSport": "Explore"
   },
   "whatWeDoPage": {
     "hero": {
-      "title": "Your club deserves better",
-      "subtitle": "Eliminate time-consuming administration and get more time for what really matters - your sport"
+      "tag": "What we do",
+      "title": "Partnerships deserve better tools",
+      "subtitle": "B2B Sport replaces fragmented processes with one unified platform for brands, distributors, and clubs."
     },
     "mission": {
-      "title": "Finally a modern solution",
-      "subtitle": "Thousands of hours are wasted every year on manual equipment handling. That stops now.",
+      "tag": "Why B2B Sport",
+      "title": "Three pillars — one platform",
+      "subtitle": "From onboarding to renewal — everything happens in one place.",
       "points": {
         "saveTime": {
-          "title": "Save time every week",
-          "description": "No more copy-paste between emails and Excel sheets"
+          "title": "Onboarding that works",
+          "description": "Register and organize partner clubs quickly and systematically"
         },
         "rightPrices": {
-          "title": "Always the right prices",
-          "description": "Your agreements are already in place - no surprises"
+          "title": "Structured agreements",
+          "description": "Reusable agreement templates with discounts and terms"
         },
         "trackEverything": {
-          "title": "Keep track of everything",
-          "description": "From member requests to deliveries - everything in one place"
+          "title": "Orders with context",
+          "description": "Orders within active agreements with correct pricing"
         }
       }
     },
     "differentiator": {
+      "tag": "Comparison",
       "title": "See the difference yourself",
-      "subtitle": "Why spend hours on something that could take minutes?",
+      "subtitle": "From fragmented processes to one unified platform",
       "currentWay": "How you do it now",
       "ourWay": "How it could be",
-      "comparison": {
-        "excelChaos": "Excel sheets sent back and forth",
-        "emailPingPong": "Endless email threads about orders",
-        "manualPrices": "Manual price updates",
-        "uncertainDelivery": "Uncertainty about delivery times",
-        "lostOrders": "Orders lost in the inbox",
-        "oneSystem": "One system for everything",
-        "instantOrders": "Order directly with club prices",
-        "automaticUpdates": "Automatic updates",
-        "trackDelivery": "Track deliveries in real-time",
-        "completeOverview": "Complete overview always"
+      "currentWayItems": [
+        "Spreadsheets sent back and forth",
+        "Endless email threads about orders",
+        "Disconnected tools without context",
+        "Manual follow-up on agreements",
+        "Expired agreements falling through the cracks"
+      ],
+      "ourWayItems": [
+        "Centralized platform for everything",
+        "Structured agreements with clear terms",
+        "Role-based access for all parties",
+        "Real-time dashboards and overview",
+        "Proactive renewal alerts"
+      ]
+    },
+    "process": {
+      "tag": "The process",
+      "title": "Three steps — full control",
+      "subtitle": "From setup to delivery — everything in the platform",
+      "steps": {
+        "login": {
+          "title": "Create and organize",
+          "description": "Clubs, agreements, and staff — all structured from the start"
+        },
+        "select": {
+          "title": "Order with confidence",
+          "description": "Within pre-negotiated terms with correct pricing"
+        },
+        "delivery": {
+          "title": "Track in real time",
+          "description": "Dashboards and tracking for all user levels"
+        }
       }
     },
     "goToMarket": {
-      "title": "Ready for the future?",
-      "subtitle": "Start your digital transformation today",
+      "tag": "Get started",
+      "title": "Ready to see the platform in action?",
+      "subtitle": "Let us show you how B2B Sport can bring structure to your partnerships.",
       "description": "We're working to make it easy to be a sports club. Contact us to hear how we can help you.",
       "cta": "Contact us"
     }
@@ -159,11 +391,28 @@
         "address2": "6760 Ribe",
         "serves": "Serves: Jutland and Funen"
       }
-    }
+    },
+    "getDirections": "Get directions"
   },
   "about": {
     "title": "About B2BSport",
-    "subtitle": "We digitalize the sports equipment industry"
+    "subtitle": "We digitalize the sports equipment industry",
+    "digest": {
+      "innovation": {
+        "title": "IT-driven innovation",
+        "description": "We use technology to simplify your daily operations"
+      },
+      "transparency": {
+        "title": "Full transparency",
+        "description": "Real-time insight into orders, deliveries and finances"
+      },
+      "implementation": {
+        "title": "Fast implementation",
+        "description": "Up and running in hours - not days"
+      },
+      "readMore": "Read more about us →",
+      "tagline": "Digital transformation"
+    }
   },
   "brands": {
     "title": "We work with the best",
@@ -376,8 +625,9 @@
   },
   "contactPage": {
     "hero": {
-      "title": "Let's talk about your club's future",
-      "subtitle": "We're ready to help you revolutionize your equipment management"
+      "tag": "Contact us",
+      "title": "Let's talk about your partnerships",
+      "subtitle": "We're ready to help you professionalize your partnerships and supplier relationships"
     },
     "info": {
       "title": "Contact Information",
@@ -389,7 +639,7 @@
       },
       "phone": {
         "label": "Phone",
-        "value": "+45 30 50 79 15"
+        "value": "+45 69 15 35 45"
       },
       "email": {
         "label": "Email",
@@ -450,17 +700,148 @@
       "submitError": "An error occurred. Please try again."
     }
   },
+  "forBrandsPage": {
+    "hero": {
+      "tag": "For brands & suppliers",
+      "title": "Stop managing partnerships in spreadsheets",
+      "subtitle": "B2B Sport gives you one platform to scale club networks, manage agreements, and streamline ordering."
+    },
+    "benefits": {
+      "tag": "Benefits",
+      "title": "Why brands choose B2B Sport",
+      "cards": [
+        {
+          "title": "Scale without hiring",
+          "description": "Manage 50 or 500 clubs from one platform — without extra headcount."
+        },
+        {
+          "title": "Fewer order errors",
+          "description": "Structured agreements and approval flows reduce errors and disputes."
+        },
+        {
+          "title": "Retain more clubs",
+          "description": "Proactive renewal alerts and dashboards keep partnerships active."
+        },
+        {
+          "title": "Professional branded portals",
+          "description": "Give clubs a self-service portal with your brand and pricing."
+        }
+      ]
+    },
+    "workflow": {
+      "title": "Your workflow as a brand administrator",
+      "subtitle": "From onboarding to scaling — everything in the platform"
+    },
+    "features": {
+      "tag": "Platform features",
+      "title": "Everything you need to drive partnerships",
+      "items": [
+        {
+          "title": "Agreement templates",
+          "description": "Create reusable templates with discounts, terms, and product categories."
+        },
+        {
+          "title": "Role-based access",
+          "description": "Give club admins and staff the right access levels."
+        },
+        {
+          "title": "Dashboard intelligence",
+          "description": "Real-time overview of orders, revenue, and club activity."
+        },
+        {
+          "title": "Order management within agreements",
+          "description": "All orders happen within active agreements with correct pricing."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to scale your club network?",
+      "subtitle": "Let us show you how B2B Sport can transform your partnerships.",
+      "primaryCTA": "Book demo",
+      "secondaryCTA": "Contact us"
+    }
+  },
+  "forClubsPage": {
+    "hero": {
+      "tag": "For clubs",
+      "title": "One platform for every supplier relationship",
+      "subtitle": "Stop juggling between emails, spreadsheets, and phone calls. Bring all your supplier agreements, orders, and budgets into one place."
+    },
+    "benefits": {
+      "tag": "Benefits",
+      "title": "Why clubs choose B2B Sport",
+      "cards": [
+        {
+          "title": "Centralized supplier relationships",
+          "description": "All your supplier agreements in one place. No more searching for terms in old emails."
+        },
+        {
+          "title": "Controlled delegation",
+          "description": "Let coaches and team leaders order equipment — within the boundaries you set. Budgets and approvals managed centrally."
+        },
+        {
+          "title": "Spending transparency",
+          "description": "See exactly what was ordered, by whom, and at what price. Real-time overview of all budgets and orders."
+        },
+        {
+          "title": "Single source of truth",
+          "description": "No more scattered information. Agreements, prices, orders, and contacts — everything in the platform."
+        }
+      ]
+    },
+    "workflow": {
+      "title": "Your workflow in the platform",
+      "subtitle": "See how the platform supports your daily work — regardless of your role"
+    },
+    "roles": {
+      "tag": "Roles & access",
+      "title": "Who does what in the platform",
+      "subtitle": "Clear role distribution ensures efficiency and control",
+      "admin": {
+        "title": "Club Administrator",
+        "description": "Has full oversight and management responsibility",
+        "capabilities": [
+          "Accept and manage supplier agreements",
+          "Set up staff access levels",
+          "Define budgets per team or department",
+          "Approve orders above budget limits",
+          "Monitor spending via dashboards",
+          "Handle agreement renewals"
+        ]
+      },
+      "staff": {
+        "title": "Coach / Team Leader",
+        "description": "Orders quickly and easily within boundaries",
+        "capabilities": [
+          "Log in and see available equipment",
+          "Browse products within agreements",
+          "Check team sizes and needs",
+          "Place orders with one click",
+          "Track order status in real-time",
+          "Receive delivery notifications"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to take control of your equipment?",
+      "subtitle": "Let us show you how B2B Sport can simplify your equipment management and supplier relationships.",
+      "primaryCTA": "Book demo",
+      "secondaryCTA": "Contact us"
+    }
+  },
   "footer": {
     "company": {
       "title": "B2BSport",
-      "description": "Denmark's first fully digital platform for ordering sports equipment. We make it easy to be a sports club."
+      "description": "The centralized platform connecting sports brands, distributors, and clubs — replacing manual processes with one structured workspace."
     },
     "quickLinks": {
       "title": "Quick Links",
       "home": "Home",
       "about": "About",
       "clubSystem": "Club System",
-      "contact": "Contact"
+      "contact": "Contact",
+      "forBrands": "For Brands",
+      "forClubs": "For Clubs"
     },
     "sports": {
       "title": "Sports",
@@ -471,12 +852,21 @@
     },
     "contact": {
       "title": "Contact",
-      "phone": "+45 30 50 79 15",
+      "phone": "+45 69 15 35 45",
       "email": "contact@b2bsport.dk",
       "address": "Rødovrevej 151, 2610 Rødovre"
     },
+    "offices": {
+      "sjaelland": "Zealand",
+      "jyllandFyn": "Jutland & Funen"
+    },
+    "partnerCard": {
+      "title": "Become a partner",
+      "description": "Ready to digitalize your club?",
+      "cta": "Contact us"
+    },
     "bottom": {
-      "copyright": "© 2025 B2BSport A/S. All rights reserved.",
+      "copyright": "© 2026 B2B Sport & Promotion Group ApS. All rights reserved.",
       "privacy": "Privacy Policy",
       "terms": "Terms and Conditions"
     }
@@ -505,33 +895,43 @@
       }
     },
     "benefits": {
-      "title": "Why clubs choose us",
+      "title": "Why clubs choose the platform",
       "digitalOrdering": {
-        "title": "100% Digital ordering",
-        "description": "No more Excel sheets. Order everything online with your pre-loaded prices."
+        "title": "Digital ordering within club agreements",
+        "description": "Order equipment directly on the platform — within your active agreements and pre-negotiated prices."
       },
       "fastDelivery": {
-        "title": "Fast delivery",
-        "description": "2-3 day delivery on stock items. Always updated inventory status."
+        "title": "Track every order from start to delivery",
+        "description": "Real-time order tracking for club administrators and coaches. Always have an overview of status."
       },
       "clubAgreements": {
-        "title": "Club agreements",
-        "description": "Your prices are already negotiated and loaded. No surprises."
+        "title": "Staff can order independently",
+        "description": "Coaches and team leaders order on their own — within the budgets and agreements you've defined."
       },
       "support": {
-        "title": "Dedicated support",
-        "description": "Personal advice from experts who know your sport."
+        "title": "One platform for all your equipment",
+        "description": "Team wear, training gear, accessories, and customization — all gathered with your club's supplier agreements."
       }
     },
     "cta": {
-      "title": "Ready to digitalize your equipment management?",
-      "subtitle": "Book a demo and see how we can help your club",
+      "title": "See how clubs use the platform",
+      "subtitle": "Experience how the platform simplifies equipment management for clubs across Denmark",
       "button": "Book demo for",
       "contact": "Contact us"
     },
     "brands": {
       "title": "We work with the best brands",
       "subtitle": "Quality equipment from recognized manufacturers"
+    },
+    "workflow": {
+      "title": "From catalog to delivery",
+      "subtitle": "How you order equipment for your team",
+      "steps": [
+        { "label": "Browse catalog", "iconKey": "Search", "description": "Find equipment within your agreement", "stat": "Pre-set prices" },
+        { "label": "Customize & select", "iconKey": "Settings", "description": "Choose sizes, colors, and options", "stat": "Per-player" },
+        { "label": "Place order", "iconKey": "ShoppingCart", "description": "Submit for approval in one click", "stat": "~2 min" },
+        { "label": "Track delivery", "iconKey": "Truck", "description": "Follow from warehouse to your club", "stat": "Real-time" }
+      ]
     }
   },
   "notFound": {

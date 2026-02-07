@@ -6,16 +6,43 @@
     "sports": "Sportarten",
     "contact": "Kontakt",
     "demo": "Demo buchen",
-    "clubSystem": "Klubsystem"
+    "clubSystem": "Klubsystem",
+    "forBrands": "Für Marken",
+    "forClubs": "Für Vereine"
   },
   "hero": {
-    "title": "Ganz Dänemarks Vereinspartner",
-    "subtitle": "Wir bauen eine digitale Lösung für Sportausrüstungsbestellungen",
-    "cta": "Kontakt aufnehmen"
+    "tag": "Die Partnerschaftsplattform für dänischen Sport",
+    "titleLine1": "Dänemarks",
+    "titleLine2": "Clubpartner",
+    "title": "Dänemarks Clubpartner",
+    "subtitle": "Verwalten Sie Clubs, Vereinbarungen und Bestellungen — alles an einem Ort.",
+    "cta": "Partner werden",
+    "ctaSecondary": "Plattform ansehen",
+    "stats": {
+      "first": "Weniger Admin, mehr Sport",
+      "second": "100% Digital",
+      "third": "24/7 Platform",
+      "tagline": "Die Partnerschaftsplattform für dänischen Sport"
+    }
+  },
+  "welcome": {
+    "tag": "Willkommen",
+    "title": "Tschüss Tabellen. Hallo digitale Clubverwaltung.",
+    "description": "B2B Sport vereint alle Partnerschaften, Vereinbarungen und Bestellungen auf einer Plattform — damit Marken skalieren und Clubs sich auf den Sport konzentrieren können.",
+    "cta": "So funktioniert es",
+    "leftCard": {
+      "tag": "Ein Überblick",
+      "title": "Alle Vereinbarungen zentral"
+    },
+    "rightCard": {
+      "tag": "Strukturiert",
+      "title": "Vordefinierte Preise"
+    }
   },
   "valueProposition": {
-    "title": "Ein einfacherer Weg, Vereinsausrüstung zu bestellen",
-    "subtitle": "Wir arbeiten daran, Sportausrüstungsbestellungen digital und einfach zu machen. Keine Excel-Tabellen, E-Mails hin und her und zeitaufwändige Verwaltung mehr.",
+    "tag": "Für B2B-Sport gebaut",
+    "title": "Strukturierte Partnerschaften, effiziente Bestellungen",
+    "subtitle": "Plattform, Support und Partnerschaft — gebaut für die Art, wie B2B-Sport tatsächlich funktioniert.",
     "mainCTA": "So machen wir es",
     "features": {
       "digital": {
@@ -34,9 +61,143 @@
         "title": "Volle Unterstützung",
         "description": "Wir helfen Ihnen vom Anfang bis zum Ende"
       }
-    }
+    },
+    "cards": {
+      "platform": {
+        "badge": "Plattform",
+        "title": "Zentralisierte Plattform",
+        "description": "Alles, was Ihr Verein braucht, in einer modernen Plattform",
+        "features": [
+          "Vereinbarungsvorlagen",
+          "Rollenbasierter Zugang",
+          "Bestellverfolgung innerhalb von Vereinbarungen",
+          "Echtzeit-Dashboards"
+        ],
+        "cta": "Plattform ansehen"
+      },
+      "support": {
+        "badge": "Support",
+        "title": "Persönlicher Support",
+        "description": "Engagierte Hilfe von Anfang bis Ende — wir kennen Ihren Sport",
+        "features": [
+          "Dedizierter Ansprechpartner",
+          "Sportspezifische Beratung",
+          "Onboarding-Unterstützung",
+          "Schnelle Reaktionszeit"
+        ],
+        "cta": "Kontaktieren Sie uns"
+      },
+      "partnership": {
+        "badge": "Partnerschaft",
+        "title": "Skalierbares Partnerschaften",
+        "description": "Mehr als ein Lieferant — wir werden Ihr Ausrüstungspartner",
+        "features": [
+          "50 oder 500 Clubs verwalten",
+          "Wiederverwendbare Vereinbarungsvorlagen",
+          "Proaktive Erneuerungshinweise",
+          "Marken-Self-Service-Portal"
+        ],
+        "cta": "Partner werden"
+      }
+    },
+    "socialProof": "Vereine"
   },
+  "workflow": {
+    "title": "So funktioniert die Plattform",
+    "subtitle": "Von der Club-Einrichtung bis zur Lieferung — alles an einem Ort",
+    "nodes": {
+      "createClub": "Verein erstellen",
+      "viewPrices": "Preise ansehen",
+      "collectOrder": "Bestellung sammeln",
+      "approveInternal": "Interne Genehmigung",
+      "confirmOrder": "Bestellung bestätigen",
+      "trackDelivery": "Lieferung verfolgen"
+    },
+    "workflows": [
+      {
+        "id": "club-onboarding",
+        "title": "Club-Onboarding",
+        "subtitle": "Erste Schritte auf der Plattform",
+        "steps": [
+          { "label": "Club registrieren", "iconKey": "UserPlus", "description": "Clubprofil und Teamstruktur einrichten", "stat": "~2 Min" },
+          { "label": "Profil konfigurieren", "iconKey": "Settings", "description": "Logo, Farben und Kontaktdaten hinzufügen", "stat": "Voll anpassbar" },
+          { "label": "Personal einrichten", "iconKey": "Users", "description": "Trainer und Personal mit rollenbasiertem Zugang einladen", "stat": "Unbegrenzte Benutzer" },
+          { "label": "Vereinbarung erstellen", "iconKey": "FileText", "description": "Mit Lieferantenvereinbarungen und festen Preisen verbinden", "stat": "Vorkonfiguriert" },
+          { "label": "Portal aktivieren", "iconKey": "Zap", "description": "Ihr Bestellportal sofort live schalten", "stat": "1-Klick" },
+          { "label": "Club ist live", "iconKey": "CheckCircle", "description": "Sofort mit der Ausrüstungsbestellung beginnen", "stat": "100% digital" }
+        ]
+      },
+      {
+        "id": "order-lifecycle",
+        "title": "Bestellablauf",
+        "subtitle": "Vom Katalog bis zur Lieferung",
+        "steps": [
+          { "label": "Katalog durchsuchen", "iconKey": "Search", "description": "Produkte innerhalb Ihrer Vereinbarung ansehen", "stat": "Vorgeladene Preise" },
+          { "label": "In den Warenkorb", "iconKey": "ShoppingCart", "description": "Größen, Farben und Mengen auswählen", "stat": "Pro-Spieler Optionen" },
+          { "label": "Zur Genehmigung senden", "iconKey": "Send", "description": "An Club-Admin zur Prüfung senden", "stat": "Sofortige Benachrichtigung" },
+          { "label": "Admin genehmigt", "iconKey": "CheckCircle", "description": "Club-Admin prüft und genehmigt die Bestellung", "stat": "1-Klick Genehmigung" },
+          { "label": "Bestellung bestätigt", "iconKey": "Package", "description": "Bestellung automatisch an Lieferanten gesendet", "stat": "Null manuelle Arbeit" },
+          { "label": "Lieferung verfolgen", "iconKey": "Truck", "description": "Ihre Bestellung vom Lager bis zur Tür verfolgen", "stat": "Echtzeit" }
+        ]
+      },
+      {
+        "id": "agreement-management",
+        "title": "Vereinbarungsverwaltung",
+        "subtitle": "Strukturierte Partnerschaften",
+        "steps": [
+          { "label": "Vorlage erstellen", "iconKey": "FileText", "description": "Wiederverwendbare Vereinbarungsvorlagen erstellen", "stat": "Drag & Drop" },
+          { "label": "Konditionen & Preise festlegen", "iconKey": "Tag", "description": "Preise, Rabatte und Produktpaletten definieren", "stat": "Pro-Club Preise" },
+          { "label": "Club zuweisen", "iconKey": "Building2", "description": "Vereinbarungen einem oder vielen Clubs zuweisen", "stat": "Massenzuweisung" },
+          { "label": "Club akzeptiert", "iconKey": "ThumbsUp", "description": "Club prüft und aktiviert die Vereinbarung", "stat": "Digitale Signatur" },
+          { "label": "Nutzung überwachen", "iconKey": "BarChart3", "description": "Bestellungen, Ausgaben und Einhaltung verfolgen", "stat": "Live-Dashboards" },
+          { "label": "Verlängern", "iconKey": "RefreshCw", "description": "Vereinbarungen mit einem Klick verlängern oder aktualisieren", "stat": "Auto-Verlängerung" }
+        ]
+      }
+    ]
+  },
+  "audienceWorkflows": [
+    {
+      "id": "brand-admin",
+      "title": "Marken-Administrator",
+      "subtitle": "Clubnetzwerke und Partnerschaften verwalten",
+      "steps": [
+        { "label": "Club einbinden", "iconKey": "UserPlus", "description": "Einen neuen Club in Ihr Netzwerk aufnehmen", "stat": "~5 Min Einrichtung" },
+        { "label": "Vereinbarung erstellen", "iconKey": "FileText", "description": "Konditionen, Preise und Produktzugang festlegen", "stat": "Wiederverwendbare Vorlagen" },
+        { "label": "Produkte konfigurieren", "iconKey": "Package", "description": "Definieren welche Produkte Clubs bestellen können", "stat": "Volle Katalogkontrolle" },
+        { "label": "Bestellungen überwachen", "iconKey": "BarChart3", "description": "Alle Club-Bestellungen in Echtzeit verfolgen", "stat": "Live-Überblick" },
+        { "label": "Partnerschaften erneuern", "iconKey": "RefreshCw", "description": "Vereinbarungen mit aktualisierten Konditionen verlängern", "stat": "1-Klick Verlängerung" },
+        { "label": "Netzwerk skalieren", "iconKey": "TrendingUp", "description": "Von 5 auf 500 Clubs nahtlos wachsen", "stat": "Kein Extra-Aufwand" }
+      ]
+    },
+    {
+      "id": "club-admin",
+      "title": "Club-Administrator",
+      "subtitle": "Vereinbarungen, Budgets und Zugang steuern",
+      "steps": [
+        { "label": "Vereinbarung akzeptieren", "iconKey": "CheckCircle", "description": "Lieferantenvereinbarung prüfen und aktivieren", "stat": "Digitale Annahme" },
+        { "label": "Mitarbeiterzugang einrichten", "iconKey": "Users", "description": "Trainer einladen und Berechtigungen definieren", "stat": "Rollenbasierter Zugang" },
+        { "label": "Budgets definieren", "iconKey": "Wallet", "description": "Ausgabenlimits pro Team oder Saison festlegen", "stat": "Volle Kontrolle" },
+        { "label": "Bestellungen genehmigen", "iconKey": "ClipboardCheck", "description": "Mitarbeiterbestellungen prüfen und genehmigen", "stat": "1-Klick Genehmigung" },
+        { "label": "Ausgaben verfolgen", "iconKey": "PieChart", "description": "Budgetnutzung über alle Teams überwachen", "stat": "Echtzeit-Einblicke" },
+        { "label": "Verlängerungen verwalten", "iconKey": "RefreshCw", "description": "Vereinbarungsverlängerungen zentral verwalten", "stat": "Proaktive Warnungen" }
+      ]
+    },
+    {
+      "id": "coach-staff",
+      "title": "Trainer / Personal",
+      "subtitle": "Ausrüstung schnell und einfach bestellen",
+      "steps": [
+        { "label": "Einloggen", "iconKey": "LogIn", "description": "Auf das Bestellportal Ihres Clubs zugreifen", "stat": "Sicherer Login" },
+        { "label": "Produkte ansehen", "iconKey": "Search", "description": "Vorab genehmigte Produkte und Preise durchsuchen", "stat": "Vorgeladener Katalog" },
+        { "label": "Teamgrößen prüfen", "iconKey": "Ruler", "description": "Größen für jeden Spieler auswählen", "stat": "Pro-Spieler Größen" },
+        { "label": "Bestellung aufgeben", "iconKey": "ShoppingCart", "description": "Bestellung zur Admin-Genehmigung einreichen", "stat": "~3 Min" },
+        { "label": "Status verfolgen", "iconKey": "Clock", "description": "Ihre Bestellung durch jede Phase verfolgen", "stat": "Echtzeit-Updates" },
+        { "label": "Lieferung empfangen", "iconKey": "Truck", "description": "Ausrüstung direkt an Ihren Club geliefert", "stat": "Tür-zu-Tür" }
+      ]
+    }
+  ],
   "team": {
+    "tag": "Unser Team",
     "title": "Das Team kennenlernen",
     "subtitle": "Ein engagiertes Team von Experten, das daran arbeitet, die Sportausrüstungsbranche zu revolutionieren",
     "roles": {
@@ -50,12 +211,20 @@
     }
   },
   "contactCTA": {
-    "title": "Bereit, Ihre Vereinsverwaltung zu revolutionieren?",
-    "subtitle": "Lassen Sie uns zeigen, wie Sie Zeit und Geld bei der Vereinsausrüstung sparen können",
+    "title": "Bereit, Ihre Partnerschaften zu professionalisieren?",
+    "subtitle": "Lassen Sie uns zeigen, wie B2B Sport Struktur in Ihre Club- und Lieferantenbeziehungen bringen kann",
     "primaryCTA": "Demo buchen",
     "secondaryCTA": "Kontakt aufnehmen",
     "phone": "+45 69 15 35 45",
     "email": "info@b2bsport.dk"
+  },
+  "contactSection": {
+    "title": "Bereit, Ihre Vereinsverwaltung zu revolutionieren?",
+    "subtitle": "Starten Sie mit Dänemarks erster vollständig digitaler Plattform für Sportausrüstungsbestellungen",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "hours": "Öffnungszeiten",
+    "hoursValue": "Mo-Fr: 8:00 - 16:00 Uhr"
   },
   "clubSystem": {
     "title": "Die Zukunft der Sportausrüstungsbestellung",
@@ -63,7 +232,14 @@
     "benefits": {
       "realtime": "Verfolgen Sie Ihre Bestellungen in Echtzeit",
       "agreements": "Ihre Vereinbarungen sind bereits geladen",
-      "simple": "Füllen Sie nur die leeren Felder aus"
+      "simple": "Füllen Sie nur die leeren Felder aus",
+      "autoConfirmation": "Automatische Auftragsbestätigung"
+    },
+    "problems": {
+      "excelSheets": "Excel-Tabellen hin und her geschickt",
+      "outdatedPrices": "Veraltete Preislisten",
+      "manualHandling": "Manuelle Auftragsabwicklung",
+      "noOverview": "Kein Überblick über den Status"
     },
     "comparison": {
       "before": "Vorher: Excel-Chaos und E-Mail-Ping-Pong",
@@ -72,7 +248,7 @@
     "stats": {
       "timeSaved": "75% weniger Zeit für Verwaltung",
       "errorReduction": "90% weniger Bestellfehler",
-      "clubs": "50+ Vereine nutzen es bereits",
+      "clubs": "Vereine in ganz Dänemark",
       "satisfaction": "4,9/5 Kundenzufriedenheit"
     }
   },
@@ -81,54 +257,110 @@
     "bookDemo": "Demo buchen",
     "learnMore": "Mehr über das System erfahren"
   },
+  "experience": {
+    "tag": "Eine einzige Wahrheitsquelle",
+    "title": "Eine einzige Wahrheitsquelle",
+    "titleHighlight": "für alle Partnerschaften",
+    "description": "Wenn eine Frage zu einer Bestellung, einer Vereinbarung oder einem Kontakt auftaucht — die Antwort ist in der Plattform. Nicht im Posteingang, nicht auf einem Schreibtisch, nicht in jemandes Erinnerung.",
+    "descriptionHighlight": "",
+    "descriptionSuffix": "",
+    "stat": {
+      "value": "Bereit",
+      "label": "zu skalieren"
+    },
+    "verifiedPartner": "Verifizierter Partner",
+    "users": {
+      "count": "Bereit",
+      "label": "zu skalieren"
+    },
+    "solutions": {
+      "title": "Plattformvorteile",
+      "items": [
+        "Zentralisierte Partnerschaftsverwaltung",
+        "Vereinbarungsvorlagen mit klaren Bedingungen",
+        "Rollenbasierter Zugang über Organisationen hinweg",
+        "Echtzeit-Dashboards pro Benutzerebene"
+      ]
+    },
+    "cta": "Partner werden"
+  },
   "sports": {
-    "title": "Wir liefern für alle Sportarten",
-    "subtitle": "Vereine, Verbände und Internate - wir liefern für alle Sportarten"
+    "tag": "Sportarten",
+    "title": "Ausrüstung für alle Sportarten",
+    "subtitle": "Von Fußball bis Golf - wir liefern Qualitätsausrüstung an Vereine in ganz Dänemark",
+    "description": "Egal welchen Sport Ihr Verein betreibt, wir haben die richtige Ausrüstung. Unsere digitale Plattform macht es einfach, alles von Teamkleidung bis Trainingsausrüstung zu bestellen.",
+    "viewAll": "Alle Sportarten ansehen",
+    "exploreSport": "Entdecken"
   },
   "whatWeDoPage": {
     "hero": {
-      "title": "Ihr Verein verdient Besseres",
-      "subtitle": "Beseitigen Sie zeitaufwändige Verwaltung und gewinnen Sie mehr Zeit für das, was wirklich zählt - Ihren Sport"
+      "tag": "Was wir machen",
+      "title": "Partnerschaften verdienen bessere Werkzeuge",
+      "subtitle": "B2B Sport ersetzt fragmentierte Prozesse durch eine einheitliche Plattform für Marken, Distributoren und Clubs."
     },
     "mission": {
-      "title": "Endlich eine moderne Lösung",
-      "subtitle": "Tausende von Stunden werden jedes Jahr mit manueller Ausrüstungsverwaltung verschwendet. Das endet jetzt.",
+      "tag": "Warum B2B Sport",
+      "title": "Drei Säulen — eine Plattform",
+      "subtitle": "Vom Onboarding bis zur Erneuerung — alles an einem Ort.",
       "points": {
         "saveTime": {
-          "title": "Jede Woche Zeit sparen",
-          "description": "Kein Copy-Paste mehr zwischen E-Mails und Excel-Tabellen"
+          "title": "Onboarding das funktioniert",
+          "description": "Registrieren und organisieren Sie Partnerclubs schnell und systematisch"
         },
         "rightPrices": {
-          "title": "Immer die richtigen Preise",
-          "description": "Ihre Vereinbarungen sind bereits vorhanden - keine Überraschungen"
+          "title": "Strukturierte Vereinbarungen",
+          "description": "Wiederverwendbare Vereinbarungsvorlagen mit Rabatten und Bedingungen"
         },
         "trackEverything": {
-          "title": "Alles im Blick behalten",
-          "description": "Von Mitgliederwünschen bis zu Lieferungen - alles an einem Ort"
+          "title": "Bestellungen mit Kontext",
+          "description": "Bestellungen innerhalb aktiver Vereinbarungen mit korrekten Preisen"
         }
       }
     },
     "differentiator": {
+      "tag": "Vergleich",
       "title": "Sehen Sie selbst den Unterschied",
-      "subtitle": "Warum Stunden mit etwas verbringen, das Minuten dauern könnte?",
+      "subtitle": "Von fragmentierten Prozessen zu einer einheitlichen Plattform",
       "currentWay": "So machen Sie es jetzt",
       "ourWay": "So könnte es sein",
-      "comparison": {
-        "excelChaos": "Excel-Tabellen hin und her geschickt",
-        "emailPingPong": "Endlose E-Mail-Threads über Bestellungen",
-        "manualPrices": "Manuelle Preisaktualisierungen",
-        "uncertainDelivery": "Unsicherheit über Lieferzeiten",
-        "lostOrders": "Bestellungen gehen im Posteingang verloren",
-        "oneSystem": "Ein System für alles",
-        "instantOrders": "Direkt mit Vereinspreisen bestellen",
-        "automaticUpdates": "Automatische Updates",
-        "trackDelivery": "Lieferungen in Echtzeit verfolgen",
-        "completeOverview": "Immer vollständiger Überblick"
+      "currentWayItems": [
+        "Tabellen hin und her geschickt",
+        "Endlose E-Mail-Threads über Bestellungen",
+        "Getrennte Tools ohne Zusammenhang",
+        "Manuelle Nachverfolgung von Vereinbarungen",
+        "Abgelaufene Vereinbarungen, die durchs Raster fallen"
+      ],
+      "ourWayItems": [
+        "Zentralisierte Plattform für alles",
+        "Strukturierte Vereinbarungen mit klaren Bedingungen",
+        "Rollenbasierter Zugang für alle Parteien",
+        "Echtzeit-Dashboards und Überblick",
+        "Proaktive Erneuerungshinweise"
+      ]
+    },
+    "process": {
+      "tag": "Der Prozess",
+      "title": "Drei Schritte — volle Kontrolle",
+      "subtitle": "Von der Einrichtung bis zur Lieferung — alles in der Plattform",
+      "steps": {
+        "login": {
+          "title": "Erstellen und organisieren",
+          "description": "Clubs, Vereinbarungen und Personal — alles von Anfang an strukturiert"
+        },
+        "select": {
+          "title": "Mit Vertrauen bestellen",
+          "description": "Innerhalb ausgehandelter Bedingungen mit korrekten Preisen"
+        },
+        "delivery": {
+          "title": "In Echtzeit verfolgen",
+          "description": "Dashboards und Tracking für alle Benutzerebenen"
+        }
       }
     },
     "goToMarket": {
-      "title": "Bereit für die Zukunft?",
-      "subtitle": "Starten Sie heute Ihre digitale Transformation",
+      "tag": "Loslegen",
+      "title": "Bereit, die Plattform in Aktion zu sehen?",
+      "subtitle": "Lassen Sie uns zeigen, wie B2B Sport Struktur in Ihre Partnerschaften bringen kann.",
       "description": "Wir arbeiten daran, es einfach zu machen, ein Sportverein zu sein. Kontaktieren Sie uns, um zu erfahren, wie wir Ihnen helfen können.",
       "cta": "Kontakt aufnehmen"
     }
@@ -159,11 +391,28 @@
         "address2": "6760 Ribe",
         "serves": "Betreut: Jütland und Fünen"
       }
-    }
+    },
+    "getDirections": "Wegbeschreibung"
   },
   "about": {
     "title": "Über B2BSport",
-    "subtitle": "Wir digitalisieren die Sportausrüstungsbranche"
+    "subtitle": "Wir digitalisieren die Sportausrüstungsbranche",
+    "digest": {
+      "innovation": {
+        "title": "IT-getriebene Innovation",
+        "description": "Wir nutzen Technologie, um Ihren Alltag zu vereinfachen"
+      },
+      "transparency": {
+        "title": "Volle Transparenz",
+        "description": "Echtzeit-Einblick in Bestellungen, Lieferungen und Finanzen"
+      },
+      "implementation": {
+        "title": "Schnelle Implementierung",
+        "description": "In Stunden einsatzbereit - nicht in Tagen"
+      },
+      "readMore": "Mehr über uns erfahren →",
+      "tagline": "Digitale Transformation"
+    }
   },
   "brands": {
     "title": "Wir arbeiten mit den Besten",
@@ -376,8 +625,9 @@
   },
   "contactPage": {
     "hero": {
-      "title": "Sprechen wir über die Zukunft Ihres Vereins",
-      "subtitle": "Wir sind bereit, Ihnen bei der Revolutionierung Ihrer Ausrüstungsverwaltung zu helfen"
+      "tag": "Kontakt",
+      "title": "Sprechen wir über Ihre Partnerschaften",
+      "subtitle": "Wir sind bereit, Ihnen bei der Professionalisierung Ihrer Partnerschaften und Lieferantenbeziehungen zu helfen"
     },
     "info": {
       "title": "Kontaktinformationen",
@@ -389,7 +639,7 @@
       },
       "phone": {
         "label": "Telefon",
-        "value": "+45 30 50 79 15"
+        "value": "+45 69 15 35 45"
       },
       "email": {
         "label": "E-Mail",
@@ -450,17 +700,149 @@
       "submitError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
     }
   },
+  "forBrandsPage": {
+    "hero": {
+      "tag": "Für Marken & Lieferanten",
+      "title": "Hören Sie auf, Partnerschaften in Tabellen zu verwalten",
+      "subtitle": "B2B Sport gibt Ihnen eine Plattform, um Club-Netzwerke zu skalieren, Vereinbarungen zu verwalten und Bestellungen zu rationalisieren."
+    },
+    "benefits": {
+      "tag": "Vorteile",
+      "title": "Warum Marken B2B Sport wählen",
+      "cards": [
+        {
+          "title": "Skalieren ohne einzustellen",
+          "description": "Verwalten Sie 50 oder 500 Clubs von einer Plattform — ohne zusätzliches Personal."
+        },
+        {
+          "title": "Weniger Bestellfehler",
+          "description": "Strukturierte Vereinbarungen und Genehmigungsabläufe reduzieren Fehler und Streitigkeiten."
+        },
+        {
+          "title": "Mehr Clubs halten",
+          "description": "Proaktive Erneuerungshinweise und Dashboards halten Partnerschaften aktiv."
+        },
+        {
+          "title": "Professionelle Markenportale",
+          "description": "Geben Sie Clubs ein Self-Service-Portal mit Ihrer Marke und Preisgestaltung."
+        }
+      ]
+    },
+    "workflow": {
+      "title": "Ihr Workflow als Marken-Administrator",
+      "subtitle": "Vom Onboarding bis zur Skalierung — alles in der Plattform"
+    },
+    "features": {
+      "tag": "Plattform-Funktionen",
+      "title": "Alles was Sie brauchen, um Partnerschaften zu führen",
+      "items": [
+        {
+          "title": "Vereinbarungsvorlagen",
+          "description": "Erstellen Sie wiederverwendbare Vorlagen mit Rabatten, Bedingungen und Produktkategorien."
+        },
+        {
+          "title": "Rollenbasierter Zugang",
+          "description": "Geben Sie Club-Admins und Personal die richtigen Zugangsebenen."
+        },
+        {
+          "title": "Dashboard-Intelligenz",
+          "description": "Echtzeit-Überblick über Bestellungen, Umsatz und Club-Aktivität."
+        },
+        {
+          "title": "Bestellverwaltung innerhalb von Vereinbarungen",
+          "description": "Alle Bestellungen erfolgen innerhalb aktiver Vereinbarungen mit korrekten Preisen."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Ihr Club-Netzwerk zu skalieren?",
+      "subtitle": "Lassen Sie uns zeigen, wie B2B Sport Ihre Partnerschaften transformieren kann.",
+      "primaryCTA": "Demo buchen",
+      "secondaryCTA": "Kontakt aufnehmen"
+    }
+  },
+  "forClubsPage": {
+    "hero": {
+      "tag": "Für Vereine",
+      "title": "Eine Plattform für alle Lieferantenbeziehungen",
+      "subtitle": "Schluss mit dem Jonglieren zwischen E-Mails, Tabellen und Telefonaten. Vereinen Sie alle Lieferantenvereinbarungen, Bestellungen und Budgets an einem Ort."
+    },
+    "benefits": {
+      "tag": "Vorteile",
+      "title": "Warum Vereine B2B Sport wählen",
+      "cards": [
+        {
+          "title": "Zentralisierte Lieferantenbeziehungen",
+          "description": "Alle Lieferantenvereinbarungen an einem Ort. Schluss mit der Suche nach Konditionen in alten E-Mails."
+        },
+        {
+          "title": "Kontrollierte Delegation",
+          "description": "Lassen Sie Trainer und Teamleiter Ausrüstung bestellen — innerhalb der von Ihnen gesetzten Grenzen. Budgets und Genehmigungen werden zentral verwaltet."
+        },
+        {
+          "title": "Ausgabentransparenz",
+          "description": "Sehen Sie genau, was bestellt wurde, von wem und zu welchem Preis. Echtzeit-Überblick über alle Budgets und Bestellungen."
+        },
+        {
+          "title": "Eine einzige Wahrheitsquelle",
+          "description": "Keine verstreuten Informationen mehr. Vereinbarungen, Preise, Bestellungen und Kontakte — alles in der Plattform."
+        }
+      ]
+    },
+    "workflow": {
+      "tag": "Arbeitsablauf",
+      "title": "Ihr Arbeitsablauf in der Plattform",
+      "subtitle": "Sehen Sie, wie die Plattform Ihre tägliche Arbeit unterstützt — unabhängig von Ihrer Rolle"
+    },
+    "roles": {
+      "tag": "Rollen & Zugang",
+      "title": "Wer macht was in der Plattform",
+      "subtitle": "Klare Rollenverteilung gewährleistet Effizienz und Kontrolle",
+      "admin": {
+        "title": "Clubadministrator",
+        "description": "Hat volle Übersicht und Verwaltungsverantwortung",
+        "capabilities": [
+          "Lieferantenvereinbarungen akzeptieren und verwalten",
+          "Zugangsstufen für Mitarbeiter einrichten",
+          "Budgets pro Team oder Abteilung definieren",
+          "Bestellungen über Budgetgrenzen genehmigen",
+          "Ausgaben über Dashboards überwachen",
+          "Vereinbarungsverlängerungen handhaben"
+        ]
+      },
+      "staff": {
+        "title": "Trainer / Teamleiter",
+        "description": "Bestellt schnell und einfach innerhalb der Grenzen",
+        "capabilities": [
+          "Einloggen und verfügbare Ausrüstung sehen",
+          "Produkte innerhalb von Vereinbarungen durchsuchen",
+          "Teamgrößen und Bedarf prüfen",
+          "Bestellungen mit einem Klick aufgeben",
+          "Bestellstatus in Echtzeit verfolgen",
+          "Lieferbenachrichtigungen erhalten"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Bereit, die Kontrolle über Ihre Ausrüstung zu übernehmen?",
+      "subtitle": "Lassen Sie uns zeigen, wie B2B Sport Ihr Ausrüstungsmanagement und Ihre Lieferantenbeziehungen vereinfachen kann.",
+      "primaryCTA": "Demo buchen",
+      "secondaryCTA": "Kontaktieren Sie uns"
+    }
+  },
   "footer": {
     "company": {
       "title": "B2BSport",
-      "description": "Dänemarks erste vollständig digitale Plattform für die Bestellung von Sportausrüstung. Wir machen es einfach, ein Sportverein zu sein."
+      "description": "Die zentralisierte Plattform, die Sport-Marken, Distributoren und Clubs verbindet — ersetzt manuelle Prozesse durch einen strukturierten Arbeitsbereich."
     },
     "quickLinks": {
       "title": "Schnelllinks",
       "home": "Startseite",
       "about": "Über uns",
       "clubSystem": "Klubsystem",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "forBrands": "Für Marken",
+      "forClubs": "Für Vereine"
     },
     "sports": {
       "title": "Sportarten",
@@ -471,12 +853,21 @@
     },
     "contact": {
       "title": "Kontakt",
-      "phone": "+45 30 50 79 15",
+      "phone": "+45 69 15 35 45",
       "email": "kontakt@b2bsport.dk",
       "address": "Rødovrevej 151, 2610 Rødovre"
     },
+    "offices": {
+      "sjaelland": "Seeland",
+      "jyllandFyn": "Jütland & Fünen"
+    },
+    "partnerCard": {
+      "title": "Partner werden",
+      "description": "Bereit, Ihren Verein zu digitalisieren?",
+      "cta": "Kontakt aufnehmen"
+    },
     "bottom": {
-      "copyright": "© 2025 B2BSport A/S. Alle Rechte vorbehalten.",
+      "copyright": "© 2026 B2B Sport & Promotion Group ApS. Alle Rechte vorbehalten.",
       "privacy": "Datenschutzrichtlinie",
       "terms": "Allgemeine Geschäftsbedingungen"
     }
@@ -505,33 +896,43 @@
       }
     },
     "benefits": {
-      "title": "Warum Vereine uns wählen",
+      "title": "Warum Vereine die Plattform wählen",
       "digitalOrdering": {
-        "title": "100% Digitale Bestellung",
-        "description": "Keine Excel-Tabellen mehr. Bestellen Sie alles online mit Ihren vorgeladenen Preisen."
+        "title": "Digitale Bestellung innerhalb von Vereinsvereinbarungen",
+        "description": "Bestellen Sie Ausrüstung direkt auf der Plattform — innerhalb Ihrer aktiven Vereinbarungen und vorverhandelten Preise."
       },
       "fastDelivery": {
-        "title": "Schnelle Lieferung",
-        "description": "2-3 Tage Lieferung bei Lagerware. Immer aktualisierter Lagerbestand."
+        "title": "Jede Bestellung von Anfang bis Lieferung verfolgen",
+        "description": "Echtzeit-Bestellverfolgung für Vereinsadministratoren und Trainer. Immer Überblick über den Status."
       },
       "clubAgreements": {
-        "title": "Vereinsvereinbarungen",
-        "description": "Ihre Preise sind bereits ausgehandelt und geladen. Keine Überraschungen."
+        "title": "Mitarbeiter können selbstständig bestellen",
+        "description": "Trainer und Teamleiter bestellen selbst — innerhalb der Budgets und Vereinbarungen, die Sie festgelegt haben."
       },
       "support": {
-        "title": "Dedizierter Support",
-        "description": "Persönliche Beratung von Experten, die Ihren Sport kennen."
+        "title": "Eine Plattform für Ihre gesamte Ausrüstung",
+        "description": "Teamkleidung, Trainingsausrüstung, Zubehör und Personalisierung — alles zusammen mit den Lieferantenvereinbarungen Ihres Vereins."
       }
     },
     "cta": {
-      "title": "Bereit, Ihre Ausrüstungsverwaltung zu digitalisieren?",
-      "subtitle": "Buchen Sie eine Demo und sehen Sie, wie wir Ihrem Verein helfen können",
+      "title": "Sehen Sie, wie Vereine die Plattform nutzen",
+      "subtitle": "Erleben Sie, wie die Plattform die Ausrüstungsverwaltung für Vereine in ganz Dänemark vereinfacht",
       "button": "Demo buchen für",
       "contact": "Kontaktieren Sie uns"
     },
     "brands": {
       "title": "Wir arbeiten mit den besten Marken",
       "subtitle": "Qualitätsausrüstung von anerkannten Herstellern"
+    },
+    "workflow": {
+      "title": "Vom Katalog bis zur Lieferung",
+      "subtitle": "So bestellen Sie Ausrüstung für Ihr Team",
+      "steps": [
+        { "label": "Katalog durchsuchen", "iconKey": "Search", "description": "Ausrüstung innerhalb Ihrer Vereinbarung finden", "stat": "Feste Preise" },
+        { "label": "Anpassen & auswählen", "iconKey": "Settings", "description": "Größen, Farben und Optionen wählen", "stat": "Pro-Spieler" },
+        { "label": "Bestellung aufgeben", "iconKey": "ShoppingCart", "description": "Mit einem Klick zur Genehmigung einreichen", "stat": "~2 Min" },
+        { "label": "Lieferung verfolgen", "iconKey": "Truck", "description": "Vom Lager bis zu Ihrem Club verfolgen", "stat": "Echtzeit" }
+      ]
     }
   },
   "notFound": {

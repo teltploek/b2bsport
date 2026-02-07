@@ -6,6 +6,7 @@ import { getDictionary } from '@/i18n/get-dictionary'
 import { i18n, type Locale } from '@/i18n/config'
 import { sportsCategories } from '@/data/sports-data'
 import ProductConfigurator from '@/components/ProductConfigurator/ProductConfigurator'
+import Workflow from '@/components/Workflow/Workflow'
 import { IconShirt, IconBackpack, IconPencil, IconCheck } from '@tabler/icons-react'
 import * as TablerIcons from '@tabler/icons-react'
 import { brandsData } from '@/data/brands-data'
@@ -54,6 +55,20 @@ export default async function SportPage({
   }
   
   const sportName = sport.name[params.locale] || sport.name.en
+
+  // Get sport-specific workflow from sportsPage dictionary
+  const sportsPageDict = dictionary.sportsPage as Record<string, unknown>
+  const sportWorkflowData = sportsPageDict.workflow as {
+    title: string
+    subtitle: string
+    steps: { label: string; iconKey: string }[]
+  } | undefined
+  const sportWorkflow = sportWorkflowData ? {
+    id: 'sport-ordering',
+    title: sportWorkflowData.title,
+    subtitle: sportWorkflowData.subtitle,
+    steps: sportWorkflowData.steps
+  } : undefined
 
   return (
     <div className="min-h-screen">
@@ -198,7 +213,27 @@ export default async function SportPage({
           </div>
         </div>
       </section>
+{sportWorkflow && (
 <section className="section-padding bg-semantic-background-primary">
+        <div className="container-dynamic">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-display-lg md:text-display-xl font-display font-bold mb-4">
+              {sportWorkflow.title}
+            </h2>
+            <p className="text-body-lg text-semantic-text-secondary">
+              {sportWorkflow.subtitle}
+            </p>
+          </div>
+        </div>
+        <Workflow
+          dictionary={dictionary}
+          locale={params.locale}
+          workflows={[sportWorkflow]}
+          hideHeader
+        />
+      </section>
+)}
+<section className="section-padding bg-semantic-background-secondary">
         <div className="container-dynamic">
           <ProductConfigurator dictionary={dictionary} sportName={sportName} />
         </div>

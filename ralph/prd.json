@@ -1,0 +1,85 @@
+{
+  "project": "B2B Sport - Workflow Component Tuning",
+  "branchName": "ralph/website-redesign",
+  "description": "Tune the Workflow section: slow down animations to a cinematic pace, enlarge cards with bigger fonts/icons/padding, and spread cards across the full canvas width. Use the /frontend-design skill for all UI implementation to ensure high design quality.",
+  "patternReferences": {
+    "workflowComponent": "src/components/Workflow/Workflow.tsx",
+    "workflowNode": "src/components/Workflow/WorkflowNode.tsx",
+    "homePage": "src/app/[locale]/page.tsx",
+    "dictionaryEn": "src/dictionaries/en.json",
+    "baseBranch": "ralph/website-redesign"
+  },
+  "agentInstructions": "IMPORTANT: For every story that modifies UI components (WorkflowNode.tsx, Workflow.tsx, or any visual changes), you MUST use the /frontend-design skill by invoking it before writing code. This skill generates distinctive, production-grade frontend code with high design quality. Invoke it by calling the Skill tool with skill='frontend-design' and pass the component requirements as args. The skill will help you produce polished, visually refined output rather than generic-looking code. DESIGN COHERENCE: The workflow component must feel coherent with the overall website style — use the existing design tokens (forest/coral/cream palette), font-display for headings, font-body for text, Tailwind utility classes, and the same visual language as other sections on the site. The cards should feel like a natural part of the B2B Sport website, not a separate widget.",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Slow down animation timing to cinematic pace",
+      "description": "As a visitor, I want the workflow animation to feel leisurely and cinematic rather than rushed, so I can comfortably read each step as it appears.",
+      "acceptanceCriteria": [
+        "IMPORTANT: Use the /frontend-design skill before implementing CSS animation changes",
+        "FIX EDGE REVEAL SEQUENCE: Currently edges appear simultaneously with the target node. Instead, edges must draw in BETWEEN node reveals. The animation sequence for each pair must be: Node N appears (1500ms fade+scale) → pause → Edge from N to N+1 draws in (800ms) → pause → Node N+1 appears. This requires separate state tracking for visible edges vs visible nodes.",
+        "Add a new state variable visibleEdgeIndex (separate from visibleStepIndex) to control edge visibility independently from node visibility",
+        "Update stepsToEdges to use visibleEdgeIndex instead of visibleUpTo for the edge visibility condition",
+        "In the startAnimation callback, schedule edges as distinct phases between nodes. Example sequence for each step i>0: first reveal node i, then after a pause (e.g. 800ms), reveal the edge from node i to node i+1, then after another pause (e.g. 700ms), reveal node i+1",
+        "In the <style> block in Workflow.tsx: change node transition duration from 400ms to 1500ms for both opacity and transform",
+        "Change edge stroke-dashoffset transition from 300ms to 800ms",
+        "Change @keyframes workflowPulse animation — slow each cycle to 1.2s instead of 0.6s",
+        "Per-step timing should be approximately: 1500ms node reveal + 800ms pause + 800ms edge draw + 700ms pause = ~3800ms per step",
+        "Change initial delay before first node from 200ms to 500ms",
+        "Change pulse duration on non-last nodes from 600ms to 2000ms before clearing activeStepIndex",
+        "Change pulse duration on last node from 1800ms to 3000ms",
+        "Change hold time after all nodes revealed from 2500ms to 4000ms",
+        "Change fade-out + pause restart delay from 500ms to 1000ms",
+        "Add a CSS transition for fade-out: the workflow-node-hidden class should also use 800ms transition (not 400ms) so the fade-out is slow too — edges should also fade out slowly with 800ms transition",
+        "Total cycle for 6 nodes should be approximately 28-32 seconds with the edge phases included",
+        "Typecheck passes",
+        "Visual verification: Navigate to /en, scroll to workflow section, confirm the sequence is: node appears → edge draws to next position → next node appears → edge draws → etc. Edges should NOT appear simultaneously with nodes."
+      ],
+      "priority": 1,
+      "passes": true,
+      "notes": "CRITICAL: The current bug is that stepsToEdges uses the same visibleUpTo as nodes, causing edges to appear at the same time as their target node. You need a separate visibleEdgeIndex state and separate setTimeout entries in the animation loop for edges. The sequence per step is: Node fade-in (1500ms) → pulse on node → edge draw-in (800ms) → next node fade-in. Update both CSS transition durations AND JavaScript setTimeout values — they must be in sync."
+    },
+    {
+      "id": "US-002",
+      "title": "Enlarge workflow node cards with bigger fonts and icons",
+      "description": "As a visitor, I want the workflow cards to feel substantial and premium with large, easily readable text and prominent icons.",
+      "acceptanceCriteria": [
+        "IMPORTANT: Use the /frontend-design skill before implementing the card redesign — pass it the current WorkflowNode.tsx and MobileWorkflowStep code and ask for a polished, larger card design",
+        "In WorkflowNode.tsx: increase icon container from w-10 h-10 to w-14 h-14 with rounded-xl",
+        "Increase icon SVG size from w-5 h-5 to w-7 h-7",
+        "Increase label text from text-sm to text-lg and make it font-bold (much bigger and prominent)",
+        "Increase description text from text-xs to text-base for easy readability",
+        "Increase stat text from text-xs to text-base",
+        "Increase card padding from px-4 py-3 to px-6 py-5 for generous breathing room",
+        "Increase gap between icon and text content from gap-3 to gap-4",
+        "Increase node min-width from min-w-[200px] to min-w-[260px]",
+        "In MobileWorkflowStep in Workflow.tsx: increase icon to w-12 h-12, label to text-base font-bold, description to text-sm, stat to text-sm, padding to px-5 py-4, max-width from max-w-[200px] to max-w-[280px]",
+        "Cards should feel substantial, premium, and easy to read at a glance — not cramped",
+        "Typecheck passes",
+        "Visual verification: Navigate to /en and confirm workflow cards are noticeably larger with bigger icons and prominent text"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": "Use the /frontend-design skill to ensure the enlarged cards have refined visual design — good spacing ratios, visual hierarchy between label/description/stat, and a polished feel. The cards should look intentionally designed, not just scaled up."
+    },
+    {
+      "id": "US-003",
+      "title": "Spread cards across full canvas width with generous gaps",
+      "description": "As a visitor, I want the workflow cards spread across the full available width with generous breathing room between them, not clustered together.",
+      "acceptanceCriteria": [
+        "IMPORTANT: Use the /frontend-design skill before implementing layout changes",
+        "Update scatteredPositions6 array to spread across a wider X range: approximately [{x:0,y:80}, {x:280,y:0}, {x:560,y:130}, {x:880,y:20}, {x:1160,y:140}, {x:1440,y:50}] — spanning 0 to ~1440px",
+        "Maintain varied horizontal gaps (some slightly wider, some slightly narrower) for organic feel",
+        "Y positions spread more vertically: use range 0-140 instead of current 0-110",
+        "Update getScatteredPositions function for dynamic generation: increase baseGap to 320 for <=4 steps, 280 for <=6 steps, 220 for >6 steps",
+        "Increase canvas height from h-[340px] to h-[420px] to give larger cards more vertical breathing room",
+        "Increase fitView padding from 0.2 to 0.35 to ensure cards have margin from canvas edges",
+        "Typecheck passes",
+        "Visual verification: Navigate to /en and confirm workflow cards are spread across the full width with generous gaps — no clustering in the center"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": "Use the /frontend-design skill to ensure the overall layout composition feels balanced and intentional. The spacing should create a pleasant visual rhythm across the full width."
+    }
+  ]
+}
