@@ -1,8 +1,6 @@
 'use client'
 
-import { useState, useMemo, useRef, useEffect, useCallback } from 'react'
-import { ReactFlow, Node, Edge } from '@xyflow/react'
-import '@xyflow/react/dist/style.css'
+import { useState, useMemo, useRef, useEffect, useCallback, useLayoutEffect } from 'react'
 import {
   UserPlus,
   Tag,
@@ -30,36 +28,14 @@ import {
   TrendingUp,
   LucideIcon,
 } from 'lucide-react'
-import WorkflowNode, { WorkflowNodeData } from './WorkflowNode'
 
 // Icon lookup from string keys to Lucide components
 const iconMap: Record<string, LucideIcon> = {
-  UserPlus,
-  Tag,
-  ShoppingCart,
-  CheckCircle,
-  Send,
-  Truck,
-  Settings,
-  Users,
-  FileText,
-  Zap,
-  Search,
-  Package,
-  Building2,
-  ThumbsUp,
-  BarChart3,
-  RefreshCw,
-  LogIn,
-  Wallet,
-  ClipboardCheck,
-  PieChart,
-  Clock,
-  Ruler,
-  TrendingUp,
+  UserPlus, Tag, ShoppingCart, CheckCircle, Send, Truck, Settings, Users,
+  FileText, Zap, Search, Package, Building2, ThumbsUp, BarChart3, RefreshCw,
+  LogIn, Wallet, ClipboardCheck, PieChart, Clock, Ruler, TrendingUp,
 }
 
-// Workflow step definition (new format)
 interface WorkflowStep {
   label: string
   iconKey: string
@@ -67,7 +43,6 @@ interface WorkflowStep {
   stat?: string
 }
 
-// Single workflow definition (new format)
 interface WorkflowDefinition {
   id: string
   title: string
@@ -75,7 +50,6 @@ interface WorkflowDefinition {
   steps: WorkflowStep[]
 }
 
-// Old-format dictionary props (backward compatible)
 interface OldWorkflowDictionary {
   title?: string
   subtitle?: string
@@ -90,7 +64,6 @@ interface OldWorkflowDictionary {
   workflows?: never
 }
 
-// New-format dictionary props
 interface NewWorkflowDictionary {
   title?: string
   subtitle?: string
@@ -110,57 +83,88 @@ interface WorkflowProps {
     workflow?: OldWorkflowDictionary | NewWorkflowDictionary
   }
   locale: string
-  /** Pass workflows directly (e.g. from audienceWorkflows) */
   workflows?: WorkflowDefinition[]
-  /** Hide section header (title/subtitle) when used as embedded component */
   hideHeader?: boolean
 }
 
-// Custom node types for React Flow
-const nodeTypes = {
-  workflowNode: WorkflowNode,
-}
-
-// Edge styling with coral color and smooth curves
-const defaultEdgeOptions = {
-  type: 'smoothstep' as const,
-  style: {
-    strokeWidth: 2,
-    stroke: '#F97B5F', // coral-500
-  },
-  animated: true,
-}
-
-// Predefined scattered positions for 6-step workflows (mind-map feel, spread across full width)
-const scatteredPositions6 = [
-  { x: 0, y: 80 },
-  { x: 280, y: 0 },
-  { x: 560, y: 130 },
-  { x: 880, y: 20 },
-  { x: 1160, y: 140 },
-  { x: 1440, y: 50 },
+// Scatter offsets for organic feel on desktop grid (px)
+const desktopScatter = [
+  { x: 0, y: 0 },
+  { x: 16, y: 4 },
+  { x: -8, y: -2 },
+  { x: 20, y: 6 },
+  { x: -4, y: 2 },
+  { x: 10, y: -4 },
+  { x: 4, y: 8 },
+  { x: -12, y: 0 },
+  { x: 14, y: -6 },
+  { x: -6, y: 4 },
 ]
 
-// Generate deterministic scattered positions for any step count
-function getScatteredPositions(count: number): { x: number; y: number }[] {
-  if (count === 6) return scatteredPositions6
-  const yOffsets = [80, 0, 130, 20, 140, 50, 70, 10, 120, 30]
-  const baseGap = count <= 4 ? 320 : count <= 6 ? 280 : 220
-  return Array.from({ length: count }, (_, i) => ({
-    x: i * baseGap + ((i * 37 + 13) % 30) - 15,
-    y: yOffsets[i % yOffsets.length],
-  }))
-}
-
-// Scattered offsets for organic look on mobile (x and y)
+// Scattered offsets for organic look on mobile
 const mobileOffsets = [
   'translate-x-0 -translate-y-1',
+  'translate-x-6 translate-y-1',
+  '-translate-x-4 -translate-y-1',
   'translate-x-8 translate-y-2',
-  '-translate-x-6 -translate-y-2',
-  'translate-x-10 translate-y-1',
-  '-translate-x-4 translate-y-3',
-  'translate-x-6 -translate-y-1',
+  '-translate-x-3 translate-y-1',
+  'translate-x-5 -translate-y-1',
 ]
+
+function oldNodesToSteps(nodes: OldWorkflowDictionary['nodes']): WorkflowStep[] {
+  const labels = nodes || {}
+  return [
+    { label: labels.createClub || 'Opret klub', iconKey: 'UserPlus' },
+    { label: labels.viewPrices || 'Se aftalepriser', iconKey: 'Tag' },
+    { label: labels.collectOrder || 'Saml bestilling', iconKey: 'ShoppingCart' },
+    { label: labels.approveInternal || 'Godkend internt', iconKey: 'CheckCircle' },
+    { label: labels.confirmOrder || 'Bekræft ordre', iconKey: 'Send' },
+    { label: labels.trackDelivery || 'Spor levering', iconKey: 'Truck' },
+  ]
+}
+
+// Desktop workflow card (rendered at natural CSS size — no canvas scaling)
+function DesktopCard({
+  icon: Icon,
+  label,
+  description,
+  stat,
+  stepNumber,
+}: {
+  icon: LucideIcon
+  label: string
+  description?: string
+  stat?: string
+  stepNumber: number
+}) {
+  return (
+    <div className="bg-cream-50 border border-cream-300/60 rounded-2xl px-7 py-6 shadow-md relative">
+      <span className="absolute -top-2.5 -left-2.5 w-7 h-7 rounded-full bg-forest-900 text-cream-100 text-xs font-bold flex items-center justify-center shadow-sm">
+        {stepNumber}
+      </span>
+      <div className="flex items-start gap-5">
+        <div className="flex-shrink-0 w-[52px] h-[52px] bg-gradient-to-br from-coral-500 to-coral-600 rounded-2xl flex items-center justify-center shadow-sm">
+          <Icon className="w-6 h-6 text-white" strokeWidth={1.8} />
+        </div>
+        <div className="flex flex-col min-w-0 gap-1.5 pt-0.5">
+          <span className="font-display font-extrabold text-xl text-forest-900 leading-tight tracking-tight">
+            {label}
+          </span>
+          {description && (
+            <span className="text-[15px] text-forest-600 leading-relaxed">
+              {description}
+            </span>
+          )}
+          {stat && (
+            <span className="text-sm text-coral-600 font-bold tracking-wide uppercase mt-0.5">
+              {stat}
+            </span>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 // Mobile workflow step component
 function MobileWorkflowStep({
@@ -182,25 +186,25 @@ function MobileWorkflowStep({
 }) {
   return (
     <div className={`flex flex-col items-center ${offsetClass}`}>
-      <div className="bg-cream-100 border border-cream-300 rounded-xl px-5 py-4 shadow-sm w-full max-w-[280px]">
-        <div className="flex items-center gap-4">
-          <div className="flex-shrink-0 w-12 h-12 bg-coral-500 rounded-xl flex items-center justify-center">
+      <div className="bg-cream-50 border border-cream-300/60 rounded-2xl px-6 py-5 shadow-md w-full max-w-[320px] relative">
+        <span className="absolute -top-2.5 -left-2.5 w-7 h-7 rounded-full bg-forest-900 text-cream-100 text-xs font-bold flex items-center justify-center shadow-sm">
+          {stepNumber}
+        </span>
+        <div className="flex items-start gap-4">
+          <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-coral-500 to-coral-600 rounded-xl flex items-center justify-center shadow-sm">
             <Icon className="w-6 h-6 text-white" strokeWidth={1.8} />
           </div>
-          <div className="flex flex-col min-w-0">
-            <span className="text-xs text-forest-500 font-medium">
-              Trin {stepNumber}
-            </span>
-            <span className="font-display font-bold text-base text-forest-900 leading-tight">
+          <div className="flex flex-col min-w-0 gap-1">
+            <span className="font-display font-extrabold text-lg text-forest-900 leading-tight tracking-tight">
               {label}
             </span>
             {description && (
-              <span className="text-sm text-forest-600 leading-snug mt-0.5">
+              <span className="text-sm text-forest-600 leading-relaxed">
                 {description}
               </span>
             )}
             {stat && (
-              <span className="text-sm text-coral-600 font-semibold leading-snug mt-0.5">
+              <span className="text-xs text-coral-600 font-bold tracking-wide uppercase mt-0.5">
                 {stat}
               </span>
             )}
@@ -208,63 +212,12 @@ function MobileWorkflowStep({
         </div>
       </div>
       {!isLast && (
-        <div className="py-3">
-          <ChevronDown className="w-5 h-5 text-coral-500" />
+        <div className="py-2.5">
+          <ChevronDown className="w-5 h-5 text-coral-400" />
         </div>
       )}
     </div>
   )
-}
-
-// Convert workflow steps to React Flow nodes
-function stepsToNodes(
-  steps: WorkflowStep[],
-  visibleUpTo: number,
-  activeIndex: number,
-  fadingOut: boolean
-): Node<WorkflowNodeData>[] {
-  const positions = getScatteredPositions(steps.length)
-  return steps.map((step, index) => {
-    const isVisible = index <= visibleUpTo && !fadingOut
-    return {
-      id: `node-${index + 1}`,
-      type: 'workflowNode',
-      position: positions[index],
-      data: {
-        label: step.label,
-        icon: iconMap[step.iconKey] || CheckCircle,
-        description: step.description,
-        stat: step.stat,
-      },
-      className: isVisible ? 'workflow-node-visible' : 'workflow-node-hidden',
-      style: index === activeIndex
-        ? { animation: 'workflowPulse 1.2s ease-in-out 2' }
-        : undefined,
-    }
-  })
-}
-
-// Convert workflow steps to React Flow edges (uses separate visibleEdgeIndex)
-function stepsToEdges(steps: WorkflowStep[], visibleEdgeUpTo: number, fadingOut: boolean): Edge[] {
-  return steps.slice(1).map((_, index) => ({
-    id: `edge-${index + 1}-${index + 2}`,
-    source: `node-${index + 1}`,
-    target: `node-${index + 2}`,
-    className: index <= visibleEdgeUpTo && !fadingOut ? 'workflow-edge-visible' : 'workflow-edge-hidden',
-  }))
-}
-
-// Convert old-format nodes to steps
-function oldNodesToSteps(nodes: OldWorkflowDictionary['nodes']): WorkflowStep[] {
-  const labels = nodes || {}
-  return [
-    { label: labels.createClub || 'Opret klub', iconKey: 'UserPlus' },
-    { label: labels.viewPrices || 'Se aftalepriser', iconKey: 'Tag' },
-    { label: labels.collectOrder || 'Saml bestilling', iconKey: 'ShoppingCart' },
-    { label: labels.approveInternal || 'Godkend internt', iconKey: 'CheckCircle' },
-    { label: labels.confirmOrder || 'Bekræft ordre', iconKey: 'Send' },
-    { label: labels.trackDelivery || 'Spor levering', iconKey: 'Truck' },
-  ]
 }
 
 export default function Workflow({
@@ -282,28 +235,16 @@ export default function Workflow({
     [dictionary.workflow]
   )
 
-  // Determine the workflows to render
   const resolvedWorkflows = useMemo((): WorkflowDefinition[] => {
-    // Direct prop takes highest priority
-    if (workflowsProp && workflowsProp.length > 0) {
-      return workflowsProp
-    }
-
-    // New format: dictionary has workflows array
+    if (workflowsProp && workflowsProp.length > 0) return workflowsProp
     const dictContent = content as NewWorkflowDictionary
-    if (dictContent.workflows && dictContent.workflows.length > 0) {
-      return dictContent.workflows
-    }
-
-    // Old format: backward compatibility with nodes object
+    if (dictContent.workflows && dictContent.workflows.length > 0) return dictContent.workflows
     const oldContent = content as OldWorkflowDictionary
-    return [
-      {
-        id: 'default',
-        title: oldContent.title || 'Fra bestilling til levering',
-        steps: oldNodesToSteps(oldContent.nodes),
-      },
-    ]
+    return [{
+      id: 'default',
+      title: oldContent.title || 'Fra bestilling til levering',
+      steps: oldNodesToSteps(oldContent.nodes),
+    }]
   }, [workflowsProp, content])
 
   const [activeTab, setActiveTab] = useState(0)
@@ -320,13 +261,73 @@ export default function Workflow({
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([])
   const isInViewRef = useRef(false)
 
+  // Refs for dynamic edge computation
+  const desktopContainerRef = useRef<HTMLDivElement>(null)
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
+  const [edgePaths, setEdgePaths] = useState<string[]>([])
+
   const clearTimers = useCallback(() => {
     timersRef.current.forEach(clearTimeout)
     timersRef.current = []
   }, [])
 
+  // Compute SVG edge paths from actual card positions
+  const computeEdgePaths = useCallback(() => {
+    const container = desktopContainerRef.current
+    if (!container) return
+
+    const cRect = container.getBoundingClientRect()
+    const newPaths: string[] = []
+
+    for (let i = 0; i < cardRefs.current.length - 1; i++) {
+      const srcWrapper = cardRefs.current[i]
+      const tgtWrapper = cardRefs.current[i + 1]
+      if (!srcWrapper || !tgtWrapper) { newPaths.push(''); continue }
+
+      // Measure the inner card element (with the visual border/bg), not the grid cell wrapper
+      const srcEl = (srcWrapper.firstElementChild as HTMLElement) || srcWrapper
+      const tgtEl = (tgtWrapper.firstElementChild as HTMLElement) || tgtWrapper
+      const src = srcEl.getBoundingClientRect()
+      const tgt = tgtEl.getBoundingClientRect()
+      const srcRow = i % 2 // 0=top row, 1=bottom row
+
+      let sx: number, sy: number, ex: number, ey: number
+
+      if (srcRow === 0) {
+        // Top → bottom: connect from bottom-center to top-center
+        sx = src.left + src.width / 2 - cRect.left
+        sy = src.bottom - cRect.top
+        ex = tgt.left + tgt.width / 2 - cRect.left
+        ey = tgt.top - cRect.top
+      } else {
+        // Bottom → top: connect from right-center to left-center
+        sx = src.right - cRect.left
+        sy = src.top + src.height / 2 - cRect.top
+        ex = tgt.left - cRect.left
+        ey = tgt.top + tgt.height / 2 - cRect.top
+      }
+
+      // Smooth cubic bezier
+      const midY = (sy + ey) / 2
+      newPaths.push(
+        `M ${sx.toFixed(1)} ${sy.toFixed(1)} C ${sx.toFixed(1)} ${midY.toFixed(1)}, ${ex.toFixed(1)} ${midY.toFixed(1)}, ${ex.toFixed(1)} ${ey.toFixed(1)}`
+      )
+    }
+
+    setEdgePaths(newPaths)
+  }, [])
+
+  // Recompute edges after layout and on resize
+  useLayoutEffect(() => {
+    const raf = requestAnimationFrame(computeEdgePaths)
+    window.addEventListener('resize', computeEdgePaths)
+    return () => {
+      cancelAnimationFrame(raf)
+      window.removeEventListener('resize', computeEdgePaths)
+    }
+  }, [activeWorkflow, computeEdgePaths])
+
   // Animation cycle: reveal → hold → fade out → pause → restart
-  // Cinematic sequence: Node N → pause → Edge N→N+1 → pause → Node N+1 → ...
   const startAnimation = useCallback(() => {
     clearTimers()
     setVisibleStepIndex(-1)
@@ -335,18 +336,17 @@ export default function Workflow({
     setIsFadingOut(false)
 
     const stepCount = activeWorkflow.steps.length
-    let elapsed = 500 // 500ms initial delay before first node
+    let elapsed = 300
 
-    // Schedule interleaved node and edge reveals
     for (let i = 0; i < stepCount; i++) {
       const nodeTime = elapsed
 
-      // Reveal node i
       const nodeTimer = setTimeout(() => {
         setVisibleStepIndex(i)
         setActiveStepIndex(i)
-        // Clear pulse after duration (2000ms for non-last, 3000ms for last)
-        const pulseDuration = i === stepCount - 1 ? 3000 : 2000
+        // Also draw the edge leading TO this node (edge i-1) simultaneously
+        if (i > 0) setVisibleEdgeIndex(i - 1)
+        const pulseDuration = i === stepCount - 1 ? 1800 : 1200
         const pulseTimer = setTimeout(() => {
           setActiveStepIndex((prev) => (prev === i ? -1 : prev))
         }, pulseDuration)
@@ -354,47 +354,31 @@ export default function Workflow({
       }, nodeTime)
       timersRef.current.push(nodeTimer)
 
-      // After node reveal transition (1500ms) + pause (800ms), draw edge to next node
       if (i < stepCount - 1) {
-        elapsed += 1500 + 800 // node transition + pause before edge
-        const edgeTime = elapsed
-
-        const edgeTimer = setTimeout(() => {
-          setVisibleEdgeIndex(i) // edge index i = edge from node i to node i+1
-        }, edgeTime)
-        timersRef.current.push(edgeTimer)
-
-        // After edge draw (800ms) + pause (700ms), next node appears
-        elapsed += 800 + 700 // edge transition + pause before next node
+        // Pause between cards: card transition (500ms) + breathing room (800ms)
+        elapsed += 500 + 800
       }
     }
 
-    // Total time = elapsed at last node + last node's pulse (3000ms)
-    const totalRevealTime = elapsed + 3000
+    const totalRevealTime = elapsed + 1800
 
-    // Hold for 4000ms after all nodes revealed, then fade out and restart
     const holdTimer = setTimeout(() => {
       if (!isInViewRef.current) return
-      // Fade out all nodes and edges
       setIsFadingOut(true)
       setActiveStepIndex(-1)
 
-      // After fade-out (800ms) + pause (200ms), reset and restart
       const restartTimer = setTimeout(() => {
         if (!isInViewRef.current) return
         setIsFadingOut(false)
         setVisibleStepIndex(-1)
         setVisibleEdgeIndex(-1)
-        // Small delay before restarting the reveal cycle
         const cycleTimer = setTimeout(() => {
-          if (isInViewRef.current) {
-            startAnimation()
-          }
+          if (isInViewRef.current) startAnimation()
         }, 100)
         timersRef.current.push(cycleTimer)
-      }, 1000) // 800ms fade-out + 200ms pause
+      }, 800)
       timersRef.current.push(restartTimer)
-    }, totalRevealTime + 4000) // hold for 4s after complete
+    }, totalRevealTime + 2500)
     timersRef.current.push(holdTimer)
   }, [activeWorkflow.steps.length, clearTimers])
 
@@ -408,7 +392,7 @@ export default function Workflow({
         isInViewRef.current = entry.isIntersecting
         setIsInView(entry.isIntersecting)
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     )
     observer.observe(section)
 
@@ -418,7 +402,7 @@ export default function Workflow({
     }
   }, [clearTimers])
 
-  // Trigger animation when section enters view or tab changes
+  // Trigger animation when in view or tab changes
   useEffect(() => {
     if (isInView) {
       startAnimation()
@@ -431,18 +415,6 @@ export default function Workflow({
     }
   }, [isInView, activeTab, startAnimation, clearTimers])
 
-  // Build nodes and edges for current active workflow
-  const nodes = useMemo(
-    () => stepsToNodes(activeWorkflow.steps, visibleStepIndex, activeStepIndex, isFadingOut),
-    [activeWorkflow.steps, visibleStepIndex, activeStepIndex, isFadingOut]
-  )
-
-  const edges = useMemo(
-    () => stepsToEdges(activeWorkflow.steps, visibleEdgeIndex, isFadingOut),
-    [activeWorkflow.steps, visibleEdgeIndex, isFadingOut]
-  )
-
-  // Mobile steps for current active workflow
   const mobileSteps = useMemo(
     () =>
       activeWorkflow.steps.map((step) => ({
@@ -454,39 +426,47 @@ export default function Workflow({
     [activeWorkflow.steps]
   )
 
+  // Prepare card refs array for current workflow
+  const stepCount = activeWorkflow.steps.length
+  if (cardRefs.current.length !== stepCount) {
+    cardRefs.current = Array(stepCount).fill(null)
+  }
+
   return (
-    <section ref={sectionRef} className="bg-semantic-background-secondary py-12 md:py-16 lg:py-20">
-      {/* Animation CSS */}
+    <section ref={sectionRef} className="bg-semantic-background-secondary py-16 md:py-24 lg:py-28">
       <style>{`
-        .workflow-node-hidden {
+        .wf-card-hidden {
           opacity: 0;
-          transform: scale(0.8);
-          transition: opacity 800ms ease-out, transform 800ms ease-out;
+          transform: scale(0.88) translateY(10px);
+          transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1), transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .workflow-node-visible {
+        .wf-card-visible {
           opacity: 1;
-          transform: scale(1);
-          transition: opacity 1500ms ease-out, transform 1500ms ease-out;
+          transform: scale(1) translateY(0);
+          transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1), transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .workflow-edge-hidden .react-flow__edge-path {
-          stroke-dasharray: 200;
-          stroke-dashoffset: 200;
-          transition: stroke-dashoffset 800ms ease-out;
+        .wf-edge-hidden {
+          stroke-dasharray: 600;
+          stroke-dashoffset: 600;
+          opacity: 0;
+          transition: stroke-dashoffset 800ms ease-out, opacity 80ms ease-out;
         }
-        .workflow-edge-visible .react-flow__edge-path {
-          stroke-dasharray: 200;
+        .wf-edge-visible {
+          stroke-dasharray: 600;
           stroke-dashoffset: 0;
-          transition: stroke-dashoffset 800ms ease-out;
+          opacity: 1;
+          transition: stroke-dashoffset 800ms ease-out, opacity 80ms ease-out;
         }
         @keyframes workflowPulse {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(249, 123, 95, 0); }
-          50% { box-shadow: 0 0 0 4px rgba(249, 123, 95, 0.4); }
+          0%, 100% { box-shadow: 0 0 0 0 rgba(239, 108, 79, 0); }
+          50% { box-shadow: 0 0 0 8px rgba(239, 108, 79, 0.15), 0 4px 20px rgba(239, 108, 79, 0.1); }
         }
       `}</style>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         {!hideHeader && (
-          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-forest-900 leading-[1.1] tracking-tight mb-6">
               {content.title}
             </h2>
@@ -498,14 +478,14 @@ export default function Workflow({
 
         {/* Tab Navigation */}
         {showTabs && (
-          <div className="flex flex-wrap justify-center gap-2 mb-6 md:mb-10">
+          <div className="flex flex-wrap justify-center gap-2 mb-8 md:mb-12">
             {resolvedWorkflows.map((wf, index) => (
               <button
                 key={wf.id}
                 onClick={() => setActiveTab(index)}
-                className={`px-5 py-2.5 rounded-lg font-display font-semibold text-sm transition-colors ${
+                className={`px-6 py-2.5 rounded-full font-display font-semibold text-sm transition-all duration-200 ${
                   index === activeTab
-                    ? 'bg-forest-900 text-cream-100'
+                    ? 'bg-forest-900 text-cream-100 shadow-md'
                     : 'text-forest-600 hover:text-forest-900 hover:bg-cream-200'
                 }`}
               >
@@ -515,8 +495,8 @@ export default function Workflow({
           </div>
         )}
 
-        {/* Mobile: Vertical list with scattered positioning (hidden on md+) */}
-        <div className="md:hidden flex flex-col items-center gap-1">
+        {/* Mobile layout (below lg) */}
+        <div className="lg:hidden flex flex-col items-center gap-1 px-2">
           {mobileSteps.map((step, index) => (
             <MobileWorkflowStep
               key={`${activeWorkflow.id}-${index}`}
@@ -531,25 +511,76 @@ export default function Workflow({
           ))}
         </div>
 
-        {/* Desktop: React Flow Canvas (hidden on mobile) */}
-        <div className="hidden md:block h-[420px] w-full rounded-xl overflow-hidden [&_.react-flow]:cursor-default">
-          <ReactFlow
-            key={activeWorkflow.id}
-            nodes={nodes}
-            edges={edges}
-            nodeTypes={nodeTypes}
-            defaultEdgeOptions={defaultEdgeOptions}
-            fitView
-            fitViewOptions={{ padding: 0.35 }}
-            panOnDrag={false}
-            zoomOnScroll={false}
-            nodesDraggable={false}
-            zoomOnPinch={false}
-            preventScrolling={false}
-            nodesConnectable={false}
-            elementsSelectable={false}
-            proOptions={{ hideAttribution: true }}
-          />
+        {/* Desktop layout (lg+): CSS Grid — cards render at natural size */}
+        <div
+          ref={desktopContainerRef}
+          className="hidden lg:grid relative"
+          style={{
+            gridTemplateColumns: `repeat(${Math.ceil(stepCount / 2)}, 1fr)`,
+            gap: '80px 32px',
+            maxWidth: '1100px',
+            margin: '0 auto',
+          }}
+        >
+          {/* SVG edge overlay — paths computed dynamically from card positions */}
+          <svg
+            className="absolute inset-0 w-full h-full pointer-events-none"
+            style={{ overflow: 'visible', zIndex: 0 }}
+          >
+            {edgePaths.map((d, i) =>
+              d ? (
+                <path
+                  key={`edge-${activeWorkflow.id}-${i}`}
+                  d={d}
+                  fill="none"
+                  stroke="#F97B5F"
+                  strokeWidth="2"
+                  className={
+                    i <= visibleEdgeIndex && !isFadingOut
+                      ? 'wf-edge-visible'
+                      : 'wf-edge-hidden'
+                  }
+                />
+              ) : null
+            )}
+          </svg>
+
+          {/* Cards placed in 3-col × 2-row staggered grid */}
+          {activeWorkflow.steps.map((step, i) => {
+            const Icon = iconMap[step.iconKey] || CheckCircle
+            const row = i % 2 // 0 = top row, 1 = bottom row
+            const col = Math.floor(i / 2)
+            const scatter = desktopScatter[i % desktopScatter.length]
+            const isVisible = i <= visibleStepIndex && !isFadingOut
+            const isPulsing = i === activeStepIndex
+
+            return (
+              <div
+                key={`${activeWorkflow.id}-${i}`}
+                ref={(el) => { cardRefs.current[i] = el }}
+                className={isVisible ? 'wf-card-visible' : 'wf-card-hidden'}
+                style={{
+                  gridRow: row + 1,
+                  gridColumn: col + 1,
+                  transform: isVisible
+                    ? `translate(${scatter.x}px, ${scatter.y}px)`
+                    : `translate(${scatter.x}px, ${scatter.y + 10}px) scale(0.88)`,
+                  zIndex: 1,
+                  ...(isPulsing
+                    ? { animation: 'workflowPulse 1s ease-in-out 2', borderRadius: '1rem' }
+                    : {}),
+                }}
+              >
+                <DesktopCard
+                  icon={Icon}
+                  label={step.label}
+                  description={step.description}
+                  stat={step.stat}
+                  stepNumber={i + 1}
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
